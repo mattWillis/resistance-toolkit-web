@@ -1,0 +1,39 @@
+---
+import StepImg from '../assets/Step1.png';
+import toolkit from '../assets/Toolkit.png';
+import Cause from '../layouts/Cause.astro';
+const allCauses = Object.values(import.meta.glob('./causes/*md', {eager: true}));
+---
+
+<Cause>
+  <div class="container">
+    <header>
+      <img src={StepImg.src} alt="Pick a cause." />
+    </header>
+    <main>
+      <p class="bold">
+        Picked a cause? Great! Go to <a href="/informed">step 2.</a>
+      </p>
+      <hr>
+      <p class="bold">Click on a cause to see organizations that support that cause!</p>
+      <p>
+        <span class="bold italic">About This List:</span>
+        The following are excellent causes that need our help. Follow the link to a cause you are passionate
+        about or interested in to see a list of organizations that support that cause. The organizations 
+        often have clear and concise action items to take to fight back. But they will also need our support, 
+        either by donating financially or by volunteering our time.
+      </p>
+      <ul class="column is-centered is-four-fifths">
+
+        {allCauses.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+      </ul>
+      <p>
+        Big thanks to <a href="https://www.advocate.com/politics/anti-donald-trump-charities" class="bold" target="_blank">Advocate</a> for inspiring and seeding this list.
+      </p>
+      <hr>
+      <p class="bold">
+        Picked a cause? Great! Go to <a href="/informed">step 2.</a>
+      </p>      
+    </main>
+  </div>
+</Cause>

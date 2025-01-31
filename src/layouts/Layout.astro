@@ -1,3 +1,7 @@
+---
+import './Layout.scss'
+import { ClientRouter } from 'astro:transitions';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,10 +9,14 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>The Resistance Toolkit</title>
+		<link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
+		<ClientRouter />
 	</head>
 	<body>
-		<slot />
+		<div class="">
+			<slot />
+		</div>
 	</body>
 </html>
 
