@@ -1,5 +1,5 @@
 ---
-layout: '../layouts/Layout.astro'
+layout: '../layouts/Cause.astro'
 title: 'Stay Informed'
 ---
 
