@@ -1,6 +1,9 @@
 ---
 import './Layout.scss'
 import { ClientRouter } from 'astro:transitions';
+import GA from '../components/GA.astro';
+
+const ENV = import.meta.env.PROD;
 ---
 <!doctype html>
 <html lang="en">
@@ -12,6 +15,8 @@ import { ClientRouter } from 'astro:transitions';
 		<title>The Resistance Toolkit</title>
 		<link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
 		<ClientRouter />
+		<!-- Google tag (gtag.js) -->
+		{import.meta.env.PROD === true && <GA /> }
 	</head>
 	<body>
 		<div class="">

@@ -1,7 +1,12 @@
 ---
 import toolkit from '../assets/Toolkit.png';
 import background from '../assets/background.svg';
-import Nav from '../components/Nav.astro'
+import PickCause from '../assets/PickCause.png';
+import StayInformed from '../assets/StayInformed.png';
+import Recover from '../assets/Recharge.png';
+import Restart from '../assets/Restart.png';
+import TakeAction from '../assets/TakeAction.png';
+import Nav from '../components/Nav.astro';
 ---
 
 <Nav />
@@ -15,7 +20,7 @@ import Nav from '../components/Nav.astro'
 					<p>Tools You Need To <span class="bold">Fight</span> Hate</p>
 				</div>
 				<!-- <div class="column is-one-quarter right-header">
-					<img src={toolkit.src} width="115" height="48" alt="Astro Homepage" />
+					<img src={toolkit.src} alt="The Resistance Toolkit logo." />
 				</div> -->
 			</header>
 		</div>
@@ -28,27 +33,32 @@ import Nav from '../components/Nav.astro'
 			<ol class="home-steps">
 				<li>
 					<a class="step-link" href="/causes">
-						🔥 Pick a cause.
+						<img src={PickCause.src} height="50" width="50" alt="">
+						<p>Pick a cause.</p>
 					</a>
 				</li>
 				<li>
 					<a class="step-link" href="/informed">
-						📚 Stay Informed.
+						<img src={StayInformed.src} height="50" width="50" alt="">
+						<p>Stay Informed.</p>
 					</a>
 				</li>
 				<li>
 					<a class="step-link" href="/actions">
-						💪 Take an Action.
+						<img src={TakeAction.src} height="50" width="50" alt="">
+						<p>Take an Action.</p>
 					</a>
 				</li>
 				<li>
 					<a class="step-link" href="/recover">
-						🔋 Recover.
+						<img src={Recover.src} height="50" width="50" alt="">
+						<p>Recover.</p>
 					</a>
 				</li>
 				<li>
 					<a class="step-link" href="/causes">
-						🔄 Repeat.
+						<img src={Restart.src} height="50" width="50" alt="">
+						<p>Repeat.</p>
 					</a>
 				</li>
 			</ol>

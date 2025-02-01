@@ -79,7 +79,7 @@ html, body {
 
 .home-steps {
   li {
-    background-color: #94B1C1;
+    
     // border-bottom: thin solid #000;
     margin-bottom: 15px;
     &:last-of-type {
@@ -94,12 +94,30 @@ html, body {
   font-weight: 900;
   font-size: 20px;
   display: block;
+  outline: 5px solid transparent;
+  // justify-content: space-between;
+  // align-items: center;
+  position: relative;
   @extend .py-4;
   // color:#E6E1D0;
+  background-color: #94B1C1;
   color: #000;
   padding-left: 15px;
+  p {
+    margin-left: 92px;
+  }
   &:hover {
     color:#E6E1D0;
+    background-color: #C20E03;
+    outline: 5px solid #E6E1D0;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    max-height: 100%;
   }
 }
 
