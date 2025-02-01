@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import toolkit from '../assets/Toolkit.png';
+import comingsoon from '../assets/ComingSoon.svg';
+---
+
+<Layout>
+  <div class="header-wrapper py-4">
+		<div class="columns is-centered mt-3">
+			<header class="column columns is-centered is-four-fifths">
+				<div class="column left-header py-4 ">
+					<h1 class="is-text-centered">
+						<span>The</span> Resistance Toolkit
+					</h1>
+					<p>Tools You Need To <span class="bold">Fight</span> Hate</p>
+				</div>
+			</header>
+		</div>
+	</div>
+  <main class="coming-soon is-size-2">
+    <!-- <h2>Coming Soon</h2> -->
+    <img src={comingsoon.src} alt="Tool box with handy man tools poking out of the top. Text reads 'Coming Soon'">
+  </main>
+</Layout>

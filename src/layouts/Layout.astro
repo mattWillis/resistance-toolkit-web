@@ -2,6 +2,7 @@
 import './Layout.scss'
 import { ClientRouter } from 'astro:transitions';
 import GA from '../components/GA.astro';
+import ComingSoon from '../components/ComingSoon.astro';
 
 const ENV = import.meta.env.PROD;
 ---
@@ -19,7 +20,7 @@ const ENV = import.meta.env.PROD;
 		{import.meta.env.PROD === true && <GA /> }
 	</head>
 	<body>
-		<div class="">
+		<div class="content">			
 			<slot />
 		</div>
 	</body>

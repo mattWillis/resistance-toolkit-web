@@ -2,6 +2,11 @@
 
 html, body {
   background-color: #eee;
+  height: 100%;
+}
+
+.content {
+  height: 100%;
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -45,6 +50,7 @@ html, body {
     font-weight: 900;
     font-style: normal;
     line-height: 55px;
+    color: #E6E1D0;
     span {
       display: block;
       font-size: 30px;
@@ -134,4 +140,14 @@ p {
   margin: unset;
   // line-height: 25px;
   margin-block: 15px;
+}
+
+.coming-soon {
+  height: 100%;
+  background-color: #94B1C1;
+  padding-top: 25px;
+  display: flex;
+  flex-flow:column;
+  // justify-content: center;
+  align-items: center;
 }
