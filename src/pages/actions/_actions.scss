@@ -1,3 +1,5 @@
+$link-color: rgb(61, 80, 245);
+$link-color-hover: #C20E03;
 
 .action-section__title {
   font-family: "neulis-sans", sans-serif;
@@ -34,5 +36,17 @@ ul.resist-learning__list {
         margin-left: 15px;
       }
     }
+  }
+}
+
+.action-items, .volunteer-btn, .donate-btn, .recovery-btn {
+  
+  background-color: $link-color;
+  color: white;
+  padding: 10px;
+  margin-block: 10px;
+  &:hover, &:focus-visible {
+    background-color: $link-color-hover;
+    color: white;
   }
 }

@@ -16,13 +16,16 @@ import RepeatCup from '@assets/Recover/RepeatCup.png';
   <header class="max-w-6xl mx-auto" slot="header">
     <img src={banner.src} alt="Recover">
   </header>
+
   <section class="mt-8 actions-section max-w-6xl mx-auto">
     <h1 class="resist-recovery__title">Recovery</h1>
-    <p class="mb-4">
-      Remember to take care of your mental, physical, and spiritual health. We're in this for the long haul, make sure to recharge your batteries!
-    </p>
-    <p class="mb-4">
+    <p class="my-4">
+      Remember to take care of your mental, physical, and spiritual health. 
+      We're in this for the long haul, make sure to recharge your batteries!
       The following are some examples, but by all means, do whatever works best for you.
+    </p>
+    <p class="my-4">
+      When you are ready, <a href="#repeat">make sure to complete this cycle!</a>
     </p>
     <div class="resist-recover__card-grid">
       <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
@@ -153,13 +156,14 @@ import RepeatCup from '@assets/Recover/RepeatCup.png';
     </div>
   </section>
   <section class="text-center mt-8 actions-section max-w-6xl mx-auto">
-    <h2 class="resist-recovery__title">Congratulations!</h2>    
-    <p class="mb-4">
+    <h2 id="repeat" class="resist-recovery__title">Congratulations!</h2>    
+    
+    <p class="my-4">
       You have completed a cycle! Once your batteries are recharged, let's do it again.
     </p>
-    <p class="mt-8">
+    <p class="my-8">
       <a href="/causes" class="start-again-btn">Go to Step 1!</a>
     </p>
-    <Image class="mx-auto" src={RepeatCup} alt="A trophy cup with a repeat symbol." />
+    <Image class="mx-auto" height={350} width={350} src={RepeatCup} alt="A trophy cup with a repeat symbol." />
   </section>
 </Layout>

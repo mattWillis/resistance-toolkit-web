@@ -22,10 +22,16 @@ export function getStaticPaths() {
     }))
   ]
 }
-
-// const { searchParams } = new URL(Astro.request.url);
-// const cause = searchParams.get('cause');
 const org = orgs.find((org) => org.slug === slug) as Org;
+
+let volunteer: any = {};
+let hasVolunteer = false;
+
+if(org.actions) {
+  volunteer = org.actions.find((action) => action.action === 'Volunteer');
+  hasVolunteer = volunteer ? true : false;
+}
+
 ---
 
 
@@ -133,42 +139,67 @@ const org = orgs.find((org) => org.slug === slug) as Org;
     </div>
   </section>
   <section class="mt-8 actions-section max-w-6xl mx-auto">
-    <h2 class="action-section__title">Actions - Table of Contents</h2>
-    <ul class="resist-actions__toc">
-      <li>
-        <a href="#org-actions">What Are Your Organizations Suggesting?</a>
-      </li>
-      <li>
-        <a href="#contact">Contact Your Representatives</a>
-      </li>
-      <li>
-        <a href="#volunteer">Volunteer</a>
-      </li>
-      <li>
-        <a href="#vote">Register to Vote</a>
-      </li>
-      <li>
-        <a href="#donate">Donate</a>
-      </li>
-      <li>
-        <a href="#spending">Analyze Where You Are Spending Your Money</a>
-      </li>
-      <li>
-        <a href="#learning">Learning / Education</a>
-      </li>
-    </ul>
+    <nav aria-label="Table of Contents" class="max-w-md mx-auto">
+      <h2 class="action-section__title">Actions - Table of Contents</h2>
+      <ul class="resist-actions__toc mb-4 pb-4">
+        <li>
+          <a href="#org-actions">What Are Your Organizations Suggesting?</a>
+        </li>
+        <li>
+          <a href="#donate">Donate</a>
+        </li>        
+        <li>
+          <a href="#contact">Contact Your Representatives</a>
+        </li>
+        <li>
+          <a href="#volunteer">Volunteer</a>
+        </li>
+        <li>
+          <a href="#vote">Register to Vote</a>
+        </li>
+        <li>
+          <a href="#spending">Analyze Where You Are Spending Your Money</a>
+        </li>
+        <li>
+          <a href="#learning">Learning / Education</a>
+        </li>
+        <li>
+          <a href="#next-step">Next Step</a>
+        </li>
+      </ul>
+    </nav>
     <div class="action max-w-4xl">
       <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
-      <ul>
+      <ul class="flex flex-wrap gap-4">
         {org.actions && org.actions.map((action) => {
           return (
           <li>
-            <a href={action.url} class="text-blue-800" target="_blank">{action.action}</a>
+            <a href={action.url} class="action-items inline-flex items-center" target="_blank">
+              <Icon name="mdi:stars" role={"img"} class="mr-2"/>
+              {action.action}
+            </a>
           </li>        
         )
         })}
       </ul>
     </div>
+    <div class="action max-w-4xl">
+      <h2 id="donate" class="action-section__title">Donate</h2>
+      {org.donate ? 
+        <a href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
+         <Icon name="mdi:donate" role={"img"} class="mr-2"/> Donate to {org.name}
+        </a> :
+        <p>
+          Check if your chosen cause or organization is accepting donations and find out if they have an annual or monthly membership. 
+        </p>
+        <h3 class="action-link__title">
+          <a href="https://www.charitynavigator.org/" target="_blank">Charity Navigator</a>
+        </h3>
+        <p>
+          Charity Navigator helps millions of people take action and support the causes they care about by connecting them to the best charities that align with their passions and values.
+        </p>
+      }
+    </div>    
     <div class="action max-w-4xl">
       <h2 id="contact" class="action-section__title">Contact Your Representatives</h2>
       <p>
@@ -219,10 +250,14 @@ const org = orgs.find((org) => org.slug === slug) as Org;
 
     <div class="action max-w-4xl">
       <h2 id="volunteer" class="action-section__title">Volunteer</h2>
-      <p>
-        Check if your cause or organization has volunteer openings or memberships.
-      </p>
-
+      {hasVolunteer ? 
+        <a href={volunteer.url} class="volunteer-btn inline-flex items-center" target="_blank">
+          <Icon name="mdi:volunteer" role={'img'} class="mr-2"/> See volunteer opportunities with {org.name}
+        </a> :
+        <p>
+          Check if your chosen cause or organization has volunteer openings or memberships.
+        </p>
+      }     
       <h3 class="action-link__title">
         <a href="https://www.volunteermatch.org/" target="_blank">VolunteerMatch.org</a>
       </h3>
@@ -257,21 +292,6 @@ const org = orgs.find((org) => org.slug === slug) as Org;
     </div>
 
     <div class="action max-w-4xl">
-      <h2 id="donate" class="action-section__title">Donate</h2>
-      {org.donate ? 
-        <a href={org.donate} target="_blank">Donate to {org.name}</a> :
-        <p>
-          Check if your chosen cause or organization is accepting donations and find out if they have an annual or monthly membership. 
-        </p>
-        <h3 class="action-link__title">
-          <a href="https://www.charitynavigator.org/" target="_blank">Charity Navigator</a>
-        </h3>
-        <p>
-          Charity Navigator helps millions of people take action and support the causes they care about by connecting them to the best charities that align with their passions and values.
-        </p>
-      }
-    </div>
-    <div class="action max-w-4xl">
       <h2 id="spending" class="action-section__title">Analyze Where You Are Spending Your Money</h2>
       <p>
         For better, or for worse, some companies and politicians only seem to respond to boycotts or an increase in sales. So wield your purchasing power carefully! 
@@ -300,11 +320,11 @@ const org = orgs.find((org) => org.slug === slug) as Org;
 
     <div class="action max-w-4xl">
       <h2 id="learning" class="action-section__title">Learning / Education</h2>
-      <p>
+      <p class="mt-2">
         It's important to actively learn about the issues you are passionate about. Consider taking a class, read a book, or do a project that will immerse yourself into your cause.
       </p>
-      <p>
-        These are just a few examples. Do some research to find opportunities near you or about what you are interested in. 
+      <p class="my-4">
+        These are just a few examples. Research opportunities near you or find a topics that you are interested in! 
       </p>
       <ul class="resist-learning__list">
         <li>
@@ -371,6 +391,15 @@ const org = orgs.find((org) => org.slug === slug) as Org;
           </ul>
         </li>
       </ul>
+    </div>
+    <div class="action max-w-4xl">
+      <h2 id="next-step" class="action-section__title">Next Step</h2>
+      <p>
+        Completed your action? Great! Now it's time to move on to the last step.
+      </p>
+      <a href="/recover" class="recovery-btn inline-flex items-center">
+        <Icon name="mdi:arrow-right" role={"img"} class="mr-2"/> Next Step
+      </a>
     </div>
   </section>
     

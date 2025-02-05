@@ -1,48 +1,23 @@
-# Astro Starter Kit: Basics
+![Logo for The Resistance Toolkit stylized as graffiti on a brick wall. Subtitle reads "The tools you need to resist hate."](src/assets/Poster.png)
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Fight Hate. One step at a Time.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[The Resistance Toolkit Website](https://resistance-toolkit.com/)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## What is the Resistance Toolkit?
+Are you feeling as overwhelmed and ready to shut down as I am in the wake of all of the hatred being unleashed by politicians? 
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Feeling hopeless, I realized I needed a way to channel my frustration into meaningful action. So I am developing the Resistance Toolkit in an attempt to turn outrage into progress. The mission is to create a process: pick a cause, take an action, recover, and repeat. This seemed more achievable to me then attempting to somehow tackle all of the issues at once.
 
-## 🚀 Project Structure
+I know that together, we can transform feelings of hopelessness into a movement for change. Let's build something that fights hate, one action at a time.
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## How To Help Develop This Project
+**_Please read the [Contributing doc](./CONTRIBUTING.md)_** to see the types of issues and requests that are currently being accepted.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Why On GitHub?
+I chose to host this MVP (minimal viable product) version of The Resistance Toolkit on GitHub for a couple of reasons:
 
-## 🧞 Commands
+1. **Open Source:** It's important to me that this project is open sourced. The goal is to foster a community of passionate and active people to help develop and maintain this project. 
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+2. **Rapid Development:** Things are changing at an incredible pace. It seems like everyday there is a new executive order and a new cause under threat. I want to be able to be nimble and test out new strategies.
