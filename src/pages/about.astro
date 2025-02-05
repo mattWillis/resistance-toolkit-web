@@ -1,54 +1,94 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
-import Banner from '../assets/Poster.png'
+import Layout from "src/layouts/Layout.astro";
+import Banner from '@assets/Poster.png';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components'
 ---
-
-<Layout>
-  <Nav />
-  <div class="container">
-    <header>
-      <img src={Banner.src} alt="Banner for The Resistance Toolkit stylized as graffiti on a brick wall. Subtitle reads 'The tools you need to resist hate.'">
-    </header>
-    <main id="main" class="column">
-      <h1 class="is-size-2">What is the Resistance Toolkit?</h1>
-      <p>
-        Are you feeling as overwhelmed and ready to shut down as I am in the wake of all of the hatred being unleashed by politicians? 
-      </p>
-      <p>
-        Feeling hopeless, I realized I needed a way to channel my frustration into meaningful action. So I am developing the Resistance Toolkit in an attempt to turn outrage into progress. The mission is to create a process: pick a cause, take an action, recover, and repeat. This seemed more achievable to me then attempting to somehow tackle all of the issues at once.
-      </p>
-      <p>
-        I know that together, we can transform feelings of hopelessness into a movement for change. Let's build something that fights hate, one action at a time.
-      </p>
-      <p>
-        <span class="bold italic">Note:</span> This implementation is primarily focused on **U.S. politics and issues**, but after some feedback I am working on an international version of this toolkit, because hate is obviously a global issue.
-      </p>
-      <h2 class="is-size-3">Why Make This Project Open Source?</h2>
-      <p>
-        I chose to make this MVP (minimal viable product) version of The Resistance Toolkit Open Source for a couple of reasons:
-      </p>
-      <ol>
+<Layout title="About">
+  <header slot="header" class="about-header">
+    <Image src={Banner} class="about-banner" alt="Banner for The Resistance Toolkit stylized as graffiti on a brick wall. Subtitle reads 'The tools you need to resist hate.'">
+    
+  </header>
+  <section class="resist-about max-w-2xl mx-auto mt-8">
+    <a href="/" class="back-home" >
+      <Icon name="mdi:arrow-back" />
+      Home
+    </a>
+    <h1 class="resist-about__title">What is the Resistance Toolkit?</h1>
+    <p>
+      Are you feeling as overwhelmed and ready to shut down as I am in the wake of all of the hatred being unleashed by politicians? 
+    </p>
+    <p>
+      Feeling hopeless, I realized I needed a way to channel my frustration into meaningful action. So I am developing the Resistance Toolkit in an attempt to turn outrage into progress. The mission is to create a process: pick a cause, take an action, recover, and repeat. This seemed more achievable to me then attempting to somehow tackle all of the issues at once.
+    </p>
+    <p>
+      I know that together, we can transform feelings of hopelessness into a movement for change. Let's build something that fights hate, one action at a time.
+    </p>
+    <p>
+      <span class="font-bold italic">Note:</span> This implementation is primarily focused on <span class="font-bold">U.S. politics and issues</span>, but after some feedback I am working on an international version of this toolkit, because hate is obviously a global issue.
+    </p>
+    <h2 class="resist-about__secondary-title">Why Make This Project Open Source?</h2>
+    <p>
+      I chose to make this MVP (minimal viable product) version of The Resistance Toolkit Open Source for a couple of reasons:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <span class="font-bold">Community:</span> 
+          It's important to me that this project is open sourced. 
+          The goal is to foster a community of passionate and active people to help develop and maintain this project. 
+        </p>
+      </li>
+      <li>
+        <p>
+          <span class="font-bold">Rapid Development:</span> 
+          Things are changing at an incredible pace. 
+          It seems like everyday there is a new executive order and a new cause under threat.
+        </p>
+        <p>
+          I want to be able to be nimble and test out new strategies. Being open sourced 
+          allows for a diversity of viewpoints and expert opinions to brought to this 
+          project in near real time.
+        </p>        
+      </li>
+    </ol>
+    <h2 class="resist-about__secondary-title">How Do I Contribute To This Project?</h2>
+    <p>
+      I am so glad you asked! There are a few ways you can contribute to this project:
+      <ul class="resist-about__list">
         <li>
-          <p>
-            <span class="bold">Community:</span> 
-            It's important to me that this project is open sourced. 
-            The goal is to foster a community of passionate and active people to help develop and maintain this project. 
-          </p>
+          Share this project with your friends and family.
         </li>
         <li>
-          <p>
-            <span class="bold">Rapid Development:</span> 
-            Things are changing at an incredible pace. 
-            It seems like everyday there is a new executive order and a new cause under threat.
-          </p>
-          <p>
-            I want to be able to be nimble and test out new strategies. Being open sourced 
-            allows for a diversity of viewpoints and expert opinions to brought to this 
-            project in near real time.
-          </p>        
+          Use the toolkit and support your chosen cause.
         </li>
-      </ol>
-    </main>
-  </div>
+        <li>
+          Visit the GitHub repository and read the CONTRIBUTIONS.md file. Then start making suggestions:
+          <ul>
+            <li>Suggest a new organization to add to the project.</li>
+            <li>Submit a bug report.</li>
+            <li>Help vet the content and resources.</li>
+            <li>Fix spelling and grammar (this one is hugely appreciated!)</li>            
+          </ul>
+        </li>
+      </ul>
+    </p>
+    <a href="https://github.com/mattWillis/resistance-toolkit-web" target="_blank" class="contribute-btn">
+      <Icon name="mdi:github" />
+      View On GitHub
+    </a>
+  </section>
 </Layout>
+
+<style>
+  h1, h2 {
+    text-align: center;
+  }
+  .about-header {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .about-banner {
+    /* width: 50svw; */
+  }
+</style>

@@ -1,0 +1,165 @@
+---
+import banner from '@assets/Step4-New.png';
+import Layout from 'src/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Meditation from '@assets/Recover/Meditation.png';
+import Games from '@assets/Recover/Games.png';
+import Art from '@assets/Recover/MakeArt.png';
+import Fitness from '@assets/Recover/Fitness.png';
+import Mindfulness from '@assets/Recover/Mindfulness.png';
+import Sleep from '@assets/Recover/Sleep.png';
+import SocialMedia from '@assets/Recover/SocialMedia.png';
+import RepeatCup from '@assets/Recover/RepeatCup.png';
+---
+
+<Layout title="Recover">
+  <header class="max-w-6xl mx-auto" slot="header">
+    <img src={banner.src} alt="Recover">
+  </header>
+  <section class="mt-8 actions-section max-w-6xl mx-auto">
+    <h1 class="resist-recovery__title">Recovery</h1>
+    <p class="mb-4">
+      Remember to take care of your mental, physical, and spiritual health. We're in this for the long haul, make sure to recharge your batteries!
+    </p>
+    <p class="mb-4">
+      The following are some examples, but by all means, do whatever works best for you.
+    </p>
+    <div class="resist-recover__card-grid">
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <Image class="w-full h-auto rounded-t-xl" src={SocialMedia} alt="Neon light of a social media like count at zero." />
+        <div class="p-4 md:p-5">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+            How and Why You Should Take Social Media Breaks
+          </h3>
+          <p class="mt-1 text-gray-500 dark:text-neutral-400">
+            Social media can have many benefits, but sometimes you just need a break. This blog offers some tips on how to step away.
+          </p>
+          <a 
+            class="resist-recovery__button mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+            href="https://summer.harvard.edu/blog/need-a-break-from-social-media-heres-why-you-should-and-how-to-do-it/"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <Image class="w-full h-auto rounded-t-xl" src={Mindfulness} alt="A sheet of paper propped up against a window with the words 'Mindfulness' written on it." />
+        <div class="p-4 md:p-5">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+            Mindfulness Activities
+          </h3>
+          <p class="mt-1 text-gray-500 dark:text-neutral-400">
+            There are many mindfulness activities available for children, teens, and adults that can relieve stress and help you be more present in the moment.
+          </p>
+          <a 
+            class="resist-recovery__button mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+            href="https://www.healthline.com/health/mind-body/mindfulness-activities#for-adults"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <Image class="w-full h-auto rounded-t-xl" src={Fitness} alt="Two women doing lunges on a foot bridge." />
+        <div class="p-4 md:p-5">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+            Find a Fitness Routine
+          </h3>
+          <p class="mt-1 text-gray-500 dark:text-neutral-400">
+            Starting a fitness program may be one of the best things for health. Physical activity can lower the risk of diseases, such as heart disease and cancer.
+          </p>
+          <a 
+            class="resist-recovery__button mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+            href="https://www.mayoclinic.org/healthy-lifestyle/fitness/basics/fitness-basics/hlv-20049447"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <Image class="w-full h-auto rounded-t-xl" src={Art} alt="A person sitting on the floor, with a paintbrush in hand, painting a sheet of paper." />
+        <div class="p-4 md:p-5">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+            Make art for your mental health
+          </h3>
+          <p class="mt-1 text-gray-500 dark:text-neutral-400">
+            Art can be helpful in a healthcare setting, whether it's prescribed therapy, something you participate in for fun or part of the environment around you.
+          </p>
+          <a 
+            class="resist-recovery__button mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+            href="https://mcpress.mayoclinic.org/living-well/the-intersection-of-art-and-health-how-art-can-help-promote-well-being/"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div>      
+
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <Image class="w-full h-auto rounded-t-xl" src={Sleep} alt="A dimly lit room with a bed." />
+        <div class="p-4 md:p-5">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+            Make Sure You're Getting Good Sleep
+          </h3>
+          <p class="mt-1 text-gray-500 dark:text-neutral-400">
+            There's so much more to sleep than just the number of hours you get each night. How much do you know?
+          </p>
+          <a 
+            class="resist-recovery__button mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+            href="https://hub.jhu.edu/at-work/2022/03/11/good-sleep-for-good-health/"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div> 
+
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <Image class="w-full h-auto rounded-t-xl" src={Games} alt="Two video game controllers being held up in front of a TV with a soccer game on." />
+        <div class="p-4 md:p-5">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+            Find a game that helps you destress
+          </h3>
+          <p class="mt-1 text-gray-500 dark:text-neutral-400">
+            From puzzlers and driving sims to power washing and Tetris.
+          </p>
+          <a 
+            class="resist-recovery__button mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+            href="https://www.engadget.com/gaming/best-relaxing-video-games-140048572.html"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div> 
+
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <Image class="w-full h-auto rounded-t-xl" src={Meditation} alt="A man sitting cross-legged on a rock, meditating." />
+        <div class="p-4 md:p-5">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+            Try meditation or a meditation app
+          </h3>
+          <p class="mt-1 text-gray-500 dark:text-neutral-400">
+            If you’ve decided to give meditation a shot, congratulations! You’ve also decided to improve your sleep, lower your blood pressure, increase your marital harmony and reduce your stress.
+          </p>
+          <a 
+            class="resist-recovery__button mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+            href="https://www.headspace.com/articles/how-to-meditate-in-ten-minutes"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div> 
+    </div>
+  </section>
+  <section class="text-center mt-8 actions-section max-w-6xl mx-auto">
+    <h2 class="resist-recovery__title">Congratulations!</h2>    
+    <p class="mb-4">
+      You have completed a cycle! Once your batteries are recharged, let's do it again.
+    </p>
+    <p class="mt-8">
+      <a href="/causes" class="start-again-btn">Go to Step 1!</a>
+    </p>
+    <Image class="mx-auto" src={RepeatCup} alt="A trophy cup with a repeat symbol." />
+  </section>
+</Layout>

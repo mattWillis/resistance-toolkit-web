@@ -1,0 +1,38 @@
+
+.action-section__title {
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-block: 15px;
+}
+
+.action-link__title {
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  // text-transform: uppercase;
+  margin-block: 10px;
+}
+
+div.action {
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  p {
+    max-width: 670px;
+  }
+}
+
+ul.resist-learning__list {
+  list-style-type: disc;
+  li ul {
+    margin-left: 15px;
+    list-style-type: circle;
+    ul {
+      list-style-type: square;
+      li {
+        margin-left: 15px;
+      }
+    }
+  }
+}

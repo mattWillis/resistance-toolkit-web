@@ -1,36 +1,128 @@
 ---
-import './Layout.scss'
-import { ClientRouter } from 'astro:transitions';
+import './Layout.scss';
+import { Image } from 'astro:assets';
+import { ClientRouter } from "astro:transitions";
 import GA from '../components/GA.astro';
-import ComingSoon from '../components/ComingSoon.astro';
+import { Icon } from "astro-icon/components";
+interface Props {
+  title: string;
+  image?: string;
+  description?: string;
+}
+const {
+  title,
+  image = "/ryan-hoffman-A7f7XRKgUWc-unsplash.webp",
+  description = "The tools you need to resist hate.",
+} = Astro.props;
 
-const ENV = import.meta.env.PROD;
+import Toolkit from '@assets/Toolkit.png';
+
+const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUBLIC_URL) : image;
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>The Resistance Toolkit</title>
-		<link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
-		<ClientRouter />
-		<!-- Google tag (gtag.js) -->
-		{import.meta.env.PROD === true && <GA /> }
-	</head>
-	<body>
-		<div class="content">			
-			<slot />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="product" />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:description" content={description} />
+
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - The Resistance Toolkit</title>
+    <link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
+    <ClientRouter />
+    {import.meta.env.PROD === true && <GA /> }
+  </head>
+  <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
+    <nav aria-label="Site Navigation" class="bg-white">
+			<div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-4 sm:py-4 lg:px-4">
+				<div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
+					<div>
+						<a href="/" class="flex items-center gap-2">
+              <Image src={Toolkit} alt="The Resistance Toolkit" class="w-12 h-12" />
+              <!-- <h1 class="text-xl font-bold text-gray-900"> The Resistance Toolkit </h1> -->
+            </a>
+					</div>
+		
+					<div class="flex items-center gap-4">
+						<a
+							class="inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+							href="/about"
+						>
+							<span class="text-sm font-medium"> About </span>
+              <Icon name="mdi:information" class="size-4" />
+						</a>
+		
+						<a
+							class="resist-button__causes inline-block rounded-sm px-5 py-3 text-sm font-medium text-white transition"
+							href="/causes"
+						>
+							Causes
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+    <slot name="header" />
+		<main
+      class="relative max-w-6xl min-h-screen mx-auto py-6 lg:pt-4 px-4 pb-20"
+    >
+      <slot />
+    </main>
+
+    <style is:global>
+      :root {
+      }
+      body {
+        background-color: theme(colors.gray.50);
+      }
+      .animate-in {
+        animation: animate-in 0.5s ease-in-out;
+      }
+      /* Firefox */
+      * {
+        scrollbar-width: auto;
+        scrollbar-color: #c7c7c7 #ededed;
+      }
+
+      /* Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 15px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: #ededed;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #c7c7c7;
+        border-radius: 5px;
+        border: 2px solid #ffffff;
+      }
+      @keyframes animate-in {
+        0% {
+          opacity: 0;
+          transform: translateY(1rem);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!-- <script is:inline src="./assets/vendor/preline/preline.js"></script> -->
+<script is:inline src="./node_modules/preline/preline.js"></script>

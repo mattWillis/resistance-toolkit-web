@@ -1,0 +1,28 @@
+.resist-header {
+  background: #C20E03;
+  border: 6px solid #E6E1D0;
+  color: #E6E1D0;
+}
+.resist-header__title {
+  font-size: 70px;
+  max-width: 60%;
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+
+.resist-header__the {
+  display: block;
+  font-size: 30px;
+  margin-bottom: -15px;
+}
+
+.resist-header__subtitle {
+  font-size: 28px;
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 30px;
+}
