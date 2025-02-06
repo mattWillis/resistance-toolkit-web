@@ -26,3 +26,23 @@
   font-style: normal;
   line-height: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .resist-header__title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .resist-header__title {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .resist-header__the {
+    font-size: 20px;
+  }
+  .resist-header__subtitle {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

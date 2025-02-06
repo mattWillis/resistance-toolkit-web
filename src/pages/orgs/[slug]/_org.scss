@@ -1,8 +1,6 @@
 
 .org-header {
-  // border-bottom: thin solid #94B1C1;
   padding-block: 15px;  
-
 }
 
 .org-header__title {
@@ -67,7 +65,6 @@ span.cause-tag {
       display: block;
       font-size: 14px;
       font-weight: 400;
-
     }
   }
 }
@@ -79,7 +76,6 @@ span.cause-tag {
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  // margin:auto;
   margin-top: 25px;
   text-align: center;
   padding-block: 10px;
@@ -91,25 +87,28 @@ span.cause-tag {
   }
   
 }
-
-.org-content {
-  // background-color: white;
-  h2 svg {
-    // vertical-align: middle;
-    // height: 22px;
-    // width: 22px;
-    // margin-right: 3px;
-  }
-}
-
 .org-info {
   border-bottom: thin solid #94B1C1;
   padding-bottom: 15px;
 }
-
 .qr-wrapper {
   padding-top: 10px;
   img {
     margin: 0 auto;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .org-info {
+    flex-direction: column;
+  }
+  .org-info, .org-contact {
+    flex: 0 0 100%;
+  }
+  .social-tags {
+    span.tag {
+      flex: 0 1 100%;
+    }
+  }
+  
 }

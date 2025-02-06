@@ -12,7 +12,7 @@ interface Props {
 const {
   title,
   image = "/Poster.png",
-  description = "The tools you need to resist hate.",
+  description = "The tools you need to resist hate. One step at a time.",
 } = Astro.props;
 
 import Toolkit from '@assets/Toolkit.png';
@@ -27,7 +27,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <meta name="description" content={description} />
 
     <meta property="og:title" content={title} />
-    <meta property="og:type" content="product" />
+    <meta property="og:type" content="app" />
     <meta property="og:image" content={imageUrl} />
     <meta property="og:description" content={description} />
 
@@ -79,7 +79,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <slot name="header" />
 		<main
       id="main"
-      class="relative max-w-6xl min-h-screen mx-auto py-6 lg:pt-4 px-4 pb-20"
+      class="relative max-w-6xl mx-auto py-6 lg:pt-4 px-4 pb-20"
     >
       <slot />
     </main>
@@ -130,4 +130,8 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 </html>
 
 <!-- <script is:inline src="./assets/vendor/preline/preline.js"></script> -->
-<script is:inline src="./node_modules/preline/preline.js"></script>
+<!-- <script is:inline src="./node_modules/preline/preline.js"></script> -->
+
+<script> 
+  import "preline/dist/preline.js";
+</script>

@@ -2459,6 +2459,36 @@ export const orgs: Org[] = [
         url: "https://www.youtube.com/unicef"
       }
     ],
+    actions: [
+      {
+        action: "Volunteer",
+        url: "https://www.unicef.org/careers/volunteers-unicef"
+      },
+      {
+        action: "Take Action",
+        url: "https://www.unicef.org/take-action"
+      },
+      {
+        action: "Climate action for children",
+        url: "https://www.unicef.org/climate-action"
+      },
+      {
+        action: "Adolescent girls' rights",
+        url: "https://www.unicef.org/adolescent-girls-rights"
+      },
+      {
+        action: "Child health and survival",
+        url: "https://www.unicef.org/child-health-and-survival"
+      },
+      {
+        action: "Children under attack",
+        url: "https://www.unicef.org/children-under-attack"
+      },
+      {
+        action: "Convention on the Rights of the Child",
+        url: "https://www.unicef.org/child-rights-convention"
+      },
+    ],    
     description: "UNICEF, the United Nations agency for children, works to protect the rights of every child, especially the most disadvantaged and those hardest to reach. Across more than 190 countries and territories, we do whatever it takes to help children survive, thrive and fulfil their potential.",
     scope: 'global',
     slug: 'unicef'

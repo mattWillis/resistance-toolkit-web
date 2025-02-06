@@ -34,6 +34,13 @@ ul.cause-list {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .cause-list-item {
+    flex: 0 1 45%;
+  }
+  
+}
+
 ul.org-list {
   list-style-type: none !important;
   padding: 0;
@@ -60,4 +67,12 @@ ul.org-list {
   li:hover, li:focus-visible {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
+}
+
+
+@media screen and (max-width: 640px) {
+  .cause-list-item {
+    flex: 0 1 45%;
+  }
+  
 }

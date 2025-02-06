@@ -26,6 +26,7 @@ div.action {
 }
 
 ul.resist-learning__list {
+  padding-left: 10px;
   list-style-type: disc;
   li ul {
     margin-left: 15px;
@@ -39,8 +40,7 @@ ul.resist-learning__list {
   }
 }
 
-.action-items, .volunteer-btn, .donate-btn, .recovery-btn {
-  
+.volunteer-btn, .donate-btn, .recovery-btn {
   background-color: $link-color;
   color: white;
   padding: 10px;
@@ -50,3 +50,27 @@ ul.resist-learning__list {
     color: white;
   }
 }
+
+.action-items__list {
+  gap: 10px;
+}
+
+.action-items {
+  background-color: $link-color;
+  color: white;
+  padding: 10px;
+  // margin-block: 10px;
+  &:hover, &:focus-visible {
+    background-color: $link-color-hover;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .action-items__list {
+    li {
+      flex: 0 1 100%;
+    }
+  }
+}
+

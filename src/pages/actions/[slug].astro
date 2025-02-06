@@ -4,7 +4,6 @@ import './_actions.scss';
 import { type Org, orgs } from '../../data';
 import Layout from '../../layouts/Layout.astro';
 const { slug } = Astro.params;
-import bskyQR from '@assets/qr-code.png';
 import banner from '@assets/Step3-New.png';
 import { Image } from 'astro:assets';
 import MailBot from '@assets/mailbot.svg';
@@ -31,19 +30,17 @@ if(org.actions) {
   volunteer = org.actions.find((action) => action.action === 'Volunteer');
   hasVolunteer = volunteer ? true : false;
 }
-
 ---
 
 
 <Layout 
   title={org.name}
   description={org.description}
-  image={''}
   >
   <header class="max-w-6xl mx-auto" slot="header">
     <img src={banner.src} alt="Stay Informed">
     <nav aria-label="Breadcrumb" class="flex breadcrumb">
-      <ol class="flex mt-3 overflow-hidden rounded-lg border border-gray-200 text-gray-600">
+      <ol class="flex mt-3 overflow-scroll rounded-lg border border-gray-200 text-gray-600">
         <li class="flex items-center justify-center">
           <a href="/" class="flex h-10 items-center gap-1.5 bg-gray-100 px-4 transition hover:text-gray-900">
             <svg
@@ -114,7 +111,14 @@ if(org.actions) {
       </div>    
     </div>
   </section>
-  <section class="org-section org-content">
+  <button type="button" class="hs-collapse-toggle inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:outline-none focus:underline focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
+    <span class="hs-collapse-open:hidden">Read more</span>
+    <span class="hs-collapse-open:block hidden">Read less</span>
+    <svg class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"></path>
+    </svg>
+  </button>
+  <section id="hs-show-hide-collapse-heading" class="hs-collapse hidden overflow-hidden transition-[height] org-section org-content" aria-labelledby="hs-show-hide-collapse">
     <div class="org-info">
       <div class="org-description">
         <h2 class="flex items-center"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
@@ -170,7 +174,7 @@ if(org.actions) {
     </nav>
     <div class="action max-w-4xl">
       <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
-      <ul class="flex flex-wrap gap-4">
+      <ul class="flex flex-wrap action-items__list">
         {org.actions && org.actions.map((action) => {
           return (
           <li>
@@ -327,14 +331,14 @@ if(org.actions) {
         These are just a few examples. Research opportunities near you or find a topics that you are interested in! 
       </p>
       <ul class="resist-learning__list">
-        <li>
-          <a href="https://webaim.org/services/training/" target="_blank">WebAIM Accessibility Training Courses</a>
+        <li >
+          <a href="https://webaim.org/services/training/" class="font-bold" target="_blank">WebAIM Accessibility Training Courses</a>
         </li>
         <li>
-          Online Courses, Certifications
+          <p class="font-bold">Online Courses, Certifications</p>
           <ul>
             <li>
-              <a href=https://pll.harvard.edu/catalog/free?page=1" target="_blank">Harvard Free Courses</a>
+              <a href=https://pll.harvard.edu/catalog/free?page=1" class="font-bold" target="_blank">Harvard Free Courses</a>
               <ul>
                 <li>
                   <a href="https://pll.harvard.edu/course/women-making-history-ten-objects-many-stories" target="_blank">Women Making History: Ten Objects, Many Stories</a>
@@ -346,7 +350,7 @@ if(org.actions) {
             </li>
 
             <li>
-              <a href="https://online.osu.edu/" target="_blank">OSU Online</a>
+              <a href="https://online.osu.edu/" class="font-bold" target="_blank">OSU Online</a>
               <ul>
                 <li>
                   <a href="https://online.osu.edu/undergraduate-certificates/black-studies-certificate/" target="_blank">Black Studies Certificate</a>
@@ -358,7 +362,7 @@ if(org.actions) {
             </li>
 
             <li>
-              <a href="https://ocw.mit.edu/" target="_blank">MIT OpenCourseWare</a>
+              <a href="https://ocw.mit.edu/" class="font-bold" target="_blank">MIT OpenCourseWare</a>
               <ul>
                 <li>
                   <a href="https://ocw.mit.edu/courses/17-251-congress-and-the-american-political-system-i-fall-2016/" target="_blank">Congress and the American Political System I</a>
@@ -374,7 +378,7 @@ if(org.actions) {
           </ul>
         </li>
         <li>
-          Books (Physical and Audio)
+          <p class="font-bold">Books (Physical and Audio)</p>
           <ul>
             <li>
               <a href="https://us.macmillan.com/books/9781250288240/thetruthaboutimmigration/" target="_blank">The Truth About Immigration</a>

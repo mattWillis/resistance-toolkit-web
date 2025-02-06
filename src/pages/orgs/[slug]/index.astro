@@ -30,7 +30,7 @@ const org = orgs.find((org) => org.slug === slug) as Org;
   <header class="max-w-6xl mx-auto" slot="header">
     <img src={banner.src} alt="Stay Informed">
     <nav aria-label="Breadcrumb" class="flex breadcrumb">
-      <ol class="flex mt-3 overflow-hidden rounded-lg border border-gray-200 text-gray-600">
+      <ol class="flex mt-3 overflow-scroll rounded-lg border border-gray-200 text-gray-600">
         <li class="flex items-center justify-center">
           <a href="/" class="flex h-10 items-center gap-1.5 bg-gray-100 px-4 transition hover:text-gray-900">
             <svg
@@ -84,7 +84,6 @@ const org = orgs.find((org) => org.slug === slug) as Org;
   
   <section class="org-header">    
     <h1 class="org-header__title">{org.name}</h1>
-    <!-- <p class="org-causes-title">Causes:</p> -->
     <div class="level">
       <div class="level-left">        
         {org.cause && org.cause.map((cause) => {
@@ -96,16 +95,16 @@ const org = orgs.find((org) => org.slug === slug) as Org;
   <section class="org-section org-content">
     <div class="org-info">
       <div class="org-description">
-        <h2 class="flex items-center"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
+        <h2 class="flex items-center mb-4"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
         <p>{org.description}</p>
         <a id="chooseOrgLink" href={`/actions/${org.slug}`} class="select-org">Choose Organization</a>
       </div>
       <div class="org-contact">
-        <h2 class="flex items-center"><Icon name="mdi:web-check"/> Website</h2>
+        <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
         <p>
           <a href={org.url} target="_blank">{org.url}</a>
         </p>
-        <h2 class="flex items-center"> <Icon name="mdi:megaphone"/> Social Media</h2>
+        <h2 class="flex items-center my-4 pb-2"> <Icon name="mdi:megaphone"/> Social Media</h2>
         <div class="social-tags">    
           {org.social && org.social.map((social) => {
             return (
@@ -117,23 +116,7 @@ const org = orgs.find((org) => org.slug === slug) as Org;
         </div>        
       </div>
     </div>
-
-
-
-    <!-- <h3>🦋 BlueSky Social Users</h3>
-
-    <p>This is a link to a <a href="https://go.bsky.app/8i9FuqR" target="_blank">starter pack of organizations</a> that are currently on the platform.</p>
-
-    <div class="is-centered">
-      <img src={bskyQR.src} alt="QR code to the Resistance Toolkit Starter Pack on BlueSky Social. Scan with your phone's camera to open up the link.">
-    </div>-->
-
-    <!-- <p class="py-4 max-w-2xl">
-      <span class="font-bold italic">A note about Social Media:</span>
-      I encourage you to use social media platforms that are open sourced and decentralized (like <a href="https://bsky.app/" class="text-color-blue600" target="_blank">BlueSky</a> or <a href="https://joinmastodon.org/" target="_blank">Mastodon</a>). However, your organization might not have an account on these newer platforms, so go where your orgs are.     
-    </p> -->
-
-    <div class="my-4 bg-blue-100 border border-blue-200 text-gray-800 rounded-lg p-4 dark:bg-blue-800/10 dark:border-blue-900 dark:text-white" role="note" tabindex="-1" aria-labelledby="note-title">
+    <div class="my-4 bg-blue-100 border border-blue-200 text-gray-800 rounded-lg p-4" role="note" tabindex="-1" aria-labelledby="note-title">
       <div class="flex gap-4">
         <div class="flex sm:w-1/3 lg:w-1/2 sm:w-1">
           <div class="shrink-0">
@@ -147,7 +130,7 @@ const org = orgs.find((org) => org.slug === slug) as Org;
             <h3 id="note-title" class="font-semibold">
               A note about Social Media
             </h3>
-            <div class="mt-2 text-sm text-gray-800 dark:text-neutral-400">
+            <div class="mt-2 text-sm text-gray-800">
               I encourage you to use social media platforms that are open sourced and decentralized (like <a href="https://bsky.app/" class="text-blue-800 font-bold" target="_blank">BlueSky</a> or <a href="https://joinmastodon.org/" class="text-blue-800 font-bold" target="_blank">Mastodon</a>). However, your organization might not have an account on these newer platforms, so go where your orgs are.     
             </div>
           </div>          

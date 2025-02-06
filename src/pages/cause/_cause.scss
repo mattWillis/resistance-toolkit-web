@@ -127,3 +127,10 @@ ul.org-list {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 660px) {
+  ul.org-list {
+    li {
+      flex: 0 1 100%;
+    }
+  }
+}
