@@ -174,18 +174,23 @@ if(org.actions) {
     </nav>
     <div class="action max-w-4xl">
       <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
-      <ul class="flex flex-wrap action-items__list">
-        {org.actions && org.actions.map((action) => {
-          return (
-          <li>
-            <a href={action.url} class="action-items inline-flex items-center" target="_blank">
-              <Icon name="mdi:stars" role={"img"} class="mr-2"/>
-              {action.action}
-            </a>
-          </li>        
-        )
-        })}
-      </ul>
+      {org.actions && org.actions.length > 0 ? 
+        <ul class="flex flex-wrap action-items__list">
+          {org.actions && org.actions.map((action) => {
+            return (
+            <li>
+              <a href={action.url} class="action-items inline-flex items-center" target="_blank">
+                <Icon name="mdi:stars" role={"img"} class="mr-2"/>
+                {action.action}
+              </a>
+            </li>        
+          )
+          })}
+        </ul> :
+        <p>
+          Sorry, we couldn't find any immediate actions for this organization. Please check their <a href={org.url} target="_blank">website</a> because they might have added some recently!
+        </p>
+      }
     </div>
     <div class="action max-w-4xl">
       <h2 id="donate" class="action-section__title">Donate</h2>
@@ -413,6 +418,10 @@ if(org.actions) {
 
 <script>
   document.addEventListener('astro:page-load', () => {
+    if(window.HSStaticMethods) {
+      window.HSStaticMethods.autoInit();
+    }
+    
     let cause: string | null;
     cause = null;
     

@@ -2497,7 +2497,7 @@ export const orgs: Org[] = [
     id: 53,
     name: "World Health Organization",
     url: 'https://www.who.int/',
-    cause: ['aid'],
+    cause: ['aid', 'medicine'],
     donate: 'https://donate.who.foundation/',
     social: [
       {
@@ -2519,6 +2519,20 @@ export const orgs: Org[] = [
       {
         platform: 'YouTube',
         url: "https://www.youtube.com/user/who?sub_confirmation=1"
+      }
+    ],
+    actions: [
+      {
+        action: "Events",
+        url: "https://www.who.int/news-room/events"
+      },
+      {
+        action: "Campaigns",
+        url: "https://www.who.int/campaigns"
+      },
+      {
+        action: "Get Data",
+        url: "https://data.who.int/"
       }
     ],
     description: "Founded in 1948, WHO is the United Nations agency that connects nations, partners and people to promote health, keep the world safe and serve the vulnerable – so everyone, everywhere can attain the highest level of health.",
@@ -2651,6 +2665,152 @@ export const orgs: Org[] = [
     scope: 'us',
     slug: 'catholiccharitiesusa'
   },
+  {
+    id: 57,
+    name: "Doctors Without Borders",
+    url: 'https://www.doctorswithoutborders.org/',
+    cause: ['aid', 'medicine'],
+    donate: 'https://donate.doctorswithoutborders.org/secure/rr-donate-web',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/doctorswithoutborders.org"
+      },
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/doctorswithoutborders"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/doctorswithoutborders"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/user/MSF"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/m-decins-sans-fronti-res-msf-"
+      },
+      {
+        platform: 'TikTok',
+        url: "https://www.tiktok.com/@doctorswithoutborders"
+      },
+    ],
+    actions: [
+      {
+        action: "Ways to get involved",
+        url: "https://www.doctorswithoutborders.org/get-involved"
+      },
+      {
+        action: "Volunteer",
+        url: "https://www.doctorswithoutborders.org/get-involved/volunteer"
+      },
+      {
+        action: "More Ways To Give",
+        url: "https://www.doctorswithoutborders.org/get-involved/ways-to-give"
+      },
+      {
+        action: "Events",
+        url: "https://www.doctorswithoutborders.org/latest/events"
+      }
+    ],
+    description: "Every day, Doctors Without Borders teams deliver emergency medical aid to people in crisis, with humanitarian projects in more than 70 countries.",
+    scope: 'global',
+    slug: 'doctorswithoutborders'
+  },
+  {
+    id: 58,
+    name: "American Medical Association",
+    url: 'https://www.ama-assn.org/',
+    cause: ['medicine'],
+    donate: 'https://member.ama-assn.org/join-renew/member-search',
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/AmericanMedicalAssociation"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/american-medical-association"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/user/AmerMedicalAssn"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/amermedicalassn/"
+      },
+    ],
+    actions: [
+      {
+        action: "Become a member",
+        url: "https://member.ama-assn.org/join-renew/member-search"
+      },
+      {
+        action: "Join in on national advocacy efforts",
+        url: "https://www.ama-assn.org/health-care-advocacy/federal-advocacy/national-advocacy"
+      },
+      {
+        action: "Events",
+        url: "https://www.ama-assn.org/member-benefits/events"
+      }
+    ],
+    description: "Throughout history, the AMA has always followed its mission: to promote the art and science of medicine and the betterment of public health.",
+    scope: 'us',
+    slug: 'ama'
+  },
+  {
+    id: 59,
+    name: "National Patient Advocate Foundation",
+    url: 'https://www.npaf.org/',
+    cause: ['medicine'],
+    donate: 'https://www.npaf.org/actions/donate/',
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/NPAForg/"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/patient_advocates/"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/npaf/"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/channel/UCbctmiopzYxL9J-QummL8bw"
+      },
 
+    ],
+    actions: [
+      {
+        action: "Get Involved",
+        url: "https://www.npaf.org/get-involved/"
+      },
+      {
+        action: "Volunteer",
+        url: "https://www.npaf.org/actions/sign-up-to-volunteer/"
+      },
+      {
+        action: "Events",
+        url: "https://www.npaf.org/events/"
+      },
+      {
+        action: "Toolkits",
+        url: "https://www.npaf.org/resources/?_resource_types=toolkits"
+      },
+      {
+        action: "Understand the Issues",
+        url: "https://www.npaf.org/issues/"
+      }
+    ],
+    description: "Our mission is to make the healthcare system work for all of us. As the advocate affiliate of Patient Advocate Foundation, we work at the national level to influence policy and drive change in healthcare.",
+    scope: 'us',
+    slug: 'npaf'
+  },
 ]
 
