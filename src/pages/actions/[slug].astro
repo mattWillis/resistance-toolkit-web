@@ -417,11 +417,20 @@ if(org.actions) {
 </Layout>
 
 <script>
+  // interface CustomWindow extends Window {
+  //   HSStaticMethods?: {
+  //     autoInit: () => void;
+  //   };
+  // }
+  // declare const window: CustomWindow;
+
   document.addEventListener('astro:page-load', () => {
+    
+    // @ts-ignore:
     if(window.HSStaticMethods) {
+      // @ts-ignore:
       window.HSStaticMethods.autoInit();
     }
-    
     let cause: string | null;
     cause = null;
     
