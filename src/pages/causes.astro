@@ -1,5 +1,5 @@
 ---
-import '../assets/Causes-Page.scss';
+import '../assets/styles/Causes-Page.scss';
 import { type Cause, causes } from '../data';
 import Layout from 'src/layouts/Layout.astro';
 import type { ImageMetadata } from 'astro';
@@ -68,22 +68,22 @@ console.log(images);
       </ol>
     </nav>
   </header>
-  <div class="container">
+  <div class="container max-w-6xl mx-auto">
     <section>
       <hr>
-      <p class="font-bold my-2 text-center">Click on a cause to see organizations that support that cause!</p>
+      <h1 class="font-bold my-2 text-center">Click on a cause to see organizations that support that cause!</h1>
       <ul class="cause-list">
-        {sortedCauses.map((post: any) => {  
-          const img = post.listImg;          
+        {sortedCauses.map((cause: any) => {  
+          const img = cause.listImg;          
           console.log(img);
           if(!images[img]) {
             throw new Error(`"${img}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
           }
             return (
               <li class="cause-list-item">                
-                <a class="cause-link" data-cause={post.slug} href={`/cause/${post.slug}`}>
-                  <Image class="cause-list-img" src={images[img]()} alt={post.title} />
-                  {post.title}
+                <a class="cause-link" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
+                  <Image class="cause-list-img" src={images[img]()} alt={cause.listImgAlt} />
+                  {cause.title}
                 </a>
               </li>
             )

@@ -20,6 +20,7 @@ export interface Cause {
   banner: string; 
   emoji: string;
   listImg: string;
+  listImgAlt: string;
 }
 
 export const causes: Cause[] = [
@@ -29,7 +30,8 @@ export const causes: Cause[] = [
     slug: 'accessibility',
     banner: 'Causes-Accessibility.png',
     emoji: '♿️',
-    listImg: '/src/assets/Card-Disability-Img.png'
+    listImg: '/src/assets/Card-Disability-Img.png',
+    listImgAlt: 'A person in a wheelchair outside in a park'
   },
   {
     id: 2,
@@ -37,7 +39,8 @@ export const causes: Cause[] = [
     slug: 'civil-rights',
     banner: 'Causes-CivilRights.png',
     emoji: '⚖️',
-    listImg: '/src/assets/Card-Civil-Img.png'    
+    listImg: '/src/assets/Card-Civil-Img.png',
+    listImgAlt: 'A person in a hijab holding a megaphone in front of a crowd of people with their arms in the air.'    
   },
   {
     id: 3,
@@ -45,7 +48,8 @@ export const causes: Cause[] = [
     slug: 'climate',
     banner: 'Causes-Climate.png',
     emoji: '🌡️',
-    listImg: '/src/assets/Card-Climate-Img.png'   
+    listImg: '/src/assets/Card-Climate-Img.png',
+    listImgAlt: 'A pair of hands holding an illuminated globe.'       
   },
   {
     id: 4,
@@ -53,7 +57,8 @@ export const causes: Cause[] = [
     slug: 'guns',
     banner: 'Causes-Guns.png',
     emoji: '🔫',
-    listImg: '/src/assets/Card-Guns-Img.png'
+    listImg: '/src/assets/Card-Guns-Img.png',
+    listImgAlt: 'Statue of a revolver with the barrel tied into a knot.'
   },  
   {
     id: 5,
@@ -61,7 +66,8 @@ export const causes: Cause[] = [
     slug: 'immigration',
     banner: 'Causes-Immigration.png',
     emoji: '🚶',
-    listImg: '/src/assets/Card-Immigration-Img.png'
+    listImg: '/src/assets/Card-Immigration-Img.png',
+    listImgAlt: 'Metal wall extending from the bottom left of the image to the top right. It is creating a scare in the dessert landscape.'
   },
   {
     id: 6,
@@ -69,7 +75,8 @@ export const causes: Cause[] = [
     slug: 'lgbtq',
     banner: 'Causes-LGBTQ.png',
     emoji: '🏳️‍🌈',
-    listImg: '/src/assets/Card-LGBTQ-Img.png'    
+    listImg: '/src/assets/Card-LGBTQ-Img.png',
+    listImgAlt: 'Rainbow flag.'
   },
   {
     id: 7,
@@ -77,7 +84,8 @@ export const causes: Cause[] = [
     slug: 'reproductive',
     banner: 'Causes-Reproductive.png',
     emoji: '♀',
-    listImg: '/src/assets/Card-Reproductive-Img.png'    
+    listImg: '/src/assets/Card-Reproductive-Img.png',
+    listImgAlt: `A crowd of protesters holding signs that read: "Defend Women's and Reproductive Rights".`
   },
   {
     id: 8,
@@ -85,7 +93,8 @@ export const causes: Cause[] = [
     slug: 'sexism',
     banner: 'Causes-Sexism.png',
     emoji: '💃',
-    listImg: '/src/assets/Card-Sexism-Img.png'
+    listImg: '/src/assets/Card-Sexism-Img.png',
+    listImgAlt: 'Silhouette of a woman, her right arm is raised with a clenched fist.'
   },  
   {
     id: 9,
@@ -93,7 +102,8 @@ export const causes: Cause[] = [
     slug: 'voting',
     banner: 'Causes-Voting.png',
     emoji: '🗳️',
-    listImg: '/src/assets/Card-Voting-Img.png'
+    listImg: '/src/assets/Card-Voting-Img.png',
+    listImgAlt: `Stickers that read: "I Voted" scattered on a white surface.`
   },
   {
     id: 10,
@@ -101,7 +111,8 @@ export const causes: Cause[] = [
     slug: 'wealth',
     banner: 'Causes-Wealth.png',
     emoji: '💰',
-    listImg: '/src/assets/Card-Wealth-Img.png'    
+    listImg: '/src/assets/Card-Wealth-Img.png',
+    listImgAlt: `Bar graph with a dollar superimposed over it.`
   },
   {
     id: 11,
@@ -109,7 +120,8 @@ export const causes: Cause[] = [
     slug: 'aid',
     banner: 'Causes-Aid.png',
     emoji: '⛑️',
-    listImg: '/src/assets/Card-Aid-Img.png'
+    listImg: '/src/assets/Card-Aid-Img.png',
+    listImgAlt: `USAID: From the American People.`
   },
   {
     id: 12,
@@ -117,7 +129,8 @@ export const causes: Cause[] = [
     slug: 'faith',
     banner: 'Causes-Faith.png',
     emoji: '🙏 🧘‍♀️',
-    listImg: '/src/assets/Card-Faith-Img.png'    
+    listImg: '/src/assets/Card-Faith-Img.png',
+    listImgAlt: `Illustration with symbols of various faiths and two hands reaching out to each other over a globe.`
   },
   {
     id: 13,
@@ -125,7 +138,8 @@ export const causes: Cause[] = [
     slug: 'medicine',
     banner: 'Causes-Medicine.png',
     emoji: '⚕️',
-    listImg: '/src/assets/Card-Medicine-Img.png'
+    listImg: '/src/assets/Card-Medicine-Img.png',
+    listImgAlt: `A stethoscope, pill packets, and other medical tools scattered on a white surface.`
   },
   {
     id: 14,
@@ -133,7 +147,17 @@ export const causes: Cause[] = [
     slug: 'science',
     banner: 'Causes-Science.png',
     emoji: '👩‍🔬👨‍🔬',
-    listImg: '/src/assets/Card-Science-Img.png'    
+    listImg: '/src/assets/Card-Science-Img.png',
+    listImgAlt: `Two women looking into microscopes in a black and white photo.`
+  },
+  {
+    id: 14,
+    title: 'Foreign Policy & Diplomacy',
+    slug: 'diplomacy',
+    banner: 'Causes-Diplomacy.png',
+    emoji: '🌍',
+    listImg: '/src/assets/Card-Diplomacy-Img.png',
+    listImgAlt: `Vintage typewriter with "DIPLOMACY" typed on the paper.`
   },
 ];
 
@@ -2811,6 +2835,91 @@ export const orgs: Org[] = [
     description: "Our mission is to make the healthcare system work for all of us. As the advocate affiliate of Patient Advocate Foundation, we work at the national level to influence policy and drive change in healthcare.",
     scope: 'us',
     slug: 'npaf'
+  },
+  {
+    id: 60,
+    name: "NCAFP",
+    url: 'https://ncafp.org/',
+    cause: ['diplomacy'],
+    donate: 'https://crm.nonprofiteasy.com/6398/Pages/fundraising/#/1',
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/NATLCOMMITTEE"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/national-committee-on-american-foreign-policy"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/channel/UCWoXb0u8VR_wVuXVHfn9yfA"
+      },
+      {
+        platform: 'Spotify',
+        url: "https://open.spotify.com/show/4nk4aJqHqKZZd2IFbEdvJG?si=9921d8e339094139&nd=1&dlsi=1bfe4e5a1e6a403a"
+      },
+
+    ],
+    actions: [
+      {
+        action: "Become a Member",
+        url: "https://ncafp.org/become-a-member/"
+      },
+      {
+        action: "Events",
+        url: "https://ncafp.org/events-and-special-programs/"
+      },
+      {
+        action: "Stay Connected - Newsletter",
+        url: "https://ncafp.org/stay-connected/"
+      },
+      {
+        action: "Media and Reports",
+        url: "https://ncafp.org/media-reports-directory/"
+      },
+    ],
+    description: "NCAFP is a nonprofit policy organization dedicated to the resolution of conflicts that threaten U.S. interests. Toward that end, the NCAFP identifies, articulates, and helps advance American foreign policy interests from a nonpartisan perspective within the framework of political realism.",
+    scope: 'us',
+    slug: 'ncafp'
+  },
+  {
+    id: 61,
+    name: "Foreign Policy For America",
+    url: 'https://www.fp4america.org/',
+    cause: ['diplomacy'],
+    donate: 'https://www.fp4america.org/donate/',
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/fp4america"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/foreign-policy-for-america/"
+      },
+    ],
+    actions: [
+      {
+        action: "Become a Member",
+        url: "https://www.fp4america.org/membership/"
+      },
+      {
+        action: "Events",
+        url: "https://www.fp4america.org/events/"
+      },
+      {
+        action: "Scorecard: Check Your State's Score",
+        url: "https://www.fp4america.org/scorecard/"
+      },
+      {
+        action: "Resources",
+        url: "https://www.fp4america.org/resources/"
+      },
+    ],
+    description: "Foreign Policy for America is a national nonpartisan organization based in Washington, D.C. Together with our members, we’re working to strengthen support for principled U.S. leadership in the world.",
+    scope: 'us',
+    slug: 'fp4america'
   },
 ]
 

@@ -1,0 +1,30 @@
+// $footer-bg-color: #C20E03;
+$footer-bg-color: #3F3F5B;
+.resist-footer {
+  background-color: $footer-bg-color;
+  color: white;
+  a {
+    color: white;
+    &:hover, &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .resist-footer__flex-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .resist-footer__flex-content {
+    margin-block: 15px;
+    justify-content: center;
+    align-items: center;
+    &:first-of-type {
+      padding-bottom: 15px;
+      margin-bottom: 0px;
+      border-bottom: thin solid white;
+    }
+  }
+}

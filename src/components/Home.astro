@@ -1,5 +1,5 @@
 ---
-import './Home.scss';
+import '@assets/styles/Home.scss';
 import { Image } from 'astro:assets';
 import PickCause from '@assets/PickCause.png';
 ---
@@ -7,14 +7,9 @@ import PickCause from '@assets/PickCause.png';
   <h2 class="resist-steps__title text-center font-black mb-4" >Fight Hate, One Step At a Time.</h2>
   
   <a class="step-link md:py-10 max-w-3xl mx-auto md:max-w-2xl" href="/causes">
-    <Image src={PickCause} alt="Icon: A megaphone with lines extending from the blow horn." />
+    <Image src={PickCause} alt="A megaphone with lines extending from the blow horn." />
     <p class="text-center">Step 1 - Pick a cause</p>
   </a>
-  <!-- <ol class="resist-steps__list max-w-3xl mx-auto md:max-w-2xl">
-    <li class="">
-
-    </li>    
-  </ol> -->
   <p class="resist-steps__note md:text-center md:max-w-2xl mx-auto mt-4">
     <span class="font-bold italic">Note:</span>
     This implementation is primarily focused on <span class="underline">U.S. politics and issues.</span> 

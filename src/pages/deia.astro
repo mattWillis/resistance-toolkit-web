@@ -1,0 +1,60 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import Banner from '@assets/DEIABanner.png';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components'
+---
+<Layout title="DEIA Statement">
+  <header slot="header" class="about-header">
+    <Image src={Banner} class="about-banner mx-auto" alt="Banner reads 'DEIA Statement'. The banner includes an illustration showing various icons denoting diversity, inclusion, equity, and accessibility.">
+  </header>
+  <section class="resist-about max-w-2xl mx-auto mt-8">
+    <a href="/" class="back-home" >
+      <Icon name="mdi:arrow-back" />
+      Home
+    </a>
+    <h1 class="resist-about__title">DEIA Statement</h1>
+    <p>
+      The Resistance Toolkit is committed to creating a resource that is <span class="font-bold">diverse</span>, <span class="font-bold">equitable</span>,
+      <span class="font-bold">inclusive</span>, and <span class="font-bold">accessible</span>.
+      Our mission is to foster a community that is passionate about fighting hate. We've always known the hate has been there, but it has now become emboldened
+      and brazen in its actions.
+    </p>
+    <p>
+      Just because our project has set this as a goal, it doesn't mean we've achieved it. 
+      We are always looking for ways to include more voices to our chorus regardless of their:      
+    </p>
+    <ul>
+      <li>Religion</li>
+      <li>Race</li>
+      <li>Gender Identity</li>
+      <li>Age</li>
+      <li>Physical and Mental Abilities</li>
+      <li>Political Affiliations</li>
+    </ul>
+    <p>
+      as long as they are <span class="font-bold">committed to fighting hate.</span>      
+    </p>
+    <p>
+      This is an ongoing process, and we are always looking to improve. If you have any feedback or suggestions on how we can improve the diversity, equity, inclusion, or accessibility of this project, please
+      visit our GitHub repository and create an issue.
+    </p>
+    <a href="https://github.com/mattWillis/resistance-toolkit-web/issues" target="_blank" class="contribute-btn">
+      <Icon name="mdi:github" />
+      Create An Issue On GitHub
+    </a>
+  </section>
+</Layout>
+
+<style>
+  h1, h2 {
+    text-align: center;
+  }
+  .about-header {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .about-banner {
+    /* width: 50svw; */
+  }
+</style>

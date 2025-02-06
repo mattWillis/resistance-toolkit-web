@@ -1,0 +1,49 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import Banner from '@assets/AccessibilityBanner.png';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components'
+---
+<Layout title="Accessibility Statement">
+  <header slot="header" class="about-header">
+    <Image src={Banner} class="about-banner mx-auto" alt="Banner that reads 'Accessibility'. Banner contains an illustration showing various icons, including an eye, a person in a wheelchair, and a hand clicking on an arrow.">
+    
+  </header>
+  <section class="resist-about max-w-2xl mx-auto mt-8">
+    <a href="/" class="back-home" >
+      <Icon name="mdi:arrow-back" />
+      Home
+    </a>
+    <h1 class="resist-about__title">Accessibility Statement</h1>
+    <p>
+      The Resistance Toolkit is committed to creating accessible and meaningful content for all. 
+      This website strives to meet or exceed 508 and WCAG 2 guidelines.
+    </p>
+    <p>
+      We realize that just because our website meets accessibility guidelines, it doesn't mean it's perfect. 
+      We are always looking for ways to improve the user experience for all of our users.
+    </p>
+    <p>
+      If you have any feedback or suggestions on how we can improve the accessibility of this website, please
+      visit our GitHub repository and open an issue.
+    </p>
+    <a href="https://github.com/mattWillis/resistance-toolkit-web/issues" target="_blank" class="contribute-btn">
+      <Icon name="mdi:github" />
+      Create An Issue On GitHub
+    </a>
+    <h1 class="resist-about__title">DEIA Statement</h1>
+  </section>
+</Layout>
+
+<style>
+  h1, h2 {
+    text-align: center;
+  }
+  .about-header {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .about-banner {
+    /* width: 50svw; */
+  }
+</style>

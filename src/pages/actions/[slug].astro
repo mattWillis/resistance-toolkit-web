@@ -1,6 +1,6 @@
 ---
-import '../orgs/[slug]/_org.scss'
-import './_actions.scss';
+import '@assets/styles/_org.scss'
+import '@assets/styles/_actions.scss';
 import { type Org, orgs } from '../../data';
 import Layout from '../../layouts/Layout.astro';
 const { slug } = Astro.params;
@@ -49,6 +49,8 @@ if(org.actions) {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden="true"
+            role="img"
             >
               <path
                 stroke-linecap="round"
@@ -114,7 +116,7 @@ if(org.actions) {
   <button type="button" class="hs-collapse-toggle inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:outline-none focus:underline focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
     <span class="hs-collapse-open:hidden">Read more</span>
     <span class="hs-collapse-open:block hidden">Read less</span>
-    <svg class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg aria-hidden="true" role="img" class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="m6 9 6 6 6-6"></path>
     </svg>
   </button>
@@ -180,7 +182,7 @@ if(org.actions) {
             return (
             <li>
               <a href={action.url} class="action-items inline-flex items-center" target="_blank">
-                <Icon name="mdi:stars" role={"img"} class="mr-2"/>
+                <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
                 {action.action}
               </a>
             </li>        
@@ -196,7 +198,7 @@ if(org.actions) {
       <h2 id="donate" class="action-section__title">Donate</h2>
       {org.donate ? 
         <a href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
-         <Icon name="mdi:donate" role={"img"} class="mr-2"/> Donate to {org.name}
+         <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/> Donate to {org.name}
         </a> :
         <p>
           Check if your chosen cause or organization is accepting donations and find out if they have an annual or monthly membership. 
@@ -261,7 +263,7 @@ if(org.actions) {
       <h2 id="volunteer" class="action-section__title">Volunteer</h2>
       {hasVolunteer ? 
         <a href={volunteer.url} class="volunteer-btn inline-flex items-center" target="_blank">
-          <Icon name="mdi:volunteer" role={'img'} class="mr-2"/> See volunteer opportunities with {org.name}
+          <Icon name="mdi:volunteer" aria-hidden="true" role={'img'} class="mr-2"/> See volunteer opportunities with {org.name}
         </a> :
         <p>
           Check if your chosen cause or organization has volunteer openings or memberships.
@@ -407,7 +409,7 @@ if(org.actions) {
         Completed your action? Great! Now it's time to move on to the last step.
       </p>
       <a href="/recover" class="recovery-btn inline-flex items-center">
-        <Icon name="mdi:arrow-right" role={"img"} class="mr-2"/> Next Step
+        <Icon name="mdi:arrow-right" aria-hidden="true" role={"img"} class="mr-2"/> Next Step
       </a>
     </div>
   </section>

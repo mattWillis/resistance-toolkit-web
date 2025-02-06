@@ -1,11 +1,29 @@
+
+
 .resist-header {
   background: #C20E03;
   border: 6px solid #E6E1D0;
   color: #E6E1D0;
+  // justify-self: flex-start;
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-container {
+  flex: 0 1 60%;
+}
+
+.resist-header__image {
+  flex: 0 1 40%;
+}
+
 .resist-header__title {
   font-size: 70px;
-  max-width: 60%;
+  // max-width: 60%;
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
   font-style: normal;
@@ -44,5 +62,11 @@
   .resist-header__subtitle {
     font-size: 20px;
     line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 640px) { 
+  .resist-header__image {
+    display: none;
   }
 }

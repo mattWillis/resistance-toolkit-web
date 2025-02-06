@@ -2,8 +2,8 @@
 import './Layout.scss';
 import { Image } from 'astro:assets';
 import { ClientRouter } from "astro:transitions";
-// import GA from '../components/GA.astro';
 import { GoogleAnalytics } from '@aqzhyi/google-analytics';
+import Footer from 'src/components/Footer.astro';
 import { Icon } from "astro-icon/components";
 interface Props {
   title: string;
@@ -26,6 +26,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta property="og:title" content={title} />
     <meta property="og:type" content="app" />
@@ -38,7 +39,12 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <meta name="twitter:card" content="summary_large_image" />
 
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Resistance" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - The Resistance Toolkit</title>
     <link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
@@ -46,25 +52,23 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     {import.meta.env.PROD === true && <GoogleAnalytics id="G-HCFPD93CD3" /> }
   </head>
   <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
-    <nav aria-label="Site Navigation" class="bg-white">			
+    <nav aria-label="Site Navigation" class="resist-grid-nav bg-white">			
       <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-4 sm:py-4 lg:px-4">
-				<div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-					
+				<div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">					
           <div class="logo-container">
             <a class="skip-to-main sr-only" href="#main">Skip to main content</a>
-            <a href="/" class="flex items-center gap-2">
-              <Image src={Toolkit} alt="The Resistance Toolkit" class="w-12 h-12" />
-              <!-- <h1 class="text-xl font-bold text-gray-900"> The Resistance Toolkit </h1> -->
+            <a href="/" title="Resistance Toolkit homepage" class="flex items-center gap-2">
+              <Image src={Toolkit} alt="Toolbox with carpentry tools sticking out" class="w-12 h-12" />
             </a>
 					</div>
 		
 					<div class="flex items-center gap-4">
 						<a
-							class="inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+							class="resist-button__about inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
 							href="/about"
 						>
 							<span class="text-sm font-medium"> About </span>
-              <Icon name="mdi:information" class="size-4" />
+              <Icon name="mdi:information" aria-hidden="true" role={'img'} class="size-4" />
 						</a>
 		
 						<a
@@ -80,17 +84,19 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <slot name="header" />
 		<main
       id="main"
-      class="relative max-w-6xl mx-auto py-6 lg:pt-4 px-4 pb-20"
+      class="resist-grid-main relative max-w-6xl mx-auto py-6 lg:pt-4 px-4 pb-20 "
     >
       <slot />
     </main>
-    <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
-      
-    </footer>
+    <Footer />
     <style is:global>
       :root {
       }
-      body {
+      html, body {
+        min-height: 100svh;
+        min-width: 100svw;
+      }
+      body, main {
         background-color: theme(colors.gray.50);
       }
       .animate-in {
@@ -135,4 +141,5 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 
 <script> 
   import "preline/dist/preline.js";
+  import "cookie-notice/dist/cookie.notice.min.js";
 </script>

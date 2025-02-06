@@ -1,12 +1,20 @@
 ---
-import './Header.scss';
+import '@assets/styles/Header.scss';
+import Toolkit from '@assets/Toolkit.png';
+import { Image } from 'astro:assets';
 ---
 
 <header class="resist-header px-8">
-  <div class="py-4">
-    <h1 class="resist-header__title">
-      <span class="resist-header__the">The</span> Resistance Toolkit
-    </h1>
-    <p class="resist-header__subtitle">Tools You Need To <span class="bold">Fight</span> Hate</p>
+  <div class="header-container max-w-3xl mx-auto container">
+    <div class="py-4 title-container">
+      <h1 class="resist-header__title">
+        <span class="resist-header__the">The</span> Resistance Toolkit
+      </h1>
+      <p class="resist-header__subtitle">Tools You Need To <span class="bold">Fight</span> Hate</p>
+    </div>
+    <div class="resist-header__image py-4">
+      <Image src={Toolkit} class="" alt="Toolbox with carpentry tools sticking out of the top." />
+    </div>
   </div>
+
 </header>

@@ -10,5 +10,6 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://resistance-toolkit.com',
   integrations: [icon(), mdx(), sitemap(), tailwind()]
 });
