@@ -1,6 +1,12 @@
 
 .org-header {
-  padding-block: 15px;  
+  padding-block: 15px; 
+  width: 100%; 
+  background-color: white;
+  border: 1px solid #c7c7c7;
+  border-bottom: none;
+  padding-inline: 15px;
+  border-radius: 6px 6px 0 0;
 }
 
 .org-header__title {
@@ -17,14 +23,21 @@
 span.cause-tag {
   background-color: #003f61;
   margin-right: 5px;
-    a {
+  a {
+    display: inline-block;
     color: #fff;
-    &:hover {
-      color: #94B1C1;
-    }
+  }
+  &:hover, &:focus-visible {
+    background-color:#C20E03;    
   }
 }
-
+.org-content {
+  background-color: white;
+  border: 1px solid #c7c7c7;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  padding-inline: 15px;
+}
 .org-section {
   padding-top: 10px;
   h2 {
@@ -51,13 +64,14 @@ span.cause-tag {
   flex: 0 0 40%;
 }
 .social-tags {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   text-align: center;
   span.tag {
     flex: 0 1 25%;
-    background-color: #c7c7c7;
+    border: 1px solid #003f61;
+    background-color: white;
     border-radius: 12px;
     padding: 2px 8px;
     a {
@@ -88,7 +102,7 @@ span.cause-tag {
   
 }
 .org-info {
-  border-bottom: thin solid #94B1C1;
+  // border-bottom: thin solid #94B1C1;
   padding-bottom: 15px;
 }
 .qr-wrapper {
@@ -107,6 +121,7 @@ span.cause-tag {
   }
   .social-tags {
     span.tag {
+      padding-block: 8px;
       flex: 0 1 100%;
     }
   }

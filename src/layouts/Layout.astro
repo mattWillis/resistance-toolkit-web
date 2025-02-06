@@ -136,10 +136,11 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
   </body>
 </html>
 
-<!-- <script is:inline src="./assets/vendor/preline/preline.js"></script> -->
-<!-- <script is:inline src="./node_modules/preline/preline.js"></script> -->
-
 <script> 
-  import "preline/dist/preline.js";
+  document.addEventListener('astro:page-load', async () => {
+    const preline = await import('preline/dist/preline.js');
+    preline.HSStaticMethods.autoInit()
+  });
   import "cookie-notice/dist/cookie.notice.min.js";
+  
 </script>

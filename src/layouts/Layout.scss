@@ -4,6 +4,13 @@
   z-index: 4;
 }
 
+.hidden {
+  display: unset;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+
 body {
   // .container {
     display: grid; 
@@ -22,10 +29,11 @@ body {
   .resist-grid-footer { grid-area: footer; }
 }
 
-$link-color: rgb(61, 80, 245);
+
+$link-color: #003f61;
 $link-color-hover: #C20E03;
 
-a {
+a, .hs-collapse-toggle {
   color: $link-color;
   &:hover {
     color: $link-color-hover;
@@ -73,32 +81,17 @@ a {
 .resist-button__causes {
   background-color: #003f61;
   color: white;
-  span {
-    background-color: #003f61;
-    color: white;
-  }
   &:hover, &:focus-visible {
     background-color: #C20E03;
     color: white;
-    span {
-      background-color: #C20E03;
-      color: white;
-    }
   }
 }
 
 .resist-button__about {
   background-color: white;
-  span {
-    background-color:white;
-  }
   &:hover, &:focus-visible {
     background-color: #C20E03;
     color: white;
-    span {
-      background-color: #C20E03;
-      color: white;
-    }
   }
 }
 
@@ -200,6 +193,8 @@ a {
   margin-block: 15px;
 }
 .resist-recovery__button {
+  @apply mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg text-white;
+  background-color: #003f61;
   &:hover, &:focus-visible {
     background-color: #C20E03;
     color: white;
@@ -222,3 +217,5 @@ a {
     cursor: pointer;
   }
 }
+
+// hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none

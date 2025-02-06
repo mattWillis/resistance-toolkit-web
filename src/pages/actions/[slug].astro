@@ -39,68 +39,6 @@ if(org.actions) {
   >
   <header class="max-w-6xl mx-auto" slot="header">
     <img src={banner.src} alt="Stay Informed">
-    <nav aria-label="Breadcrumb" class="flex breadcrumb">
-      <ol class="flex mt-3 overflow-scroll rounded-lg border border-gray-200 text-gray-600">
-        <li class="flex items-center justify-center">
-          <a href="/" class="flex h-10 items-center gap-1.5 bg-gray-100 px-4 transition hover:text-gray-900">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
-            role="img"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-            />
-            </svg>
-            <span class="ms-1.5 text-xs font-medium"> Home </span>
-          </a>
-        </li>          
-        <li class="relative flex items-center">
-          <span
-            class="absolute inset-y-0 -start-px h-10 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"
-          >
-          </span>
-          <a href="/causes" class="flex h-10 items-center bg-gray-100 pe-4 ps-8 text-xs font-medium transition hover:text-gray-900" aria-current="page">
-            Causes
-          </a>
-        </li>
-        <li class="relative flex items-center">
-          <span
-            class="absolute inset-y-0 -start-px h-10 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"
-          >
-          </span>
-          <a id="org-link" href="/cause" class="flex h-10 items-center bg-gray-100 pe-4 ps-8 text-xs font-medium transition hover:text-gray-900" aria-current="page">
-            Organizations
-          </a>
-        </li>
-        <li class="relative flex items-center">
-          <span
-            class="absolute inset-y-0 -start-px h-10 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"
-          >
-          </span>
-          <a id="informed-link" href={`/orgs/${org.slug}`} class="flex h-10 items-center bg-gray-100 pe-4 ps-8 text-xs font-medium transition hover:text-gray-900" aria-current="page">
-            Informed
-          </a>
-        </li>
-        <li class="relative flex items-center">
-          <span
-            class="absolute inset-y-0 -start-px h-10 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"
-          >
-          </span>
-          <a href="/recover" class="flex h-10 items-center bg-white pe-4 ps-8 text-xs font-medium transition hover:text-gray-900" aria-current="page">
-            Next Step
-          </a>
-        </li>
-        <!-- <li><a href="/informed">Next Step</a></li> -->
-      </ol>
-    </nav>
   </header>
   
   <section class="org-header">    
@@ -112,14 +50,14 @@ if(org.actions) {
         })}          
       </div>    
     </div>
+    <button type="button" class="hs-collapse-toggle inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
+      <span class="hs-collapse-open:hidden read-more">Read more</span>
+      <span class="hs-collapse-open:block read-less">Read less</span>
+      <svg aria-hidden="true" role="img" class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m6 9 6 6 6-6"></path>
+      </svg>
+    </button>
   </section>
-  <button type="button" class="hs-collapse-toggle inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:outline-none focus:underline focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
-    <span class="hs-collapse-open:hidden">Read more</span>
-    <span class="hs-collapse-open:block hidden">Read less</span>
-    <svg aria-hidden="true" role="img" class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m6 9 6 6 6-6"></path>
-    </svg>
-  </button>
   <section id="hs-show-hide-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] org-section org-content" aria-labelledby="hs-show-hide-collapse">
     <div class="org-info">
       <div class="org-description">
@@ -144,32 +82,33 @@ if(org.actions) {
       </div>
     </div>
   </section>
-  <section class="mt-8 actions-section max-w-4xl mx-auto">
-    <nav aria-label="Table of Contents" class="max-w-md mx-auto">
-      <h2 class="action-section__title">Actions - Table of Contents</h2>
-      <ul class="resist-actions__toc mb-4 pb-4">
-        <li>
+  <section class="mt-8 actions-section max-w-6xl mx-auto">
+    <nav aria-label="Table of Contents" class="max-w-4xl mx-auto">
+      <h2 class="action-section__title text-center">Actions - Table of Contents</h2>
+      <!-- <ul class="flex justify-center rounded-lg shadow-sm mx-auto">       -->
+      <ul class="resist-actions__toc max-w-sm flex mx-auto flex-col">
+        <li class="toc__item">
           <a href="#org-actions">What Are Your Organizations Suggesting?</a>
         </li>
-        <li>
+        <li class="toc__item">
           <a href="#donate">Donate</a>
         </li>        
-        <li>
+        <li class="toc__item">
           <a href="#contact">Contact Your Representatives</a>
         </li>
-        <li>
+        <li class="toc__item">
           <a href="#volunteer">Volunteer</a>
         </li>
-        <li>
+        <li class="toc__item">
           <a href="#vote">Register to Vote</a>
         </li>
-        <li>
+        <li class="toc__item">
           <a href="#spending">Analyze Where You Are Spending Your Money</a>
         </li>
-        <li>
+        <li class="toc__item">
           <a href="#learning">Learning / Education</a>
         </li>
-        <li>
+        <li class="toc__item">
           <a href="#next-step">Next Step</a>
         </li>
       </ul>
@@ -412,45 +351,5 @@ if(org.actions) {
         <Icon name="mdi:arrow-right" aria-hidden="true" role={"img"} class="mr-2"/> Next Step
       </a>
     </div>
-  </section>
-    
-      
-        
+  </section>   
 </Layout>
-
-<script>
-  // interface CustomWindow extends Window {
-  //   HSStaticMethods?: {
-  //     autoInit: () => void;
-  //   };
-  // }
-  // declare const window: CustomWindow;
-
-  document.addEventListener('astro:page-load', () => {
-    
-    // @ts-ignore:
-    if(window.HSStaticMethods) {
-      // @ts-ignore:
-      window.HSStaticMethods.autoInit();
-    }
-    let cause: string | null;
-    cause = null;
-    
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    if(urlSearchParams.has('cause')) {
-      cause = urlSearchParams.get('cause');
-    }
-    const orgLink = document.getElementById('org-link');
-    const informedLink = document.getElementById('informed-link');
-    if(cause !== null && orgLink !== null) {
-      orgLink.setAttribute('href', `/cause/${cause}`);
-    }
-    if(cause !== null && informedLink !== null) {
-      const oldHref = informedLink.getAttribute('href');
-      const newHref = oldHref + `?cause=${cause}`;
-      informedLink.setAttribute('href', newHref);
-    }
-  
-    console.log('Current cause: ', cause);
-  })
-</script>
