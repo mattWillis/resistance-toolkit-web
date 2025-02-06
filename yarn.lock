@@ -20,6 +20,11 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.10.tgz#ae829f170158e297a9b6a28f161a8e487d00814d"
   integrity sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==
 
+"@aqzhyi/google-analytics@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@aqzhyi/google-analytics/-/google-analytics-0.3.5.tgz#3563aa1aced6bb6299c70a870e4f393994e0acc6"
+  integrity sha512-pajK+/s5bL8CnSmTVn4hXuUmao7z0adJmThYYSTWPQIqAGSp4HbbtY9bDx4ee4Ms4VHO4APhb0LEt5078j5kxQ==
+
 "@astrojs/compiler@^2.10.3":
   version "2.10.3"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.10.3.tgz#852386445029f7765a70b4c1d1140e175e1d8c27"
@@ -74,14 +79,6 @@
     source-map "^0.7.4"
     unist-util-visit "^5.0.0"
     vfile "^6.0.3"
-
-"@astrojs/partytown@^2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-2.1.3.tgz#a4dfa88a64af486425403bdcec84d323385b2dce"
-  integrity sha512-pkGsV6/GUTph4oLgvrpbrGnu4+9JuG8fOCzBCI2dQKtpBYQ6XAZKHrPA3evQoB5vDbfUZGVCoWe95MnSoPbVtQ==
-  dependencies:
-    "@qwik.dev/partytown" "^0.11.0"
-    mrmime "^2.0.0"
 
 "@astrojs/prism@3.2.0":
   version "3.2.0"
@@ -548,13 +545,6 @@
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
-
-"@qwik.dev/partytown@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@qwik.dev/partytown/-/partytown-0.11.0.tgz#f8eacb4447259d75a9f1a2f74341a6abd2c1e550"
-  integrity sha512-MHime7cxj7KGrapGZ1VqLkXXq5BLNqvjNZndRJVvMkUWn92F2bsezlWW1lKDoFaKCKu2xv9LRUZL99RYOs+ccA==
-  dependencies:
-    dotenv "^16.4.7"
 
 "@rollup/pluginutils@^5.1.4":
   version "5.1.4"
@@ -1452,11 +1442,6 @@ domutils@^3.0.1, domutils@^3.1.0:
     dom-serializer "^2.0.0"
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
-
-dotenv@^16.4.7:
-  version "16.4.7"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.7.tgz#0e20c5b82950140aa99be360a8a5f52335f53c26"
-  integrity sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==
 
 dset@^3.1.4:
   version "3.1.4"

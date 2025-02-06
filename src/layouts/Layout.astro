@@ -2,7 +2,8 @@
 import './Layout.scss';
 import { Image } from 'astro:assets';
 import { ClientRouter } from "astro:transitions";
-import GA from '../components/GA.astro';
+// import GA from '../components/GA.astro';
+import { GoogleAnalytics } from '@aqzhyi/google-analytics';
 import { Icon } from "astro-icon/components";
 interface Props {
   title: string;
@@ -42,7 +43,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <title>{title} - The Resistance Toolkit</title>
     <link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
     <ClientRouter />
-    {import.meta.env.PROD === true && <GA /> }
+    {import.meta.env.PROD === true && <GoogleAnalytics id="G-HCFPD93CD3" /> }
   </head>
   <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
     <nav aria-label="Site Navigation" class="bg-white">			
