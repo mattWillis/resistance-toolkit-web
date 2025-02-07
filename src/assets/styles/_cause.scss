@@ -134,3 +134,16 @@ ul.org-list {
     }
   }
 }
+.org-image__cover {
+  height: 180px;
+  width: clamp(300px, 100%, 734px);
+  margin: 0 auto 5px auto;
+}
+.org-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  object-fit: contain;
+}

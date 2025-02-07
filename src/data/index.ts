@@ -172,6 +172,7 @@ export interface Org {
   slug: string;
   donate?: string;
   actions?: {action: string, url: string}[];
+  ogImage?: string;
 }
 
 export const orgs: Org[] = [
@@ -179,6 +180,7 @@ export const orgs: Org[] = [
     id: 1,
     name: "International Association of Accessibility Professionals",
     url: 'https://www.accessibilityassociation.org/s/',
+    ogImage: "/src/assets/Orgs/IAAPBanner.png",
     cause: ['accessibility'],
     description: 'A global association of organizations and professionals that have joined together to define, promote, and improve the accessibility of services, products, and environments for people with disabilities. Become part of the Global Accessibility Community.',
     scope: 'global',
@@ -188,8 +190,28 @@ export const orgs: Org[] = [
     id: 2,
     name: "WebAIM",
     url: 'https://webaim.org/',
+    ogImage: "/src/assets/Orgs/WebAimBanner.png",
     cause: ['accessibility'],
-    social: undefined,
+    social: [
+      {
+        platform: "Monthly Newsletter",
+        url: "https://webaim.org/newsletter/"
+      }
+    ],
+    actions: [
+      {
+        action: "WAVE - Web Accessibility Evaluation Tool",
+        url: "https://wave.webaim.org/"
+      },
+      {
+        action: "Virtual Web Accessibility Training",
+        url: "https://webaim.org/training/virtual/"
+      },
+      {
+        action: "WCAG 2 Checklist",
+        url: "https://webaim.org/standards/wcag/checklist"
+      }
+    ],
     description: 'We have web accessibility in mind. Expanding the potential of the web for people with disabilities by empowering individuals and organizations to create accessible content.',
     scope: 'global',
     slug: 'webaim'
@@ -198,6 +220,7 @@ export const orgs: Org[] = [
     id: 3,
     name: "Disability Rights Education & Defense Fund",
     url: 'https://dredf.org/',
+    ogImage: "/src/assets/Orgs/DREDFBanner.png",
     cause: ['accessibility'],
     donate: "https://dredf.org/donate/",
     actions: [
@@ -256,6 +279,7 @@ export const orgs: Org[] = [
     id: 4,
     name: "American Association of People with Disabilities",
     url: 'https://www.aapd.com/',
+    ogImage: "/src/assets/Orgs/AAPDBanner.png",
     cause: ['accessibility'],
     donate: "https://aapd.kindful.com/",
     social: [
@@ -288,6 +312,7 @@ export const orgs: Org[] = [
     id: 5,
     name: "ADA National Network",
     url: 'https://adata.org/',
+    ogImage: "https://adata.org/sites/adata.org/files/Banner_ada_logo.png",
     cause: ['accessibility'],
     social: [
       {
@@ -311,6 +336,7 @@ export const orgs: Org[] = [
     id: 6,
     name: "Amnesty International",
     url: 'https://www.amnesty.org/',
+    ogImage: "https://www.amnesty.org/en/wp-content/uploads/2019/12/whoweare_2944x1224_header.jpg",
     cause: ['civil-rights'],
     donate: "https://www.amnesty.org/en/donate/",
     social: [
@@ -353,6 +379,7 @@ export const orgs: Org[] = [
     id: 6,
     name: "ACLU",
     url: 'https://www.aclu.org/',
+    ogImage: "https://www.aclu.org/wp-content/themes/aclu-wp/img/default_fb_share.jpg",
     cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'sexism', 'voting'],
     donate: "https://action.aclu.org/give/now",
     social: [
@@ -391,6 +418,7 @@ export const orgs: Org[] = [
     id: 6,
     name: "Equal Justice Initiative",
     url: 'https://eji.org/',
+    ogImage: "https://eji.org/wp-content/uploads/2019/11/eji-home-support1.jpg",
     cause: ['civil-rights'],
     donate: "https://eji.org/ways-to-give/",
     social: [
@@ -429,6 +457,7 @@ export const orgs: Org[] = [
     id: 7,
     name: "Southern Poverty Law Center",
     url: 'https://www.splcenter.org/',
+    ogImage: "https://res.cloudinary.com/splc/images/f_auto,q_auto/v1736542788/splc-logo_twitter_instream/splc-logo_twitter_instream.png?_i=AA",
     cause: ['civil-rights', 'wealth'],
     donate: "https://secure.splcenter.org/page/72074/donate/1",
     social: [
@@ -471,6 +500,7 @@ export const orgs: Org[] = [
     id: 8,
     name: "NAACP",
     url: 'https://www.naacp.org/',
+    ogImage: "https://naacp.org/themes/custom/naacp/assets/images/og-image-naacp.jpg",
     cause: ['civil-rights'],
     donate: "https://naacp.org/donate",
     social: [
@@ -505,6 +535,7 @@ export const orgs: Org[] = [
     id: 9,
     name: "Native American Rights Fund",
     url: 'https://narf.org/',
+    ogImage: "https://narf.org/wordpress/wp-content/uploads/2014/12/about_us-e1662073570178.jpg",
     cause: ['civil-rights'],
     donate: "https://secure.narf.org/page/64457/donate/1",
     social: [
@@ -539,6 +570,7 @@ export const orgs: Org[] = [
     id: 10,
     name: "National Congress of American Indians",
     url: 'https://www.ncai.org/',
+    ogImage: "https://cdn.sanity.io/images/raa5sn1v/production/0cf9d395acb40d7313930b61a72e419758dc9266-1200x630.png?w=1280&amp;q=80&amp;auto=format",
     cause: ['civil-rights'],
     donate: "https://give.ncai.org/campaign/633783/donate",
     social: [
@@ -577,6 +609,7 @@ export const orgs: Org[] = [
     id: 11,
     name: "Innocence Project",
     url: 'https://innocenceproject.org/',
+    ogImage: "https://innocenceproject.org/wp-content/uploads/2023/05/VanDyke_Counts_Exoneration-79-cropped-jpg.webp",
     cause: ['civil-rights'],
     donate: "https://innocenceproject.org/donate/",
     social: [
@@ -619,6 +652,7 @@ export const orgs: Org[] = [
     id: 12,
     name: "Climate Action Network",
     url: 'https://climatenetwork.org/',
+    ogImage: "https://climatenetwork.org/wp-content/uploads/2020/09/36811390855_c4b727efed_5k-scaled.jpg",
     cause: ['climate'],
     donate: "https://climatenetwork.org/get-involved/support/",
     social: [
@@ -665,6 +699,7 @@ export const orgs: Org[] = [
     id: 13,
     name: "Climate Science Legal Defense Fund",
     url: 'https://climatesciencedefensefund.org/',
+    ogImage: "https://www.csldf.org/wp-content/uploads/2023/10/CSLDF-Impact-Report-Graphic-lg-1.png",
     cause: ['climate'],
     donate: "https://www.csldf.org/donate/",
     social: [
@@ -695,6 +730,7 @@ export const orgs: Org[] = [
     id: 14,
     name: "Citizens' Climate Lobby",
     url: 'https://citizensclimatelobby.org/',
+    ogImage: "https://citizensclimatelobby.org/wp-content/uploads/2021/12/CCL_Jun2019_Tuesday_315-scaled.jpg",
     cause: ['climate'],
     donate: "https://citizensclimatelobby.org/donate/",
     social: [
@@ -753,6 +789,7 @@ export const orgs: Org[] = [
     id: 15,
     name: "Everytown for Gun Safety",
     url: 'https://everytown.org/',
+    ogImage: "https://www.everytown.org/wp-content/uploads/2020/06/et-default-share.png",
     cause: ['guns'],
     donate: "https://secure.actblue.com/donate/everytown-web-2025?source=etno_nav_onetime&refcode=etno_nav_onetime&_gl=1*1ob5331*_ga*NDM3MDM5NjY1LjE3Mzc4MzQ3NDI.*_ga_68QYBV181T*MTczODc2Nzc5NC4zLjAuMTczODc2Nzc5NC4wLjAuMA..",
     social: [
@@ -792,6 +829,7 @@ export const orgs: Org[] = [
     id: 16,
     name: "Sandy Hook Promise",
     url: 'https://www.sandyhookpromise.org/',
+    ogImage: "https://www.sandyhookpromise.org/wp-content/uploads/2020/07/fb_share.webp",
     cause: ['guns'],
     donate: "https://takeaction.sandyhookpromise.org/a/foundation?amtOpts=25,50,100,250,500,1000",
     social: [
@@ -842,6 +880,7 @@ export const orgs: Org[] = [
     id: 17,
     name: "Giffords",
     url: 'https://giffords.org/',
+    ogImage: "https://files.giffords.org/wp-content/uploads/2020/09/20.09-SOC-Generic-Link-Preview-Color.jpg?strip=all&lossy=1&ssl=1",
     cause: ['guns'],
     donate: "https://secure.actblue.com/donate/giffords-website?refcode=site_top_nav",
     social: [
@@ -884,6 +923,7 @@ export const orgs: Org[] = [
     id: 18,
     name: "Americans for Immigrant Justice",
     url: 'https://aijustice.org/',
+    ogImage: "https://aijustice.org/wp-content/uploads/2020/06/ai-justice-banner.jpg",
     cause: ['immigration'],
     donate: "https://aijustice.org/donate/",
     social: [
@@ -938,6 +978,7 @@ export const orgs: Org[] = [
     id: 19,
     name: "American Immigration Council",
     url: 'https://www.americanimmigrationcouncil.org/',
+    ogImage: "https://www.americanimmigrationcouncil.org/sites/default/files/americanimmigrationcouncil.jpg",
     cause: ['immigration'],
     donate: "https://www.americanimmigrationcouncil.org/donate",
     social: [
@@ -980,6 +1021,7 @@ export const orgs: Org[] = [
     id: 20,
     name: "Young Center for Immigrant Children's Rights",
     url: 'https://www.theyoungcenter.org/',
+    ogImage: "http://static1.squarespace.com/static/597ab5f3bebafb0a625aaf45/t/5f763676b29ca936f6cabbd1/1601582716196/Young-Center-Hero-Image-Website.png?format=1500w",
     cause: ['immigration'],
     donate: "https://www.theyoungcenter.org/donate",
     social: [
@@ -1026,6 +1068,7 @@ export const orgs: Org[] = [
     id: 21,
     name: "GLAAD",
     url: 'https://www.glaad.org',
+    ogImage: "https://media.glaad.org/wp-content/uploads/2022/11/20110804/Glaad_Cyan.png",
     cause: ['lgbtq'],
     donate: "https://give.glaad.org/page/76113/donate/1",
     social: [
@@ -1080,6 +1123,7 @@ export const orgs: Org[] = [
     id: 22,
     name: "Sylvia Rivera Law Project",
     url: 'https://srlp.org/',
+    ogImage: "/src/assets/Orgs/SRLPBanner.png",
     cause: ['lgbtq'],
     donate: "https://srlp.org/donate/",
     social: [
@@ -1134,6 +1178,7 @@ export const orgs: Org[] = [
     id: 23,
     name: "Elevated Access",
     url: 'https://www.elevatedaccess.org/',
+    ogImage: "http://static1.squarespace.com/static/6467d799146f502ed383205b/t/647623878025042d20f6358e/1685463943262/Primary+Logo.png?format=1500w",
     cause: ['lgbtq'],
     donate: "https://www.elevatedaccess.org/donate",
     social: [
@@ -1176,6 +1221,7 @@ export const orgs: Org[] = [
     id: 24,
     name: "Lambda Legal",
     url: 'https://www.lambdalegal.org',
+    ogImage: "https://lambdalegal.org/wp-content/uploads/2023/03/LL-META.png",
     cause: ['lgbtq'],
     donate: "https://lambdalegal.org/ways-to-give/",
     social: [
@@ -1218,6 +1264,7 @@ export const orgs: Org[] = [
     id: 25,
     name: "Planed Parenthood",
     url: 'https://www.plannedparenthood.org/',
+    ogImage: "https://www.plannedparenthood.org/uploads/filer_public_thumbnails/filer_public/b9/ed/b9eddaf2-608a-4935-8c70-fc98afd54562/find-health-center.jpg__1200x1200_q65_subsampling-2.jpg",
     cause: ['reproductive', 'medicine'],
     donate: "https://www.plannedparenthood.org/get-involved/other-ways-give",
     social: [
@@ -1269,6 +1316,7 @@ export const orgs: Org[] = [
     id: 25,
     name: "EMILY's List",
     url: 'https://emilyslist.org/',
+    ogImage: "https://emilyslist.org/wp-content/uploads/2023/02/eml-social-share.jpg",
     cause: ['reproductive', 'sexism'],
     donate: "https://secure.actblue.com/donate/donate-to-emilys-list",
     social: [
@@ -1319,6 +1367,7 @@ export const orgs: Org[] = [
     id: 26,
     name: "Center for Reproductive Rights",
     url: 'https://reproductiverights.org/',
+    ogImage: "https://reproductiverights.org/wp-content/uploads/2021/04/Court.jpg",
     cause: ['reproductive', 'medicine'],
     donate: "https://reproductiverights.org/get-involved/support-us/",
     social: [
@@ -1373,6 +1422,7 @@ export const orgs: Org[] = [
     id: 27,
     name: "Reproductive Freedom For All",
     url: 'https://reproductivefreedomforall.org/',
+    ogImage: "https://reproductivefreedomforall.org/wp-content/uploads/2024/05/Fight-for-Reproductive-Freedom_Hero-1024x683.png",
     cause: ['reproductive'],
     donate: "https://reproductivefreedomforall.org/donate/",
     social: [
@@ -1423,8 +1473,56 @@ export const orgs: Org[] = [
     id: 28,
     name: "UN Women",
     url: 'https://www.unwomen.org/',
+    ogImage: "https://www.unwomen.org/sites/default/files/UN%20Women%20Logos/UN-Women-logo-social-media-1024x512-en.png",
     cause: ['sexism'],
-    social: undefined,
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/unwomen"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/un-women"
+      },
+      {
+        platform: 'Flickr',
+        url: "https://www.flickr.com/photos/unwomen"
+      },
+      {
+        platform: 'Snapchat',
+        url: "https://www.snapchat.com/add/unwomen"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/UNWomen"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/unwomen"
+      },
+    ],
+    actions: [
+      {
+        action: "Get Involved",
+        url: "https://www.unwomen.org/en/get-involved"
+      },
+      {
+        action: "For ALL Women and Girls",
+        url: "https://www.unwomen.org/en/get-involved/for-all-women-and-girls"
+      },
+      {
+        action: "HeForShe",
+        url: "https://www.heforshe.org/en"
+      },
+      {
+        action: "Publications",
+        url: "https://www.unwomen.org/en/publications"
+      },
+      {
+        action: "Careers and Internships",
+        url: "https://www.unwomen.org/en/about-us/employment"
+      },
+    ],
     description: 'UN Women is the UN organization delivering programmes, policies and standards that uphold women’s human rights and ensure that every woman and girl lives up to her full potential.',
     scope: 'global',
     slug: 'unwomen'
@@ -1433,6 +1531,7 @@ export const orgs: Org[] = [
     id: 29,
     name: "Global Fund for Women",
     url: 'https://www.globalfundforwomen.org/',
+    ogImage: "https://www.globalfundforwomen.org/wp-content/uploads/2024/01/cropped-inmotion_1200x630_1.29.24.jpg",
     cause: ['sexism'],
     donate: "https://join.globalfundforwomen.org/a/donate",
     social: [
@@ -1483,6 +1582,7 @@ export const orgs: Org[] = [
     id: 30,
     name: "Advocates for Youth",
     url: 'https://www.advocatesforyouth.org/',
+    ogImage: "https://www.advocatesforyouth.org/wp-content/uploads/2019/08/Advocates-for-Youth-Logo_RRR-blue.png",
     cause: ['sexism', 'medicine', 'lgbtq'],
     donate: "https://actionnetwork.org/fundraising/donate-to-advocates-for-youth-3",
     social: [
@@ -1534,6 +1634,7 @@ export const orgs: Org[] = [
     id: 32,
     name: "Defend The Vote",
     url: 'https://wedefendthevote.org/',
+    ogImage: "https://wedefendthevote.org/wp-content/uploads/2021/01/share.png",
     cause: ['voting'],
     donate: "https://secure.actblue.com/donate/defend-the-vote-1",
     social: [
@@ -1568,6 +1669,7 @@ export const orgs: Org[] = [
     id: 33,
     name: "Vote.org",
     url: 'https://vote.org/',
+    ogImage: "https://www.vote.org/img/og-www-default.png",
     cause: ['voting'],
     donate: "https://www.vote.org/donate/",
     social: [
@@ -1642,6 +1744,7 @@ export const orgs: Org[] = [
     id: 34,
     name: "Voters of Tomorrow",
     url: 'https://votersoftomorrow.org/',
+    ogImage: "https://votersoftomorrow.org/wp-content/uploads/2022/01/wfhVhxmI.jpeg",
     cause: ['voting'],
     donate: "https://secure.actblue.com/donate/voters-of-tomorrow-action-1",
     social: [
@@ -1688,6 +1791,7 @@ export const orgs: Org[] = [
     id: 35,
     name: "Common Cause",
     url: 'https://www.commoncause.org/',
+    ogImage: "https://www.commoncause.org/wp-content/uploads/2024/10/CC-Share-Graphic-Main9.jpg",
     cause: ['voting', "democracy"],
     donate: "https://www.commoncause.org/donate/",
     social: [
@@ -1734,6 +1838,7 @@ export const orgs: Org[] = [
     id: 35,
     name: "VoteVets.org",
     url: 'https://votevets.org/',
+    ogImage: "https://votevets.org/wp-content/uploads/2021/06/Social-Share.png",
     cause: ['voting', 'democracy'],
     donate: "https://secure.actblue.com/contribute/page/vote_vets_pac",
     social: [
@@ -1781,6 +1886,7 @@ export const orgs: Org[] = [
     id: 36,
     name: "Oxfam",
     url: 'https://www.oxfamamerica.org/',
+    ogImage: "https://webassets.oxfamamerica.org/media/images/oxfam-america-image_nr63lYZ.width-1200.png",
     cause: ['wealth', 'aid'],
     donate: "https://give.oxfamamerica.org/page/63259/donate/1",
     social: [
@@ -1831,6 +1937,7 @@ export const orgs: Org[] = [
     id: 37,
     name: "Patriotic Millionaires",
     url: 'https://patrioticmillionaires.org/',
+    ogImage: "https://patrioticmillionaires.org/wp-content/uploads/2024/11/Share-Image-2.png",
     cause: ['wealth'],
     actions: [
       {
@@ -1876,6 +1983,7 @@ export const orgs: Org[] = [
     id: 38,
     name: "Inequality Media",
     url: 'https://www.inequalitymedia.org/',
+    ogImage: "http://static1.squarespace.com/static/57043836f850824f376c74ef/t/5708505d20c647096509fce8/1460162675551/IM_logo_final.jpg?format=1500w",
     cause: ['wealth'],
     donate: "https://www.inequalitymedia.org/donate",
     actions: [
@@ -1902,6 +2010,7 @@ export const orgs: Org[] = [
     id: 39,
     name: "Citizens for Tax Justice",
     url: 'https://ctj.org/',
+    ogImage: "/src/assets/Orgs/CTJBanner.png",
     cause: ['wealth'],
     donate: "https://ctj.org/donate/",
     actions: [
@@ -1936,6 +2045,7 @@ export const orgs: Org[] = [
     id: 40,
     name: "Economic Policy Institute",
     url: 'https://www.epi.org/',
+    ogImage: "https://www.epi.org/files/2016/epi-careers-bground-05-11-2016.png",
     cause: ['wealth'],
     donate: "https://secure.actblue.com/donate/epi",
     actions: [
@@ -1986,6 +2096,7 @@ export const orgs: Org[] = [
     id: 41,
     name: "Global Refuge",
     url: 'https://www.globalrefuge.org/',
+    ogImage: "https://www.globalrefuge.org/wp-content/uploads/2023/08/impact_overview-1200x630-c-center.jpg",
     cause: ['immigration'],
     donate: "https://secured.globalrefuge.org/page/78592/donate/1",
     actions: [
@@ -2048,6 +2159,7 @@ export const orgs: Org[] = [
     id: 42,
     name: "Lutheran World Relief",
     url: 'https://lwr.org/',
+    ogImage: "https://lwr.org/themes/custom/ai/images/logo_lwr_social_big2.jpg",
     cause: ['immigration', "faith"],
     donate: "https://give.lwr.org/page/123179/donate/1",
     actions: [
@@ -2098,6 +2210,7 @@ export const orgs: Org[] = [
     id: 43,
     name: "Interfaith Alliance",
     url: 'https://interfaithalliance.org',
+    ogImage: "https://interfaithalliance.org/wp-content/uploads/2022/11/092822_IFA-Christian-Nationalism_001-771x514.png",
     cause: ['faith', 'lgbtq', 'reproductive'],
     donate: "https://support.interfaithalliance.org/a/donate",
     actions: [
@@ -2144,6 +2257,7 @@ export const orgs: Org[] = [
     id: 44,
     name: "Interfaith America",
     url: 'https://www.interfaithamerica.org/',
+    ogImage: "https://www.interfaithamerica.org/wp-content/uploads/2022/10/A7301150.jpg",
     cause: ['faith'],
     donate: 'https://www.interfaithamerica.org/support-us/',
     actions: [
@@ -2186,44 +2300,46 @@ export const orgs: Org[] = [
     scope: 'us',
     slug: 'interfaithamerica'
   },
-  {
-    id: 45,
-    name: "North American Interfaith Network",
-    url: 'https://nain.org/',
-    cause: ['faith'],
-    donate: 'https://nain.org/donate/',
-    actions: [
-      {
-        action: 'Programs',
-        url: 'https://nain.org/programs/'
-      },
-      {
-        action: 'Membership',
-        url: 'https://nain.org/join-us/'
-      }
-    ],
-    social: [
-      {
-        platform: 'Facebook',
-        url: 'https://www.facebook.com/NAINConnect'
-      },
-      {
-        platform: 'Instagram',
-        url: 'https://www.instagram.com/naininterfaith/'
-      },
-      {
-        platform: 'LinkedIn',
-        url: 'https://www.linkedin.com/company/north-american-interfaith-network'
-      }
-    ],
-    description: "We Exist: to facilitate communication among and the mutual strengthening of interfaith organizations, to affirm humanity’s diverse and historic spiritual resources and bring them to bear on contemporary global, national, regional and local issues, to foster the work of interfaith organizations and provide networking possibilities.",
-    scope: 'us',
-    slug: 'nain'
-  },
+  // {
+  //   id: 45,
+  //   name: "North American Interfaith Network",
+  //   url: 'https://nain.org/',
+  //   ogImage: "https://NAIN.ORG/files/nain-logo-modified.png",
+  //   cause: ['faith'],
+  //   donate: 'https://nain.org/donate/',
+  //   actions: [
+  //     {
+  //       action: 'Programs',
+  //       url: 'https://nain.org/programs/'
+  //     },
+  //     {
+  //       action: 'Membership',
+  //       url: 'https://nain.org/join-us/'
+  //     }
+  //   ],
+  //   social: [
+  //     {
+  //       platform: 'Facebook',
+  //       url: 'https://www.facebook.com/NAINConnect'
+  //     },
+  //     {
+  //       platform: 'Instagram',
+  //       url: 'https://www.instagram.com/naininterfaith/'
+  //     },
+  //     {
+  //       platform: 'LinkedIn',
+  //       url: 'https://www.linkedin.com/company/north-american-interfaith-network'
+  //     }
+  //   ],
+  //   description: "We Exist: to facilitate communication among and the mutual strengthening of interfaith organizations, to affirm humanity’s diverse and historic spiritual resources and bring them to bear on contemporary global, national, regional and local issues, to foster the work of interfaith organizations and provide networking possibilities.",
+  //   scope: 'us',
+  //   slug: 'nain'
+  // },
   {
     id: 46,
     name: "United Religions Initiative",
     url: 'https://www.uri.org/',
+    ogImage: "https://www.uri.org/sites/default/files/2022-08/URI-logo.png",
     cause: ['faith'],
     donate: 'https://www.uri.org/donate',
     actions: [
@@ -2262,7 +2378,8 @@ export const orgs: Org[] = [
     id: 47,
     name: "Union of Concerned Scientists",
     url: 'https://www.ucsusa.org/',
-    cause: ['science', 'climate', 'civil-rights'],
+    ogImage: "https://www.ucsusa.org/themes/custom/ucstheme/assets/social-logo.png",
+    cause: ['science', 'climate'],
     donate: 'https://secure.ucsusa.org/onlineactions/dR5QqmX2uUCLCFD1KkVEzg2',
     actions: [
       {
@@ -2312,6 +2429,7 @@ export const orgs: Org[] = [
     id: 48,
     name: "AAAS",
     url: 'https://www.aaas.org/',
+    ogImage: "/src/assets/Orgs/AAASBanner.png",
     cause: ['science'],
     donate: 'https://www.aaas.org/support',
     actions: [
@@ -2362,6 +2480,7 @@ export const orgs: Org[] = [
     id: 49,
     name: "The Science Coalition",
     url: 'https://www.sciencecoalition.org/',
+    ogImage: "/src/assets/Orgs/TSCBanner.png",
     cause: ['science'],
     actions: [
       {
@@ -2391,6 +2510,7 @@ export const orgs: Org[] = [
     id: 50,
     name: "American Red Cross",
     url: 'https://www.redcross.org/',
+    ogImage: "https://www.redcross.org/content/dam/redcross/red-cross-logos/American-Red-Cross_Logo_1200x630.jpg",
     cause: ['aid'],
     donate: 'https://www.redcross.org/donate/donation.html/',
     social: [
@@ -2423,6 +2543,7 @@ export const orgs: Org[] = [
     id: 51,
     name: "International Committee of the Red Cross",
     url: 'https://www.icrc.org/en',
+    ogImage: "https://www.icrc.org/sites/default/files/styles/meta_image/public/2024-02/About_ICRC.jpg?h=5f62bdfc&itok=lpzshezB",
     cause: ['aid'],
     donate: 'https://www.icrc.org/en/donate',
     social: [
@@ -2459,6 +2580,7 @@ export const orgs: Org[] = [
     id: 52,
     name: "UNICEF",
     url: 'https://www.unicef.org',
+    ogImage: "https://www.unicef.org/sites/default/files/styles/hero_desktop/public/UNI610268-cropped.JPG.webp?itok=zThFYBkV",
     cause: ['aid'],
     donate: 'https://www.unicefusa.org/?form=donate',
     social: [
@@ -2521,6 +2643,7 @@ export const orgs: Org[] = [
     id: 53,
     name: "World Health Organization",
     url: 'https://www.who.int/',
+    ogImage: "https://cdn.who.int/media/images/default-source/infographics/logo-who.tmb-1200v.jpg?sfvrsn=2fcc68a0_35",
     cause: ['aid', 'medicine'],
     donate: 'https://donate.who.foundation/',
     social: [
@@ -2567,6 +2690,7 @@ export const orgs: Org[] = [
     id: 54,
     name: "Islamic Relief USA",
     url: 'https://irusa.org/',
+    ogImage: "https://irusa.org/wp-content/uploads/2020/04/IRUSA_FB.jpg",
     cause: ['aid', 'faith'],
     donate: 'https://donate.irusa.org/campaign/657729/donate',
     social: [
@@ -2605,6 +2729,7 @@ export const orgs: Org[] = [
     id: 55,
     name: "Muslim Aid USA",
     url: 'https://www.mausa.org/',
+    ogImage: "https://www.mausa.org/wp-content/uploads/2023/01/mausaogimage.png",
     cause: ['aid', 'faith'],
     donate: 'https://www.mausa.org/appeals/feed-the-fasting/',
     social: [
@@ -2651,6 +2776,7 @@ export const orgs: Org[] = [
     id: 56,
     name: "Catholic Charities USA",
     url: 'https://www.catholiccharitiesusa.org/',
+    ogImage: "https://www.catholiccharitiesusa.org/wp-content/uploads/2023/06/Rectangle-6825-9.59.35-AM.jpg",
     cause: ['aid', 'faith', 'immigration'],
     donate: 'https://www.catholiccharitiesusa.org/?form=createhope24',
     social: [
@@ -2693,6 +2819,7 @@ export const orgs: Org[] = [
     id: 57,
     name: "Doctors Without Borders",
     url: 'https://www.doctorswithoutborders.org/',
+    ogImage: "https://www.doctorswithoutborders.org/themes/custom/msf/meta_image.png",
     cause: ['aid', 'medicine'],
     donate: 'https://donate.doctorswithoutborders.org/secure/rr-donate-web',
     social: [
@@ -2747,6 +2874,7 @@ export const orgs: Org[] = [
     id: 58,
     name: "American Medical Association",
     url: 'https://www.ama-assn.org/',
+    ogImage: "https://www.ama-assn.org/sites/ama-assn.org/files/2019-01/2018-11-19-GENERICSOCIAL.jpg",
     cause: ['medicine'],
     donate: 'https://member.ama-assn.org/join-renew/member-search',
     social: [
@@ -2789,6 +2917,7 @@ export const orgs: Org[] = [
     id: 59,
     name: "National Patient Advocate Foundation",
     url: 'https://www.npaf.org/',
+    ogImage: "https://www.npaf.org/wp-content/uploads/2021/11/NPAF-image-share.jpeg",
     cause: ['medicine'],
     donate: 'https://www.npaf.org/actions/donate/',
     social: [
@@ -2840,6 +2969,7 @@ export const orgs: Org[] = [
     id: 60,
     name: "NCAFP",
     url: 'https://ncafp.org/',
+    ogImage: "https://ncafp.org/wp-content/uploads/2024/10/ncaf-social.png",
     cause: ['diplomacy'],
     donate: 'https://crm.nonprofiteasy.com/6398/Pages/fundraising/#/1',
     social: [
@@ -2887,6 +3017,7 @@ export const orgs: Org[] = [
     id: 61,
     name: "Foreign Policy For America",
     url: 'https://www.fp4america.org/',
+    ogImage: "/src/assets/Orgs/FP4ABanner.png",
     cause: ['diplomacy'],
     donate: 'https://www.fp4america.org/donate/',
     social: [
