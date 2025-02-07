@@ -50,7 +50,12 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <title>{title} - The Resistance Toolkit</title>
     <link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
     <ClientRouter />
+    {import.meta.env.PROD ? 
+      <script data-cookieconsent="ignore">    window.dataLayer = window.dataLayer || [];    function gtag() {        dataLayer.push(arguments);    }    gtag("consent", "default", {        ad_personalization: "denied",        ad_storage: "denied",        ad_user_data: "denied",        analytics_storage: "denied",        functionality_storage: "denied",        personalization_storage: "denied",        security_storage: "granted",        wait_for_update: 500,    });    gtag("set", "ads_data_redaction", true);    gtag("set", "url_passthrough", false);</script>
+      : null
+    }
     {import.meta.env.PROD === true && <GoogleAnalytics id="G-HCFPD93CD3" /> }
+
   </head>
   <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
     <nav aria-label="Site Navigation" class="resist-grid-nav bg-white">			
@@ -142,6 +147,6 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     const preline = await import('preline/dist/preline.js');
     preline.HSStaticMethods.autoInit()
   });
-  import "cookie-notice/dist/cookie.notice.min.js";
+  // import "cookie-notice/dist/cookie.notice.min.js";
   
 </script>
