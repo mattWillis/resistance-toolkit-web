@@ -180,7 +180,7 @@ export const orgs: Org[] = [
     id: 1,
     name: "International Association of Accessibility Professionals",
     url: 'https://www.accessibilityassociation.org/s/',
-    ogImage: "/src/assets/Orgs/IAAPBanner.png",
+    ogImage: "/Orgs/IAAPBanner.webp",
     cause: ['accessibility'],
     description: 'A global association of organizations and professionals that have joined together to define, promote, and improve the accessibility of services, products, and environments for people with disabilities. Become part of the Global Accessibility Community.',
     scope: 'global',
@@ -190,7 +190,7 @@ export const orgs: Org[] = [
     id: 2,
     name: "WebAIM",
     url: 'https://webaim.org/',
-    ogImage: "/src/assets/Orgs/WebAimBanner.png",
+    ogImage: "/Orgs/WebAimBanner.webp",
     cause: ['accessibility'],
     social: [
       {
@@ -220,7 +220,7 @@ export const orgs: Org[] = [
     id: 3,
     name: "Disability Rights Education & Defense Fund",
     url: 'https://dredf.org/',
-    ogImage: "/src/assets/Orgs/DREDFBanner.png",
+    ogImage: "/Orgs/DREDFBanner.webp",
     cause: ['accessibility'],
     donate: "https://dredf.org/donate/",
     actions: [
@@ -279,7 +279,7 @@ export const orgs: Org[] = [
     id: 4,
     name: "American Association of People with Disabilities",
     url: 'https://www.aapd.com/',
-    ogImage: "/src/assets/Orgs/AAPDBanner.png",
+    ogImage: "/Orgs/AAPDBanner.webp",
     cause: ['accessibility'],
     donate: "https://aapd.kindful.com/",
     social: [
@@ -1123,7 +1123,7 @@ export const orgs: Org[] = [
     id: 22,
     name: "Sylvia Rivera Law Project",
     url: 'https://srlp.org/',
-    ogImage: "/src/assets/Orgs/SRLPBanner.png",
+    ogImage: "/Orgs/SRLPBanner.webp",
     cause: ['lgbtq'],
     donate: "https://srlp.org/donate/",
     social: [
@@ -2010,7 +2010,7 @@ export const orgs: Org[] = [
     id: 39,
     name: "Citizens for Tax Justice",
     url: 'https://ctj.org/',
-    ogImage: "/src/assets/Orgs/CTJBanner.png",
+    ogImage: "/Orgs/CTJBanner.webp",
     cause: ['wealth'],
     donate: "https://ctj.org/donate/",
     actions: [
@@ -2429,7 +2429,7 @@ export const orgs: Org[] = [
     id: 48,
     name: "AAAS",
     url: 'https://www.aaas.org/',
-    ogImage: "/src/assets/Orgs/AAASBanner.png",
+    ogImage: "/Orgs/AAASBanner.webp",
     cause: ['science'],
     donate: 'https://www.aaas.org/support',
     actions: [
@@ -2480,7 +2480,7 @@ export const orgs: Org[] = [
     id: 49,
     name: "The Science Coalition",
     url: 'https://www.sciencecoalition.org/',
-    ogImage: "/src/assets/Orgs/TSCBanner.png",
+    ogImage: "/Orgs/TSCBanner.webp",
     cause: ['science'],
     actions: [
       {
@@ -3017,7 +3017,7 @@ export const orgs: Org[] = [
     id: 61,
     name: "Foreign Policy For America",
     url: 'https://www.fp4america.org/',
-    ogImage: "/src/assets/Orgs/FP4ABanner.png",
+    ogImage: "/Orgs/FP4ABanner.webp",
     cause: ['diplomacy'],
     donate: 'https://www.fp4america.org/donate/',
     social: [
