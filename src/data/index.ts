@@ -151,7 +151,7 @@ export const causes: Cause[] = [
     listImgAlt: `Two women looking into microscopes in a black and white photo.`
   },
   {
-    id: 14,
+    id: 15,
     title: 'Foreign Policy & Diplomacy',
     slug: 'diplomacy',
     banner: 'Causes-Diplomacy.png',
@@ -2184,7 +2184,7 @@ export const orgs: Org[] = [
         url: "https://lwr.org/coffee"
       },
       {
-        action: "Mailing List - News emergencies on ways to give, and important communications",
+        action: "Mailing List - News and important communications",
         url: "https://lwr.org/sign-our-emails"
       }
     ],
@@ -3051,6 +3051,61 @@ export const orgs: Org[] = [
     description: "Foreign Policy for America is a national nonpartisan organization based in Washington, D.C. Together with our members, we’re working to strengthen support for principled U.S. leadership in the world.",
     scope: 'us',
     slug: 'fp4america'
+  },
+  {
+    id: 62,
+    name: "Lutheran Serices In America",
+    url: 'https://lutheranservices.org/',
+    ogImage: "https://lutheranservices.org/wp-content/uploads/2022/07/LSA_Hero_social.png",
+    cause: ['faith', 'medicine', 'aid'],
+    donate: 'https://lutheranservices.networkforgood.com/projects/46065-lutheran-services-in-america',
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/LutheranServices"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/lutheran-services-in-america/"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/user/LutheranSrvcs"
+      },
+      {
+        platform: 'Blog',
+        url: "https://lutheranservices.org/blog/"
+      }
+    ],
+    actions: [
+      {
+        action: "Take Action",
+        url: "https://lutheranservices.org/take-action/"
+      },
+      {
+        action: "Join Us",
+        url: "https://lutheranservices.org/join-us/"
+      },
+      {
+        action: "Explore Our Member Network",
+        url: "https://lutheranservices.org/our-network/"
+      },
+      {
+        action: "Events",
+        url: "https://lutheranservices.org/events/"
+      },
+      {
+        action: "More Ways to Give",
+        url: "https://lutheranservices.org/give/"
+      },
+      {
+        action: "ELCA responds to fake news",
+        url: "https://www.youtube.com/watch?v=Liqz0VdZG1E"
+      }
+    ],
+    description: "We lead one of the nation’s largest and most respected health and human services networks to empower people in America to lead their best lives - so all communities can thrive. Together, we support families, we empower children to grow up to be healthy, productive adults, and we enable veterans, refugees, older adults and people with disabilities to live with dignity and independence in the community of their choice.",
+    scope: 'us',
+    slug: 'lutheranservices'
   },
 ]
 
