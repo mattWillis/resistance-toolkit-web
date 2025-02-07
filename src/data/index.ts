@@ -171,7 +171,7 @@ export interface Org {
   scope: string;
   slug: string;
   donate?: string;
-  actions?: {action: string, url: string}[];
+  actions?: {action: string, url: string, category?:string}[];
   ogImage?: string;
 }
 
@@ -182,6 +182,44 @@ export const orgs: Org[] = [
     url: 'https://www.accessibilityassociation.org/s/',
     ogImage: "/Orgs/IAAPBanner.webp",
     cause: ['accessibility'],
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/AccessibilityAssociation/"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/company/international-association-of-accessibility-professionals"
+      },
+      {
+        platform: "YouTube",
+        url: "https://www.youtube.com/channel/UCuL8fMa2LEZm9Agrmkdvsbg"
+      }
+    ],
+    actions: [
+      {
+        action: "Get a Certification",
+        url: "https://www.accessibilityassociation.org/s/certification",
+        category: "education"
+      },
+      {
+        action: "Join IAAP",
+        url: "https://www.accessibilityassociation.org/s/membership"
+      },
+      {
+        action: "Events",
+        url: "https://www.accessibilityassociation.org/s/events-categories"
+      },
+      {
+        action: "Education",
+        url: "https://www.accessibilityassociation.org/s/education",
+        category: "education"
+      }, 
+      {
+        action: "Resources",
+        url: "https://www.accessibilityassociation.org/s/resources/resources-overview"
+      }
+    ],   
     description: 'A global association of organizations and professionals that have joined together to define, promote, and improve the accessibility of services, products, and environments for people with disabilities. Become part of the Global Accessibility Community.',
     scope: 'global',
     slug: 'iaaap'
@@ -205,7 +243,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Virtual Web Accessibility Training",
-        url: "https://webaim.org/training/virtual/"
+        url: "https://webaim.org/training/virtual/",
+        category: "education"
       },
       {
         action: "WCAG 2 Checklist",
@@ -302,6 +341,16 @@ export const orgs: Org[] = [
       {
         platform: "YouTube",
         url: "https://www.youtube.com/user/AAPDvideo"
+      },
+      {
+        platform: "Blog",
+        url: "https://www.aapd.com/blog/"
+      }
+    ],
+    actions: [
+      {
+        action: "Events",
+        url: "https://www.aapd.com/events/"
       }
     ],
     description: 'The American Association of People with Disabilities works to increase the political and economic power of people with disabilities. As a national disability-led and cross-disability rights organization, AAPD advocates for full civil rights for over 70 million Americans with disabilities.',
@@ -326,6 +375,25 @@ export const orgs: Org[] = [
       {
         platform: "LinkedIn",
         url: "https://www.linkedin.com/company/ada-national-network/"
+      }
+    ],
+    actions: [
+      {
+        action: "Events",
+        url: "https://adata.org/events-calendar/upcoming"
+      },
+      {
+        action: "ADA Training",
+        url: "https://adata.org/ada-training",
+        category: "education"
+      },
+      {
+        action: "Find Your ADA Center",
+        url: "https://adata.org/find-your-region"
+      },
+      {
+        action: "Media Kit",
+        url: "https://adata.org/media-kit"
       }
     ],
     description: 'The ADA National Network provides information, guidance and training on how to implement the Americans with Disabilities Act (ADA) in order to support the mission of the ADA to “assure equality of opportunity, full participation, independent living, and economic self-sufficiency for individuals with disabilities.',
@@ -368,7 +436,25 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Get Involved",
+        url: "https://www.amnesty.org/en/get-involved/"
+      },
+      {
+        action: "Take Action - Sign a Petition",
         url: "https://www.amnesty.org/en/get-involved/take-action/"
+      },
+      {
+        action: "Free Online Course",
+        url: "https://www.amnesty.org/en/get-involved/online-courses/",
+        category: "education"
+      },
+      {
+        action: "Human Rights Education",
+        url: "https://www.amnesty.org/en/human-rights-education/",
+        category: "education"
+      },
+      {
+        action: "Become a Member",
+        url: "https://www.amnesty.org/en/get-involved/join/"
       }
     ],
     description: 'Through our detailed research and determined campaigning, we help fight abuses of human rights worldwide. We bring torturers to justice. Change oppressive laws. And free people jailed just for voicing their opinion.',
@@ -406,8 +492,22 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Take Action",
+        action: "Take Action - Sign a Petition",
         url: "https://www.aclu.org/action" 
+      },
+      {
+        action: "Shop",
+        url: "https://shop.aclu.org/",
+        category: "money"
+      },
+      {
+        action: "Know Your Rights",
+        url: "https://www.aclu.org/know-your-rights",
+        category: "education"
+      },
+      {
+        action: "Careers & Internships",
+        url: "https://www.aclu.org/careers/"
       }
     ],
     description: 'With immigrant rights, trans justice, reproductive freedom, and more at risk, we’re in courts and communities across the country to protect everyone’s rights — and we need you with us.',
@@ -443,6 +543,16 @@ export const orgs: Org[] = [
       {
         action: "Get Involved",
         url: "https://eji.org/get-involved/"
+      },
+      {
+        action: "Host an Educational Event",
+        url: "https://eji.org/host-an-educational-event/",
+        category: "education"
+      },
+      {
+        action: "Visit a Legacy Site",
+        url: "https://legacysites.eji.org/",
+        category: "education"
       },
       {
         action: "Employment Opportunities",
@@ -481,7 +591,8 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Toolkits, Guides, and How-Tos",
-        url: "https://www.splcenter.org/resources/guides/"
+        url: "https://www.splcenter.org/resources/guides/",
+        category: "education"
       },
       {
         action: "Hope Watch",
@@ -523,8 +634,23 @@ export const orgs: Org[] = [
         url: "https://naacp.org/take-action"
       },
       {
+        action: "Join the NAACP",
+        url: "https://naacp.org/take-action/become-member"
+      },
+      {
+        action: "Know Your Rights",
+        url: "https://naacp.org/find-resources/know-your-rights",
+        category: "education"
+      },
+      {
+        action: "Voter Guides",
+        url: "https://naacp.org/resources/library?_page=1&keywords=&_limit=12&topic=151",
+        category: "vote"
+      },
+      {
         action: "Find Resources",
-        url: "https://naacp.org/find-resources"
+        url: "https://naacp.org/find-resources",
+        category: "education"
       },
     ],
     description: 'We envision an inclusive community rooted in liberation where all persons can exercise their civil and human rights without discrimination. We are committed to a world without racism where Black people enjoy equitable opportunities in thriving communities.',
@@ -590,7 +716,8 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Resource Library",
-        url: "https://ncai.assetbank-server.com/assetbank-ncai/action/browseItems?categoryId=-1&categoryTypeId=2"
+        url: "https://ncai.assetbank-server.com/assetbank-ncai/action/browseItems?categoryId=-1&categoryTypeId=2",
+        category: "education"
       },
       {
         action: "Events",
@@ -640,8 +767,17 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Take Action",
+        action: "Sign Petitions",
+        url: "https://innocenceproject.org/sign-petitions/"
+      },
+      {
+        action: "Resources and Actions",
         url: "https://innocenceproject.org/take-action/"
+      },
+      {
+        action: "Volunteer with Innocence Project",
+        url: "https://innocenceproject.org/volunteer/",
+        category: "volunteer"
       }
     ],
     description: 'Founded in 1992 by visionary attorneys Peter Neufeld and Barry Scheck, the Innocence Project has been at the forefront of criminal justice reform, using DNA and other scientific advancements to prove wrongful conviction.',
@@ -676,7 +812,8 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Publications",
-        url: "https://climatenetwork.org/resource_type/publications/"
+        url: "https://climatenetwork.org/resource_type/publications/",
+        category: "education"
       },
       {
         action: "Stay Informed",
@@ -718,7 +855,7 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Resources",
+        action: "Resources - Toolkits",
         url: "https://www.csldf.org/resources/"
       }
     ],
@@ -769,8 +906,9 @@ export const orgs: Org[] = [
         url: "https://citizensclimatelobby.org/get-loud-take-action/"
       },
       {
-        action: "Volunteer",
-        url: "https://community.citizensclimate.org/new-volunteer"
+        action: "Volunteer with Citizens' Climate Lobby",
+        url: "https://community.citizensclimate.org/new-volunteer",
+        category: "volunteer"
       },
       {
         action: "CCL Online Community",
@@ -813,11 +951,13 @@ export const orgs: Org[] = [
       },
       {
         action: "Your State (Found on the Homepage)",
-        url: "https://everytownresearch.org/"
+        url: "https://everytownresearch.org/",
+        category: "education"
       },
       {
         action: "Everytown Labs",
-        url: "https://everytownresearch.org/labs/"
+        url: "https://everytownresearch.org/labs/",
+        category: "education"
       },
 
     ],
@@ -860,8 +1000,9 @@ export const orgs: Org[] = [
         url: "https://www.sandyhookpromise.org/take-action/get-involved/"
       },
       {
-        action: "Volunteer",
-        url: "https://www.sandyhookpromise.org/take-action/volunteer/"
+        action: "Volunteer with Sandy Hook Promise",
+        url: "https://www.sandyhookpromise.org/take-action/volunteer/",
+        category: "volunteer"
       },
       {
         action: "Make the Promise",
@@ -954,8 +1095,9 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Volunteer",
-        url: "https://aijustice.org/volunteer/"
+        action: "Volunteer with American's for Immigrant Justice",
+        url: "https://aijustice.org/volunteer/",
+        category: "volunteer"
       },
       {
         action: "Events",
@@ -1010,7 +1152,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Immigration Impact: the only news site exclusively committed to covering immigration issues.",
-        url: "https://immigrationimpact.com/"
+        url: "https://immigrationimpact.com/",
+        category: "education"
       },
     ],
     description: 'The Council strives to strengthen the United States by shaping immigration policies and practices through innovative programs, cutting-edge research, and strategic legal and advocacy efforts grounded in evidence, compassion, justice and fairness.',
@@ -1048,12 +1191,14 @@ export const orgs: Org[] = [
         url: "https://www.theyoungcenter.org/how-to-help-immigrant-children"
       },
       {
-        action: "Volunteer",
-        url: "https://clienttrack.eccovia.com/portal/default.aspx?CustomerID=TYC"
+        action: "Volunteer with Young Center",
+        url: "https://clienttrack.eccovia.com/portal/default.aspx?CustomerID=TYC",
+        category: "volunteer"
       },
       {
         action: "Become a Young Center Ambassador",
-        url: "https://www.theyoungcenter.org/ambassadors"
+        url: "https://www.theyoungcenter.org/ambassadors",
+        category: "volunteer"
       },
       {
         action: "Refer a Child",
@@ -1099,8 +1244,9 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Volunteer",
-        url: "https://act.glaad.org/page/77842/survey/1"
+        action: "Volunteer with GLAAD",
+        url: "https://act.glaad.org/page/77842/survey/1",
+        category: "volunteer"
       },
       {
         action: "Events",
@@ -1108,7 +1254,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Ways to Give",
-        url: "https://glaad.org/ways-to-support-glaad/"
+        url: "https://glaad.org/ways-to-support-glaad/",
+        category: "donate"
       },
       {
         action: "Mailing List",
@@ -1150,8 +1297,9 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Volunteer",
-        url: "https://srlp.org/get-involved/volunteer/"
+        action: "Volunteer with SRLP",
+        url: "https://srlp.org/get-involved/volunteer/",
+        category: "volunteer"
       },
       {
         action: "Events",
@@ -1163,7 +1311,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Trainings",
-        url: "https://srlp.org/trainings/"
+        url: "https://srlp.org/trainings/",
+        category: "education"
       },
       {
         action: "Become a Member",
@@ -1209,8 +1358,9 @@ export const orgs: Org[] = [
         url: "https://www.elevatedaccess.org/get-involved/ways-to-help"
       },
       {
-        action: "Volunteer",
-        url: "https://www.elevatedaccess.org/contact"
+        action: "Volunteer with Elevated Access",
+        url: "https://www.elevatedaccess.org/contact",
+        category: "volunteer"
       },
     ],
     description: 'We are a non-profit organization that enables people to access healthcare by providing flights on private planes at no cost. Our volunteer pilot network transports clients seeking abortion or gender-affirming care across the United States.',
@@ -1249,11 +1399,13 @@ export const orgs: Org[] = [
       },
       {
         action: "Peer-to-Peer Fundraising",
-        url: "https://lambdalegal.org/fundraise/"
+        url: "https://lambdalegal.org/fundraise/",
+        category: "money"
       },
       {
         action: "Ways to Give",
-        url: "https://lambdalegal.org/ways-to-give/"
+        url: "https://lambdalegal.org/ways-to-give/",
+        category: "donate"
       }
     ],
     description: 'Lambda Legal’s lawyers have won precedent-setting civil rights cases on everything from marriage equality to expressions of gender identity to health care discrimination. We never charge our clients for legal representation or advocacy, nor do we receive any government funding.',
@@ -1295,16 +1447,19 @@ export const orgs: Org[] = [
         url: "https://www.plannedparenthood.org/get-involved"
       },
       {
-        action: "Volunteer",
-        url: "https://www.weareplannedparenthood.org/pGPUfPzxL0-W-oG8DCQ24w2?ms=3NALz2111W1N1V&sourceid=1010711&_ga=2.190745064.2122819497.1651591791-1277393218.1630613411&_gl=1*1whxp5g*_gcl_au*MTkxNjUwNjM2MS4xNzM3Nzc5MDE2*_ga*MTYwNjQ2ODY3NS4xNzM3Nzc5MDE2*_ga_ENXC8KHJL8*MTczODc3MTQ3Ni4zLjEuMTczODc3MTY0NS4wLjAuMjA4MzU1ODcxNg.."
+        action: "Volunteer with Planned Parenthood",
+        url: "https://www.weareplannedparenthood.org/pGPUfPzxL0-W-oG8DCQ24w2?ms=3NALz2111W1N1V&sourceid=1010711&_ga=2.190745064.2122819497.1651591791-1277393218.1630613411&_gl=1*1whxp5g*_gcl_au*MTkxNjUwNjM2MS4xNzM3Nzc5MDE2*_ga*MTYwNjQ2ODY3NS4xNzM3Nzc5MDE2*_ga_ENXC8KHJL8*MTczODc3MTQ3Ni4zLjEuMTczODc3MTY0NS4wLjAuMjA4MzU1ODcxNg..",
+        category: "volunteer"
       },
       {
         action: "Jobs and Work",
-        url: "https://www.plannedparenthood.org/get-involved/jobs-and-volunteering"
+        url: "https://www.plannedparenthood.org/get-involved/jobs-and-volunteering",
+        category: "volunteer"
       },
       {
         action: "Shop",
-        url: "https://marketplace.plannedparenthood.org/"
+        url: "https://marketplace.plannedparenthood.org/",
+        category: "money"
       }
 
     ],
@@ -1352,7 +1507,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Store",
-        url: "https://store.emilyslist.org/"
+        url: "https://store.emilyslist.org/",
+        category: "money"
       },
       {
         action: "Train to Run for Office - and Win",
@@ -1399,7 +1555,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Learn",
-        url: "https://reproductiverights.org/get-involved/learn/"
+        url: "https://reproductiverights.org/get-involved/learn/",
+        category: "education"
       },
       {
         action: "Get Involved",
@@ -1449,8 +1606,9 @@ export const orgs: Org[] = [
         url: "https://reproductivefreedomforall.org/take-action/"
       },
       {
-        action: "Volunteer",
-        url: "https://act.reproductivefreedomforall.org/a/nat-volunteers-23?ms=web_org_gen_20241106takeactionbanner"
+        action: "Volunteer with Reproductive Freedom For All",
+        url: "https://act.reproductivefreedomforall.org/a/nat-volunteers-23?ms=web_org_gen_20241106takeactionbanner",
+        category: "volunteer"
       },
       {
         action: "Demand Abortion Access Now",
@@ -1462,7 +1620,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Other Ways to Donate",
-        url: "https://reproductivefreedomforall.org/donate/other-ways-to-donate/"
+        url: "https://reproductivefreedomforall.org/donate/other-ways-to-donate/",
+        category: "donate"
       }
     ],
     description: 'Reproductive Freedom for All organizes and mobilizes our 4 million members to fight for access to abortion, birth control, paid parental leave, and protections from pregnancy discrimination.',
@@ -1573,6 +1732,11 @@ export const orgs: Org[] = [
         action: "Become a Champion for Equality",
         url: "https://www.globalfundforwomen.org/champions-for-equality/"
       },
+      {
+        action: "Store",
+        url: "https://globalfundforwomenstore.com/",
+        category: "money"
+      }
     ],
     description: 'We envision a world where movements for gender justice have transformed power and privilege for a few into equity and equality for all. We fund bold, ambitious, and expansive gender justice movements to create meaningful change that will last beyond our lifetimes.',
     scope: 'global',
@@ -1614,7 +1778,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Resources and Tools",
-        url: "https://www.advocatesforyouth.org/resources-tools/"
+        url: "https://www.advocatesforyouth.org/resources-tools/",
+        category: "education"
       },
       {
         action: "Know Your IX",
@@ -1622,7 +1787,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Shop",
-        url: "https://shop.advocatesforyouth.org/"
+        url: "https://shop.advocatesforyouth.org/",
+        category: "money"
       },
     ],
     description: 'Advocates for Youth works alongside thousands of young people here in the U.S. and around the globe as they fight for sexual health, rights, and justice.',
@@ -1650,7 +1816,8 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Scorecard: Find your State's Score",
-        url: "https://wedefendthevote.org/scorecard/"
+        url: "https://wedefendthevote.org/scorecard/",
+        category: "education"
       },
       {
         action: "Support Our Endorsed Politicians",
@@ -1767,8 +1934,9 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Volunteer",
-        url: "https://www.mobilize.us/votersoftomorrow/"
+        action: "Volunteer with Voters of Tomorrow",
+        url: "https://www.mobilize.us/votersoftomorrow/",
+        category: "volunteer"
       },
       {
         action: "VotingHub: Make your voice heard",
@@ -1780,7 +1948,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Store",
-        url: "https://store.votersoftomorrow.org/"
+        url: "https://store.votersoftomorrow.org/",
+        category: "money"
       }
     ],
     description: 'Voters of Tomorrow is a Gen Z-led 501(c)(4) organization that engages and represents young Americans in politics and government. With chapters in 20 states and a volunteer presence in all 50, we take a locally based, multifaceted approach to engaging young voters. Our team is led by a national staff of young political strategists, organizers, and policy experts.',
@@ -1822,12 +1991,14 @@ export const orgs: Org[] = [
         url: "https://www.commoncause.org/take-action/"
       },
       {
-        action: "Volunteer",
-        url: "https://actionnetwork.org/forms/join-the-common-cause-action-team-slack/"
+        action: "Volunteer with Common Cause",
+        url: "https://actionnetwork.org/forms/join-the-common-cause-action-team-slack/",
+        category: "volunteer"
       },
       {
         action: "Resource Library",
-        url: "https://www.commoncause.org/research-and-resources/"
+        url: "https://www.commoncause.org/research-and-resources/",
+        category: "education"
       }
     ],
     description: 'Common Cause is a nonpartisan, grassroots organization dedicated to upholding the core values of American democracy. We work to create open, honest, and accountable government that serves the public interest; promote equal rights, opportunity, and representation for all; and empower all people to make their voices heard in the political process.',
@@ -1870,11 +2041,13 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Find our Endorsed Candidates",
-        url: "https://votevets.org/candidates"
+        url: "https://votevets.org/candidates",
+        category: "education"
       },
       {
         action: "Shop",
-        url: "https://shop.votevets.org/"
+        url: "https://shop.votevets.org/",
+        category: "money"
       },
 
     ],
@@ -1917,16 +2090,19 @@ export const orgs: Org[] = [
         url: "https://www.oxfamamerica.org/take-action/"
       },
       {
-        action: "Volunteer",
-        url: "https://www.oxfamamerica.org/take-action/volunteer/"
+        action: "Volunteer Oxfam",
+        url: "https://www.oxfamamerica.org/take-action/volunteer/",
+        category: "volunteer"
       },
       {
         action: "Be a Fundraiser",
-        url: "https://www.oxfamamerica.org/take-action/be-a-fundraiser/"
+        url: "https://www.oxfamamerica.org/take-action/be-a-fundraiser/",
+        category: "volunteer"
       },
       {
         action: "Host am Oxfam Hunger Banquet",
-        url: "https://www.oxfamamerica.org/take-action/oxfam-hunger-banquet/"
+        url: "https://www.oxfamamerica.org/take-action/oxfam-hunger-banquet/",
+        category: "volunteer"
       }
     ],
     description: 'Oxfam is a global organization that fights inequality to end poverty and injustice. We offer lifesaving support in times of crisis and advocate for economic justice, gender equality, and climate action. We demand equal rights and equal treatment so that everyone can thrive, not just survive. The future is equal.',
@@ -1942,11 +2118,13 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Become a Patriotic Millionaire: (Minimum annual dues are $10,000)",
-        url: "https://patrioticmillionaires.org/become-a-member/"
+        url: "https://patrioticmillionaires.org/become-a-member/",
+        category: "money"
       },
       {
-        action: "I’m not a millionaire, but I want to help. How can I get involved?",
-        url: "https://secure.actblue.com/donate/pm_website"
+        action: "I’m not a millionaire, but I want to help. How to donate?",
+        url: "https://secure.actblue.com/donate/pm_website",
+        category: "money"
       }
     ],
     social: [
@@ -1989,7 +2167,8 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Wealth and Poverty Course",
-        url: "https://www.inequalitymedia.org/wealth-and-poverty"
+        url: "https://www.inequalitymedia.org/wealth-and-poverty",
+        category: "education"
       },
       {
         action: "Mailing List",
@@ -2020,7 +2199,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Resources",
-        url: "https://ctj.org/resources/"
+        url: "https://ctj.org/resources/",
+        category: "education"
       }
     ],
     social: [
@@ -2059,7 +2239,8 @@ export const orgs: Org[] = [
       },
       {
         action: "The State of Working America Data Library: comprehensive historical data on the American labor force.",
-        url: "https://www.epi.org/data/"
+        url: "https://www.epi.org/data/",
+        category: "education"
       },
       {
         action: "Resources",
@@ -2102,15 +2283,18 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Volunteer Opportunities",
-        url: "https://www.globalrefuge.org/get-involved/volunteer/"
+        url: "https://www.globalrefuge.org/get-involved/volunteer/",
+        category: "volunteer"
       },
       {
         action: "Corporate Giving",
-        url: "https://www.globalrefuge.org/get-involved/corporate-giving-and-involvement/"
+        url: "https://www.globalrefuge.org/get-involved/corporate-giving-and-involvement/",
+        category: "donate"
       },
       {
         action: "Create a Circle of Welcome for a New American family.",
-        url: "https://www.globalrefuge.org/get-involved/circleofwelcome/"
+        url: "https://www.globalrefuge.org/get-involved/circleofwelcome/",
+        category: "volunteer"
       },
       {
         action: "Advocate with Us: Raise your voice alongside those seeking safety",
@@ -2118,11 +2302,13 @@ export const orgs: Org[] = [
       },
       {
         action: "Combatting Disinformation",
-        url: "https://www.globalrefuge.org/get-involved/advocate-with-us/disinformation/"
+        url: "https://www.globalrefuge.org/get-involved/advocate-with-us/disinformation/",
+        category: "education"
       },
       {
         action: "Faith in Action: Your faith community can help welcome immigrants and refugees.",
-        url: "https://www.globalrefuge.org/get-involved/faith-in-action/"
+        url: "https://www.globalrefuge.org/get-involved/faith-in-action/",
+        category: "volunteer"
       }
     ],
     social: [
@@ -2165,11 +2351,13 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Volunteer to quilt",
-        url: "https://lwr.org/quilts"
+        url: "https://lwr.org/quilts",
+        category: "volunteer"
       },
       {
         action: "Make LWR Kits",
-        url: "https://lwr.org/kits"
+        url: "https://lwr.org/kits",
+        category: "volunteer"
       },
       {
         action: "Find an Ingathering",
@@ -2177,11 +2365,13 @@ export const orgs: Org[] = [
       },
       {
         action: "Resource Library",
-        url: "https://lwr.org/downloads"
+        url: "https://lwr.org/downloads",
+        category: "education"
       },
       {
         action: "LWR Farmers Market Coffee",
-        url: "https://lwr.org/coffee"
+        url: "https://lwr.org/coffee",
+        category: "money"
       },
       {
         action: "Mailing List - News and important communications",
@@ -2271,11 +2461,13 @@ export const orgs: Org[] = [
       },
       {
         action: 'Courses, Curricula, and Tools',
-        url: "https://www.interfaithamerica.org/curriculum/"
+        url: "https://www.interfaithamerica.org/curriculum/",
+        category: "education"
       },
       {
         action: 'The Learning & Action Bridge: Customized Recommendations for high-impact opportunities.',
-        url: "https://www.interfaithamerica.org/lab/"
+        url: "https://www.interfaithamerica.org/lab/",
+        category: "volunteer"
       }
     ],
     social: [
@@ -2300,41 +2492,6 @@ export const orgs: Org[] = [
     scope: 'us',
     slug: 'interfaithamerica'
   },
-  // {
-  //   id: 45,
-  //   name: "North American Interfaith Network",
-  //   url: 'https://nain.org/',
-  //   ogImage: "https://NAIN.ORG/files/nain-logo-modified.png",
-  //   cause: ['faith'],
-  //   donate: 'https://nain.org/donate/',
-  //   actions: [
-  //     {
-  //       action: 'Programs',
-  //       url: 'https://nain.org/programs/'
-  //     },
-  //     {
-  //       action: 'Membership',
-  //       url: 'https://nain.org/join-us/'
-  //     }
-  //   ],
-  //   social: [
-  //     {
-  //       platform: 'Facebook',
-  //       url: 'https://www.facebook.com/NAINConnect'
-  //     },
-  //     {
-  //       platform: 'Instagram',
-  //       url: 'https://www.instagram.com/naininterfaith/'
-  //     },
-  //     {
-  //       platform: 'LinkedIn',
-  //       url: 'https://www.linkedin.com/company/north-american-interfaith-network'
-  //     }
-  //   ],
-  //   description: "We Exist: to facilitate communication among and the mutual strengthening of interfaith organizations, to affirm humanity’s diverse and historic spiritual resources and bring them to bear on contemporary global, national, regional and local issues, to foster the work of interfaith organizations and provide networking possibilities.",
-  //   scope: 'us',
-  //   slug: 'nain'
-  // },
   {
     id: 46,
     name: "United Religions Initiative",
@@ -2447,7 +2604,8 @@ export const orgs: Org[] = [
       },
       {
         action: 'Training Sessions',
-        url: 'https://www.aaas.org/page/training-sessions'
+        url: 'https://www.aaas.org/page/training-sessions',
+        category: "education"
       }
     ],
     social: [
@@ -2484,7 +2642,7 @@ export const orgs: Org[] = [
     cause: ['science'],
     actions: [
       {
-        action: 'How to Take Action',
+        action: 'How to Take Action - Tools and Resources',
         url: 'https://www.sciencecoalition.org/why-science-matters/#take-action'
       }
     ],
@@ -2535,47 +2693,76 @@ export const orgs: Org[] = [
         url: "https://www.tiktok.com/@americanredcross?lang=en"
       }
     ],
+    actions: [
+      {
+        action: "Volunteer with Red Cross",
+        url: "https://www.redcross.org/volunteer/become-a-volunteer.html",
+        category: "volunteer"
+      },
+      {
+        action: "Training Services and Certification",
+        url: "https://www.redcross.org/take-a-class",
+        category: "education"
+      },
+      {
+        action: "Give Blood",
+        url: "https://www.redcross.org/give-blood.html",
+        category: "volunteer"
+      },
+      {
+        action: "More Ways to Donate",
+        url: "https://www.redcross.org/donations/ways-to-donate.html",
+        category: "donate"
+      }, 
+      {
+        action: "Shop",
+        url: "https://www.redcross.org/store",
+        category: "money"
+      }
+
+    ],
     description: "Our mission is more than words. We always aim to prevent and relieve suffering with every action. The Red Cross shelters, feeds and provides comfort to people affected by disasters; supplies about 40% of the nation’s blood; teaches skills that save lives; distributes international humanitarian aid; and supports veterans, military members and their families.",
     scope: 'us',
     slug: 'americanredcross'
   },
-  {
-    id: 51,
-    name: "International Committee of the Red Cross",
-    url: 'https://www.icrc.org/en',
-    ogImage: "https://www.icrc.org/sites/default/files/styles/meta_image/public/2024-02/About_ICRC.jpg?h=5f62bdfc&itok=lpzshezB",
-    cause: ['aid'],
-    donate: 'https://www.icrc.org/en/donate',
-    social: [
-      {
-        platform: 'BlueSky',
-        url: 'https://bsky.app/profile/icrc.org'
-      },
-      {
-        platform: 'Facebook',
-        url: 'https://www.facebook.com/icrc'
-      },
-      {
-        platform: 'LinkedIn',
-        url: 'https://www.linkedin.com/company/icrc'
-      },
-      {
-        platform: 'Instagram',
-        url: 'https://www.instagram.com/ICRC/'
-      },
-      {
-        platform: 'TikTok',
-        url: "https://www.tiktok.com/@icrc"
-      },
-      {
-        platform: 'YouTube',
-        url: "https://www.youtube.com/icrcfilms"
-      }
-    ],
-    description: "The ICRC is a neutral, independent organization ensuring humanitarian protection and assistance for people affected by armed conflict and other violence.",
-    scope: 'global',
-    slug: 'icrc'
-  },
+  // {
+  //   id: 51,
+  //   name: "International Committee of the Red Cross",
+  //   url: 'https://www.icrc.org/en',
+  //   ogImage: "https://www.icrc.org/sites/default/files/styles/meta_image/public/2024-02/About_ICRC.jpg?h=5f62bdfc&itok=lpzshezB",
+  //   cause: ['aid'],
+  //   donate: 'https://www.icrc.org/en/donate',
+  //   social: [
+  //     {
+  //       platform: 'BlueSky',
+  //       url: 'https://bsky.app/profile/icrc.org'
+  //     },
+  //     {
+  //       platform: 'Facebook',
+  //       url: 'https://www.facebook.com/icrc'
+  //     },
+  //     {
+  //       platform: 'LinkedIn',
+  //       url: 'https://www.linkedin.com/company/icrc'
+  //     },
+  //     {
+  //       platform: 'Instagram',
+  //       url: 'https://www.instagram.com/ICRC/'
+  //     },
+  //     {
+  //       platform: 'TikTok',
+  //       url: "https://www.tiktok.com/@icrc"
+  //     },
+  //     {
+  //       platform: 'YouTube',
+  //       url: "https://www.youtube.com/icrcfilms"
+  //     }
+  //   ],
+    
+  //   description: "The ICRC is a neutral, independent organization ensuring humanitarian protection and assistance for people affected by armed conflict and other violence.",
+  //   scope: 'global',
+  //   slug: 'icrc'
+  // },
   {
     id: 52,
     name: "UNICEF",
@@ -2607,8 +2794,9 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Volunteer",
-        url: "https://www.unicef.org/careers/volunteers-unicef"
+        action: "Volunteer with UNICEF",
+        url: "https://www.unicef.org/careers/volunteers-unicef",
+        category: "volunteer"
       },
       {
         action: "Take Action",
@@ -2679,7 +2867,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Get Data",
-        url: "https://data.who.int/"
+        url: "https://data.who.int/",
+        category: "education"
       }
     ],
     description: "Founded in 1948, WHO is the United Nations agency that connects nations, partners and people to promote health, keep the world safe and serve the vulnerable – so everyone, everywhere can attain the highest level of health.",
@@ -2701,12 +2890,14 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Volunteer",
-        url: "https://irusa.org/volunteer/"
+        action: "Volunteer with Islamic Relief USA",
+        url: "https://irusa.org/volunteer/",
+        category: "volunteer"
       },
       {
         action: "Creative Giving",
-        url: "https://irusa.org/creative-giving/"
+        url: "https://irusa.org/creative-giving/",
+        category: "donate"
       },
       {
         action: "Advocacy",
@@ -2714,11 +2905,13 @@ export const orgs: Org[] = [
       },
       {
         action: "Create a Fundraiser",
-        url: "https://irusa.org/iraise/"
+        url: "https://irusa.org/iraise/",
+        category: "volunteer"
       },
       {
         action: "Create a Will",
-        url: "https://irusa.org/wills/"
+        url: "https://irusa.org/wills/",
+        category: "donate"
       }
     ],
     description: "Islamic Relief USA is a community of diverse people sharing a set of common values: excellence, sincerity, social justice, compassion, and custodianship. Islamic Relief USA provides relief and development in a dignified manner regardless of gender, race, or religion, and works to empower individuals in their communities and give them a voice in the world.",
@@ -2765,7 +2958,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Nights of Power",
-        url: "https://www.mausa.org/nights-of-power/"
+        url: "https://www.mausa.org/nights-of-power/",
+        category: "donate"
       }
     ],
     description: "Muslim Aid USA is a faith based American international charity that provides help to people who are victims of natural disasters or conflict. MAUSA also helps those who are suffering from poverty, hunger, disease, illiteracy, discrimination, homelessness, debt, unemployment, injustice, deprivation or lack of skills and economic opportunities.",
@@ -2804,7 +2998,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Advocacy - Resources and Tools",
-        url: "https://www.catholiccharitiesusa.org/advocacy/"
+        url: "https://www.catholiccharitiesusa.org/advocacy/",
+        category: "education"
       },
       {
         action: "Parish Engagement",
@@ -2854,12 +3049,14 @@ export const orgs: Org[] = [
         url: "https://www.doctorswithoutborders.org/get-involved"
       },
       {
-        action: "Volunteer",
-        url: "https://www.doctorswithoutborders.org/get-involved/volunteer"
+        action: "Volunteer with Doctors Without Borders",
+        url: "https://www.doctorswithoutborders.org/get-involved/volunteer",
+        category: "volunteer"
       },
       {
         action: "More Ways To Give",
-        url: "https://www.doctorswithoutborders.org/get-involved/ways-to-give"
+        url: "https://www.doctorswithoutborders.org/get-involved/ways-to-give",
+        category: "donate"
       },
       {
         action: "Events",
@@ -2902,7 +3099,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Join in on national advocacy efforts",
-        url: "https://www.ama-assn.org/health-care-advocacy/federal-advocacy/national-advocacy"
+        url: "https://www.ama-assn.org/health-care-advocacy/federal-advocacy/national-advocacy",
+        category: "education"
       },
       {
         action: "Events",
@@ -2945,8 +3143,9 @@ export const orgs: Org[] = [
         url: "https://www.npaf.org/get-involved/"
       },
       {
-        action: "Volunteer",
-        url: "https://www.npaf.org/actions/sign-up-to-volunteer/"
+        action: "Volunteer with NPAF",
+        url: "https://www.npaf.org/actions/sign-up-to-volunteer/",
+        category: "volunteer"
       },
       {
         action: "Events",
@@ -2958,7 +3157,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Understand the Issues",
-        url: "https://www.npaf.org/issues/"
+        url: "https://www.npaf.org/issues/",
+        category: "education"
       }
     ],
     description: "Our mission is to make the healthcare system work for all of us. As the advocate affiliate of Patient Advocate Foundation, we work at the national level to influence policy and drive change in healthcare.",
@@ -3006,7 +3206,8 @@ export const orgs: Org[] = [
       },
       {
         action: "Media and Reports",
-        url: "https://ncafp.org/media-reports-directory/"
+        url: "https://ncafp.org/media-reports-directory/",
+        category: "education"
       },
     ],
     description: "NCAFP is a nonprofit policy organization dedicated to the resolution of conflicts that threaten U.S. interests. Toward that end, the NCAFP identifies, articulates, and helps advance American foreign policy interests from a nonpartisan perspective within the framework of political realism.",
@@ -3041,11 +3242,13 @@ export const orgs: Org[] = [
       },
       {
         action: "Scorecard: Check Your State's Score",
-        url: "https://www.fp4america.org/scorecard/"
+        url: "https://www.fp4america.org/scorecard/",
+        category: "education"
       },
       {
         action: "Resources",
-        url: "https://www.fp4america.org/resources/"
+        url: "https://www.fp4america.org/resources/",
+        category: "education"
       },
     ],
     description: "Foreign Policy for America is a national nonpartisan organization based in Washington, D.C. Together with our members, we’re working to strengthen support for principled U.S. leadership in the world.",
@@ -3096,7 +3299,8 @@ export const orgs: Org[] = [
       },
       {
         action: "More Ways to Give",
-        url: "https://lutheranservices.org/give/"
+        url: "https://lutheranservices.org/give/",
+        category: "donate"
       },
       {
         action: "ELCA responds to fake news",

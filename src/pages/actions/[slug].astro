@@ -23,13 +23,33 @@ export function getStaticPaths() {
 }
 const org = orgs.find((org) => org.slug === slug) as Org;
 
-let volunteer: any = {};
+let volunteer: {action: string, url: string, category?: string}[] = [];
 let hasVolunteer = false;
+let education: {action: string, url: string, category?: string}[] = [];
+let donations: {action: string, url: string, category?: string}[] = [];
+let store: {action: string, url: string, category?: string}[] = [];
+
+let hasStore = false;
+let hasEducation = false;
+let hasOtherDonations = false;
+
 
 if(org.actions) {
-  volunteer = org.actions.find((action) => action.action === 'Volunteer');
-  hasVolunteer = volunteer ? true : false;
+  volunteer = org.actions.filter((action) => action.category === 'volunteer');
+  hasVolunteer = volunteer.length > 0 ? true : false;
+
+  donations = org.actions.filter((action) => action.category === 'donate');
+  hasOtherDonations = donations.length > 0 ? true : false;
+
+  education = org.actions.filter((action) => action.category === 'education');
+  hasEducation = education.length > 0 ? true : false;
+
+  store = org.actions.filter((action) => action.category === 'money');
+  hasStore = store.length > 0 ? true : false;
 }
+
+console.log(education)
+console.log(hasEducation)
 ---
 
 
@@ -113,34 +133,38 @@ if(org.actions) {
         </li>
       </ul>
     </nav>
-    <div class="action max-w-4xl">
-      <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
-      {org.actions && org.actions.length > 0 ? 
-        <ul class="flex flex-wrap action-items__list">
-          {org.actions && org.actions.map((action) => {
-            return (
-            <li>
-              <a href={action.url} class="action-items inline-flex items-center" target="_blank">
-                <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
-                {action.action}
-              </a>
-            </li>        
-          )
-          })}
-        </ul> :
-        <p>
-          Sorry, we couldn't find any immediate actions for this organization. Please check their <a href={org.url} target="_blank">website</a> because they might have added some recently!
-        </p>
-      }
+    <div class="action max-w-6xl">
+      <div class="action-wrapper">
+        <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
+        {org.actions && org.actions.length > 0 ? 
+          <ul class="flex flex-wrap action-items__list">
+            {org.actions && org.actions.map((action) => {
+              return (
+              <li>
+                <a href={action.url} class="action-items inline-flex items-center" target="_blank">
+                  <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
+                  {action.action}
+                </a>
+              </li>        
+            )
+            })}
+          </ul> :
+          <p>
+            Sorry, we couldn't find any immediate actions for this organization. Please check their <a href={org.url} target="_blank">website</a> because they might have added some recently!
+          </p>
+        }
+      </div>
+
     </div>
-    <div class="action max-w-4xl">
+    <div class="action">
+      <div class="action-wrapper">
       <h2 id="donate" class="action-section__title">Donate</h2>
       {org.donate ? 
         <a href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
          <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/> Donate to {org.name}
         </a> :
         <p>
-          Check if your chosen cause or organization is accepting donations and find out if they have an annual or monthly membership. 
+          We didn't find a donation link for your Organization. But Charity Navigator is a great tool to find charities that champion your cause. 
         </p>
         <h3 class="action-link__title">
           <a href="https://www.charitynavigator.org/" target="_blank">Charity Navigator</a>
@@ -149,207 +173,238 @@ if(org.actions) {
           Charity Navigator helps millions of people take action and support the causes they care about by connecting them to the best charities that align with their passions and values.
         </p>
       }
+      {hasOtherDonations && (
+        donations.map((donate) => {
+         return (
+            <a href={donate.url} class="donate-btn inline-flex items-center mx-2" target="_blank">
+              <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/>
+              {donate.action}
+            </a>
+          )
+        })          
+      )}
+      </div>
     </div>    
-    <div class="action max-w-4xl">
-      <h2 id="contact" class="action-section__title">Contact Your Representatives</h2>
-      <p>
-        Make your voice heard! Write to or call your representatives at the local, state, and national level. 
-        Urge them to take up your cause, or call them out on stances you disagree with. Every email, letter, or 
-        message is counted and is an <span class="font-bold">important</span> indicator that your cause is important to their constituents.
-      </p>
-      <h3 class="action-link__title">
-        <a href="https://resist.bot" target="_blank">ResistBot</a>
-      </h3>
-      <p>
-        Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
-      </p>
-      <Image src={MailBot} alt="ResistBot" class=""/>
-      <p>
-        Send the word RESIST to Resistbot on 
-      </p>
-      <ul>
-        <li>
-          <a href="https://bcrw.apple.com/sms:open?service=iMessage&recipient=urn:biz:d0189b65-f844-4344-adc1-d2d01daca04e&body=resist" target="_blank">Apple Messages</a>,
-        </li>
-        <li>
-          <a href="https://www.messenger.com/t/1224106861035505?text=resisthttps://www.messenger.com/t/1224106861035505?text=resist" target="_blank">Messenger</a>, 
-        </li>
-        <li>
-          <a href="https://www.instagram.com/direct/t/107534807309194/?text=" target="_blank">Instagram</a>, 
-        </li>
-        <li>
-          <a href="https://t.me/resistbot?start=resist" target="_blank">Telegram</a>, 
-        </li>
-      </ul>          
-      <p>
-        or by text to <a href="sms:50409" target="_blank">50409</a> and answer the questions texted back. 
-      </p>
-      <p>
-        In minutes, you’ll have contacted Congress or your other elected officials. <a href="https://resist.bot/letters" target="_blank">Make your letter open</a> for maximum effect.
-      </p>
-
-      <h3 class="action-link__title">
-        <a href="https://www.usa.gov/elected-officials" target="_blank">Find Your Elected Officials</a>
-      </h3>
-      <p>
-        USA.gov has a tool to to find your Federal, State, and Local officials, just enter your address. 
-        They provide a <span class="font-bold">physical address</span>, <span class="font-bold">phone numbers</span>, and 
-        <span class="font-bold">social media accounts</span> for every elected official. 
-      </p>            
-    </div>
-
-    <div class="action max-w-4xl">
-      <h2 id="volunteer" class="action-section__title">Volunteer</h2>
-      {hasVolunteer ? 
-        <a href={volunteer.url} class="volunteer-btn inline-flex items-center" target="_blank">
-          <Icon name="mdi:volunteer" aria-hidden="true" role={'img'} class="mr-2"/> See volunteer opportunities with {org.name}
-        </a> :
+    <div class="action">
+      <div class="action-wrapper">
+        <h2 id="contact" class="action-section__title">Contact Your Representatives</h2>
         <p>
-          Check if your chosen cause or organization has volunteer openings or memberships.
+          Make your voice heard! Write to or call your representatives at the local, state, and national level. 
+          Urge them to take up your cause, or call them out on stances you disagree with. Every email, letter, or 
+          message is counted and is an <span class="font-bold">important</span> indicator that your cause is important to their constituents.
         </p>
-      }     
-      <h3 class="action-link__title">
-        <a href="https://www.volunteermatch.org/" target="_blank">VolunteerMatch.org</a>
-      </h3>
-      <p>
-        VolunteerMatch believes that volunteering can change lives – starting with yours. When we connect with our 
-        communities and each other through service we can find our passion and purpose, build camaraderie and hope, 
-        and experience joy and gratitude.
-      </p>
+        <h3 class="action-link__title">
+          <a href="https://resist.bot" target="_blank">ResistBot</a>
+        </h3>
+        <p>
+          Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
+        </p>
+        <Image src={MailBot} alt="ResistBot" class=""/>
+        <p>
+          Send the word RESIST to Resistbot on <a href="https://bcrw.apple.com/sms:open?service=iMessage&recipient=urn:biz:d0189b65-f844-4344-adc1-d2d01daca04e&body=resist" target="_blank">Apple Messages</a>,
+          <a href="https://www.messenger.com/t/1224106861035505?text=resisthttps://www.messenger.com/t/1224106861035505?text=resist" target="_blank">Messenger</a>, 
+          <a href="https://www.instagram.com/direct/t/107534807309194/?text=" target="_blank">Instagram</a>, 
+          <a href="https://t.me/resistbot?start=resist" target="_blank">Telegram</a>, or by text to <a href="sms:50409" target="_blank">50409</a> and answer the questions texted back. 
+        </p>         
+        <p>
+          In minutes, you’ll have contacted Congress or your other elected officials. <a href="https://resist.bot/letters" target="_blank">Make your letter open</a> for maximum effect.
+        </p>
 
-      <h3 class="action-link__title">
-        <a href="https://www.eac.gov/help-america-vote" target="_blank">Volunteer as a Poll Worker</a>
-      </h3>
-      <p>
-        Poll workers are essential to ensure elections are a success. During each election, millions of Americans 
-        dedicate themselves to sustaining the backbone of democracy - our election process.
-      </p>
+        <h3 class="action-link__title">
+          <a href="https://www.usa.gov/elected-officials" target="_blank">Find Your Elected Officials</a>
+        </h3>
+        <p>
+          USA.gov has a tool to to find your Federal, State, and Local officials, just enter your address. 
+          They provide a <span class="font-bold">physical address</span>, <span class="font-bold">phone numbers</span>, and 
+          <span class="font-bold">social media accounts</span> for every elected official. 
+        </p>
+      </div>            
     </div>
 
-    <div class="action max-w-4xl">
-      <h2 id="vote" class="action-section__title">Register to Vote</h2>
-      <p>
-        Register or check your registration status and find out what issues are on your ballot.
-      </p>
+    <div class="action">
+      <div class="action-wrapper">
+        <h2 id="volunteer" class="action-section__title">Volunteer</h2>
+        {hasVolunteer ? 
+          volunteer.map((thisVolunteer) => {
+          return (
+            <a href={thisVolunteer.url} class="volunteer-btn inline-flex mx-2 items-center" target="_blank">
+              <Icon name="mdi:volunteer" aria-hidden="true" role={'img'} class="mr-2"/> { thisVolunteer.action }
+            </a>
+          )
+          }) :
+          <p>
+            We didn't find volunteer opportunities with {org.name}.  
+            But you can use these resources to check if your chosen cause or organization has volunteer openings or memberships.
+          </p>
+          
+          <h3 class="action-link__title">
+            <a href="https://www.volunteermatch.org/" target="_blank">VolunteerMatch.org</a>
+          </h3>
+          <p>
+            VolunteerMatch believes that volunteering can change lives – starting with yours. When we connect with our 
+            communities and each other through service we can find our passion and purpose, build camaraderie and hope, 
+            and experience joy and gratitude.
+          </p>
 
-      <h3 class="action-link__title">
-        <a href="https://www.vote.org/" target="_blank">Vote.org</a>
-      </h3>
-      
-      <h3 class="action-link__title">
-        <a href="https://www.votelikeabeast.com/" target="_blank">Vote Like A Beast</a>
-      </h3>
+          <h3 class="action-link__title">
+            <a href="https://www.eac.gov/help-america-vote" target="_blank">Volunteer as a Poll Worker</a>
+          </h3>
+          <p>
+            Poll workers are essential to ensure elections are a success. During each election, millions of Americans 
+            dedicate themselves to sustaining the backbone of democracy - our election process.
+          </p>
+        }  
+      </div>
     </div>
 
-    <div class="action max-w-4xl">
-      <h2 id="spending" class="action-section__title">Analyze Where You Are Spending Your Money</h2>
-      <p>
-        For better, or for worse, some companies and politicians only seem to respond to boycotts or an increase in sales. So wield your purchasing power carefully! 
-      </p>
-      <p>
-        Find companies who align with your cause and support them. 
-      </p>
-      <p>
-        Find companies that don't support your cause and spend your money at alternative companies.
-      </p>
-      <h3 class="action-link__title">
-        <a href="https://www.goodsuniteus.com/" target="_blank">Goods Unite Us</a>
-      </h3>
-      <p>
-        Search for a company and see their politics. Do some research and spend your money wisely!
-      </p>
-      <Image src={GoodsUnite} alt="Screenshot of a dashboard showing breakdowns and graphs of donations a company has made."/>
-      <h3 class="action-link__title">
-        <a href="https://www.opensecrets.org/" target="_blank">Open Secrets</a>
-      </h3>
-      <p>
-        Look up a politician to see who is funding their campaign. Look up a company to see who and where they are making donations to. 
-      </p>
-      <Image src={OS} alt="Screenshot of a dashboard showing who has been donating to a politician."/>
+    <div class="action">
+      <div class="action-wrapper">        
+        <h2 id="vote" class="action-section__title">Register to Vote</h2>
+        <p>
+          Register or check your registration status and find out what issues are on your ballot.
+        </p>
+
+        <h3 class="action-link__title">
+          <a href="https://www.vote.org/" target="_blank">Vote.org</a>
+        </h3>
+        
+        <h3 class="action-link__title">
+          <a href="https://www.votelikeabeast.com/" target="_blank">Vote Like A Beast</a>
+        </h3>
+      </div>
     </div>
 
-    <div class="action max-w-4xl">
-      <h2 id="learning" class="action-section__title">Learning / Education</h2>
-      <p class="mt-2">
-        It's important to actively learn about the issues you are passionate about. Consider taking a class, read a book, or do a project that will immerse yourself into your cause.
-      </p>
-      <p class="my-4">
-        These are just a few examples. Research opportunities near you or find a topics that you are interested in! 
-      </p>
-      <ul class="resist-learning__list">
-        <li >
-          <a href="https://webaim.org/services/training/" class="font-bold" target="_blank">WebAIM Accessibility Training Courses</a>
-        </li>
-        <li>
-          <p class="font-bold">Online Courses, Certifications</p>
-          <ul>
+    <div class="action">
+      <div class="action-wrapper">      
+        <h2 id="spending" class="action-section__title">Analyze Where You Are Spending Your Money</h2>      
+        <p>
+          For better, or for worse, some companies and politicians only seem to respond to boycotts or an increase in sales. So wield your purchasing power carefully! 
+        </p>
+        <p>
+          Find companies who align with your cause and support them. 
+        </p>
+        <p>
+          Find companies that don't support your cause and spend your money at alternative companies.
+        </p>
+        <h3 class="action-link__title">
+          <a href="https://www.goodsuniteus.com/" target="_blank">Goods Unite Us</a>
+        </h3>
+        <p>
+          Search for a company and see their politics. Do some research and spend your money wisely!
+        </p>
+        <Image src={GoodsUnite} alt="Screenshot of a dashboard showing breakdowns and graphs of donations a company has made."/>
+        <h3 class="action-link__title">
+          <a href="https://www.opensecrets.org/" target="_blank">Open Secrets</a>
+        </h3>
+        <p>
+          Look up a politician to see who is funding their campaign. Look up a company to see who and where they are making donations to. 
+        </p>
+        <Image src={OS} alt="Screenshot of a dashboard showing who has been donating to a politician."/>
+      </div>
+    </div>
+
+    <div class="action">
+      <div class="action-wrapper">      
+        <h2 id="learning" class="action-section__title">Learning / Education</h2>
+        {hasEducation ? 
+          <p class="my-4">
+            Here are some resources your Organization has provided.
+          </p> :
+          <p class="mt-2">
+          It's important to actively learn about the issues you are passionate about. Consider taking a class, read a book, or do a project that will immerse yourself into your cause.
+          </p>
+        
+          <p class="my-4">
+            The following are just a few examples of the types of courses and books you should look for. 
+          </p>
+          <ul class="resist-learning__list">
+            <li >
+              <a href="https://webaim.org/services/training/" class="font-bold" target="_blank">WebAIM Accessibility Training Courses</a>
+            </li>
             <li>
-              <a href=https://pll.harvard.edu/catalog/free?page=1" class="font-bold" target="_blank">Harvard Free Courses</a>
+              <p class="font-bold">Online Courses, Certifications</p>
               <ul>
                 <li>
-                  <a href="https://pll.harvard.edu/course/women-making-history-ten-objects-many-stories" target="_blank">Women Making History: Ten Objects, Many Stories</a>
+                  <a href=https://pll.harvard.edu/catalog/free?page=1" class="font-bold" target="_blank">Harvard Free Courses</a>
+                  <ul>
+                    <li>
+                      <a href="https://pll.harvard.edu/course/women-making-history-ten-objects-many-stories" target="_blank">Women Making History: Ten Objects, Many Stories</a>
+                    </li>
+                    <li>
+                      <a href="https://pll.harvard.edu/course/justice" target="_blank">Justice</a>
+                    </li>
+                  </ul>
                 </li>
+
                 <li>
-                  <a href="https://pll.harvard.edu/course/justice" target="_blank">Justice</a>
+                  <a href="https://online.osu.edu/" class="font-bold" target="_blank">OSU Online</a>
+                  <ul>
+                    <li>
+                      <a href="https://online.osu.edu/undergraduate-certificates/black-studies-certificate/" target="_blank">Black Studies Certificate</a>
+                    </li>
+                    <li>
+                      <a href="https://online.osu.edu/undergraduate-certificates/diversity-equity-inclusion-certificate/" target="_blank">Diversity, Equity, and Inclusion Certificate</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="https://ocw.mit.edu/" class="font-bold" target="_blank">MIT OpenCourseWare</a>
+                  <ul>
+                    <li>
+                      <a href="https://ocw.mit.edu/courses/17-251-congress-and-the-american-political-system-i-fall-2016/" target="_blank">Congress and the American Political System I</a>
+                    </li>
+                    <li>
+                      <a href="https://ocw.mit.edu/courses/wgs-160j-science-activism-gender-race-and-power-fall-2019/" target="_blank">Science Activism: Gender, Race, and Power</a>
+                    </li>
+                    <li>
+                      <a href="https://ocw.mit.edu/courses/cms-631-data-storytelling-studio-climate-change-spring-2017/" target="_blank">Data Storytelling Studio: Climate Change</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
-
             <li>
-              <a href="https://online.osu.edu/" class="font-bold" target="_blank">OSU Online</a>
+              <p class="font-bold">Books (Physical and Audio)</p>
               <ul>
                 <li>
-                  <a href="https://online.osu.edu/undergraduate-certificates/black-studies-certificate/" target="_blank">Black Studies Certificate</a>
+                  <a href="https://us.macmillan.com/books/9781250288240/thetruthaboutimmigration/" target="_blank">The Truth About Immigration</a>
                 </li>
                 <li>
-                  <a href="https://online.osu.edu/undergraduate-certificates/diversity-equity-inclusion-certificate/" target="_blank">Diversity, Equity, and Inclusion Certificate</a>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="https://ocw.mit.edu/" class="font-bold" target="_blank">MIT OpenCourseWare</a>
-              <ul>
-                <li>
-                  <a href="https://ocw.mit.edu/courses/17-251-congress-and-the-american-political-system-i-fall-2016/" target="_blank">Congress and the American Political System I</a>
+                  <a href="https://www.powells.com/featured/antiracism" target="_blank">Books on Racism</a>
                 </li>
                 <li>
-                  <a href="https://ocw.mit.edu/courses/wgs-160j-science-activism-gender-race-and-power-fall-2019/" target="_blank">Science Activism: Gender, Race, and Power</a>
+                  <a href="https://glaad.org/eight-books-from-trans-authors-to-read-for-trans-awareness-week/" target="_blank">Books by Trans Authors</a>
                 </li>
                 <li>
-                  <a href="https://ocw.mit.edu/courses/cms-631-data-storytelling-studio-climate-change-spring-2017/" target="_blank">Data Storytelling Studio: Climate Change</a>
+                  <a href="https://www.goodreads.com/shelf/show/accessibility" target="_blank">Books on Accessibility</a>
                 </li>
               </ul>
             </li>
           </ul>
-        </li>
-        <li>
-          <p class="font-bold">Books (Physical and Audio)</p>
-          <ul>
-            <li>
-              <a href="https://us.macmillan.com/books/9781250288240/thetruthaboutimmigration/" target="_blank">The Truth About Immigration</a>
-            </li>
-            <li>
-              <a href="https://www.powells.com/featured/antiracism" target="_blank">Books on Racism</a>
-            </li>
-            <li>
-              <a href="https://glaad.org/eight-books-from-trans-authors-to-read-for-trans-awareness-week/" target="_blank">Books by Trans Authors</a>
-            </li>
-            <li>
-              <a href="https://www.goodreads.com/shelf/show/accessibility" target="_blank">Books on Accessibility</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+        }
+        {hasEducation && (
+          education.map((educate) => {
+          return (
+              <a href={educate.url} class="donate-btn inline-flex items-center mx-1" target="_blank">
+                <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
+                {educate.action}
+              </a>
+            )
+          })          
+        )}
+      </div>
     </div>
-    <div class="action max-w-4xl">
-      <h2 id="next-step" class="action-section__title">Next Step</h2>
-      <p>
-        Completed your action? Great! Now it's time to move on to the last step.
-      </p>
-      <a href="/recover" class="recovery-btn inline-flex items-center">
-        <Icon name="mdi:arrow-right" aria-hidden="true" role={"img"} class="mr-2"/> Next Step
-      </a>
+    <div class="action">
+      <div class="action-wrapper">
+        <h2 id="next-step" class="action-section__title">Next Step</h2>
+        <p>
+          Completed your action? Great! Now it's time to move on to the last step.
+        </p>
+        <a href="/recover" class="recovery-btn inline-flex items-center">
+          <Icon name="mdi:arrow-right" aria-hidden="true" role={"img"} class="mr-2"/> Next Step
+        </a>
+      </div>
     </div>
   </section>   
 </Layout>

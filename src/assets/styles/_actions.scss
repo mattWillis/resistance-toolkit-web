@@ -20,10 +20,15 @@ $link-color-hover: #C20E03;
 div.action {
   border-bottom: 1px solid #000;
   padding-bottom: 20px;
-  @apply mx-auto;
+  @apply mx-auto max-w-6xl;
   p {
-    max-width: 670px;
+    // @apply mx-auto max-w-4xl;
+    // max-width: 670px;
   }
+}
+
+.action-wrapper {
+  @apply mx-auto max-w-4xl;
 }
 
 .toc__item {

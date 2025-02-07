@@ -1,7 +1,16 @@
+.resist-home__section {
+  @apply max-w-6xl mx-auto py-6 lg:pt-8 px-4 pb-10;
+}
+
 .resist-steps__title {
+  @apply font-black mb-0 text-center;
   font-family: "neulis-sans", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
+}
+.resist-steps__subtitle {
+  @apply mb-4 text-center;
+  font-size: 20px;
 }
 
 .resist-steps__list {
@@ -45,13 +54,14 @@
   position: relative;
   background-color: #94B1C1;
   color: #000;
+  // background-color: #003f61;
+  // background-color: #4E4D70;
+  // color: #fff;
   padding-left: 15px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  // padding-block: 20px;
   p {
-    // margin-left: 120px;
     text-transform: capitalize;
   }
   &:hover {
@@ -75,6 +85,62 @@
   }
 }
 
+.resist-featured__section {
+  @apply pb-1;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.resist-featured {
+  flex: 0 1 30%;
+  @apply flex flex-col bg-white border shadow-sm rounded-xl;
+}
+
+.resist-featured__header {
+  @apply bg-gray-100 border-b rounded-t-xl py-2 px-4 md:py-2 md:px-5;
+  // background-color: #003f61;
+  // background-color: #94B1C1;
+}
+
+.resist-featured__header--title {
+  @apply mt-1 text-sm inline-flex items-center;
+  // color: #fff; 
+  // color: #000;
+  font-family: "neulis-sans", sans-serif;
+  // font-weight: 900;
+}
+
+.resist-featured__body {
+  @apply p-4 md:p-5;
+}
+.resist-featured__body--title {
+  @apply text-lg font-bold mb-2;
+  color: #000;
+  font-family: "neulis-sans", sans-serif;
+}
+
+.resist-featured__body--img {
+  @apply mx-auto;
+}
+
+
+.resist-featured__body--text {
+  @apply mt-2 text-gray-900;
+}
+.resist-featured__body--link {
+  @apply mt-3 flex items-center gap-x-1 font-semibold rounded-lg border border-transparent decoration-2 hover:underline;
+}
+
+@media screen and (max-width: 915px) {
+  .resist-featured__section {
+   flex-wrap: wrap;
+  }
+  .resist-featured {
+    flex: 0 1 70%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .resist-steps__title {
     font-size: 18px;
@@ -89,7 +155,6 @@
 }
 
 @media screen and (max-width: 640px) { 
-
   .step-link {
     font-size: 16px;
     padding: 25px 0px;
@@ -99,5 +164,11 @@
     p {
       margin-left: 45px;
     }
+  }
+  .resist-featured__section {
+    flex-direction: column;
+  }
+  .resist-featured {
+    flex: 0 1 100%;
   }
 }

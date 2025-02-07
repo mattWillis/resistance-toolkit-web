@@ -12,7 +12,6 @@
 }
 
 body {
-  // .container {
     display: grid; 
     grid-template-columns: 1fr; 
     grid-template-rows: min-content min-content 2.5fr min-content; 
@@ -22,7 +21,6 @@ body {
       "header"
       "main"
       "footer"; 
-  // }
   .resist-grid-nav { grid-area: nav; }
   .resist-grid-header { grid-area: header; }
   .resist-grid-main { grid-area: main; }
@@ -46,19 +44,8 @@ a, .hs-collapse-toggle {
 .logo-container {
   position: relative;
 }
-// .sr-only:not(:focus):not(:active):not(:focus-visible) {
-//   clip: rect(0 0 0 0); 
-//   clip-path: inset(50%);
-//   height: 1px;
-//   overflow: hidden;
-//   position: absolute;
-//   white-space: nowrap; 
-//   width: 1px;
-// }
 
 .skip-to-main:focus-visible {
-  // width: 1px;
-  // height: 1px;
   padding: unset;
   margin: unset;
   overflow: unset;

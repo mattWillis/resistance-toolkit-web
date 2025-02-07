@@ -2,19 +2,95 @@
 import '@assets/styles/Home.scss';
 import { Image } from 'astro:assets';
 import PickCause from '@assets/PickCause.png';
+import { Icon } from 'astro-icon/components';
+import MailBot from '@assets/mailbot.svg';
+import VoteDotOrg from '@assets/votedotorg.svg';
+import YourMoney from '@assets/YourMoney.svg';
 ---
-<section class="resist-home__section max-w-6xl mx-auto py-6 lg:pt-8 px-4 pb-10"> 
-  <h2 class="resist-steps__title text-center font-black mb-4" >Fight Hate, One Step At a Time.</h2>
-  
+<section class="resist-home__section"> 
+  <h2 class="resist-steps__title text-center" >Join The Resistance</h2>
+  <p class="resist-steps__subtitle">Fight Hate, One Step At a Time.</p>
   <a class="step-link md:py-10 max-w-3xl mx-auto md:max-w-2xl" href="/causes">
     <Image src={PickCause} alt="A megaphone with lines extending from the blow horn." />
     <p class="text-center">Step 1 - Pick a cause</p>
   </a>
   <p class="resist-steps__note md:text-center md:max-w-2xl mx-auto mt-4">
-    <span class="font-bold italic">Note:</span>
+    <span class="font-bold">Note:</span>
     This implementation is primarily focused on <span class="underline">U.S. politics and issues.</span> 
   </p>
   <p class="resist-steps__note md:text-center md:max-w-2xl mx-auto">
     International version coming soon, because hate is a global issue.
   </p>
+</section>
+<section class="resist-home__section resist-featured__section">
+  
+  <div class="resist-featured">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+       <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
+      </p>
+    </div>
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        ResistBot
+      </h3>
+      <Image src={MailBot} class="resist-featured__body--img" alt="A robot holding an envelope." />
+      <p class="resist-featured__body--text">
+        Make your voice heard! Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
+      </p>
+      <a class="resist-featured__body--link" href="https://resist.bot/" target="_blank">
+        Resist.bot
+        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+      </a>
+    </div>
+  </div>
+
+  <div class="resist-featured">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+        <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
+      </p>
+    </div>
+
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        Register to Vote
+      </h3>
+      <Image src={VoteDotOrg} class="resist-featured__body--img" alt="Text reads 'Vote.org'" />
+      <p class="resist-featured__body--text">
+        Are you registered to vote? Check your status, register, vote by mail, and get election reminders.
+      </p>
+      <a class="resist-featured__body--link" href="https://www.vote.org/" target="_blank">
+        Vote.org
+        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+      </a>
+    </div>    
+  </div>
+  <div class="resist-featured">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+        <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
+      </p>
+    </div>
+
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        Where is your money going?
+      </h3>
+      <Image src={YourMoney} class="resist-featured__body--img" alt="Stacks of coins and dollar bills." />
+      <p class="resist-featured__body--text">
+        Find companies who align with your cause and support them. Find what companies are funding politicians. 
+      </p>
+      <a class="resist-featured__body--link" href="https://www.goodsuniteus.com/" target="_blank">
+        Goods Unite Us
+        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+      </a>
+      
+      <a class="resist-featured__body--link" href="https://www.opensecrets.org/" target="_blank">
+        Open Secrets
+        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+      </a>
+    </div>    
+  </div>
+
 </section>
