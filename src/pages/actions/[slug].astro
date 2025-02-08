@@ -47,9 +47,6 @@ if(org.actions) {
   store = org.actions.filter((action) => action.category === 'money');
   hasStore = store.length > 0 ? true : false;
 }
-
-console.log(education)
-console.log(hasEducation)
 ---
 
 
@@ -72,15 +69,8 @@ title={`The Resistance Toolkit - ${org.name}`}
         })}          
       </div>    
     </div>
-    <button type="button" class="hs-collapse-toggle inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
-      <span class="hs-collapse-open:hidden read-more">Read more</span>
-      <span class="hs-collapse-open:block read-less">Read less</span>
-      <svg aria-hidden="true" role="img" class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="m6 9 6 6 6-6"></path>
-      </svg>
-    </button>
   </section>
-  <section id="hs-show-hide-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] org-section org-content" aria-labelledby="hs-show-hide-collapse">
+  <section  class="org-section org-content" aria-labelledby="hs-show-hide-collapse">
     <div class="org-info">
       <div class="org-description">
         <h2 class="flex items-center"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
@@ -104,11 +94,10 @@ title={`The Resistance Toolkit - ${org.name}`}
       </div>
     </div>
   </section>
-  <section class="mt-8 actions-section max-w-6xl mx-auto">
+  <section class="mt-8 action max-w-6xl mx-auto">
     <nav aria-label="Table of Contents" class="max-w-4xl mx-auto">
       <h2 class="action-section__title text-center">Actions - Table of Contents</h2>
-      <!-- <ul class="flex justify-center rounded-lg shadow-sm mx-auto">       -->
-      <ul class="resist-actions__toc max-w-sm flex mx-auto flex-col">
+      <ul class="resist-actions__toc max-w-sm rounded-lg shadow-sm flex mx-auto flex-col">
         <li class="toc__item">
           <a href="#org-actions">What Are Your Organizations Suggesting?</a>
         </li>
@@ -135,7 +124,10 @@ title={`The Resistance Toolkit - ${org.name}`}
         </li>
       </ul>
     </nav>
-    <div class="action max-w-6xl">
+  </section>
+  <section  class="mt-8 actions-section max-w-6xl mx-auto">
+
+    <div class="action">
       <div class="action-wrapper">
         <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
         {org.actions && org.actions.length > 0 ? 
