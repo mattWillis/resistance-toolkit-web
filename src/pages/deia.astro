@@ -4,7 +4,12 @@ import Banner from '@assets/DEIABanner.png';
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components'
 ---
-<Layout title="DEIA Statement">
+<Layout 
+  title="The Resistance Toolkit - DEIA Statement"
+  image = "https://resistance-toolkit.com/Social-Share.png",
+  description = "Join the Resistance! The tools you need to fight hate, one step at a time.",
+  imageAlt = 'Text reads "The Resistance Toolkit, tools you need to fight hate." Illustration of a woman wearing a bandana on her head and flexing her right arm.'
+>
   <header slot="header" class="about-header">
     <Image src={Banner} class="about-banner mx-auto" alt="Banner reads 'DEIA Statement'. The banner includes an illustration showing various icons denoting diversity, inclusion, equity, and accessibility.">
   </header>

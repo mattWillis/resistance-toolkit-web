@@ -9,11 +9,13 @@ interface Props {
   title: string;
   image?: string;
   description?: string;
+  imageAlt?: string;
 }
 const {
   title,
-  image = "Social-Share.png",
-  description = "The tools you need to fight hate. One step at a time.",
+  image = "https://resistance-toolkit.com/Social-Share.png",
+  description = "Join the Resistance! The tools you need to fight hate, one step at a time.",
+  imageAlt = 'Text reads "The Resistance Toolkit, tools you need to fight hate." Illustration of a woman wearing a bandana on her head and flexing her right arm.'
 } = Astro.props;
 
 import Toolkit from '@assets/Toolkit.png';
@@ -30,8 +32,8 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 
     <meta property="og:title" content={title} />
     <meta property="og:type" content="app" />
-    <meta property="og:image" content={`https://resistance-toolkit.com/${imageUrl}`} />
-    <meta property="og:image:alt" content={'Text reads "The Resistance Toolkit, tools you need to fight hate." Illustration of a woman wearing a bandana on her head and flexing her right arm.'} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:description" content={description} />
 
     <meta name="twitter:title" content={title} />

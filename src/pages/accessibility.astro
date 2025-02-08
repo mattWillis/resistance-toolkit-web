@@ -4,7 +4,12 @@ import Banner from '@assets/AccessibilityBanner.png';
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components'
 ---
-<Layout title="Accessibility Statement">
+<Layout 
+  title="The Resistance Toolkit - Accessibility Statement"
+  image = "https://resistance-toolkit.com/Social-Share.png",
+  description = "Join the Resistance! The tools you need to fight hate, one step at a time.",
+  imageAlt = 'Text reads "The Resistance Toolkit, tools you need to fight hate." Illustration of a woman wearing a bandana on her head and flexing her right arm.'
+>
   <header slot="header" class="about-header">
     <Image src={Banner} class="about-banner mx-auto" alt="Banner that reads 'Accessibility'. Banner contains an illustration showing various icons, including an eye, a person in a wheelchair, and a hand clicking on an arrow.">
     
