@@ -158,49 +158,44 @@ a, .hs-collapse-toggle {
 }
 
 .resist-card {
-  flex: 0 1 calc(33.333% - 10px);
+  flex: 0 1 calc(25% - 10px);
+}
+
+@media screen and (max-width: 1090px) {
+  .resist-card {
+    flex: 1 1 calc(33.33% - 10px);
+  }  
+  .resist-card:nth-last-child(1):is(:nth-child(odd)) {
+    .resist-recover__card--img-container {
+      max-width: 50%;
+      @apply mx-auto;
+      img {
+        object-fit: contain;
+        border-radius: 0px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
   .resist-card {
-    flex: 0 1 calc(50% - 10px);
+    flex: 1 1 calc(50% - 10px);
   }
 }
 @media screen and (max-width: 640px) {
   .resist-card {
-    flex: 0 1 100%;
+    flex: 1 1 100%;
+  }
+  .resist-card:nth-last-child(1):is(:nth-child(odd)) {
+    .resist-recover__card--img-container {
+      max-width: 100%;
+      width: 100%;
+      @apply mx-auto;
+      img {
+        object-fit: unset;
+        @apply rounded-t-xl;
+      }
+    }
   }
 }
 
-.resist-recovery__title {
-  font-family: "neulis-sans", sans-serif;
-  font-weight: 900;
-  font-size: 25px;
-  text-transform: uppercase;
-  margin-block: 15px;
-}
-.resist-recovery__button {
-  @apply mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg text-white;
-  background-color: #003f61;
-  &:hover, &:focus-visible {
-    background-color: #C20E03;
-    color: white;
-    cursor: pointer;
-  }
-}
-
-.start-again-btn {
-  // display: block;
-  background-color: #003f61;
-  color: white;
-  font-family: "neulis-sans", sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-  padding: 20px;
-  margin-top: 15px;
-  &:hover, &:focus-visible {
-    background-color: #C20E03;
-    color: white;
-    cursor: pointer;
-  }
-}

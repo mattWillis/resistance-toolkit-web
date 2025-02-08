@@ -177,6 +177,22 @@ title={`The Resistance Toolkit - ${org.name}`}
           )
         })          
       )}
+      {hasStore ? 
+        <div>
+          <p class="font-bold mt-4 mb-1">{org.name} has a store. Check it out!</p>
+          {store.map((shop) => {
+            return (
+            <a href={shop.url} class="donate-btn inline-flex items-center" target="_blank">
+              <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/>
+              {shop.action}
+            </a>            
+          )})
+          }
+
+        </div> :
+        null
+
+      }
       </div>
     </div>    
     <div class="action">

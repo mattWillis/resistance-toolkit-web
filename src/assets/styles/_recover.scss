@@ -1,0 +1,52 @@
+.resist-recovery__title {
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-block: 15px;
+}
+
+.resist-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  @apply p-4;
+}
+
+.resist-recover__card--img-container {
+  img {
+    object-fit: contain;
+    @apply rounded-t-xl;
+  }
+}
+
+.resist-recovery__button {
+  @apply mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg text-white;
+  background-color: #003f61;
+  &:hover, &:focus-visible {
+    background-color: #C20E03;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.start-again-btn {
+  background-color: #003f61;
+  color: white;
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 20px;
+  margin-top: 15px;
+  &:hover, &:focus-visible {
+    background-color: #C20E03;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.resist-repeat {
+  @apply text-center mt-8  max-w-6xl mx-auto;
+  @apply mx-auto mb-4 max-w-6xl bg-white border shadow-sm rounded-xl;;
+}
