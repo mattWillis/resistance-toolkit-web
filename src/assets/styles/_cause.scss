@@ -87,6 +87,18 @@ ul.org-list {
     }
   }
 }
+
+.org-scope {
+  width: fit-content;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #d1d1d1;
+  border-radius: 4px;
+  @apply my-2;
+  // @apply mx-auto;
+}
+
 .resist-org__section-title {
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;

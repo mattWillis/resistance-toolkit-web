@@ -2,9 +2,8 @@
 import '@assets/styles/_cause.scss';
 import { type Org, orgs } from '../../data';
 import { type Cause, causes } from '../../data';
-import { Icon } from "astro-icon/components";
 import { Image } from 'astro:assets';
-import DefaultImg from '/src/assets/resist-default-img.png';
+import StepImg from '@assets/Step1-New.png'
 import Layout from '../../layouts/Layout.astro';
 const { slug } = Astro.params;
 
@@ -29,6 +28,16 @@ orgs.map((org) => {
   })
 });
 
+const sortedOrgs = allMatchedOrgs.sort((a: Org, b: Org) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+});
+
 const globalOrgs: Org[] = allMatchedOrgs.filter((org) => org.scope === 'global');
 const usOrgs: Org[] = allMatchedOrgs.filter((org) => org.scope === 'us');
 ---
@@ -39,78 +48,50 @@ const usOrgs: Org[] = allMatchedOrgs.filter((org) => org.scope === 'us');
   image={'https://resistance-toolkit.com/Cause-Share.png'}
   imageAlt='Text reads "Featured Cause". Illustration of a megaphone with sound waves coming out of it.'
 >
-<header  class="max-w-6xl mx-auto" slot="header">
-
+<header class="max-w-6xl mx-auto" slot="header">
+  <Image src={StepImg} alt="Pick a cause." />
 </header>
 
 <section class="max-w-3xl mx-auto py-6 lg:pt-8 px-4 pb-10">
-  <h1 class="resist-select-org__title">Select an Organization</h1>
-  {globalOrgs.length !== 0 && 
-  <h2 class="resist-org__section-title">🌍 Global Organizations</h2>
-    <ul class="org-list">    
-      {globalOrgs.map((thisOrg) => {
-        return (
-        <li>
-          <a class="org-link" href={`/orgs/${thisOrg.slug}?cause=${cause.slug}`}>
-            {thisOrg.ogImage ? 
-              <div class="org-image__cover">
-                <Image
-                  width={100}
-                  height={100}
-                  src={thisOrg.ogImage}
-                  alt={`${thisOrg.name} social media share`}
-                  class="org-image"
-                />
-              </div> :
-              <div class="org-image__cover">
-                <Image
-                  width={100}
-                  height={100}
-                  src={'/src/assets/resist-default-img.png'}
-                  alt={'Image not found'}
-                  class="org-image"
-                />
-              </div>
-            }  
-            <p class="org-title">{thisOrg.name}</p>
-            <p>{thisOrg.description}</p>           
-          </a>
-        </li>)
-      })}
-    </ul>
-  }
-  
-  <h2 class="resist-org__section-title">🇺🇸 U.S. Focused</h2>
-  <ul class="org-list">
-    {usOrgs.map((thisOrg) => {
-      return (
-      <li>        
-        <a class="org-link" href={`/orgs/${thisOrg.slug}?cause=${cause.slug}`}>        
-          {thisOrg.ogImage ? 
-              <div class="org-image__cover">
-                <Image
-                  width={100}
-                  height={100}
-                  src={thisOrg.ogImage}
-                  alt={`${thisOrg.name} social media share`}
-                  class="org-image"
-                />
-              </div> :
-              <div class="org-image__cover">
-                <Image
-                  src={'/src/assets/resist-default-img.png'}
-                  width={100}
-                  height={100}
-                  alt={'Image not found'}
-                  class="org-image"
-                />
-              </div>
-            }         
-          <p class="org-title">{thisOrg.name}</p>
-          <p>{thisOrg.description}</p>          
-        </a>        
-      </li>)
-    })}
-  </ul>
+  <h1 class="resist-select-org__title">{cause.title} - Select an Organization</h1>
+  {sortedOrgs.length !== 0 && 
+      <ul class="org-list">    
+        {sortedOrgs.map((thisOrg) => {
+          return (
+          <li>
+            <a class="org-link" href={`/orgs/${thisOrg.slug}?cause=${cause.slug}`}>
+              {thisOrg.ogImage ? 
+                <div class="org-image__cover">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={thisOrg.ogImage}
+                    alt={`${thisOrg.name} social media share`}
+                    class="org-image"
+                  />
+                </div> :
+                <div class="org-image__cover">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={'/src/assets/resist-default-img.png'}
+                    alt={'Image not found'}
+                    class="org-image"
+                  />
+                </div>
+              }  
+              <p class="org-scope">
+                {thisOrg.scope === 'global' ? 
+                  `🌍 Globally Focused` : 
+                  `🇺🇸 U.S. Focused`
+                }
+              </p>
+              <p class="org-title">{thisOrg.name}</p>
+              <p>{thisOrg.description}</p>           
+            </a>
+          </li>)
+        })}
+      </ul>
+    }
 </section>
 </Layout>

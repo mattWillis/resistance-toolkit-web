@@ -30,7 +30,7 @@ export const causes: Cause[] = [
     slug: 'accessibility',
     banner: 'Causes-Accessibility.png',
     emoji: '♿️',
-    listImg: '/src/assets/Card-Disability-Img.png',
+    listImg: '/src/assets/Card-Disability-Img.webp',
     listImgAlt: 'A person in a wheelchair outside in a park'
   },
   {
@@ -39,7 +39,7 @@ export const causes: Cause[] = [
     slug: 'civil-rights',
     banner: 'Causes-CivilRights.png',
     emoji: '⚖️',
-    listImg: '/src/assets/Card-Civil-Img.png',
+    listImg: '/src/assets/Card-Civil-Img.webp',
     listImgAlt: 'A person in a hijab holding a megaphone in front of a crowd of people with their arms in the air.'    
   },
   {
@@ -48,7 +48,7 @@ export const causes: Cause[] = [
     slug: 'climate',
     banner: 'Causes-Climate.png',
     emoji: '🌡️',
-    listImg: '/src/assets/Card-Climate-Img.png',
+    listImg: '/src/assets/Card-Climate-Img.webp',
     listImgAlt: 'A pair of hands holding an illuminated globe.'       
   },
   {
@@ -57,7 +57,7 @@ export const causes: Cause[] = [
     slug: 'guns',
     banner: 'Causes-Guns.png',
     emoji: '🔫',
-    listImg: '/src/assets/Card-Guns-Img.png',
+    listImg: '/src/assets/Card-Guns-Img.webp',
     listImgAlt: 'Statue of a revolver with the barrel tied into a knot.'
   },  
   {
@@ -66,7 +66,7 @@ export const causes: Cause[] = [
     slug: 'immigration',
     banner: 'Causes-Immigration.png',
     emoji: '🚶',
-    listImg: '/src/assets/Card-Immigration-Img.png',
+    listImg: '/src/assets/Card-Immigration-Img.webp',
     listImgAlt: 'Metal wall extending from the bottom left of the image to the top right. It is creating a scare in the dessert landscape.'
   },
   {
@@ -75,7 +75,7 @@ export const causes: Cause[] = [
     slug: 'lgbtq',
     banner: 'Causes-LGBTQ.png',
     emoji: '🏳️‍🌈',
-    listImg: '/src/assets/Card-LGBTQ-Img.png',
+    listImg: '/src/assets/Card-LGBTQ-Img.webp',
     listImgAlt: 'Rainbow flag.'
   },
   {
@@ -84,7 +84,7 @@ export const causes: Cause[] = [
     slug: 'reproductive',
     banner: 'Causes-Reproductive.png',
     emoji: '♀',
-    listImg: '/src/assets/Card-Reproductive-Img.png',
+    listImg: '/src/assets/Card-Reproductive-Img.webp',
     listImgAlt: `A crowd of protesters holding signs that read: "Defend Women's and Reproductive Rights".`
   },
   {
@@ -93,7 +93,7 @@ export const causes: Cause[] = [
     slug: 'sexism',
     banner: 'Causes-Sexism.png',
     emoji: '💃',
-    listImg: '/src/assets/Card-Sexism-Img.png',
+    listImg: '/src/assets/Card-Sexism-Img.webp',
     listImgAlt: 'Silhouette of a woman, her right arm is raised with a clenched fist.'
   },  
   {
@@ -102,7 +102,7 @@ export const causes: Cause[] = [
     slug: 'voting',
     banner: 'Causes-Voting.png',
     emoji: '🗳️',
-    listImg: '/src/assets/Card-Voting-Img.png',
+    listImg: '/src/assets/Card-Voting-Img.webp',
     listImgAlt: `Stickers that read: "I Voted" scattered on a white surface.`
   },
   {
@@ -111,7 +111,7 @@ export const causes: Cause[] = [
     slug: 'wealth',
     banner: 'Causes-Wealth.png',
     emoji: '💰',
-    listImg: '/src/assets/Card-Wealth-Img.png',
+    listImg: '/src/assets/Card-Wealth-Img.webp',
     listImgAlt: `Bar graph with a dollar superimposed over it.`
   },
   {
@@ -120,7 +120,7 @@ export const causes: Cause[] = [
     slug: 'aid',
     banner: 'Causes-Aid.png',
     emoji: '⛑️',
-    listImg: '/src/assets/Card-Aid-Img.png',
+    listImg: '/src/assets/Card-Aid-Img.webp',
     listImgAlt: `USAID: From the American People.`
   },
   {
@@ -129,7 +129,7 @@ export const causes: Cause[] = [
     slug: 'faith',
     banner: 'Causes-Faith.png',
     emoji: '🙏 🧘‍♀️',
-    listImg: '/src/assets/Card-Faith-Img.png',
+    listImg: '/src/assets/Card-Faith-Img.webp',
     listImgAlt: `Illustration with symbols of various faiths and two hands reaching out to each other over a globe.`
   },
   {
@@ -138,7 +138,7 @@ export const causes: Cause[] = [
     slug: 'medicine',
     banner: 'Causes-Medicine.png',
     emoji: '⚕️',
-    listImg: '/src/assets/Card-Medicine-Img.png',
+    listImg: '/src/assets/Card-Medicine-Img.webp',
     listImgAlt: `A stethoscope, pill packets, and other medical tools scattered on a white surface.`
   },
   {
@@ -147,7 +147,7 @@ export const causes: Cause[] = [
     slug: 'science',
     banner: 'Causes-Science.png',
     emoji: '👩‍🔬👨‍🔬',
-    listImg: '/src/assets/Card-Science-Img.png',
+    listImg: '/src/assets/Card-Science-Img.webp',
     listImgAlt: `Two women looking into microscopes in a black and white photo.`
   },
   {
@@ -156,8 +156,17 @@ export const causes: Cause[] = [
     slug: 'diplomacy',
     banner: 'Causes-Diplomacy.png',
     emoji: '🌍',
-    listImg: '/src/assets/Card-Diplomacy-Img.png',
+    listImg: '/src/assets/Card-Diplomacy-Img.webp',
     listImgAlt: `Vintage typewriter with "DIPLOMACY" typed on the paper.`
+  },
+  {
+    id: 15,
+    title: 'Democracy',
+    slug: 'democracy',
+    banner: 'Causes-Diplomacy.png',
+    emoji: '🇺🇸',
+    listImg: '/src/assets/Card-Democracy-Img.webp',
+    listImgAlt: `A young black woman raises her right fist in the air as a large crowd of protesters gather in front of a political building.`
   },
 ];
 
@@ -1801,7 +1810,7 @@ export const orgs: Org[] = [
     name: "Defend The Vote",
     url: 'https://wedefendthevote.org/',
     ogImage: "https://wedefendthevote.org/wp-content/uploads/2021/01/share.png",
-    cause: ['voting'],
+    cause: ['voting', 'democracy'],
     donate: "https://secure.actblue.com/donate/defend-the-vote-1",
     social: [
       {
@@ -1837,7 +1846,7 @@ export const orgs: Org[] = [
     name: "Vote.org",
     url: 'https://vote.org/',
     ogImage: "https://www.vote.org/img/og-www-default.png",
-    cause: ['voting'],
+    cause: ['voting', 'democracy'],
     donate: "https://www.vote.org/donate/",
     social: [
       {
@@ -1912,7 +1921,7 @@ export const orgs: Org[] = [
     name: "Voters of Tomorrow",
     url: 'https://votersoftomorrow.org/',
     ogImage: "https://votersoftomorrow.org/wp-content/uploads/2022/01/wfhVhxmI.jpeg",
-    cause: ['voting'],
+    cause: ['voting', 'democracy'],
     donate: "https://secure.actblue.com/donate/voters-of-tomorrow-action-1",
     social: [
       {
@@ -3310,6 +3319,81 @@ export const orgs: Org[] = [
     description: "We lead one of the nation’s largest and most respected health and human services networks to empower people in America to lead their best lives - so all communities can thrive. Together, we support families, we empower children to grow up to be healthy, productive adults, and we enable veterans, refugees, older adults and people with disabilities to live with dignity and independence in the community of their choice.",
     scope: 'us',
     slug: 'lutheranservices'
+  },
+  {
+    id: 63,
+    name: "Indivisible",
+    url: 'https://indivisible.org/',
+    ogImage: "/Orgs/IndivisibleBanner.webp",
+    cause: ['democracy'],
+    donate: 'https://secure.actblue.com/donate/23-web-form',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/indivisible.org"
+      },
+      {
+        platform: 'Mastodon',
+        url: "https://mastodon.social/@indivisibleteam"
+      },
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/indivisibleguide/"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/indivisibleteam"
+      },
+      {
+        platform: 'Medium',
+        url: "https://indivisibleteam.medium.com/"
+      }
+    ],
+    actions: [
+      {
+        action: "Take Action Now",
+        url: "https://indivisible.org/take-action-now"
+      },
+      {
+        action: "More Ways to Donate",
+        url: "https://indivisible.org/how-to-give",
+        category: "donate"
+      },
+      {
+        action: "Guide",
+        url: "https://indivisible.org/resource/guide",
+        category: "education"
+      },
+      {
+        action: "Support Our Candidates",
+        url: "https://indivisible.org/our-candidates"
+      },
+      {
+        action: "Resources",
+        url: "https://indivisible.org/resources"
+      },
+      {
+        action: "Find a Local Event",
+        url: "https://www.mobilize.us/indivisible/"
+      },
+      {
+        action: "Find or Create a Group",
+        url: "https://indivisible.org/groups"
+      },
+      {
+        action: "Group Support Hub",
+        url: "https://lutheranservices.org/give/",
+        category: "donate"
+      },
+      {
+        action: "Store",
+        url: "https://store.indivisible.org/",
+        category: "money"
+      }
+    ],
+    description: "Action by action, day by day, group by group, Indivisibles are remaking our democracy. Brought together by a practical guide to resist the Trump agenda, Indivisible is a movement of thousands of group leaders and more than a million members taking regular, iterative, and increasingly complex actions to resist the GOPs agenda, elect local champions, and fight for progressive policies.",
+    scope: 'us',
+    slug: 'indivisible'
   },
 ]
 
