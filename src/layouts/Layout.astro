@@ -13,7 +13,7 @@ interface Props {
 }
 const {
   title,
-  image = "https://resistance-toolkit.com/Social-Share.png",
+  image = `${Astro.site}Social-Share.png`,
   description = "Join the Resistance! The tools you need to fight hate. Pick a cause, choose an org, take an action, recover, and repeat!",
   imageAlt = 'Text reads "The Resistance Toolkit, tools you need to fight hate." Illustration of a woman wearing a bandana on her head and flexing her right arm.'
 } = Astro.props;
@@ -30,18 +30,29 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <meta name="description" content={description} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <meta property="og:title" content={title} />
-    <meta property="og:type" content="app" />
-    <meta property="og:image" content={imageUrl} />
-    <meta property="og:image:alt" content={imageAlt} />
-    <meta property="og:description" content={description} />
 
+    <!-- Facebook -->
+    <meta property="og:url" content={`${Astro.url.href}`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:secure_url" content={imageUrl} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:image:width" content="1200px" />
+    <meta property="og:image:height" content="630px" />
+
+    <!-- Twitter - never gonna call it anything else! -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="resistance-toolkit.com">
+    <meta property="twitter:url" content="https://resistance-toolkit.com">
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image:alt" content={imageAlt} />
 
-    <meta name="viewport" content="width=device-width" />
+
+    <meta name="viewport" content="width=device-width initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -52,8 +63,6 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <title>{title} - The Resistance Toolkit</title>
     <link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
     <ClientRouter />
-    {import.meta.env.PROD === true && <GoogleAnalytics id="G-HCFPD93CD3" /> }
-
   </head>
   <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
     <nav aria-label="Site Navigation" class="resist-grid-nav bg-white">			

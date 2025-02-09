@@ -45,8 +45,8 @@ const usOrgs: Org[] = allMatchedOrgs.filter((org) => org.scope === 'us');
 <Layout 
   title={`The Resistance Toolkit - ${cause.title}`}
   description={`Featured organizations that support ${cause.title}`}
-  image={'https://resistance-toolkit.com/Cause-Share.png'}
-  imageAlt='Text reads "Featured Cause". Illustration of a megaphone with sound waves coming out of it.'
+  image={`${Astro.site}Cause-Share.png`}
+  imageAlt='Text reads Featured Cause. Next to the text is an illustration of a megaphone with sound waves coming out of it.'
 >
 <header class="max-w-6xl mx-auto" slot="header">
   <Image src={StepImg} alt="Pick a cause." />

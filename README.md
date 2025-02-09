@@ -1,5 +1,7 @@
 ![Logo for The Resistance Toolkit stylized as graffiti on a brick wall. Subtitle reads "The tools you need to resist hate."](src/assets/Poster.png)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/80b9f4df-cb1a-4f7a-ba13-2d38e15055e5/deploy-status)](https://app.netlify.com/sites/resistance-toolkit/deploys)
+
 ## Fight Hate. One step at a Time.
 
 [The Resistance Toolkit Website](https://resistance-toolkit.com/)

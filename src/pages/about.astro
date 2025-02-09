@@ -6,9 +6,9 @@ import { Icon } from 'astro-icon/components'
 ---
 <Layout 
   title="About"
-  image = "https://resistance-toolkit.com/Social-Share.png",
+  image=`${Astro.site}Social-Share.png`
   description = "Join the Resistance! The tools you need to fight hate, one step at a time.",
-  imageAlt = 'Text reads "The Resistance Toolkit, tools you need to fight hate." Illustration of a woman wearing a bandana on her head and flexing her right arm.'
+  imageAlt = 'Text reads The Resistance Toolkit, tools you need to fight hate. Next to the text is an illustration of a woman wearing a bandana on her head and flexing her right arm in the style of Rosie the Riveter.'
   >
   <header slot="header" class="about-header">
     <Image src={Banner} class="about-banner mx-auto" alt="Banner for The Resistance Toolkit stylized as graffiti on a brick wall. Subtitle reads 'The tools you need to resist hate.'">
