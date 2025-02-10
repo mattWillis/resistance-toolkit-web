@@ -59,7 +59,7 @@ const usOrgs: Org[] = allMatchedOrgs.filter((org) => org.scope === 'us');
         {sortedOrgs.map((thisOrg) => {
           return (
           <li>
-            <a class="org-link" href={`/orgs/${thisOrg.slug}?cause=${cause.slug}`}>
+            <a rel="next" class="org-link" href={`/orgs/${thisOrg.slug}?cause=${cause.slug}`}>
               {thisOrg.ogImage ? 
                 <div class="org-image__cover">
                   <Image

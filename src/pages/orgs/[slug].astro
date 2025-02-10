@@ -47,19 +47,19 @@ const org = orgs.find((org) => org.slug === slug) as Org;
       <div class="org-description">
         <h2 class="flex items-center mb-4"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
         <p>{org.description}</p>
-        <a id="chooseOrgLink" href={`/actions/${org.slug}`} class="select-org">Choose Organization</a>
+        <a id="chooseOrgLink" rel="next" href={`/actions/${org.slug}`} class="select-org">Choose Organization</a>
       </div>
       <div class="org-contact">
         <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
         <p>
-          <a href={org.url} target="_blank">{org.url}</a>
+          <a href={org.url} rel="noopener nofollow" target="_blank">{org.url}</a>
         </p>
         <h2 class="flex items-center my-4 pb-2"> <Icon name="mdi:megaphone"/> Social Media</h2>
         <div class="social-tags">    
           {org.social && org.social.map((social) => {
             return (
             <span class="tag">
-              <a href={social.url} title={`View ${org.name} on ${social.platform}`} target="_blank">{social.platform}</a>
+              <a href={social.url} rel="noopener nofollow" title={`View ${org.name} on ${social.platform}`} target="_blank">{social.platform}</a>
             </span>        
           )
           })}
@@ -82,12 +82,12 @@ const org = orgs.find((org) => org.slug === slug) as Org;
             A note about Social Media
           </h3>
           <div class="mt-2 text-sm text-gray-800">
-            I encourage you to use social media platforms that are open sourced and decentralized (like <a href="https://bsky.app/" class="text-blue-800 font-bold" target="_blank">BlueSky</a> or <a href="https://joinmastodon.org/" class="text-blue-800 font-bold" target="_blank">Mastodon</a>). However, your organization might not have an account on these newer platforms, so go where your orgs are.     
+            I encourage you to use social media platforms that are open sourced and decentralized (like <a rel="noopener nofollow" href="https://bsky.app/" class="text-blue-800 font-bold" target="_blank">BlueSky</a> or <a href="https://joinmastodon.org/" class="text-blue-800 font-bold" target="_blank">Mastodon</a>). However, your organization might not have an account on these newer platforms, so go where your orgs are.     
           </div>
         </div>          
       </div>
       <div>
-        <p class="text-sm">This is a link to a <a href="https://go.bsky.app/8i9FuqR" class="text-blue-800 font-bold" target="_blank">starter pack of organizations</a> that are currently on BlueSky.</p>
+        <p class="text-sm">This is a link to a <a rel="noopener nofollow" href="https://go.bsky.app/8i9FuqR" class="text-blue-800 font-bold" target="_blank">starter pack of organizations</a> that are currently on BlueSky.</p>
         <div class="qr-wrapper">
           <Image src={bskyQR} height={80} width={80} alt="QR code to the Resistance Toolkit Starter Pack on BlueSky Social. Scan with your phone's camera to open up the link." />
         </div>
