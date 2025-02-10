@@ -86,6 +86,9 @@ ul.org-list {
       color:#C20E03;
     }
   }
+  p {
+    text-decoration: none !important;
+  }
 }
 
 .org-scope {
@@ -96,7 +99,6 @@ ul.org-list {
   background-color: #d1d1d1;
   border-radius: 4px;
   @apply my-2;
-  // @apply mx-auto;
 }
 
 .resist-org__section-title {

@@ -14,7 +14,6 @@ $link-color-hover: #C20E03;
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
   font-size: 18px;
-  // text-transform: uppercase;
   margin-block: 10px;
 }
 
@@ -22,16 +21,26 @@ div.action {
   padding-inline: 10px;
   padding-bottom: 20px;
   @apply mx-auto mb-4 max-w-6xl bg-white border shadow-sm rounded-xl;
+  p {
+    // font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+    // line-height: 28px;
+    // @apply prose;
+  }
 }
 
 .action-wrapper {
-  @apply mx-auto max-w-4xl;
+  @apply mx-auto max-w-2xl;
 }
 
 .toc__item {
   @apply py-3 px-4 text-sm font-medium bg-white border border-gray-200;  
   a {
-    display: block;
+    display: block;    
+    font-family: "century-gothic", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
   }
 }
 
@@ -52,7 +61,7 @@ ul.resist-learning__list {
 
 .volunteer-btn, .donate-btn, .recovery-btn {
   background-color: $link-color;
-  color: white;
+  color: white !important;
   padding: 10px;
   margin-block: 10px;
   &:hover, &:focus-visible {

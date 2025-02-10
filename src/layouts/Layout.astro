@@ -71,7 +71,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
           <div class="logo-container">
             <a class="skip-to-main sr-only" href="#main">Skip to main content</a>
             <a href="/" title="Resistance Toolkit homepage" class="flex items-center gap-2">
-              <Image src={Toolkit} alt="Toolbox with carpentry tools sticking out" class="w-12 h-12" />
+              <Image src={Toolkit} alt="Toolbox with carpentry tools sticking out" height={96} width={96} class="w-12 h-12" />
             </a>
 					</div>
 		
@@ -103,7 +103,10 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     </main>
     <Footer />
     <style is:global>
-      :root {
+      :root {        
+        font-family: "century-gothic", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
       }
       html, body {
         min-height: 100svh;

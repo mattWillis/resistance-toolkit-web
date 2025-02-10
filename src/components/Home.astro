@@ -6,8 +6,12 @@ import { Icon } from 'astro-icon/components';
 import MailBot from '@assets/mailbot.svg';
 import VoteDotOrg from '@assets/votedotorg.svg';
 import YourMoney from '@assets/YourMoney.svg';
+import DEIA from '@assets/resources/DEIA.png';
+import Somebody from '@assets/resources/IAmSomebody.png';
+import Muse from '@assets/resources/Inspire-Song-Muse.png';
+import ResistSquare from '@assets/resources/ResistanceSquare.png';
 ---
-<section class="resist-home__section"> 
+<section class="resist-home__section resist-start__section"> 
   <h2 class="resist-steps__title text-center" >Join The Resistance</h2>
   <p class="resist-steps__subtitle">Fight Hate, One Step At a Time.</p>
   <a rel="next" class="step-link md:py-10 max-w-3xl mx-auto md:max-w-2xl" href="/causes">
@@ -16,12 +20,12 @@ import YourMoney from '@assets/YourMoney.svg';
   </a>
   <p class="resist-steps__note  md:max-w-2xl mx-auto mt-4">
     <span class="font-bold">Note:</span>
-    This implementation is primarily focused on <span class="underline">U.S. politics and issues.</span> 
+    This implementation is primarily focused on <span class="font-bold">U.S. politics and issues.</span> 
     An international version is in the works and coming soon. Because hate is a global issue.
   </p>
 </section>
 <section class="resist-home__section resist-featured__section">
-  
+
   <div class="resist-featured">
     <div class="resist-featured__header">
       <p class="resist-featured__header--title">
@@ -49,7 +53,6 @@ import YourMoney from '@assets/YourMoney.svg';
         <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
       </p>
     </div>
-
     <div class="resist-featured__body">
       <h3 class="resist-featured__body--title">
         Register to Vote
@@ -64,13 +67,13 @@ import YourMoney from '@assets/YourMoney.svg';
       </a>
     </div>    
   </div>
+
   <div class="resist-featured">
     <div class="resist-featured__header">
       <p class="resist-featured__header--title">
         <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
       </p>
     </div>
-
     <div class="resist-featured__body">
       <h3 class="resist-featured__body--title">
         Where is your money going?
@@ -83,7 +86,6 @@ import YourMoney from '@assets/YourMoney.svg';
         Goods Unite Us
         <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
       </a>
-      
       <a rel="noopener nofollow" class="resist-featured__body--link" href="https://www.opensecrets.org/" target="_blank">
         Open Secrets
         <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
@@ -91,4 +93,90 @@ import YourMoney from '@assets/YourMoney.svg';
     </div>    
   </div>
 
+</section>
+
+<section class="resist-home__section downloads resist-featured__section"> 
+  
+  <h2 class="resist-steps__title downloads text-center" >Downloads</h2>
+  
+  <div class="resist-featured downloads">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+      </p>
+    </div>
+    <div class="resist-featured__body--img-wrapper">
+      <Image src={ResistSquare} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text in the top left hand corner reads "The Resistance Toolkit, Tools You Need To Fight Hate. resistance-toolkit.com". In the bottom right had corner there is an illustration of a woman flexing her right arm.` />
+    </div>
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        Tools You Need
+      </h3>
+      <a class="resist-featured__body--link" href="/Resources/ResistSquare.png" download="Resistance Toolkit - Fight Hate">
+        Download
+        <Icon name="mdi:download" role="img" aria-hidden="true" />
+      </a>
+    </div>
+  </div>
+
+  <div class="resist-featured downloads">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+      </p>
+    </div>
+    <div class="resist-featured__body--img-wrapper">
+      <Image src={Somebody} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text reads "I am SOMEBODY. The Resistance Toolkit." A diverse group of  illustrated hands, clenched into fists, peak up behind a city skyline. Image is washed with a pink and purple filter.` />
+    </div>
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        I Am Somebody
+      </h3>
+      <a class="resist-featured__body--link" href="/Resources/IAmSomebody.png" download="Resistance Toolkit - Somebody">
+        Download
+        <Icon name="mdi:download" role="img" aria-hidden="true" />
+      </a>
+    </div>
+  </div>
+
+  <div class="resist-featured downloads">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+      </p>
+    </div>
+    <div class="resist-featured__body--img-wrapper">
+      <Image src={Muse} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`A silhouette of a woman with her right arm held up with a clenched fist is in the foreground with a rising sun in the background. Symbols and lines surround her. Text reads "Best, you've got to be the best You've got to change the world And use this chance to be heard by Muse".` />
+    </div>
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        Be Heard!
+      </h3>
+      <a class="resist-featured__body--link" href="/Resources/Inspire-Song-Muse.png" download="Resistance Toolkit - Be Heard">
+        Download
+        <Icon name="mdi:download" role="img" aria-hidden="true" />
+      </a>
+    </div>
+  </div>
+
+  <div class="resist-featured downloads">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+      </p>
+    </div>
+    <div class="resist-featured__body--img-wrapper">
+      <Image src={DEIA} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Diversity, Equity, Inclusion, Accessibility: It's the law. Title 7 Of The Civil Rights Act, Americans With Disabilities Act, Age Discrimination In Employment Act, Equal Pay Act, Pregnancy Discrimination Act, Many More... DEIA initiatives merely ensure government agencies follow the law, not to force "illegal and immoral discrimination programs."` />
+    </div>
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        DEI - It's The Law
+      </h3>
+      <a class="resist-featured__body--link" href="/Resources/DEIA.png" download="Resistance Toolkit - DEI">
+        Download
+        <Icon name="mdi:download" role="img" aria-hidden="true" />
+      </a>
+    </div>
+  </div>
+    
 </section>

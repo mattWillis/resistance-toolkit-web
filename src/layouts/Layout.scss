@@ -4,13 +4,6 @@
   z-index: 4;
 }
 
-.hidden {
-  // display: unset;
-  // display: block;
-  // visibility: hidden;
-  // height: 0px;
-}
-
 body {
     display: grid; 
     grid-template-columns: 1fr; 
@@ -28,11 +21,16 @@ body {
 }
 
 
-$link-color: #003f61;
+$link-color: #3F3F5B;
 $link-color-hover: #C20E03;
 
-a, .hs-collapse-toggle {
+// Better Contrast
+// $link-color-hover: #880902;
+
+a, .hs-collapse-toggle, div.action p a {
   color: $link-color;
+  // text-decoration: underline;
+  // text-decoration-thickness: 1px;
   &:hover {
     color: $link-color-hover;
   }
@@ -66,7 +64,7 @@ a, .hs-collapse-toggle {
 }
 
 .resist-button__causes {
-  background-color: #003f61;
+  background-color: $link-color;
   color: white;
   &:hover, &:focus-visible {
     background-color: #C20E03;

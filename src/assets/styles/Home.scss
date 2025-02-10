@@ -2,6 +2,12 @@
   @apply max-w-6xl mx-auto py-6 lg:pt-8 px-4 pb-10;
 }
 
+.resist-start__section {
+  border: 10px solid #C20E03;
+  @apply rounded-xl;
+  @apply shadow-xl;
+}
+
 .resist-steps__title {
   @apply font-black mb-0 text-center;
   font-family: "neulis-sans", sans-serif;
@@ -54,9 +60,6 @@
   position: relative;
   background-color: #94B1C1;
   color: #000;
-  // background-color: #003f61;
-  // background-color: #4E4D70;
-  // color: #fff;
   padding-left: 15px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -99,16 +102,11 @@
 
 .resist-featured__header {
   @apply bg-gray-100 border-b rounded-t-xl py-2 px-4 md:py-2 md:px-5;
-  // background-color: #003f61;
-  // background-color: #94B1C1;
 }
 
 .resist-featured__header--title {
   @apply mt-1 text-sm inline-flex items-center;
-  // color: #fff; 
-  // color: #000;
   font-family: "neulis-sans", sans-serif;
-  // font-weight: 900;
 }
 
 .resist-featured__body {
@@ -129,8 +127,40 @@
   @apply mt-2 text-gray-900;
 }
 .resist-featured__body--link {
-  @apply mt-3 flex items-center gap-x-1 font-semibold rounded-lg border border-transparent decoration-2 hover:underline;
+  @apply mt-3 flex items-center gap-x-1 font-semibold rounded-lg border border-transparent hover:underline;
 }
+
+
+.downloads.resist-featured__section {
+  flex-wrap: wrap;
+}
+
+.downloads.resist-steps__title {
+  flex: 1 0 100%;
+}
+
+.downloads.resist-featured {
+  flex: 0 1 calc(25% - 15px);
+}
+
+.downloads .resist-featured__body--link  {
+  background-color: #3F3F5B;
+  @apply text-sm;
+  font-weight: 400;
+  color: white;
+  padding: 5px 10px;
+  display: inline-flex;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover, &:focus-visible {
+    background-color: #C20E03;
+  }
+}
+
+
+.resist-resource-card__img {
+  @apply shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-xs;
+}
+
 
 @media screen and (max-width: 915px) {
   .resist-featured__section {
@@ -138,6 +168,9 @@
   }
   .resist-featured {
     flex: 0 1 70%;
+  }
+  .downloads.resist-featured {
+    flex: 0 1 calc(50% - 15px);
   }
 }
 
@@ -152,6 +185,15 @@
       width: 100px;
     }
   } 
+  .resist-featured__body--img-wrapper {
+    width: 50%;
+    @apply mx-auto;
+  }
+
+  .downloads.resist-featured {
+    flex: 0 1 70%;
+  }
+
 }
 
 @media screen and (max-width: 640px) { 
@@ -169,6 +211,9 @@
     flex-direction: column;
   }
   .resist-featured {
+    flex: 0 1 100%;
+  }
+  .downloads.resist-featured {
     flex: 0 1 100%;
   }
 }
