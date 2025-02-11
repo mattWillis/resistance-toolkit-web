@@ -24,13 +24,8 @@ body {
 $link-color: #3F3F5B;
 $link-color-hover: #C20E03;
 
-// Better Contrast
-// $link-color-hover: #880902;
-
 a, .hs-collapse-toggle, div.action p a {
-  color: $link-color;
-  // text-decoration: underline;
-  // text-decoration-thickness: 1px;
+  @apply text-blue-800;
   &:hover {
     color: $link-color-hover;
   }

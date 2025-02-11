@@ -2,9 +2,17 @@
 import '@assets/styles/_org.scss'
 import '@assets/styles/_actions.scss';
 import { type Org, orgs } from '../../data';
+import { type Cause, causes } from '../../data';
 import Layout from '../../layouts/Layout.astro';
 const { slug } = Astro.params;
 import banner from '@assets/Step3-New.png';
+import Rosie from '@assets/Rosie.svg';
+import Donate from '@assets/Donate.svg';
+import Contact from '@assets/Contact.svg';
+import Register from '@assets/Register.svg';
+import Volunteer from '@assets/Volunteer.svg';
+import Learn from '@assets/Learn.svg';
+import ResearchMoney from '@assets/ResearchMoney.svg';
 import { Image } from 'astro:assets';
 import MailBot from '@assets/mailbot.svg';
 import GoodsUnite from '@assets/GoodsUniteUs.png';
@@ -47,6 +55,11 @@ if(org.actions) {
   store = org.actions.filter((action) => action.category === 'money');
   hasStore = store.length > 0 ? true : false;
 }
+
+const orgCauses = org.cause.map((cause) => {
+  return causes.find((c) => c.slug === cause) as Cause;
+});
+
 ---
 
 
@@ -128,10 +141,15 @@ title={`The Resistance Toolkit - ${org.name}`}
   <section  class="mt-8 actions-section max-w-6xl mx-auto">
 
     <div class="action">
+      <Image src={Rosie} role="img" width={150} height={150} alt="Rosie the Riveter flexing her right arm." class="action-icon"/>
       <div class="action-wrapper">
         <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
+        <p>
+          <!-- {org.name} are on the front lines of the fight for {org.cause && org.cause.join(', ')}. These are suggestions from their website on how you can help them. -->
+          The following are actions straight from the {org.name} website.
+        </p>
         {org.actions && org.actions.length > 0 ? 
-          <ul class="flex flex-wrap action-items__list">
+          <ul class="flex mt-4 flex-wrap action-items__list">
             {org.actions && org.actions.map((action) => {
               return (
               <li>
@@ -150,7 +168,8 @@ title={`The Resistance Toolkit - ${org.name}`}
       </div>
 
     </div>
-    <div class="action">
+    <div class="action">      
+      <Image src={Donate} role="img" width={150} height={150} alt="An open box with three stars jumping out." class="action-icon"/>
       <div class="action-wrapper">
       <h2 id="donate" class="action-section__title">Donate</h2>
       {org.donate ? 
@@ -196,6 +215,7 @@ title={`The Resistance Toolkit - ${org.name}`}
       </div>
     </div>    
     <div class="action">
+      <Image src={Contact} role="img" width={150} height={150} alt="Megaphone with lines emanating from the horn." class="action-icon top"/>
       <div class="action-wrapper">
         <h2 id="contact" class="action-section__title">Contact Your Representatives</h2>
         <p>
@@ -232,6 +252,7 @@ title={`The Resistance Toolkit - ${org.name}`}
     </div>
 
     <div class="action">
+      <Image src={Volunteer} role="img" width={150} height={150} alt="Outline of two hands overlap to make a heart." class="action-icon top"/>
       <div class="action-wrapper">
         <h2 id="volunteer" class="action-section__title">Volunteer</h2>
         {hasVolunteer ? 
@@ -268,6 +289,7 @@ title={`The Resistance Toolkit - ${org.name}`}
     </div>
 
     <div class="action">
+      <Image src={Register} role="img" width={150} height={150} alt="An icon of a pencil is writing on a curled piece of paper." class="action-icon"/>
       <div class="action-wrapper">        
         <h2 id="vote" class="action-section__title">Register to Vote</h2>
         <p>
@@ -285,6 +307,7 @@ title={`The Resistance Toolkit - ${org.name}`}
     </div>
 
     <div class="action">
+      <Image src={ResearchMoney} role="img" width={150} height={150} alt="A magnifying glass hovers as lines emanate from the glass." class="action-icon top"/>
       <div class="action-wrapper">      
         <h2 id="spending" class="action-section__title">Analyze Where You Are Spending Your Money</h2>      
         <p>
@@ -314,84 +337,19 @@ title={`The Resistance Toolkit - ${org.name}`}
     </div>
 
     <div class="action">
+      <Image src={Learn} role="img" width={150} height={150} alt="A pen and a pencil are crossed, similar to skull and crossbones. Symbols of arrows and eyes surround them." class="action-icon top"/>
       <div class="action-wrapper">      
         <h2 id="learning" class="action-section__title">Learning / Education</h2>
-        {hasEducation ? 
-          <p class="my-4">
-            Here are some resources your Organization has provided.
-          </p> :
-          <p class="mt-2">
+        <p class="mt-2">
           It's important to actively learn about the issues you are passionate about. Consider taking a class, read a book, or do a project that will immerse yourself into your cause.
           </p>
-        
+        {hasEducation ? 
           <p class="my-4">
-            The following are just a few examples of the types of courses and books you should look for. 
+            Here are some resources {org.name} has provided.
+          </p> :        
+          <p class="my-4">
+            We didn't find any specific educational resources on the {org.name} website. But it's <a rel="noopener nofollow external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
           </p>
-          <ul class="resist-learning__list">
-            <li >
-              <a rel="noopener nofollow external" href="https://webaim.org/services/training/" class="font-bold" target="_blank">WebAIM Accessibility Training Courses</a>
-            </li>
-            <li>
-              <p class="font-bold">Online Courses, Certifications</p>
-              <ul>
-                <li>
-                  <a rel="noopener nofollow external" href=https://pll.harvard.edu/catalog/free?page=1" class="font-bold" target="_blank">Harvard Free Courses</a>
-                  <ul>
-                    <li>
-                      <a rel="noopener nofollow external" href="https://pll.harvard.edu/course/women-making-history-ten-objects-many-stories" target="_blank">Women Making History: Ten Objects, Many Stories</a>
-                    </li>
-                    <li>
-                      <a rel="noopener nofollow external" href="https://pll.harvard.edu/course/justice" target="_blank">Justice</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a rel="noopener nofollow external" href="https://online.osu.edu/" class="font-bold" target="_blank">OSU Online</a>
-                  <ul>
-                    <li>
-                      <a rel="noopener nofollow external" href="https://online.osu.edu/undergraduate-certificates/black-studies-certificate/" target="_blank">Black Studies Certificate</a>
-                    </li>
-                    <li>
-                      <a rel="noopener nofollow external" href="https://online.osu.edu/undergraduate-certificates/diversity-equity-inclusion-certificate/" target="_blank">Diversity, Equity, and Inclusion Certificate</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a rel="noopener nofollow external" href="https://ocw.mit.edu/" class="font-bold" target="_blank">MIT OpenCourseWare</a>
-                  <ul>
-                    <li>
-                      <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/17-251-congress-and-the-american-political-system-i-fall-2016/" target="_blank">Congress and the American Political System I</a>
-                    </li>
-                    <li>
-                      <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/wgs-160j-science-activism-gender-race-and-power-fall-2019/" target="_blank">Science Activism: Gender, Race, and Power</a>
-                    </li>
-                    <li>
-                      <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/cms-631-data-storytelling-studio-climate-change-spring-2017/" target="_blank">Data Storytelling Studio: Climate Change</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <p class="font-bold">Books (Physical and Audio)</p>
-              <ul>
-                <li>
-                  <a rel="noopener nofollow external" href="https://us.macmillan.com/books/9781250288240/thetruthaboutimmigration/" target="_blank">The Truth About Immigration</a>
-                </li>
-                <li>
-                  <a rel="noopener nofollow external" href="https://www.powells.com/featured/antiracism" target="_blank">Books on Racism</a>
-                </li>
-                <li>
-                  <a rel="noopener nofollow external" href="https://glaad.org/eight-books-from-trans-authors-to-read-for-trans-awareness-week/" target="_blank">Books by Trans Authors</a>
-                </li>
-                <li>
-                  <a rel="noopener nofollow external" href="https://www.goodreads.com/shelf/show/accessibility" target="_blank">Books on Accessibility</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
         }
         {hasEducation && (
           education.map((educate) => {
@@ -403,6 +361,70 @@ title={`The Resistance Toolkit - ${org.name}`}
             )
           })          
         )}
+
+        <p class="my-4">
+          The following are some general examples of the types of courses and books you could look for. 
+        </p>
+        <ul class="resist-learning__list">
+          <li>
+            <p class="font-bold">Books on Causes {org.name} is Involved With</p>
+            <ul>
+              {orgCauses && orgCauses.map((cause) => {
+                return (
+                  <li>
+                    <a rel="noopener nofollow external" href={cause.books} target="_blank">{cause.title}</a>
+                  </li>
+                )
+              })}
+            </ul>
+          </li>
+          <li >
+            <a rel="noopener nofollow external" href="https://webaim.org/services/training/" class="font-bold" target="_blank">WebAIM Accessibility Training Courses</a>
+          </li>
+          <li>
+            <p class="font-bold">Online Courses, Certifications</p>
+            <ul>
+              <li>
+                <a rel="noopener nofollow external" href=https://pll.harvard.edu/catalog/free?page=1" class="font-bold" target="_blank">Harvard Free Courses</a>
+                <ul>
+                  <li>
+                    <a rel="noopener nofollow external" href="https://pll.harvard.edu/course/women-making-history-ten-objects-many-stories" target="_blank">Women Making History: Ten Objects, Many Stories</a>
+                  </li>
+                  <li>
+                    <a rel="noopener nofollow external" href="https://pll.harvard.edu/course/justice" target="_blank">Justice</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a rel="noopener nofollow external" href="https://online.osu.edu/" class="font-bold" target="_blank">OSU Online</a>
+                <ul>
+                  <li>
+                    <a rel="noopener nofollow external" href="https://online.osu.edu/undergraduate-certificates/black-studies-certificate/" target="_blank">Black Studies Certificate</a>
+                  </li>
+                  <li>
+                    <a rel="noopener nofollow external" href="https://online.osu.edu/undergraduate-certificates/diversity-equity-inclusion-certificate/" target="_blank">Diversity, Equity, and Inclusion Certificate</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a rel="noopener nofollow external" href="https://ocw.mit.edu/" class="font-bold" target="_blank">MIT OpenCourseWare</a>
+                <ul>
+                  <li>
+                    <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/17-251-congress-and-the-american-political-system-i-fall-2016/" target="_blank">Congress and the American Political System I</a>
+                  </li>
+                  <li>
+                    <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/wgs-160j-science-activism-gender-race-and-power-fall-2019/" target="_blank">Science Activism: Gender, Race, and Power</a>
+                  </li>
+                  <li>
+                    <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/cms-631-data-storytelling-studio-climate-change-spring-2017/" target="_blank">Data Storytelling Studio: Climate Change</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="action">

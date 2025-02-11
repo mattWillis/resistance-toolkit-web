@@ -21,6 +21,7 @@ export interface Cause {
   emoji: string;
   listImg: string;
   listImgAlt: string;
+  books: string;
 }
 
 export const causes: Cause[] = [
@@ -31,7 +32,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Accessibility.png',
     emoji: '♿️',
     listImg: '/src/assets/Card-Disability-Img.webp',
-    listImgAlt: 'A person in a wheelchair outside in a park'
+    listImgAlt: 'A person in a wheelchair outside in a park',
+    books: 'https://www.goodreads.com/list/show/142568.Ability_and_Disability_Introduction_Monthly_List_1'
   },
   {
     id: 2,
@@ -40,7 +42,8 @@ export const causes: Cause[] = [
     banner: 'Causes-CivilRights.png',
     emoji: '⚖️',
     listImg: '/src/assets/Card-Civil-Img.webp',
-    listImgAlt: 'A person in a hijab holding a megaphone in front of a crowd of people with their arms in the air.'    
+    listImgAlt: 'A person in a hijab holding a megaphone in front of a crowd of people with their arms in the air.',
+    books: 'https://uncpressblog.com/2021/12/15/universal-human-rights-month-a-recommended-reading-list/'
   },
   {
     id: 3,
@@ -49,7 +52,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Climate.png',
     emoji: '🌡️',
     listImg: '/src/assets/Card-Climate-Img.webp',
-    listImgAlt: 'A pair of hands holding an illuminated globe.'       
+    listImgAlt: 'A pair of hands holding an illuminated globe.',
+    books: 'https://www.penguinrandomhouse.com/the-read-down/books-to-inspire-care-for-the-earth/'       
   },
   {
     id: 4,
@@ -58,7 +62,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Guns.png',
     emoji: '🔫',
     listImg: '/src/assets/Card-Guns-Img.webp',
-    listImgAlt: 'Statue of a revolver with the barrel tied into a knot.'
+    listImgAlt: 'Statue of a revolver with the barrel tied into a knot.',
+    books: 'https://www.penguinrandomhouse.com/the-read-down/national-gun-violence-awareness-day/'
   },  
   {
     id: 5,
@@ -67,7 +72,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Immigration.png',
     emoji: '🚶',
     listImg: '/src/assets/Card-Immigration-Img.webp',
-    listImgAlt: 'Metal wall extending from the bottom left of the image to the top right. It is creating a scare in the dessert landscape.'
+    listImgAlt: 'Metal wall extending from the bottom left of the image to the top right. It is creating a scare in the dessert landscape.',
+    books: 'https://www.globalrefuge.org/books-about-immigration/'
   },
   {
     id: 6,
@@ -76,7 +82,8 @@ export const causes: Cause[] = [
     banner: 'Causes-LGBTQ.png',
     emoji: '🏳️‍🌈',
     listImg: '/src/assets/Card-LGBTQ-Img.webp',
-    listImgAlt: 'Rainbow flag.'
+    listImgAlt: 'Rainbow flag.',
+    books: 'https://glaad.org/tag/books/'
   },
   {
     id: 7,
@@ -85,7 +92,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Reproductive.png',
     emoji: '♀',
     listImg: '/src/assets/Card-Reproductive-Img.webp',
-    listImgAlt: `A crowd of protesters holding signs that read: "Defend Women's and Reproductive Rights".`
+    listImgAlt: `A crowd of protesters holding signs that read: "Defend Women's and Reproductive Rights".`,
+    books: 'https://stanfordpress.typepad.com/blog/2021/09/reproductive-rights-recommended-reading.html'
   },
   {
     id: 8,
@@ -94,7 +102,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Sexism.png',
     emoji: '💃',
     listImg: '/src/assets/Card-Sexism-Img.webp',
-    listImgAlt: 'Silhouette of a woman, her right arm is raised with a clenched fist.'
+    listImgAlt: 'Silhouette of a woman, her right arm is raised with a clenched fist.',
+    books: 'https://www.inclusiongeeks.com/articles/twenty-incredible-books-on-feminism-and-patriarchy-2023-and-2024/'
   },  
   {
     id: 9,
@@ -103,7 +112,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Voting.png',
     emoji: '🗳️',
     listImg: '/src/assets/Card-Voting-Img.webp',
-    listImgAlt: `Stickers that read: "I Voted" scattered on a white surface.`
+    listImgAlt: `Stickers that read: "I Voted" scattered on a white surface.`,
+    books: 'https://socialjusticebooks.org/booklists/voting-rights/'
   },
   {
     id: 10,
@@ -112,7 +122,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Wealth.png',
     emoji: '💰',
     listImg: '/src/assets/Card-Wealth-Img.webp',
-    listImgAlt: `Bar graph with a dollar superimposed over it.`
+    listImgAlt: `Bar graph with a dollar superimposed over it.`,
+    books: 'https://inequality.org/our-inequality-work/books/'
   },
   {
     id: 11,
@@ -121,7 +132,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Aid.png',
     emoji: '⛑️',
     listImg: '/src/assets/Card-Aid-Img.webp',
-    listImgAlt: `USAID: From the American People.`
+    listImgAlt: `USAID: From the American People.`,
+    books: 'https://foreignpolicy.com/2024/07/13/summer-reading-list-book-recommendations-ir-history-fiction-geopolitics/'
   },
   {
     id: 12,
@@ -130,7 +142,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Faith.png',
     emoji: '🙏 🧘‍♀️',
     listImg: '/src/assets/Card-Faith-Img.webp',
-    listImgAlt: `Illustration with symbols of various faiths and two hands reaching out to each other over a globe.`
+    listImgAlt: `Illustration with symbols of various faiths and two hands reaching out to each other over a globe.`,
+    books: 'https://www.goodreads.com/shelf/show/interfaith-dialog'
   },
   {
     id: 13,
@@ -139,7 +152,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Medicine.png',
     emoji: '⚕️',
     listImg: '/src/assets/Card-Medicine-Img.webp',
-    listImgAlt: `A stethoscope, pill packets, and other medical tools scattered on a white surface.`
+    listImgAlt: `A stethoscope, pill packets, and other medical tools scattered on a white surface.`,
+    books: 'https://www.penguinrandomhouse.com/the-read-down/books-on-healthcare/'
   },
   {
     id: 14,
@@ -148,7 +162,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Science.png',
     emoji: '👩‍🔬👨‍🔬',
     listImg: '/src/assets/Card-Science-Img.webp',
-    listImgAlt: `Two women looking into microscopes in a black and white photo.`
+    listImgAlt: `Two women looking into microscopes in a black and white photo.`,
+    books: 'https://www.goodreads.com/list/show/692.Best_Science_Books_Non_Fiction_Only'
   },
   {
     id: 15,
@@ -157,7 +172,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Diplomacy.png',
     emoji: '🌍',
     listImg: '/src/assets/Card-Diplomacy-Img.webp',
-    listImgAlt: `Vintage typewriter with "DIPLOMACY" typed on the paper.`
+    listImgAlt: `Vintage typewriter with "DIPLOMACY" typed on the paper.`,
+    books: 'https://www.goodreads.com/list/show/1142.Best_Foreign_Policy_Books'
   },
   {
     id: 15,
@@ -166,7 +182,8 @@ export const causes: Cause[] = [
     banner: 'Causes-Diplomacy.png',
     emoji: '🇺🇸',
     listImg: '/src/assets/Card-Democracy-Img.webp',
-    listImgAlt: `A young black woman raises her right fist in the air as a large crowd of protesters gather in front of a political building.`
+    listImgAlt: `A young black woman raises her right fist in the air as a large crowd of protesters gather in front of a political building.`,
+    books: 'https://www.journalofdemocracy.org/books/'
   },
 ];
 

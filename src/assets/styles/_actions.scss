@@ -20,18 +20,27 @@ $link-color-hover: #C20E03;
 div.action {
   padding-inline: 10px;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  // justify-content: space-around;
+  position: relative;
+  align-items: center;
   @apply mx-auto mb-4 max-w-6xl bg-white border shadow-sm rounded-xl;
   p {
-    // font-weight: 400;
     font-size: 16px;
     line-height: 1.75;
-    // line-height: 28px;
-    // @apply prose;
+  }
+}
+.action-icon {
+  flex: 0 1 150px;
+  &.top {
+    align-self: flex-start;
   }
 }
 
 .action-wrapper {
-  @apply mx-auto max-w-2xl;
+  @apply max-w-2xl;
+  flex: 1;
 }
 
 .toc__item {
@@ -84,10 +93,23 @@ ul.resist-learning__list {
   }
 }
 
+
+
 @media screen and (max-width: 768px) {
   .action-items__list {
     li {
       flex: 0 1 100%;
+    }
+  }
+  div.action {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .action-icon {
+    flex: 1 0 100%;
+    &.top {
+      align-self: center;
     }
   }
 }
