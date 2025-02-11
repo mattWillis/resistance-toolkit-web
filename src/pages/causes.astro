@@ -38,7 +38,7 @@ console.log(images);
   imageAlt='Text reads Causes To Support. Next to the text is an illustration of a megaphone with sound waves coming out of it.'
   >
   <header class="max-w-6xl mx-auto" slot="header">
-    <Image src={StepImg} alt="Pick a cause." />
+    <Image class="no-touchy" src={StepImg} alt="Pick a cause." />
   </header>
   <div class="container max-w-6xl mx-auto">
     <section>
@@ -54,7 +54,7 @@ console.log(images);
             return (
               <li class="cause-list-item">                
                 <a rel="next" class="cause-link" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
-                  <Image class="cause-list-img" src={images[img]()} alt={cause.listImgAlt} />
+                  <Image class="cause-list-img no-touchy" src={images[img]()} alt={cause.listImgAlt} />
                   {cause.title}
                 </a>
               </li>

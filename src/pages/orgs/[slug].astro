@@ -29,7 +29,7 @@ const org = orgs.find((org) => org.slug === slug) as Org;
   imageAlt='Text reads Featured Org. Next to the text is an illustration of a woman flexing her right arm in the style of Rosie the Riveter.'
   >
   <header class="max-w-6xl mx-auto" slot="header">
-    <img src={banner.src} alt="Stay Informed">
+    <Image class="no-touchy" src={banner} alt="Stay Informed" />
   </header>
   
   <section class="org-header">    
@@ -89,7 +89,7 @@ const org = orgs.find((org) => org.slug === slug) as Org;
       <div>
         <p class="text-sm mx-auto text-center md:max-w-[65%] sm:max-w-[100%]">This is a link to a <a rel="noopener nofollow external" href="https://go.bsky.app/54kcLsh" class="text-blue-800 font-bold" target="_blank">starter pack of organizations</a> that are currently on BlueSky.</p>
         <div class="qr-wrapper">
-          <Image src={StarterSVG} height={80} width={80} alt="QR code to the Resistance Toolkit Starter Pack on BlueSky Social. Scan with your phone's camera to open up the link." />
+          <Image class="no-touchy" src={StarterSVG} height={80} width={80} alt="QR code to the Resistance Toolkit Starter Pack on BlueSky Social. Scan with your phone's camera to open up the link." />
         </div>
       </div>
     </div>

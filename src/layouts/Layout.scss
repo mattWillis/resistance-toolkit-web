@@ -4,6 +4,11 @@
   z-index: 4;
 }
 
+.no-touchy {
+ pointer-events: none;
+ user-select: none;
+}
+
 body {
     display: grid; 
     grid-template-columns: 1fr; 
