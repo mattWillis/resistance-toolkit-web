@@ -32,7 +32,7 @@ $link-color-hover: #C20E03;
 a, .hs-collapse-toggle, div.action p a {
   @apply text-blue-800;
   transition: color 0.3s cubic-bezier(.25,.8,.25,1), background-color 0.3s cubic-bezier(.25,.8,.25,1);
-  &:hover {
+  &:hover, &:active {
     color: $link-color-hover;
   }
   &:focus-visible {

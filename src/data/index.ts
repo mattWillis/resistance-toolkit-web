@@ -944,6 +944,16 @@ export const orgs: Org[] = [
         action: "Join CCL",
         url: "https://citizensclimatelobby.org/join-citizens-climate-lobby/"
       },
+      {
+        action: "Blog",
+        url: "https://citizensclimatelobby.org/blog/",
+        category: "education"
+      },
+      {
+        action: "Podcast",
+        url: "https://citizensclimatelobby.org/blog/category/podcast/",
+        category: "education"
+      }
     ],
     description: 'Citizens’ Climate Lobby (CCL) is a nonprofit, nonpartisan, grassroots advocacy climate change organization focused on national policies to address the national and global climate crisis. Consistently respectful, nonpartisan approach to climate education.',
     scope: 'us',

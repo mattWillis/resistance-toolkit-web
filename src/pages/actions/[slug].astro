@@ -90,11 +90,11 @@ title={`The Resistance Toolkit - ${org.name}`}
         <p>{org.description}</p>        
       </div>
       <div class="org-contact">
-        <h2 class="flex items-center"><Icon name="mdi:web-check"/> Website</h2>
+        <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
         <p>
           <a rel="noopener nofollow external" href={org.url} target="_blank">{org.url}</a>
         </p>
-        <h2 class="flex items-center"> <Icon name="mdi:megaphone"/> Social Media</h2>
+        <h2 class="flex items-center my-4 pb-2"> <Icon name="mdi:megaphone"/> Social Media</h2>
         <div class="social-tags">    
           {org.social && org.social.map((social) => {
             return (
@@ -144,13 +144,15 @@ title={`The Resistance Toolkit - ${org.name}`}
       <Image src={Rosie} role="img" width={150} height={150} alt="Rosie the Riveter flexing her right arm." class="action-icon no-touchy"/>
       <div class="action-wrapper">
         <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
-        <p>
-          <!-- {org.name} are on the front lines of the fight for {org.cause && org.cause.join(', ')}. These are suggestions from their website on how you can help them. -->
+        <p>          
           The following are actions straight from the {org.name} website.
         </p>
         {org.actions && org.actions.length > 0 ? 
           <ul class="flex mt-4 flex-wrap action-items__list">
             {org.actions && org.actions.map((action) => {
+              if(action.category === 'education') {
+                return;
+              }
               return (
               <li>
                 <a rel="noopener nofollow external" href={action.url} class="action-items inline-flex items-center" target="_blank">
@@ -162,7 +164,7 @@ title={`The Resistance Toolkit - ${org.name}`}
             })}
           </ul> :
           <p>
-            Sorry, we couldn't find any immediate actions for this organization. Please check their <a href={org.url} target="_blank">website</a> because they might have added some recently!
+            Sorry, we couldn't find any immediate actions for {org.name} from their website. Please check their <a href={org.url} target="_blank">website</a> because they might have added some recently!
           </p>
         }
       </div>
@@ -326,7 +328,7 @@ title={`The Resistance Toolkit - ${org.name}`}
           Search for a company and find their political donations. Get suggestions for alternative brands. Do some research and spend your money wisely!
         </p>
         <Image class="money-image" src={GoodsUnite} alt="Screenshot of a dashboard showing breakdowns and graphs of donations a company has made." />
-        <h3 class="action-link__title">
+        <h3 class="action-link__title open-secrets">
           <a rel="noopener nofollow external" href="https://www.opensecrets.org/" target="_blank">Open Secrets</a>
         </h3>
         <p>
@@ -344,10 +346,10 @@ title={`The Resistance Toolkit - ${org.name}`}
           It's important to actively learn about the issues you are passionate about. Consider taking a class, read a book, or do a project that will immerse yourself into your cause.
           </p>
         {hasEducation ? 
-          <p class="my-4">
+          <p class="my-2">
             Here are some resources {org.name} has provided.
           </p> :        
-          <p class="my-4">
+          <p class="my-2 no-education">
             We didn't find any specific educational resources on the {org.name} website. But it's <a rel="noopener nofollow external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
           </p>
         }
@@ -362,7 +364,7 @@ title={`The Resistance Toolkit - ${org.name}`}
           })          
         )}
 
-        <p class="my-4">
+        <p class="my-2">
           The following are some general examples of the types of courses and books you could look for. 
         </p>
         <ul class="resist-learning__list">

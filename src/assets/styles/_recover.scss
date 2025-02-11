@@ -36,8 +36,8 @@
 
 .resist-recovery__button {
   @apply mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg text-white;
-  background-color: #003f61;
-  &:hover, &:focus-visible {
+  background-color: #3F3F5B;
+  &:hover, &:focus-visible, &:active {
     background-color: #C20E03;
     color: white;
     cursor: pointer;
@@ -45,7 +45,7 @@
 }
 
 .start-again-btn {
-  background-color: #003f61;
+  background-color: #3F3F5B;
   color: white;
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
