@@ -492,7 +492,7 @@ export const orgs: Org[] = [
     name: "ACLU",
     url: 'https://www.aclu.org/',
     ogImage: "https://www.aclu.org/wp-content/themes/aclu-wp/img/default_fb_share.jpg",
-    cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'sexism', 'voting'],
+    cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'sexism', 'voting', 'accessibility'],
     donate: "https://action.aclu.org/give/now",
     social: [
       {
@@ -2751,44 +2751,7 @@ export const orgs: Org[] = [
     scope: 'us',
     slug: 'americanredcross'
   },
-  // {
-  //   id: 51,
-  //   name: "International Committee of the Red Cross",
-  //   url: 'https://www.icrc.org/en',
-  //   ogImage: "https://www.icrc.org/sites/default/files/styles/meta_image/public/2024-02/About_ICRC.jpg?h=5f62bdfc&itok=lpzshezB",
-  //   cause: ['aid'],
-  //   donate: 'https://www.icrc.org/en/donate',
-  //   social: [
-  //     {
-  //       platform: 'BlueSky',
-  //       url: 'https://bsky.app/profile/icrc.org'
-  //     },
-  //     {
-  //       platform: 'Facebook',
-  //       url: 'https://www.facebook.com/icrc'
-  //     },
-  //     {
-  //       platform: 'LinkedIn',
-  //       url: 'https://www.linkedin.com/company/icrc'
-  //     },
-  //     {
-  //       platform: 'Instagram',
-  //       url: 'https://www.instagram.com/ICRC/'
-  //     },
-  //     {
-  //       platform: 'TikTok',
-  //       url: "https://www.tiktok.com/@icrc"
-  //     },
-  //     {
-  //       platform: 'YouTube',
-  //       url: "https://www.youtube.com/icrcfilms"
-  //     }
-  //   ],
-    
-  //   description: "The ICRC is a neutral, independent organization ensuring humanitarian protection and assistance for people affected by armed conflict and other violence.",
-  //   scope: 'global',
-  //   slug: 'icrc'
-  // },
+
   {
     id: 52,
     name: "UNICEF",
@@ -3412,5 +3375,161 @@ export const orgs: Org[] = [
     scope: 'us',
     slug: 'indivisible'
   },
+  {
+    id: 64,
+    name: "Moms Demand Action",
+    url: 'https://momsdemandaction.org/',
+    ogImage: "/Orgs/MomsDemandAction.webp",
+    cause: ['guns'],
+    donate: 'https://secure.actblue.com/donate/mda-web',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/momsdemand.bsky.social"
+      },
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/MomsDemandAction"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/momsdemand"
+      },
+    ],
+    actions: [
+      {
+        action: "Tell Congress to Pass an Assault Weapons Ban Now",
+        url: "https://act.everytown.org/sign/awb-2023/"
+      },
+      {
+        action: "Add Your Name: We Must Disarm Hate",
+        url: "https://indivisible.org/how-to-give",
+      },
+      {
+        action: "Take Action / Volunteer",
+        url: "https://indivisible.org/resource/guide",
+        category: "volunteer"
+      },
+      {
+        action: "Resources",
+        url: "https://momsdemandaction.org/resources/",
+        category: "education"
+      },
+      {
+        action: "Stories",
+        url: "https://momsdemandaction.org/stories/",
+        category: "education"
+      },
+      {
+        action: "Store",
+        url: "https://store.everytown.org/collections/moms-demand-action",
+        category: "money"
+      }
+    ],
+    description: "Moms Demand Action is a grassroots movement of Americans fighting for public safety measures that can protect people from gun violence. We pass stronger gun laws and work to close the loopholes that jeopardize the safety of our families.",
+    scope: 'us',
+    slug: 'momsdemandaction'
+  },
+  {
+    id: 65,
+    name: "Students Demand Action",
+    url: 'https://studentsdemandaction.org/',
+    ogImage: "https://studentsdemandaction.org/wp-content/uploads/sites/10/2024/12/SDA-Website-Meta-121024A.jpg",
+    cause: ['guns'],
+    donate: 'https://secure.actblue.com/donate/everytown-web-2024',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/studentsdemand.bsky.social"
+      },
+      {
+        platform: 'TikTok',
+        url: "https://www.tiktok.com/@studentsdemand?lang=en"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/studentsdemand/"
+      },
+    ],
+    actions: [
+      {
+        action: "Why You Should Get Involved",
+        url: "https://studentsdemandaction.org/get-involved/#why-you-should-get-involved"
+      },
+      {
+        action: "Organize A Students Demand Action Group",
+        url: "https://studentsdemandaction.org/get-involved/#organize-students-demand-action-group",
+        category: "volunteer"
+      },
+      {
+        action: "Join the Calling Team",
+        url: "https://indivisible.org/resource/guide",
+        category: "volunteer"
+      },
+      {
+        action: "Join the Texting Team",
+        url: "https://forms.everytown.org/a/join-students-demand-action-text-team/",
+        category: "volunteer"
+      },
+      {
+        action: "Take Quick Actions",
+        url: "https://studentsdemandaction.org/take-action/"
+      },
+      {
+        action: "Events",
+        url: "https://studentsdemandaction.org/events/"
+      },
+      {
+        action: "Store",
+        url: "https://store.everytown.org/collections/students-demand-action",
+        category: "money"
+      },
+      {
+        action: "Stories",
+        url: "https://studentsdemandaction.org/stories/",
+        category: "education"
+      },
+      {
+        action: "Get News",
+        url: "https://studentsdemandaction.org/news/",
+        category: "education"
+      }
+    ],
+    description: "We are young activists committed to ending gun violence. We are Students Demand Action. Students Demand Action started in 2016 as a pilot program and, with a sense of urgency, we launched it as a national initiative within two weeks of the Parkland shooting. Because what could be more urgent than fixing the errors in our system that have cost so many young people their lives? Students Demand Action now has more than 800 groups across the country and active volunteers in every state and D.C.",
+    scope: 'us',
+    slug: 'studentsdemandaction'
+  }
 ]
 
+
+
+  /** 
+   * TODO: Website is currently buggy: check back later
+   **/
+  // {
+  //   id: 64,
+  //   name: "End Citizens United",
+  //   url: 'https://admin.endcitizensunited.org/',
+  //   ogImage: "https://admin.endcitizensunited.org/wp-content/uploads/2020/03/share.png",
+  //   cause: ['democracy', 'voting'],
+  //   donate: 'https://secure.actblue.com/donate/ecuwebsite',
+  //   social: [
+  //     {
+  //       platform: 'BlueSky',
+  //       url: "https://bsky.app/profile/endcitizensunited.bsky.social"
+  //     },
+  //     {
+  //       platform: 'Facebook',
+  //       url: "https://facebook.com/StopBigMoney"
+  //     }
+  //   ],
+  //   actions: [
+  //     {
+  //       action: "Get Involved",
+  //       url: "https://ecuactionfund.org/the-for-the-people-act/"
+  //     },
+  //   ],
+  //   description: "To fix our democracy by getting big money out of politics and protecting the right to vote. We will work to end our rigged political system by electing reform champions, passing meaningful legislative reforms, and elevating these issues in the national conversation. We will work in partnership with these champions to overturn Citizens United, end the unlimited and undisclosed money in politics, and protect and expand the right to vote.",
+  //   scope: 'us',
+  //   slug: 'endcitizensunited'
+  // },

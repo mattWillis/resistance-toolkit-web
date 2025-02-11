@@ -15,6 +15,9 @@ $link-color-hover: #C20E03;
   font-weight: 900;
   font-size: 18px;
   margin-block: 10px;
+  &:last-of-type {
+    border-top: 1px solid #3F3F5B;
+  }
 }
 
 div.action {
@@ -51,6 +54,11 @@ div.action {
     font-weight: 700;
     font-style: normal;
   }
+}
+
+.money-image {
+  border: 6px solid #3F3F5B;
+  border-radius: 6px;
 }
 
 ul.resist-learning__list {

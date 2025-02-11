@@ -15,8 +15,8 @@ import Learn from '@assets/Learn.svg';
 import ResearchMoney from '@assets/ResearchMoney.svg';
 import { Image } from 'astro:assets';
 import MailBot from '@assets/mailbot.svg';
-import GoodsUnite from '@assets/GoodsUniteUs.png';
-import OS from '@assets/OS.png';
+import GoodsUnite from '@assets/GoodsUniteUs-2.png';
+import OS from '@assets/OpenSecrets.png';
 
 import { Icon } from "astro-icon/components";
 
@@ -323,16 +323,16 @@ title={`The Resistance Toolkit - ${org.name}`}
           <a rel="noopener nofollow external" href="https://www.goodsuniteus.com/" target="_blank">Goods Unite Us</a>
         </h3>
         <p>
-          Search for a company and see their politics. Do some research and spend your money wisely!
+          Search for a company and find their political donations. Get suggestions for alternative brands. Do some research and spend your money wisely!
         </p>
-        <Image src={GoodsUnite} alt="Screenshot of a dashboard showing breakdowns and graphs of donations a company has made."/>
+        <Image class="money-image" src={GoodsUnite} alt="Screenshot of a dashboard showing breakdowns and graphs of donations a company has made." />
         <h3 class="action-link__title">
           <a rel="noopener nofollow external" href="https://www.opensecrets.org/" target="_blank">Open Secrets</a>
         </h3>
         <p>
-          Look up a politician to see who is funding their campaign. Look up a company to see who and where they are making donations to. 
+          Look up a politician to see who is funding their campaign.
         </p>
-        <Image src={OS} alt="Screenshot of a dashboard showing who has been donating to a politician."/>
+        <Image class="money-image" src={OS} alt="Screenshot of a dashboard showing who has been donating to a politician."/>
       </div>
     </div>
 

@@ -32,25 +32,28 @@ $footer-bg-color: #3F3F5B;
 
 .resist-social__link {
   @apply col-span-4;
+  transition: all 0.2s;
   a {    
     display: inline-block;
-    transition: all 0.2s;
+    svg path {
+      transition: fill 0.3s cubic-bezier(.25,.8,.25,1);
+    }
   }
 }
 
-a.bsky:hover {
+a.bsky:hover, a.bsky:focus-visible {
   svg path {
     fill: #1285FE;
   }
 }
 
-a.mastodon:hover {
+a.mastodon:hover, a.mastodon:focus-visible {
   svg path {
     fill: #5D51E7;
   }
 }
 
-a.instagram:hover {
+a.instagram:hover, a.instagram:focus-visible {
   svg path {
     fill: #ED8228;
   }

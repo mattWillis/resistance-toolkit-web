@@ -31,6 +31,7 @@ $link-color-hover: #C20E03;
 
 a, .hs-collapse-toggle, div.action p a {
   @apply text-blue-800;
+  transition: color 0.3s cubic-bezier(.25,.8,.25,1), background-color 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover {
     color: $link-color-hover;
   }
@@ -66,7 +67,8 @@ a, .hs-collapse-toggle, div.action p a {
 .resist-button__causes {
   background-color: $link-color;
   color: white;
-  &:hover, &:focus-visible {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover, &:focus-visible, &:active {    
     background-color: #C20E03;
     color: white;
   }
@@ -74,7 +76,8 @@ a, .hs-collapse-toggle, div.action p a {
 
 .resist-button__about {
   background-color: white;
-  &:hover, &:focus-visible {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover, &:focus-visible, &:active {
     background-color: #C20E03;
     color: white;
   }

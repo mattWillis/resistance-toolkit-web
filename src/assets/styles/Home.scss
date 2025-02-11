@@ -3,7 +3,8 @@
 }
 
 .resist-start__section {
-  border: 10px solid #C20E03;
+  // border: 10px solid #C20E03;
+  border: 10px solid #3F3F5B;
   @apply rounded-xl;
   @apply shadow-xl;
 }
@@ -67,17 +68,18 @@
   p {
     text-transform: capitalize;
   }
-  &:hover {
+  &:hover, &:focus-visible, &:active {
     color:#E6E1D0;
     background-color: #C20E03;
     outline: 5px solid #E6E1D0;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
-  &:focus-visible {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    color:#E6E1D0;
-    background-color: #C20E03;   
-  }
+  // &:focus-visible {
+  //   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  //   color:#E6E1D0;
+  //   outline: 5px solid #E6E1D0;
+  //   background-color: #C20E03;   
+  // }
   img {
     position: absolute;
     left: 0;
