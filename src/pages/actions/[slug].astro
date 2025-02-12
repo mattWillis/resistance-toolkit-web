@@ -1,8 +1,8 @@
 ---
-import '@assets/styles/_org.scss'
-import '@assets/styles/_actions.scss';
-import { type Org, orgs } from '../../data';
-import { type Cause, causes } from '../../data';
+import '@styles/_org.scss'
+import '@styles/_actions.scss';
+import { type Org, orgs } from '@data/index';
+import { type Cause, causes } from '@data/index';
 import Layout from '../../layouts/Layout.astro';
 const { slug } = Astro.params;
 import banner from '@assets/Step3-New.png';
@@ -130,7 +130,7 @@ title={`The Resistance Toolkit - ${org.name}`}
           <a href="#spending">Analyze Where You Are Spending Your Money</a>
         </li>
         <li class="toc__item">
-          <a href="#learning">Learning / Education</a>
+          <a href="#learning">Training / Education</a>
         </li>
         <li class="toc__item">
           <a href="#next-step">Next Step</a>

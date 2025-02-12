@@ -469,6 +469,10 @@ export const orgs: Org[] = [
         url: "https://www.amnesty.org/en/get-involved/take-action/"
       },
       {
+        action: "What We Do - Campaigns",
+        url: "https://www.amnesty.org/en/what-we-do/"
+      },
+      {
         action: "Free Online Course",
         url: "https://www.amnesty.org/en/get-involved/online-courses/",
         category: "education"
@@ -522,6 +526,10 @@ export const orgs: Org[] = [
         url: "https://www.aclu.org/action" 
       },
       {
+        action: "Campaigns & Initiatives",
+        url: "https://www.aclu.org/campaigns-initiatives"
+      },
+      {
         action: "Shop",
         url: "https://shop.aclu.org/",
         category: "money"
@@ -530,6 +538,10 @@ export const orgs: Org[] = [
         action: "Know Your Rights",
         url: "https://www.aclu.org/know-your-rights",
         category: "education"
+      },
+      {
+        action: "Research & Publications",
+        url: "https://www.aclu.org/publications"
       },
       {
         action: "Careers & Internships",
@@ -2436,7 +2448,7 @@ export const orgs: Org[] = [
     id: 43,
     name: "Interfaith Alliance",
     url: 'https://interfaithalliance.org',
-    ogImage: "https://interfaithalliance.org/wp-content/uploads/2022/11/092822_IFA-Christian-Nationalism_001-771x514.png",
+    ogImage: "https://cdn.prod.website-files.com/678fc0503fb396ad46f4567a/67a3bddbe44cba62d1c9b835_Open%20Graph%20Image.avif",
     cause: ['faith', 'lgbtq', 'reproductive'],
     donate: "https://support.interfaithalliance.org/a/donate",
     actions: [
