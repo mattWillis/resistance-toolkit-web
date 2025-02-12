@@ -2449,21 +2449,31 @@ export const orgs: Org[] = [
     name: "Interfaith Alliance",
     url: 'https://interfaithalliance.org',
     ogImage: "https://cdn.prod.website-files.com/678fc0503fb396ad46f4567a/67a3bddbe44cba62d1c9b835_Open%20Graph%20Image.avif",
-    cause: ['faith', 'lgbtq', 'reproductive'],
+    cause: ['faith', 'lgbtq', 'reproductive', 'democracy'],
     donate: "https://support.interfaithalliance.org/a/donate",
     actions: [
+      {
+        action: "Take Action: Join a campaign, event, or petition",
+        url: "https://www.interfaithalliance.org/get-involved#take-action"
+      },
+      {
+        action: "Find your local affiliate",
+        url: "https://www.interfaithalliance.org/get-involved#affiliates"
+      },
       {
         action: "Mailing List - News, Resources, Advocacy Opportunities",
         url: "https://support.interfaithalliance.org/a/signup"
       },
       {
-        action: "Tell Your Representative: Vote NO On SAVE",
-        url: "https://support.interfaithalliance.org/a/no-on-save"
+        action: "Updates: News, Analysis, Advocacy, Research, and more",
+        url: "https://www.interfaithalliance.org/updates",
+        category: "education"
       },
       {
-        action: "Tell Your Representative: Don't Bring Public School Chaplains to my State",
-        url: "https://support.interfaithalliance.org/a/chaplain_petition?sourceid=1108072"
-      },
+        action: "Our Vision", 
+        url: "https://www.interfaithalliance.org/our-vision",
+        category: "education"
+      }
     ],
     social: [
       {
@@ -2487,7 +2497,7 @@ export const orgs: Org[] = [
         url: 'https://www.tiktok.com/@interfaithalliance'
       }
     ],
-    description: "We strive to build a resilient, inclusive democracy, which respects the inherent dignity of all people, affords each person the freedoms of belief and religious practice, and guarantees that all have the opportunity to thrive. Interfaith Alliance forges powerful alliances among people of diverse faiths and beliefs to build a resilient, inclusive democracy and fulfill America’s promise of religious freedom and civil rights not just for some, but for all.",
+    description: "Join the pro-democracy faith movement. Religious extremism threatens our democracy, our communities, and individual freedoms. We are a counterforce: challenging the dangerous ideas of Project 2025 by mobilizing people of diverse faiths and beliefs to achieve democracy together.",
     scope: 'us',
     slug: 'interfaithalliance'
   },
