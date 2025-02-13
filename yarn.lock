@@ -20,11 +20,6 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.10.tgz#ae829f170158e297a9b6a28f161a8e487d00814d"
   integrity sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==
 
-"@aqzhyi/google-analytics@^0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@aqzhyi/google-analytics/-/google-analytics-0.3.5.tgz#3563aa1aced6bb6299c70a870e4f393994e0acc6"
-  integrity sha512-pajK+/s5bL8CnSmTVn4hXuUmao7z0adJmThYYSTWPQIqAGSp4HbbtY9bDx4ee4Ms4VHO4APhb0LEt5078j5kxQ==
-
 "@astrojs/compiler@^2.10.3":
   version "2.10.3"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.10.3.tgz#852386445029f7765a70b4c1d1140e175e1d8c27"

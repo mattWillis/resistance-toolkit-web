@@ -9,7 +9,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@aqzhyi/google-analytics": "^0.3.5",
     "@astrojs/mdx": "^4.0.8",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^6.0.0",

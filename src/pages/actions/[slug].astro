@@ -59,13 +59,12 @@ if(org.actions) {
 const orgCauses = org.cause.map((cause) => {
   return causes.find((c) => c.slug === cause) as Cause;
 });
-
 ---
 
 
 <Layout 
-title={`The Resistance Toolkit - ${org.name}`}
-  description={`See how to support ${org.name}`}
+title={`${org.name} - The Resistance Toolkit`}
+  description={`See how to support ${org.name} and join them in the fight against the politics of hate!`}
   image={`${Astro.site}Org-Share.png`}
   imageAlt='Text reads Featured Org. Next to the text is an illustration of a woman flexing her right arm in the style of Rosie the Riveter.'
   >

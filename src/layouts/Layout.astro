@@ -1,15 +1,15 @@
 ---
 import './Layout.scss';
 import { Image } from 'astro:assets';
+import AnalyticsHeap from 'src/components/Analytics-Heap.astro';
 import { ClientRouter } from "astro:transitions";
-import { GoogleAnalytics } from '@aqzhyi/google-analytics';
 import Footer from 'src/components/Footer.astro';
 import { Icon } from "astro-icon/components";
 interface Props {
   title: string;
-  image?: string;
-  description?: string;
-  imageAlt?: string;
+  image: string;
+  description: string;
+  imageAlt: string;
 }
 const {
   title,
@@ -63,7 +63,11 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <title>{title} - The Resistance Toolkit</title>
     <link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
     <ClientRouter />
+    {import.meta.env.DEV ? 
+      <AnalyticsHeap /> : null
+    }
   </head>
+
   <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
     <nav aria-label="Site Navigation" class="resist-grid-nav bg-white">			
       <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-4 sm:py-4 lg:px-4">
@@ -89,7 +93,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 							href="/causes"
 						>
 							Causes
-						</a>
+						</a>           
 					</div>
 				</div>
 			</div>
@@ -155,7 +159,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 <script> 
   document.addEventListener('astro:page-load', async () => {
     const preline = await import('preline/dist/preline.js');
-    preline.HSStaticMethods.autoInit()
+    preline.HSStaticMethods.autoInit();
   });
   import "cookie-notice/dist/cookie.notice.min.js";
   

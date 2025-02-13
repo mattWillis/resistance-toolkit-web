@@ -2669,7 +2669,7 @@ export const orgs: Org[] = [
     social: [
       {
         platform: 'BlueSky',
-        url: 'https://bsky.app/profile/hps-aaas.bsky.social'
+        url: 'https://bsky.app/profile/aaas.bsky.social'
       },
       {
         platform: 'Facebook',
@@ -3530,7 +3530,83 @@ export const orgs: Org[] = [
     description: "We are young activists committed to ending gun violence. We are Students Demand Action. Students Demand Action started in 2016 as a pilot program and, with a sense of urgency, we launched it as a national initiative within two weeks of the Parkland shooting. Because what could be more urgent than fixing the errors in our system that have cost so many young people their lives? Students Demand Action now has more than 800 groups across the country and active volunteers in every state and D.C.",
     scope: 'us',
     slug: 'studentsdemandaction'
-  }
+  },
+  {
+    id: 65,
+    name: "Asian Americans Advancing Justice",
+    url: 'https://www.advancingjustice-aajc.org/',
+    ogImage: "https://www.advancingjustice-aajc.org/themes/custom/sunset/img/aajc_logo.svg",
+    cause: ['civil-rights'],
+    donate: 'https://www.advancingjustice-aajc.org/donate',
+    social: [
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/advancingjusticeaajc"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/asian-american-justice-center"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/user/AdvancingEquality"
+      },
+      {
+        platform: 'Blog',
+        url: "https://medium.com/advancing-justice-aajc"
+      }
+    ],
+    actions: [
+      {
+        action: "Get Involved - Resources, Opportunities, and More",
+        url: "https://www.advancingjustice-aajc.org/get-involved"
+      },
+      {
+        action: "Know Your Rights",
+        url: "https://www.advancingjustice-aajc.org/know-your-rights",
+        category: "education"
+      },
+      {
+        action: "Asian Resource Hub",
+        url: "https://asianresourcehub.org/resources/"
+      },
+      {
+        action: "Our Programs",
+        url: "https://www.advancingjustice-aajc.org/programs",
+      },
+      {
+        action: "Report Hate",
+        url: "https://www.standagainsthatred.org/",
+      },
+      {
+        action: "Youth Leadership Summit - Three-day development program",
+        url: "https://www.advancingjustice-aajc.org/youth-leadership-summit",
+        category: "education"
+      },
+      {
+        action: "Ways to Give",
+        url: "https://www.advancingjustice-aajc.org/ways-give",
+        category: "donate"
+      },
+      {
+        action: "Voter Hotline - Assistance in nine Asian languages",
+        url: "https://forms.everytown.org/a/join-students-demand-action-text-team/",
+      },
+      {
+        action: "Volunteer for Voter Hotline",
+        url: "https://forms.everytown.org/a/join-students-demand-action-text-team/",
+        category: "volunteer"
+      },
+      {
+        action: "News",
+        url: "https://www.advancingjustice-aajc.org/news-media/in-the-news",
+        category: "education"
+      }
+    ],
+    description: "Asian Americans have been part of the American story since its earliest days, and are now the U.S.'s fastest-growing racial group with the potential and power to shape our nation and the policies that affect us. Our mission is to advance civil and human rights of Asian Americans and to build and promote a fair and equitable society for all.",
+    scope: 'us',
+    slug: 'aajc'
+  },
 ]
 
 

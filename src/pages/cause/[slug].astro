@@ -37,14 +37,11 @@ const sortedOrgs = allMatchedOrgs.sort((a: Org, b: Org) => {
   }
   return 0;
 });
-
-const globalOrgs: Org[] = allMatchedOrgs.filter((org) => org.scope === 'global');
-const usOrgs: Org[] = allMatchedOrgs.filter((org) => org.scope === 'us');
 ---
 
 <Layout 
-  title={`The Resistance Toolkit - ${cause.title}`}
-  description={`Featured organizations that support ${cause.title}`}
+  title={`${cause.title} - The Resistance Toolkit`}
+  description={`Featured organizations - ${cause.title}. Pick an org and join the fight against the politics of hate and ignorance.`}
   image={`${Astro.site}Cause-Share.png`}
   imageAlt='Text reads Featured Cause. Next to the text is an illustration of a megaphone with sound waves coming out of it.'
 >
