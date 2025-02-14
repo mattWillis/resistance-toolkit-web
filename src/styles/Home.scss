@@ -1,12 +1,16 @@
+@use "src/styles/_variables" as *;
+
 .resist-home__section {
   @apply max-w-6xl mx-auto py-6 lg:pt-8 px-4 pb-10;
 }
 
 .resist-start__section {
-  // border: 10px solid #C20E03;
-  border: 10px solid #3F3F5B;
+  // border: 10px solid #3F3F5B;
+  border: 10px solid $border-color;
+  background-color: $primary-color;
   @apply rounded-xl;
   @apply shadow-xl;
+  color: #E6E1D0;
 }
 
 .resist-steps__title {
@@ -20,46 +24,16 @@
   font-size: 20px;
 }
 
-.resist-steps__list {
-  list-style: none !important;
-  counter-reset: steps-counter;
-  li {
-    width: 100%;
-    counter-increment: steps-counter;
-    margin-bottom: 15px;
-    position: relative;
-    &:last-of-type {
-      margin-bottom: 0;
-      border-bottom: none;
-    }
-    &::before {
-      position: absolute;
-      left: -40px;
-      top: calc(50% - 20px);
-      content: counter(steps-counter) ".";
-      font-family: "neulis-sans", sans-serif;
-      font-weight: 900;
-      font-size: 40px;
-      line-height: 1;
-    }
-  }
-}
-
-.resist-steps__list li:hover {
-  &::before {
-    color:#C20E03;
-  }
-}
-
 
 .step-link {
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
   font-size: 25px;
   display: block;
-  outline: 5px solid transparent;
+  // outline: 5px solid transparent;
+  outline: 5px solid $border-color;
   position: relative;
-  background-color: #94B1C1;
+  background-color: $light-color;
   color: #000;
   padding-left: 15px;
   border-radius: 8px;
@@ -70,16 +44,9 @@
   }
   &:hover, &:focus-visible, &:active {
     color:#E6E1D0;
-    background-color: #C20E03;
-    outline: 5px solid #E6E1D0;
+    background-color: $link-color-hover;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
-  // &:focus-visible {
-  //   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  //   color:#E6E1D0;
-  //   outline: 5px solid #E6E1D0;
-  //   background-color: #C20E03;   
-  // }
   img {
     position: absolute;
     left: 0;
@@ -146,15 +113,15 @@
 }
 
 .downloads .resist-featured__body--link  {
-  background-color: #3F3F5B;
+  background-color: $link-color;
   @apply text-sm;
   font-weight: 400;
   color: white;
   padding: 5px 10px;
   display: inline-flex;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  &:hover, &:focus-visible {
-    background-color: #C20E03;
+  &:hover, &:focus-visible, &:active {
+    background-color: $link-color-hover;
   }
 }
 

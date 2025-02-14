@@ -3,6 +3,7 @@ import '@styles/_recover.scss';
 import banner from '@assets/Step4-New.png';
 import Layout from 'src/layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import Therapy from '@assets/Recover/Therapy.png';
 import Meditation from '@assets/Recover/Meditation.png';
 import Games from '@assets/Recover/Games.png';
 import Art from '@assets/Recover/MakeArt.png';
@@ -34,6 +35,29 @@ import RepeatCup from '@assets/Recover/RepeatCup.png';
       When you are ready, <a rel="next" href="#repeat">make sure to complete this cycle!</a>
     </p>
     <div class="resist-recover__card-grid">
+
+      <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl ">
+        <div class="resist-recover__card--img-container">
+          <Image class="w-full h-auto no-touchy" src={Therapy} alt="Neon light of a social media like count at zero." />
+        </div>        
+        <div class="resist-card__body">
+          <h3 class="text-lg font-bold text-gray-800">
+            Consider Therapy
+          </h3>
+          <p class="mt-1 resist-card__text">
+            Taking care of your mental health is just as important as taking care of your physical health.
+            Explore therapy options, crisis resources, and if you just need to talk to someone try a "warmline".
+          </p>
+          <a 
+            rel="noopener nofollow"
+            class="resist-recovery__button" 
+            href="https://mhanational.org/get-help"
+            target="_blank">
+            Learn More
+          </a>
+        </div>
+      </div>
+
       <div class="resist-card inline-flex flex-col bg-white border shadow-sm rounded-xl ">
         <div class="resist-recover__card--img-container">
           <Image class="w-full h-auto no-touchy" src={SocialMedia} alt="Neon light of a social media like count at zero." />

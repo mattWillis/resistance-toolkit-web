@@ -1,3 +1,5 @@
+@use "src/styles/_variables" as *;
+
 @mixin focusVisible {
   outline: 3px solid white;
   box-shadow: 0 0 0 6px black;
@@ -24,10 +26,6 @@ body {
   .resist-grid-main { grid-area: main; }
   .resist-grid-footer { grid-area: footer; }
 }
-
-
-$link-color: #3F3F5B;
-$link-color-hover: #C20E03;
 
 a, .hs-collapse-toggle, div.action p a {
   @apply text-blue-800;
@@ -69,7 +67,8 @@ a, .hs-collapse-toggle, div.action p a {
   color: white;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover, &:focus-visible, &:active {    
-    background-color: #C20E03;
+    // background-color: #C20E03;
+    background-color: $link-color-hover;
     color: white;
   }
 }
@@ -78,7 +77,8 @@ a, .hs-collapse-toggle, div.action p a {
   background-color: white;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover, &:focus-visible, &:active {
-    background-color: #C20E03;
+    // background-color: #C20E03;
+    background-color: $link-color-hover;
     color: white;
   }
 }
@@ -130,7 +130,8 @@ a, .hs-collapse-toggle, div.action p a {
     margin-right: 5px;
   }
   &:hover, &:focus-visible {
-    background-color: #C20E03;
+    // background-color: #C20E03;
+    background-color: $link-color-hover;
     color: white;
   }
 }

@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .resist-recovery__title {
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
@@ -18,8 +20,6 @@
     font-size: 16px;
     font-style: normal;
     line-height: 20px;
-    // font-size: 20px;
-    // text-transform: uppercase;
   }
 }
 
@@ -36,16 +36,16 @@
 
 .resist-recovery__button {
   @apply mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg text-white;
-  background-color: #3F3F5B;
+  background-color: $primary-color;
   &:hover, &:focus-visible, &:active {
-    background-color: #C20E03;
+    background-color: $link-color-hover;
     color: white;
     cursor: pointer;
   }
 }
 
 .start-again-btn {
-  background-color: #3F3F5B;
+  background-color: $primary-color;
   color: white;
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
@@ -53,7 +53,7 @@
   padding: 20px;
   margin-top: 15px;
   &:hover, &:focus-visible {
-    background-color: #C20E03;
+    background-color: $link-color-hover;
     color: white;
     cursor: pointer;
   }

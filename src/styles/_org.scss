@@ -1,4 +1,6 @@
 
+@use "./variables" as *;
+
 .org-header {
   padding-block: 15px; 
   width: 100%; 
@@ -21,14 +23,14 @@
   padding-bottom: 0px;
 }
 span.cause-tag {
-  background-color: #003f61;
+  background-color: $primary-color;
   margin-right: 5px;
   a {
     display: inline-block;
     color: #fff;
   }
   &:hover, &:focus-visible {
-    background-color:#C20E03;    
+    background-color:$link-color-hover;    
   }
 }
 .org-content {
@@ -70,7 +72,7 @@ span.cause-tag {
   text-align: center;
   span.tag {
     flex: 0 1 25%;
-    border: 1px solid #003f61;
+    border: 1px solid $primary-color;
     background-color: white;
     border-radius: 12px;
     padding: 2px 8px;
@@ -85,7 +87,7 @@ span.cause-tag {
 
 .select-org {
   display: block;
-  background-color: #003f61;
+  background-color: $primary-color;
   color: white;
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
@@ -96,7 +98,7 @@ span.cause-tag {
   border-radius: 6px;
   
   &:hover, &:focus-visible {
-    background-color: #C20E03;
+    background-color: $link-color-hover;
     color: white;
   }
   

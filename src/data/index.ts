@@ -2669,7 +2669,7 @@ export const orgs: Org[] = [
     social: [
       {
         platform: 'BlueSky',
-        url: 'https://bsky.app/profile/aaas.bsky.social'
+        url: 'https://bsky.app/profile/aaas.org'
       },
       {
         platform: 'Facebook',

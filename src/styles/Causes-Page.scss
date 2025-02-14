@@ -1,3 +1,4 @@
+@use "./variables" as *;
 
 ul.cause-list {
   display: flex;
@@ -28,7 +29,7 @@ ul.cause-list {
     text-decoration: underline;
     color: #000;
     &:hover {
-      color:#C20E03;
+      color:$link-color-hover;
     }    
   }
 }
@@ -70,5 +71,13 @@ ul.org-list {
   .cause-list-item {
     flex: 0 1 45%;
   }
-  
+  .cause-list-item {
+    transition: none;
+    &:hover, &:focus-visible {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+    }
+    &:active {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
 }

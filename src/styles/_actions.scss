@@ -1,6 +1,4 @@
-$link-color: #3F3F5B;
-$link-color-hover: #C20E03;
-
+@use "./variables" as *;
 
 .action-section__title {
   font-family: "neulis-sans", sans-serif;
@@ -19,7 +17,7 @@ $link-color-hover: #C20E03;
 }
 
 .open-secrets {
-  border-top: 1px solid #3F3F5B;
+  border-top: 1px solid $primary-color;
   margin-top: 20px;
   padding-top: 20px;
 }
@@ -60,7 +58,7 @@ div.action {
 }
 
 .money-image {
-  border: 6px solid #3F3F5B;
+  border: 6px solid $primary-color;
   border-radius: 6px;
 }
 
