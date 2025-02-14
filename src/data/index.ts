@@ -27,7 +27,7 @@ export interface Cause {
 export const causes: Cause[] = [
   {
     id: 1,
-    title: 'Disabled Rights / Accessibility',
+    title: 'Disability Rights / Accessibility',
     slug: 'accessibility',
     banner: 'Causes-Accessibility.png',
     emoji: '♿️',
@@ -830,10 +830,10 @@ export const orgs: Org[] = [
     cause: ['climate'],
     donate: "https://climatenetwork.org/get-involved/support/",
     social: [
-      {
-        platform: 'BlueSky',
-        url: 'https://bsky.app/profile/caneurope.bsky.social'
-      },
+      // {
+      //   platform: 'BlueSky',
+      //   url: 'https://bsky.app/profile/caneurope.bsky.social'
+      // },
       {
         platform: 'YouTube',
         url: 'https://www.youtube.com/user/caninternational'
@@ -1462,7 +1462,7 @@ export const orgs: Org[] = [
   },
   {
     id: 25,
-    name: "Planed Parenthood",
+    name: "Planned Parenthood",
     url: 'https://www.plannedparenthood.org/',
     ogImage: "https://www.plannedparenthood.org/uploads/filer_public_thumbnails/filer_public/b9/ed/b9eddaf2-608a-4935-8c70-fc98afd54562/find-health-center.jpg__1200x1200_q65_subsampling-2.jpg",
     cause: ['reproductive', 'medicine'],
@@ -3463,7 +3463,7 @@ export const orgs: Org[] = [
     slug: 'momsdemandaction'
   },
   {
-    id: 65,
+    id: 66,
     name: "Students Demand Action",
     url: 'https://studentsdemandaction.org/',
     ogImage: "https://studentsdemandaction.org/wp-content/uploads/sites/10/2024/12/SDA-Website-Meta-121024A.jpg",
@@ -3532,7 +3532,7 @@ export const orgs: Org[] = [
     slug: 'studentsdemandaction'
   },
   {
-    id: 65,
+    id: 67,
     name: "Asian Americans Advancing Justice",
     url: 'https://www.advancingjustice-aajc.org/',
     ogImage: "https://www.advancingjustice-aajc.org/themes/custom/sunset/img/aajc_logo.svg",
@@ -3607,6 +3607,172 @@ export const orgs: Org[] = [
     scope: 'us',
     slug: 'aajc'
   },
+  {
+    id: 68,
+    name: "NRDC",
+    url: 'https://www.nrdc.org/',
+    ogImage: "https://www.nrdc.org/sites/default/files/2023-05/nrdc-media-logo-teaser.png",
+    cause: ['climate'],
+    donate: 'https://action.nrdc.org/donation/2554-support-nrdc',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/nrdc.org"
+      },
+      {
+        platform: 'Facebook',
+        url: "https://www.facebook.com/nrdc.org"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/nrdc_org/"
+      },
+      {
+        platform: 'LinkedIn',
+        url: "https://www.linkedin.com/company/natural-resources-defense-council/"
+      },
+      {
+        platform: 'TikTok',
+        url: "https://www.tiktok.com/@nrdc.org"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/user/NRDCflix"
+      },
+    ],
+    actions: [
+      {
+        action: "Add Your Voice - Petitions, Letters",
+        url: "https://www.nrdc.org/take-action/add-your-voice"
+      },
+      {
+        action: "Toolkist and How-Tos",
+        url: "https://www.nrdc.org/take-action/toolkits",
+      },
+      {
+        action: "Events",
+        url: "https://www.nrdc.org/take-action/events"
+      },
+      {
+        action: "Our Programs",
+        url: "https://www.advancingjustice-aajc.org/programs",
+      },
+      {
+        action: "Ways to Give",
+        url: "https://www.nrdc.org/ways-give",
+        category: "donate"
+      },
+      {
+        action: "Climate Crisis 101",
+        url: "https://www.nrdc.org/climate-crisis",
+        category: "education"
+      },
+      {
+        action: "What is Climate Change?",
+        url: "https://www.nrdc.org/stories/what-climate-change",
+        category: "education"
+      },
+      {
+        action: "Effects of Climate Change",
+        url: "https://www.nrdc.org/stories/what-are-effects-climate-change",
+      },
+      {
+        action: "What are the Solutions to Climate Change?",
+        url: "https://www.nrdc.org/stories/what-are-solutions-climate-change",
+        category: "volunteer"
+      },
+      {
+        action: "News",
+        url: "https://www.advancingjustice-aajc.org/news-media/in-the-news",
+        category: "education"
+      },
+      {
+        action: "News and Commentary",
+        url: "https://www.nrdc.org/news-commentary",
+      },
+      {
+        action: "Data, Reports, and Resources",
+        url: "https://www.nrdc.org/data-reports-resources",
+      }
+    ],
+    description: "Be a Force for the Future. NRDC (the Natural Resources Defense Council) combines the power of more than 3 million members and online activists with the expertise of some 700 scientists, lawyers, and other environmental specialists to confront the climate crisis, protect the planet's wildlife and wild places, and to ensure the rights of all people to clean air, clean water, and healthy communities.",
+    scope: 'global',
+    slug: 'nrdc'
+  },
+  {
+    id: 69,
+    name: "Sunrise Movement",
+    url: 'https://www.sunrisemovement.org/',
+    ogImage: "https://www.sunrisemovement.org/wp-content/uploads/2023/09/share-sunrise-movement.jpg",
+    cause: ['climate'],
+    donate: 'https://www.sunrisemovement.org/donate/',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/sunrisemvmt.bsky.social"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://instagram.com/sunrisemvmt/"
+      },
+      {
+        platform: 'TikTok',
+        url: "https://tiktok.com/@sunrisemvmt/"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/@sunrisemovement4046"
+      },
+    ],
+    actions: [
+      {
+        action: "Become a Member",
+        url: "https://www.sunrisemovement.org/become-a-member/"
+      },
+      {
+        action: "Get Started",
+        url: "https://www.sunrisemovement.org/take-action/#get-started"
+      },
+      {
+        action: "Find Your Local Sunrise Hub",
+        url: "https://www.sunrisemovement.org/take-action/#local",
+      },
+      {
+        action: "Events",
+        url: "https://www.sunrisemovement.org/take-action/#events"
+      },
+      {
+        action: "Resources",
+        url: "https://www.sunrisemovement.org/take-action/#resources",
+      },
+      {
+        action: "Our Demands",
+        url: "https://www.sunrisemovement.org/our-demands/",
+      },
+      {
+        action: "Local and National Events on Mobilize",
+        url: "https://www.mobilize.us/sunrisemovement/"
+      },
+      {
+        action: "Resources - Guides, Toolkits, and More",
+        url: "https://www.sunrisemovement.org/latest/#resources",
+        category: "education"
+      },
+      {
+        action: "Reports",
+        url: "https://www.sunrisemovement.org/latest/#reports",
+        category: "education"
+      },
+      {
+        action: "News",
+        url: "http://sunrisemovement.org/latest/#news",
+        category: "education"
+      }
+    ],
+    description: "We are the climate revolution. Together, we will force the government to end the era of fossil fuel elites, invest in Black, brown and working class communities, and create millions of good union jobs. We’re on a mission to put everyday people back in charge and build a world that works for all of us, now and for generations to come.",
+    scope: 'global',
+    slug: 'sunrisemovement'
+  },  
 ]
 
 
