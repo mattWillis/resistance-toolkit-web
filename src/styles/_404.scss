@@ -1,0 +1,11 @@
+@use '@styles/variables.scss' as *;
+
+.looking-causes {
+  background-color: $link-color;
+  color: white;
+  padding: 1rem;
+  &:hover, &:focus-visible {
+    background-color: $link-color-hover;
+    color: white;
+  }
+}

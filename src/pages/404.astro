@@ -1,0 +1,21 @@
+---
+import '@styles/_404.scss';
+import Layout from "src/layouts/Layout.astro";
+import Computer from '@assets/404.svg';
+import { Image } from "astro:assets";
+---
+
+<Layout
+  title="Page Not Found"
+  description="Sorry, the page you are looking for does not exist."
+  image=`${Astro.site}Social-Share.png`
+  imageAlt = 'Text reads "The Resistance Toolkit, tools you need to fight hate." Illustration of a woman wearing a bandana on her head and flexing her right arm.'
+>
+  <div class="flex flex-col items-center justify-center ">
+    <h1 class="text-6xl font-bold">404</h1>
+    <Image src={Computer} alt="A computer with a 404 error message on the screen." class="w-1/2 mt-4 no-touchy" />
+    <p class="mt-4 text-xl">Sorry! Page not found</p>
+
+    <a href="/causes" class="mt-8 looking-causes">Looking for Causes?</a>
+  </div>
+
