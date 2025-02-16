@@ -197,7 +197,7 @@ export interface Org {
   scope: string;
   slug: string;
   donate?: string;
-  actions?: {action: string, url: string, category?:string}[];
+  actions: {action: string, url: string, category?:string}[];
   ogImage?: string;
 }
 
@@ -671,6 +671,10 @@ export const orgs: Org[] = [
         action: "Take Action",
         url: "https://naacp.org/take-action"
       },
+      {
+        action: "Black Consumer Advisory - Hold Businesses Accountable",
+        url: "https://naacp.org/campaigns/black-consumer-advisory"
+      }, 
       {
         action: "Join the NAACP",
         url: "https://naacp.org/take-action/become-member"
