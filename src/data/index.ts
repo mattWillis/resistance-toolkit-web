@@ -3772,7 +3772,64 @@ export const orgs: Org[] = [
     description: "We are the climate revolution. Together, we will force the government to end the era of fossil fuel elites, invest in Black, brown and working class communities, and create millions of good union jobs. We’re on a mission to put everyday people back in charge and build a world that works for all of us, now and for generations to come.",
     scope: 'global',
     slug: 'sunrisemovement'
-  },  
+  }, 
+  {
+    id: 70,
+    name: "Democracy Forward",
+    url: 'https://democracyforward.org/',
+    ogImage: "https://democracyforward.org/wp-content/uploads/2022/07/Social-Share-1.jpg",
+    cause: ['democracy'],
+    donate: 'https://democracyforward.org/action/donate/',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/democracyforward.org"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/DemocracyFwd/"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/democracyforward/"
+      },
+      {
+        platform: "Instagram",
+        url: "https://www.instagram.com/democracyforward/"
+      },
+      {
+        platform: 'TikTok',
+        url: "https://www.tiktok.com/@democracyfwd"
+      },
+      {
+        platform: 'YouTube',
+        url: "http://youtube.com/@democracyforward"
+      },
+    ],
+    actions: [
+      {
+        action: "Learn About Our Strategy",
+        url: "https://democracyforward.org/about/"
+      },
+      {
+        action: "Reports & Data",
+        url: "https://democracyforward.org/update-category/reports-data/",
+        category: "education"
+      },
+      {
+        action: "News & Updates",
+        url: "https://democracyforward.org/updates/",
+      },
+      {
+        action: "Shop",
+        url: "https://store.democracyforward.org/",
+        category: "money"
+      }
+    ],
+    description: "We go to court for people and democracy. Democracy Forward is a national legal organization that advances democracy and social progress through litigation, policy and public education, and regulatory engagement.",
+    scope: 'us',
+    slug: 'democracyfwd'
+  },   
 ]
 
 

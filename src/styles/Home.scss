@@ -74,18 +74,6 @@
     border-radius: 8px 0 0 8px;
   }
 }
-
-// .step-link::after {
-//   content: "";
-//   position: absolute;
-//   top: -50%;
-//   right: -50%;
-//   bottom: -50%;
-//   left: -50%;
-//   background: var(--red-sheen);
-//   transform: rotateZ(60deg) translate(-5em, 7.5em);
-// }
-
 .resist-featured__section {
   @apply pb-1;
   display: flex;
@@ -181,6 +169,9 @@
     padding: 35px 0px;
     img {
       width: 100px;
+    }
+    .step {
+      display: none;
     }
   } 
   .resist-featured__body--img-wrapper {
