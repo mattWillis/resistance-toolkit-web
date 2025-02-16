@@ -58,7 +58,8 @@ ul.org-list {
     margin: 0;
     padding: 0;
     border-radius: 4px;
-    flex: 1 1 45%;
+    // flex: 1 1 45%;
+    flex: 0 1 calc(33% - 20px);
     border: thin solid #9f9f9f;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -145,8 +146,6 @@ ul.org-list {
 
 .org-image__cover {
   height: 180px;
-  width: clamp(300px, 100%, 734px);
-  margin: 0 auto 5px auto;
 }
 .org-image {
   width: 100%;
@@ -155,6 +154,16 @@ ul.org-list {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   object-fit: contain;
+}
+
+// flex: 1 1 45%;
+@media screen and (max-width: 1010px) {
+  ul.org-list {
+    li {
+      flex: 0 1 45%;
+      transition: none;
+    }
+  }
 }
 
 @media screen and (max-width: 660px) {

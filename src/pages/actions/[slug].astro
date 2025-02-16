@@ -91,14 +91,14 @@ title={`${org.name}`}
       <div class="org-contact">
         <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
         <p>
-          <a rel="noopener nofollow external" href={org.url} target="_blank">{org.url}</a>
+          <a rel="external" href={org.url} target="_blank">{org.url}</a>
         </p>
         <h2 class="flex items-center my-4 pb-2"> <Icon name="mdi:megaphone"/> Social Media</h2>
         <div class="social-tags">    
           {org.social && org.social.map((social) => {
             return (
             <span class="tag">
-              <a rel="noopener nofollow external" href={social.url} title={`View ${org.name} on ${social.platform}`} target="_blank">{social.platform}</a>
+              <a rel="external" href={social.url} title={`View ${org.name} on ${social.platform}`} target="_blank">{social.platform}</a>
             </span>        
           )
           })}
@@ -154,7 +154,7 @@ title={`${org.name}`}
               }
               return (
               <li>
-                <a rel="noopener nofollow external" href={action.url} class="action-items inline-flex items-center" target="_blank">
+                <a rel="external" href={action.url} class="action-items inline-flex items-center" target="_blank">
                   <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
                   {action.action}
                 </a>
@@ -174,7 +174,7 @@ title={`${org.name}`}
       <div class="action-wrapper">
       <h2 id="donate" class="action-section__title">Donate</h2>
       {org.donate ? 
-        <a rel="noopener nofollow external" href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
+        <a rel="external" href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
          <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/> Donate to {org.name}
         </a> :
         <p>
@@ -190,7 +190,7 @@ title={`${org.name}`}
       {hasOtherDonations && (
         donations.map((donate) => {
          return (
-            <a rel="noopener nofollow external" href={donate.url} class="donate-btn inline-flex items-center mx-2" target="_blank">
+            <a rel="external" href={donate.url} class="donate-btn inline-flex items-center mx-2" target="_blank">
               <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/>
               {donate.action}
             </a>
@@ -202,7 +202,7 @@ title={`${org.name}`}
           <p class="font-bold mt-4 mb-1">{org.name} has a store. Check it out!</p>
           {store.map((shop) => {
             return (
-            <a rel="noopener nofollow external" href={shop.url} class="donate-btn inline-flex items-center" target="_blank">
+            <a rel="external" href={shop.url} class="donate-btn inline-flex items-center" target="_blank">
               <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/>
               {shop.action}
             </a>            
@@ -225,24 +225,24 @@ title={`${org.name}`}
           message is counted and is an <span class="font-bold">important</span> indicator that your cause is important to their constituents.
         </p>
         <h3 class="action-link__title">
-          <a rel="noopener nofollow external" href="https://resist.bot" target="_blank">ResistBot</a>
+          <a rel="external" href="https://resist.bot" target="_blank">ResistBot</a>
         </h3>
         <p>
           Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
         </p>
         <Image src={MailBot} alt="ResistBot" class=""/>
         <p>
-          Send the word RESIST to Resistbot on <a rel="noopener nofollow external" href="https://bcrw.apple.com/sms:open?service=iMessage&recipient=urn:biz:d0189b65-f844-4344-adc1-d2d01daca04e&body=resist" target="_blank">Apple Messages</a>,
-          <a rel="noopener nofollow external" href="https://www.messenger.com/t/1224106861035505?text=resisthttps://www.messenger.com/t/1224106861035505?text=resist" target="_blank">Messenger</a>, 
-          <a rel="noopener nofollow external" href="https://www.instagram.com/direct/t/107534807309194/?text=" target="_blank">Instagram</a>, 
-          <a rel="noopener nofollow external" href="https://t.me/resistbot?start=resist" target="_blank">Telegram</a>, or by text to <a href="sms:50409" target="_blank">50409</a> and answer the questions texted back. 
+          Send the word RESIST to Resistbot on <a rel="external" href="https://bcrw.apple.com/sms:open?service=iMessage&recipient=urn:biz:d0189b65-f844-4344-adc1-d2d01daca04e&body=resist" target="_blank">Apple Messages</a>,
+          <a rel="external" href="https://www.messenger.com/t/1224106861035505?text=resisthttps://www.messenger.com/t/1224106861035505?text=resist" target="_blank">Messenger</a>, 
+          <a rel="external" href="https://www.instagram.com/direct/t/107534807309194/?text=" target="_blank">Instagram</a>, 
+          <a rel="external" href="https://t.me/resistbot?start=resist" target="_blank">Telegram</a>, or by text to <a href="sms:50409" target="_blank">50409</a> and answer the questions texted back. 
         </p>         
         <p>
-          In minutes, you’ll have contacted Congress or your other elected officials. <a href="https://resist.bot/letters" target="_blank">Make your letter open</a> for maximum effect.
+          In minutes, you’ll have contacted Congress or your other elected officials. <a rel="external" href="https://resist.bot/letters" target="_blank">Make your letter open</a> for maximum effect.
         </p>
 
         <h3 class="action-link__title">
-          <a rel="noopener nofollow external" href="https://www.usa.gov/elected-officials" target="_blank">Find Your Elected Officials</a>
+          <a rel="external" href="https://www.usa.gov/elected-officials" target="_blank">Find Your Elected Officials</a>
         </h3>
         <p>
           USA.gov has a tool to to find your Federal, State, and Local officials, just enter your address. 
@@ -270,7 +270,7 @@ title={`${org.name}`}
           </p>
           
           <h3 class="action-link__title">
-            <a rel="noopener nofollow external" href="https://www.volunteermatch.org/" target="_blank">VolunteerMatch.org</a>
+            <a rel="external" href="https://www.volunteermatch.org/" target="_blank">VolunteerMatch.org</a>
           </h3>
           <p>
             VolunteerMatch believes that volunteering can change lives – starting with yours. When we connect with our 
@@ -279,7 +279,7 @@ title={`${org.name}`}
           </p>
 
           <h3 class="action-link__title">
-            <a rel="noopener nofollow external" href="https://www.eac.gov/help-america-vote" target="_blank">Volunteer as a Poll Worker</a>
+            <a rel="external" href="https://www.eac.gov/help-america-vote" target="_blank">Volunteer as a Poll Worker</a>
           </h3>
           <p>
             Poll workers are essential to ensure elections are a success. During each election, millions of Americans 
@@ -298,11 +298,11 @@ title={`${org.name}`}
         </p>
 
         <h3 class="action-link__title">
-          <a rel="noopener nofollow external" href="https://www.vote.org/" target="_blank">Vote.org</a>
+          <a rel="external" href="https://www.vote.org/" target="_blank">Vote.org</a>
         </h3>
         
         <h3 class="action-link__title">
-          <a rel="noopener nofollow external" href="https://www.votelikeabeast.com/" target="_blank">Vote Like A Beast</a>
+          <a rel="external" href="https://www.votelikeabeast.com/" target="_blank">Vote Like A Beast</a>
         </h3>
       </div>
     </div>
@@ -321,14 +321,14 @@ title={`${org.name}`}
           Find companies that don't support your cause and spend your money at alternative companies.
         </p>
         <h3 class="action-link__title">
-          <a rel="noopener nofollow external" href="https://www.goodsuniteus.com/" target="_blank">Goods Unite Us</a>
+          <a rel="external" href="https://www.goodsuniteus.com/" target="_blank">Goods Unite Us</a>
         </h3>
         <p>
           Search for a company and find their political donations. Get suggestions for alternative brands. Do some research and spend your money wisely!
         </p>
         <Image class="money-image" src={GoodsUnite} alt="Screenshot of a dashboard showing breakdowns and graphs of donations a company has made." />
         <h3 class="action-link__title open-secrets">
-          <a rel="noopener nofollow external" href="https://www.opensecrets.org/" target="_blank">Open Secrets</a>
+          <a rel="external" href="https://www.opensecrets.org/" target="_blank">Open Secrets</a>
         </h3>
         <p>
           Look up a politician to see who is funding their campaign.
@@ -349,13 +349,13 @@ title={`${org.name}`}
             Here are some resources {org.name} has provided.
           </p> :        
           <p class="my-2 no-education">
-            We didn't find any specific educational resources on the {org.name} website. But it's <a rel="noopener nofollow external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
+            We didn't find any specific educational resources on the {org.name} website. But it's <a rel="external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
           </p>
         }
         {hasEducation && (
           education.map((educate) => {
           return (
-              <a rel="noopener nofollow external" href={educate.url} class="education-btn inline-flex items-center mx-1" target="_blank">
+              <a rel="external" href={educate.url} class="education-btn inline-flex items-center mx-1" target="_blank">
                 <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
                 {educate.action}
               </a>
@@ -373,53 +373,53 @@ title={`${org.name}`}
               {orgCauses && orgCauses.map((cause) => {
                 return (
                   <li>
-                    <a rel="noopener nofollow external" href={cause.books} target="_blank">{cause.title}</a>
+                    <a rel="external" href={cause.books} target="_blank">{cause.title}</a>
                   </li>
                 )
               })}
             </ul>
           </li>
           <li >
-            <a rel="noopener nofollow external" href="https://webaim.org/services/training/" class="font-bold" target="_blank">WebAIM Accessibility Training Courses</a>
+            <a rel="external" href="https://webaim.org/services/training/" class="font-bold" target="_blank">WebAIM Accessibility Training Courses</a>
           </li>
           <li>
             <p class="font-bold">Online Courses, Certifications</p>
             <ul>
               <li>
-                <a rel="noopener nofollow external" href=https://pll.harvard.edu/catalog/free?page=1" class="font-bold" target="_blank">Harvard Free Courses</a>
+                <a rel="external" href=https://pll.harvard.edu/catalog/free?page=1" class="font-bold" target="_blank">Harvard Free Courses</a>
                 <ul>
                   <li>
-                    <a rel="noopener nofollow external" href="https://pll.harvard.edu/course/women-making-history-ten-objects-many-stories" target="_blank">Women Making History: Ten Objects, Many Stories</a>
+                    <a rel="external" href="https://pll.harvard.edu/course/women-making-history-ten-objects-many-stories" target="_blank">Women Making History: Ten Objects, Many Stories</a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow external" href="https://pll.harvard.edu/course/justice" target="_blank">Justice</a>
+                    <a rel="external" href="https://pll.harvard.edu/course/justice" target="_blank">Justice</a>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <a rel="noopener nofollow external" href="https://online.osu.edu/" class="font-bold" target="_blank">OSU Online</a>
+                <a rel="external" href="https://online.osu.edu/" class="font-bold" target="_blank">OSU Online</a>
                 <ul>
                   <li>
-                    <a rel="noopener nofollow external" href="https://online.osu.edu/undergraduate-certificates/black-studies-certificate/" target="_blank">Black Studies Certificate</a>
+                    <a rel="external" href="https://online.osu.edu/undergraduate-certificates/black-studies-certificate/" target="_blank">Black Studies Certificate</a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow external" href="https://online.osu.edu/undergraduate-certificates/diversity-equity-inclusion-certificate/" target="_blank">Diversity, Equity, and Inclusion Certificate</a>
+                    <a rel="external" href="https://online.osu.edu/undergraduate-certificates/diversity-equity-inclusion-certificate/" target="_blank">Diversity, Equity, and Inclusion Certificate</a>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <a rel="noopener nofollow external" href="https://ocw.mit.edu/" class="font-bold" target="_blank">MIT OpenCourseWare</a>
+                <a rel="external" href="https://ocw.mit.edu/" class="font-bold" target="_blank">MIT OpenCourseWare</a>
                 <ul>
                   <li>
-                    <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/17-251-congress-and-the-american-political-system-i-fall-2016/" target="_blank">Congress and the American Political System I</a>
+                    <a rel="external" href="https://ocw.mit.edu/courses/17-251-congress-and-the-american-political-system-i-fall-2016/" target="_blank">Congress and the American Political System I</a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/wgs-160j-science-activism-gender-race-and-power-fall-2019/" target="_blank">Science Activism: Gender, Race, and Power</a>
+                    <a rel="external" href="https://ocw.mit.edu/courses/wgs-160j-science-activism-gender-race-and-power-fall-2019/" target="_blank">Science Activism: Gender, Race, and Power</a>
                   </li>
                   <li>
-                    <a rel="noopener nofollow external" href="https://ocw.mit.edu/courses/cms-631-data-storytelling-studio-climate-change-spring-2017/" target="_blank">Data Storytelling Studio: Climate Change</a>
+                    <a rel="external" href="https://ocw.mit.edu/courses/cms-631-data-storytelling-studio-climate-change-spring-2017/" target="_blank">Data Storytelling Studio: Climate Change</a>
                   </li>
                 </ul>
               </li>

@@ -52,7 +52,7 @@ const org = orgs.find((org) => org.slug === slug) as Org;
       <div class="org-contact">
         <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
         <p>
-          <a href={org.url} rel="noopener nofollow external" target="_blank">{org.url}</a>
+          <a href={org.url} rel="external" target="_blank">{org.url}</a>
         </p>
         <h2 class="flex items-center my-4 pb-2"> <Icon name="mdi:megaphone"/> Social Media</h2>
         <div class="social-tags">    
