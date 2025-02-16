@@ -2,6 +2,7 @@
 import '@styles/Home.scss';
 import { Image } from 'astro:assets';
 import PickCause from '@assets/PickCause.png';
+import CausePicker from './CausePicker.astro';
 import { Icon } from 'astro-icon/components';
 import MailBot from '@assets/mailbot.svg';
 import VoteDotOrg from '@assets/votedotorg.svg';
@@ -11,79 +12,14 @@ import Somebody from '@assets/resources/IAmSomebody.png';
 import Muse from '@assets/resources/Inspire-Song-Muse.png';
 import ResistSquare from '@assets/resources/ResistanceSquare.png';
 import '@styles/Causes-Page.scss';
-
-// DATA
-import { type Cause, causes } from '@data/index';
-// export function getStaticPaths() {
-//   return [
-//     ...causes.map((cause) => ({
-//       params: {
-//         slug: cause.slug
-//       }
-//     }))
-//   ]
-// }
-const sortedCauses = causes.sort((a: Cause, b: Cause) => {
-  if (a.title < b.title) {
-    return -1;
-  }
-  if (a.title > b.title) {
-    return 1;
-  }
-  return 0;
-});
-
-const images = await import.meta.glob<{ default: ImageMetadata }>('@assets/*.{jpeg,jpg,png,gif,webp}');
-console.log(images);
-
 ---
 <div class="container max-w-6xl mx-auto">
   <section class="resist-home__section resist-start__section">
     <h2 class="resist-steps__title text-center" >Welcome To The Resistance</h2>
     <h3 class="font-bold my-2 pb-4 text-center">Click on a cause to see organizations that support that cause!</h3>
-    <ul class="cause-list">
-      {sortedCauses.map((cause: any) => {  
-        const img = cause.listImg;          
-        console.log(img);
-        if(!images[img]) {
-          throw new Error(`"${img}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`);
-        }
-          return (
-            <li class="cause-list-item">                
-              <a rel="next" class="cause-link" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
-                <Image class="cause-list-img no-touchy" src={images[img]()} alt={cause.listImgAlt} />
-                {cause.title}
-              </a>
-            </li>
-          )
-        }        
-      )}
-    </ul>
-    <p class="my-6 max-w-xlg mx-auto">
-      <span class="font-bold italic">About This List:</span>
-      These are excellent causes that need our help. Follow the link to a cause you are passionate
-      about or interested in to see a list of organizations that support that cause. The organizations 
-      often have clear and concise action items to take to fight back. But they will also need our support, 
-      either by donating financially or by volunteering our time.
-    </p>
-    <p class="my-6 text-center">
-      Big thanks to <a class="font-bold thanks-link" rel="external" href="https://www.advocate.com/politics/anti-donald-trump-charities" target="_blank">Advocate</a> for inspiring and seeding this list.
-    </p>
+    <CausePicker />
   </section>
 </div>
-<!-- <section class="resist-home__section resist-start__section"> 
-  <h2 class="resist-steps__title text-center" >Welcome To The Resistance</h2>
-  <p class="resist-steps__subtitle">Fight Hate, One Step At a Time.</p>
-  <a rel="next" class="step-link md:py-10 max-w-3xl mx-auto md:max-w-2xl" href="/causes">
-    <Image src={PickCause} class="no-touchy" alt="A megaphone with lines extending from the blow horn." />
-    <p class="text-center"><span class="step">Step 1 -</span> Click To Pick a cause</p>
-  </a>
-  <p class="resist-steps__note  md:max-w-2xl mx-auto mt-4">
-    <span class="font-bold">Note:</span>
-    This implementation is primarily focused on <span class="font-bold">U.S. politics and issues.</span> 
-    An international version is in the works. Because hate is a global issue.
-  </p>
-</section> -->
 
 <section class="resist-home__section resist-featured__section">
 

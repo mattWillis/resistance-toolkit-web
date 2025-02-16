@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import { type Cause, causes } from '@data/index';
+
+const sortedCauses = causes.sort((a: Cause, b: Cause) => {
+  if (a.title < b.title) {
+    return -1;
+  }
+  if (a.title > b.title) {
+    return 1;
+  }
+  return 0;
+});
+
+const images = await import.meta.glob<{ default: ImageMetadata }>('@assets/*.{jpeg,jpg,png,gif,webp}');
+console.log(images);
+---
+
+<ul class="cause-list">
+  {sortedCauses.map((cause: any) => {  
+    const img = cause.listImg;          
+    console.log(img);
+    if(!images[img]) {
+      throw new Error(`"${img}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`);
+    }
+      return (
+        <li class="cause-list-item">                
+          <a rel="next" class="cause-link" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
+            <Image class="cause-list-img no-touchy" src={images[img]()} alt={cause.listImgAlt} />
+            {cause.title}
+          </a>
+        </li>
+      )
+    }        
+  )}
+</ul>
+<p class="my-6 max-w-xlg mx-auto">
+  <span class="font-bold italic">About This List:</span>
+  These are excellent causes that need our help. Follow the link to a cause you are passionate
+  about or interested in to see a list of organizations that support that cause. The organizations 
+  often have clear and concise action items to take to fight back. But they will also need our support, 
+  either by donating financially or by volunteering our time.
+</p>
+<p class="my-6 text-center">
+  Big thanks to <a class="font-bold thanks-link" rel="external" href="https://www.advocate.com/politics/anti-donald-trump-charities" target="_blank">Advocate</a> for inspiring and seeding this list.
+</p>

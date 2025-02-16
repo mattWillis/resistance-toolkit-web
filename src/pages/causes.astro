@@ -1,34 +1,9 @@
 ---
 import '@styles/Causes-Page.scss';
-import { type Cause, causes } from '@data/index';
 import Layout from 'src/layouts/Layout.astro';
-import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
-import StepImg from '@assets/Step1-New.png'
-
-
-export function getStaticPaths() {
-  return [
-    ...causes.map((cause) => ({
-      params: {
-        slug: cause.slug
-      }
-    }))
-  ]
-}
-const sortedCauses = causes.sort((a: Cause, b: Cause) => {
-  if (a.title < b.title) {
-    return -1;
-  }
-  if (a.title > b.title) {
-    return 1;
-  }
-  return 0;
-});
-
-const images = await import.meta.glob<{ default: ImageMetadata }>('@assets/*.{jpeg,jpg,png,gif,webp}');
-console.log(images);
-
+import StepImg from '@assets/PickACauseBanner.png'
+import CausePicker from 'src/components/CausePicker.astro';
 ---
 
 <Layout 
@@ -44,34 +19,7 @@ console.log(images);
     <section>
       <hr>
       <h1 class="font-bold my-2 text-center">Click on a cause to see organizations that support that cause!</h1>
-      <ul class="cause-list">
-        {sortedCauses.map((cause: any) => {  
-          const img = cause.listImg;          
-          console.log(img);
-          if(!images[img]) {
-            throw new Error(`"${img}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`);
-          }
-            return (
-              <li class="cause-list-item">                
-                <a rel="next" class="cause-link" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
-                  <Image class="cause-list-img no-touchy" src={images[img]()} alt={cause.listImgAlt} />
-                  {cause.title}
-                </a>
-              </li>
-            )
-          }        
-        )}
-      </ul>
-      <p class="my-6 max-w-xlg mx-auto">
-        <span class="font-bold italic">About This List:</span>
-        The following are excellent causes that need our help. Follow the link to a cause you are passionate
-        about or interested in to see a list of organizations that support that cause. The organizations 
-        often have clear and concise action items to take to fight back. But they will also need our support, 
-        either by donating financially or by volunteering our time.
-      </p>
-      <p class="my-6 text-center">
-        Big thanks to <a rel="external" href="https://www.advocate.com/politics/anti-donald-trump-charities" class="font-bold" target="_blank">Advocate</a> for inspiring and seeding this list.
-      </p>
+      <CausePicker />
     </section>
   </div>
 </Layout>
