@@ -65,109 +65,110 @@ const orgCauses = org.cause.map((cause) => {
 
 <Layout 
   title={`${org.name}`}
-  description={`How to get the latest news on ${org.name}. Stay informed and take action against the politics of hate and ignorance.`}
+  description={`Learn how to support ${org.name}, stay informed, and join them in the fight against the politics of hate!`}
   image={`${Astro.site}Org-Share.png`}
   imageAlt='Text reads Featured Org. Next to the text is an illustration of a woman flexing her right arm in the style of Rosie the Riveter.'
   >
   <header class="max-w-6xl mx-auto" slot="header">
     <Image class="no-touchy" src={banner} alt="Stay Informed" />
   </header>
-  
-  <section class="org-header">    
-    <h1 class="org-header__title">{org.name}</h1>
-    <div class="level">
-      <div class="level-left">        
-        {org.cause && org.cause.map((cause) => {
-          return <span class="cause-tag whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm"><a href={`/cause/${cause}`}>{cause}</a></span>
-        })}          
-      </div>    
-    </div>
-  </section>
-  <section class="org-section org-content">
-    <div class="org-info">
-      <div class="org-description">
-        <h2 class="flex items-center mb-4"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
-        <p>{org.description}</p>        
-      </div>
-      <div class="org-contact">
-        <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
-        <p>
-          <a href={org.url} rel="external" target="_blank">{org.url}</a>
-        </p>
-        <h2 class="flex items-center my-4 pb-2"> <Icon name="mdi:megaphone"/> Social Media</h2>
-        <div class="social-tags">    
-          {org.social && org.social.map((social) => {
-            return (
-            <span class="tag">
-              <a href={social.url} rel="noopener nofollow external" title={`View ${org.name} on ${social.platform}`} target="_blank">{social.platform}</a>
-            </span>        
-          )
-          })}
-        </div>        
-      </div>
-    </div>   
-  </section>
-  <div class="my-4 bg-blue-100 border border-blue-200 text-gray-800 rounded-lg p-4" role="note" tabindex="-1" aria-labelledby="note-title">
-    <div class="flex gap-4">
-      <div class="flex sm:w-1/3 lg:w-1/2 sm:w-1">
-        <div class="shrink-0">
-          <svg class="shrink-0 size-4 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 16v-4"></path>
-            <path d="M12 8h.01"></path>
+  <section class="sticky top-0 inset-x-0 z-10 bg-white">
+    <header class="actions-nav__header">
+      <h2 class="actions-nav__title">Actions Menu</h2>
+      <p class="actions-nav__toggle">
+        <button type="button" class="hs-collapse-toggle" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
+          <span class="hs-collapse-open:hidden show-toc">Show</span>
+          <span class="hs-collapse-open:block hidden hide-toc">Hide</span>
+          <svg role="img" aria-hidden="true" class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6"></path>
           </svg>
-        </div>
-        <div class="ms-3">
-          <h3 id="note-title" class="font-semibold">
-            A note about Social Media
-          </h3>
-          <div class="mt-2 text-sm text-gray-800">
-            I encourage you to use social media platforms that are open sourced and decentralized (like <a rel="noopener nofollow external" href="https://bsky.app/" class="text-blue-800 font-bold" target="_blank">BlueSky</a> or <a rel="noopener nofollow external" href="https://joinmastodon.org/" class="text-blue-800 font-bold" target="_blank">Mastodon</a>). However, your organization might not have an account on these newer platforms, so go where your orgs are.     
-          </div>
-        </div>          
-      </div>
-      <div>
-        <p class="text-sm mx-auto text-center md:max-w-[65%] sm:max-w-[100%]">This is a link to a <a rel="noopener nofollow external" href="https://go.bsky.app/54kcLsh" class="text-blue-800 font-bold" target="_blank">starter pack of organizations</a> that are currently on BlueSky.</p>
-        <div class="qr-wrapper">
-          <Image class="no-touchy" src={StarterSVG} height={80} width={80} alt="QR code to the Resistance Toolkit Starter Pack on BlueSky Social. Scan with your phone's camera to open up the link." />
-        </div>
-      </div>
-    </div>
-  </div>
+        </button>
+      </p>
+    </header>
 
-  <section class="mt-8 action max-w-6xl mx-auto">
-    <nav aria-label="Table of Contents" class="max-w-4xl mx-auto">
-      <h2 class="action-section__title text-center">Actions - Table of Contents</h2>
-      <ul class="resist-actions__toc max-w-sm rounded-lg shadow-sm flex mx-auto flex-col">
+    <nav id="hs-show-hide-collapse-heading" aria-label="Actions Menu" class="toc-nav max-w-4xl mx-auto hs-collapse hidden w-full overflow-hidden transition-[height] duration-300">
+      <ul class="resist-actions__toc rounded-lg flex flex-col">
         <li class="toc__item">
-          <a href="#org-actions">What Are Your Organizations Suggesting?</a>
+          <a href="#org-actions" data-section-target="#org-actions">What Are Your Organizations Suggesting?</a>
         </li>
         <li class="toc__item">
-          <a href="#donate">Donate</a>
+          <a href="#donate" data-section-target="#donate">Donate</a>
         </li>        
         <li class="toc__item">
-          <a href="#contact">Contact Your Representatives</a>
+          <a href="#contact" data-section-target="#contact">Contact Your Representatives</a>
         </li>
         <li class="toc__item">
-          <a href="#volunteer">Volunteer</a>
+          <a href="#volunteer" data-section-target="#volunteer">Volunteer</a>
         </li>
         <li class="toc__item">
-          <a href="#vote">Register to Vote</a>
+          <a href="#vote" data-section-target="#vote">Register to Vote</a>
         </li>
         <li class="toc__item">
-          <a href="#spending">Analyze Where You Are Spending Your Money</a>
+          <a href="#spending" data-section-target="#spending">Analyze Where You Are Spending Your Money</a>
         </li>
         <li class="toc__item">
-          <a href="#learning">Training / Education</a>
+          <a href="#learning" data-section-target="#learning">Training / Education</a>
         </li>
         <li class="toc__item">
-          <a href="#next-step">Next Step</a>
+          <a href="#next-step" data-section-target="#next-step">Next Step</a>
         </li>
       </ul>
     </nav>
-  </section>
-  <section  class="mt-8 actions-section max-w-6xl mx-auto">
 
+  </section>  
+  <section class="org-section">
+    <div class="org-wrapper">
+      
+      <section class="org-header">    
+        <h1 class="org-header__title">{org.name}</h1>
+        <div class="level">
+          <div class="level-left">        
+            {org.cause && org.cause.map((cause) => {
+              return <span class="cause-tag whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm"><a href={`/cause/${cause}`}>{cause}</a></span>
+            })}          
+          </div>    
+        </div>
+      </section>
+      <section  class="org-section org-content" aria-labelledby="hs-show-hide-collapse">
+        <div class="org-info">
+          <div class="org-description">
+            <h2 class="flex items-center"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
+            <p>{org.description}</p>        
+          </div>
+          <div class="org-contact">
+            <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
+            <p>
+              <a rel="external" href={org.url} target="_blank">{org.url}</a>
+            </p>
+            <h2 class="flex items-center my-4 pb-2"> <Icon name="mdi:megaphone"/> Social Media</h2>
+            <div class="social-tags">    
+              {org.social && org.social.map((social) => {
+                return (
+                <span class="tag">
+                  <a rel="external" href={social.url} title={`View ${org.name} on ${social.platform}`} target="_blank">{social.platform}</a>
+                </span>        
+              )
+              })}
+            </div>        
+          </div>
+        </div>
+      </section>      
+
+      <p class="px-4 py-2 text-sm">
+        <Icon name="mdi:information-outline" aria-hidden="true" role="img" class="inline social-info-icon" />
+        <span class="font-bold">
+          A note about Social Media:
+        </span>
+        We encourage you to try and use social media platforms that are open sourced and decentralized 
+        (like <a rel="noopener nofollow external" href="https://bsky.app/" class="text-blue-800 font-bold" target="_blank">BlueSky</a> 
+        or <a rel="noopener nofollow external" href="https://joinmastodon.org/" class="text-blue-800 font-bold" target="_blank">Mastodon</a>).         
+        This is a link to a <a rel="external" href="https://go.bsky.app/54kcLsh" class="text-blue-800 font-bold" target="_blank">starter pack of organizations</a> 
+        that are currently on BlueSky.    
+      </p>
+    </div>
+  </section>
+
+  <section  class="mt-8 actions-section max-w-6xl mx-auto">
     <div class="action">
       <Image src={Rosie} role="img" width={150} height={150} alt="Rosie the Riveter flexing her right arm." class="action-icon no-touchy"/>
       <div class="action-wrapper">
@@ -186,6 +187,7 @@ const orgCauses = org.cause.map((cause) => {
                 <a rel="external" href={action.url} class="action-items inline-flex items-center" target="_blank">
                   <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
                   {action.action}
+                  <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
                 </a>
               </li>        
             )
@@ -196,7 +198,6 @@ const orgCauses = org.cause.map((cause) => {
           </p>
         }
       </div>
-
     </div>
     <div class="action">      
       <Image src={Donate} role="img" width={150} height={150} alt="An open box with three stars jumping out." class="action-icon no-touchy"/>
@@ -204,13 +205,20 @@ const orgCauses = org.cause.map((cause) => {
       <h2 id="donate" class="action-section__title">Donate</h2>
       {org.donate ? 
         <a rel="external" href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
-         <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/> Donate to {org.name}
+         <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/> 
+         Donate to {org.name}
+         <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
         </a> :
-        <p>
-          We didn't find a donation link for your Organization. But Charity Navigator is a great tool to find charities that champion your cause. 
+        <p class="no-actions-found">
+          We didn't find a donation link for {org.name}.
+          But it's <a rel="external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
+          You can also use Charity Navigator to find charities that champion your cause. 
         </p>
         <h3 class="action-link__title">
-          <a href="https://www.charitynavigator.org/" target="_blank">Charity Navigator</a>
+          <a href="https://www.charitynavigator.org/" target="_blank">
+          Charity Navigator
+          <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+          </a>
         </h3>
         <p>
           Charity Navigator helps millions of people take action and support the causes they care about by connecting them to the best charities that align with their passions and values.
@@ -234,6 +242,7 @@ const orgCauses = org.cause.map((cause) => {
             <a rel="external" href={shop.url} class="donate-btn inline-flex items-center" target="_blank">
               <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/>
               {shop.action}
+              <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
             </a>            
           )})
           }
@@ -254,7 +263,10 @@ const orgCauses = org.cause.map((cause) => {
           message is counted and is an <span class="font-bold">important</span> indicator that your cause is important to their constituents.
         </p>
         <h3 class="action-link__title">
-          <a rel="external" href="https://resist.bot" target="_blank">ResistBot</a>
+          <a rel="external" href="https://resist.bot" target="_blank">
+            ResistBot
+            <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+          </a>
         </h3>
         <p>
           Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
@@ -271,7 +283,10 @@ const orgCauses = org.cause.map((cause) => {
         </p>
 
         <h3 class="action-link__title">
-          <a rel="external" href="https://www.usa.gov/elected-officials" target="_blank">Find Your Elected Officials</a>
+          <a rel="external" href="https://www.usa.gov/elected-officials" target="_blank">
+            Find Your Elected Officials
+            <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+          </a>
         </h3>
         <p>
           USA.gov has a tool to to find your Federal, State, and Local officials, just enter your address. 
@@ -293,13 +308,17 @@ const orgCauses = org.cause.map((cause) => {
             </a>
           )
           }) :
-          <p>
+          <p class="no-actions-found">
             We didn't find volunteer opportunities with {org.name}.  
-            But you can use these resources to check if your chosen cause or organization has volunteer openings or memberships.
+            But it's <a rel="external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
+            You can also use Volunteer Match to check if your chosen cause or organization has volunteer openings or memberships.            
           </p>
           
           <h3 class="action-link__title">
-            <a rel="external" href="https://www.volunteermatch.org/" target="_blank">VolunteerMatch.org</a>
+            <a rel="external" href="https://www.volunteermatch.org/" target="_blank">
+              VolunteerMatch.org
+              <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+            </a>
           </h3>
           <p>
             VolunteerMatch believes that volunteering can change lives – starting with yours. When we connect with our 
@@ -308,7 +327,10 @@ const orgCauses = org.cause.map((cause) => {
           </p>
 
           <h3 class="action-link__title">
-            <a rel="external" href="https://www.eac.gov/help-america-vote" target="_blank">Volunteer as a Poll Worker</a>
+            <a rel="external" href="https://www.eac.gov/help-america-vote" target="_blank">
+              Volunteer as a Poll Worker
+              <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+            </a>
           </h3>
           <p>
             Poll workers are essential to ensure elections are a success. During each election, millions of Americans 
@@ -327,11 +349,17 @@ const orgCauses = org.cause.map((cause) => {
         </p>
 
         <h3 class="action-link__title">
-          <a rel="external" href="https://www.vote.org/" target="_blank">Vote.org</a>
+          <a rel="external" href="https://www.vote.org/" target="_blank">
+            Vote.org
+            <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+          </a>
         </h3>
         
         <h3 class="action-link__title">
-          <a rel="external" href="https://www.votelikeabeast.com/" target="_blank">Vote Like A Beast</a>
+          <a rel="external" href="https://www.votelikeabeast.com/" target="_blank">
+            Vote Like A Beast
+            <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+          </a>
         </h3>
       </div>
     </div>
@@ -350,14 +378,20 @@ const orgCauses = org.cause.map((cause) => {
           Find companies that don't support your cause and spend your money at alternative companies.
         </p>
         <h3 class="action-link__title">
-          <a rel="external" href="https://www.goodsuniteus.com/" target="_blank">Goods Unite Us</a>
+          <a rel="external" href="https://www.goodsuniteus.com/" target="_blank">
+            Goods Unite Us
+            <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+          </a>
         </h3>
         <p>
           Search for a company and find their political donations. Get suggestions for alternative brands. Do some research and spend your money wisely!
         </p>
         <Image class="money-image" src={GoodsUnite} alt="Screenshot of a dashboard showing breakdowns and graphs of donations a company has made." />
         <h3 class="action-link__title open-secrets">
-          <a rel="external" href="https://www.opensecrets.org/" target="_blank">Open Secrets</a>
+          <a rel="external" href="https://www.opensecrets.org/" target="_blank">
+            Open Secrets
+            <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
+          </a>
         </h3>
         <p>
           Look up a politician to see who is funding their campaign.
@@ -377,7 +411,7 @@ const orgCauses = org.cause.map((cause) => {
           <p class="my-2">
             Here are some resources {org.name} has provided.
           </p> :        
-          <p class="my-2 no-education">
+          <p class="my-2 no-actions-found">
             We didn't find any specific educational resources on the {org.name} website. But it's <a rel="external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
           </p>
         }
@@ -387,6 +421,7 @@ const orgCauses = org.cause.map((cause) => {
               <a rel="external" href={educate.url} class="education-btn inline-flex items-center mx-1" target="_blank">
                 <Icon name="mdi:stars" aria-hidden="true" role={"img"} class="mr-2"/>
                 {educate.action}
+                <Icon name="mdi:external-link" role="img" class="ml-2" aria-label={'External link'} />
               </a>
             )
           })          
@@ -470,3 +505,51 @@ const orgCauses = org.cause.map((cause) => {
     </div>
   </section>   
 </Layout>
+
+<script type="text/javascript">
+  document.addEventListener('astro:page-load', () => {
+    function isWithinTolerance(number, target, tolerance) {
+      return Math.abs(number - target) <= tolerance;
+    }
+    function scrollWithCallback(scrollPosition, callback) {
+      const scroll = () => {
+
+        scrollPosition = Math.round(scrollPosition);
+        console.log(window.scrollY);
+        console.log(scrollPosition)
+
+        if(isWithinTolerance(window.scrollY, scrollPosition, 1)) {
+          callback();
+          return;
+        }
+        window.requestAnimationFrame(scroll);
+      };
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+      scroll();
+    };
+
+    const tocLinks = document.querySelectorAll('.toc__item a');
+    tocLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const toggleBtn = document.querySelector('#hs-show-hide-collapse');
+        
+        const sectionId = e.target.getAttribute('data-section-target');
+        console.log(sectionId)
+        const sectionToScrollTo = document.querySelector(sectionId);
+        console.log(sectionToScrollTo);
+        const offset = 210;
+        const elementPosition = sectionToScrollTo.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        scrollWithCallback(offsetPosition, () => {
+          toggleBtn.click();          
+        });
+      });
+    });
+  })
+</script>

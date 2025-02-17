@@ -162,7 +162,7 @@ title={`${org.name}`}
             )
             })}
           </ul> :
-          <p>
+          <p class="no-actions-found">
             Sorry, we couldn't find any immediate actions for {org.name} from their website. Please check their <a href={org.url} target="_blank">website</a> because they might have added some recently!
           </p>
         }
@@ -177,7 +177,7 @@ title={`${org.name}`}
         <a rel="external" href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
          <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/> Donate to {org.name}
         </a> :
-        <p>
+        <p class="no-actions-found">
           We didn't find a donation link for your Organization. But Charity Navigator is a great tool to find charities that champion your cause. 
         </p>
         <h3 class="action-link__title">
@@ -264,7 +264,7 @@ title={`${org.name}`}
             </a>
           )
           }) :
-          <p>
+          <p class="no-actions-found">
             We didn't find volunteer opportunities with {org.name}.  
             But you can use these resources to check if your chosen cause or organization has volunteer openings or memberships.
           </p>
@@ -348,7 +348,7 @@ title={`${org.name}`}
           <p class="my-2">
             Here are some resources {org.name} has provided.
           </p> :        
-          <p class="my-2 no-education">
+          <p class="my-2 no-actions-found">
             We didn't find any specific educational resources on the {org.name} website. But it's <a rel="external" href={org.url} target="_blank">worth checking their site periodically</a> because things are changing quickly! 
           </p>
         }

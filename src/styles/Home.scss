@@ -5,6 +5,7 @@
 }
 
 .resist-start__section {
+  @apply max-w-7xl;
   // border: 10px solid #3F3F5B;
   border: 10px solid $border-color;
   background-color: $primary-color;
@@ -147,6 +148,13 @@
   @apply shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-xs;
 }
 
+.thanks-link {
+  color: white;
+  text-decoration: underline;
+  &:hover {
+    color: $light-color;
+  }
+}
 
 @media screen and (max-width: 915px) {
   .resist-featured__section {
@@ -161,6 +169,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .resist-start__section {
+    @apply max-w-full w-full;
+  }
   .resist-steps__title {
     font-size: 18px;
   }

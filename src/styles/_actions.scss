@@ -1,5 +1,52 @@
 @use "./variables" as *;
 
+.actions-nav__header {
+  padding-block: 15px;
+  padding-inline: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid $primary-color;
+  border-radius: 6px;
+  @apply shadow-md;
+}
+
+.actions-nav__title {
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.hs-collapse-toggle {
+  @apply inline-flex  gap-x-1 text-sm font-semibold hover:underline;
+  border: 1px solid $primary-color;
+  padding: 5px;
+  width: 68px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+
+#hs-show-hide-collapse {
+  span.read-less {
+    display: none;
+  }
+}
+
+#hs-show-hide-collapse.open {
+  .show-toc {
+    display: none !important;
+  }
+  span.hide-toc {
+    display: block !important;
+  }
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
 .action-section__title {
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
@@ -13,7 +60,10 @@
   font-weight: 900;
   font-size: 18px;
   margin-block: 10px;
-
+  a {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 .open-secrets {
@@ -28,8 +78,9 @@ div.action {
   display: flex;
   justify-content: center;
   position: relative;
-  align-items: center;
+  align-items: center;  
   @apply mx-auto mb-4 max-w-6xl bg-white border shadow-sm rounded-xl;
+  border: 1px solid $primary-color;
   p {
     font-size: 16px;
     line-height: 1.75;
@@ -46,10 +97,14 @@ div.action {
   @apply max-w-2xl;
   flex: 1;
 }
-
+.toc-nav {
+  // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  @apply shadow-lg;
+}
 .toc__item {
-  @apply py-3 px-4 text-sm font-medium bg-white border border-gray-200;  
+  @apply text-sm font-medium bg-white border border-gray-200;  
   a {
+    @apply py-3 px-4;
     display: block;    
     font-family: "century-gothic", Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -62,8 +117,7 @@ div.action {
   border-radius: 6px;
 }
 
-.no-education {
-  // border: 4px solid #3F3F5B;
+.no-actions-found {
   background-color: #efefef;
   border-radius: 8px;
   padding: 10px;
@@ -108,8 +162,6 @@ ul.resist-learning__list {
     color: white;
   }
 }
-
-
 
 @media screen and (max-width: 768px) {
   .action-items__list {

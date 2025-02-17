@@ -5,10 +5,10 @@
   padding-block: 15px; 
   width: 100%; 
   background-color: white;
-  border: 1px solid #c7c7c7;
+  border: 1px solid $primary-color;
   border-bottom: none;
   padding-inline: 15px;
-  border-radius: 6px 6px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .org-header__title {
@@ -35,9 +35,9 @@ span.cause-tag {
 }
 .org-content {
   background-color: white;
-  border: 1px solid #c7c7c7;
+  border: 1px solid $primary-color;
   border-top: 0;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 12px 12px;
   padding-inline: 15px;
 }
 .org-section {
@@ -46,7 +46,7 @@ span.cause-tag {
     font-family: "neulis-sans", sans-serif;
     margin-bottom: 5px;
     font-size: 20px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     svg {
       margin-right: 5px;
     }
@@ -114,6 +114,16 @@ span.cause-tag {
   }
 }
 
+
+.social-note {
+  margin-top: 8px;
+}
+
+.social-info-icon {
+  vertical-align:text-top;
+}
+
+
 @media screen and (max-width: 768px) {
   .org-info {
     flex-direction: column;
@@ -127,5 +137,4 @@ span.cause-tag {
       flex: 0 1 100%;
     }
   }
-  
 }

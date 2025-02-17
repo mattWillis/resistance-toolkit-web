@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { type Cause, causes } from '@data/index';
-
+import '@styles/_cause-picker.scss';
 const sortedCauses = causes.sort((a: Cause, b: Cause) => {
   if (a.title < b.title) {
     return -1;
@@ -36,11 +36,11 @@ console.log(images);
 </ul>
 <p class="my-6 max-w-xlg mx-auto">
   <span class="font-bold italic">About This List:</span>
-  These are excellent causes that need our help. Follow the link to a cause you are passionate
-  about or interested in to see a list of organizations that support that cause. The organizations 
+  Select a cause you are passionate about or interested in
+  to see a list of organizations that support that cause. The orgs 
   often have clear and concise action items to take to fight back. But they will also need our support, 
   either by donating financially or by volunteering our time.
 </p>
 <p class="my-6 text-center">
-  Big thanks to <a class="font-bold thanks-link" rel="external" href="https://www.advocate.com/politics/anti-donald-trump-charities" target="_blank">Advocate</a> for inspiring and seeding this list.
+  Big thanks to <a class="font-bold thanks-link" rel="external" href="https://www.advocate.com/politics/anti-donald-trump-charities" target="_blank">Advocate</a> for inspiring this list.
 </p>
