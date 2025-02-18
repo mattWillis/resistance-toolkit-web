@@ -97,28 +97,25 @@ import { Image } from 'astro:assets';
     event.preventDefault();
     submitButton.disabled = true;
     submitButton.textContent = 'Submitting...';
-    console.log('Form: ', form);
+    
     const formData = new FormData(form);
-    console.log('Form Data:', formData);
-    console.log('Form URL:', new URLSearchParams(formData.toString()));
-    for (const entry of formData.entries()) {
-      console.log(entry[0], entry[1]); // key, value
-    }
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: new URLSearchParams(formData.toString()),
-    // })
-    //   .then(() => {        
-    //     form.reset();
-    //     submitButton.disabled = false;
-    //     submitButton.textContent = 'Submit';
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error!', error.message);
-    //     submitButton.disabled = false;
-    //     submitButton.textContent = 'Submit';
-    //   });
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData.toString()),
+    })
+      .then(() => {        
+        form.reset();
+        alert('Success! Your message has been sent.');
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit';
+      })
+      .catch((error) => {
+        console.error('Error!', error.message);
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit';
+      });
   }
   form.addEventListener('submit', handleFormSubmit);
 </script>
