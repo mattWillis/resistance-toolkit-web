@@ -9,6 +9,16 @@ $link-color: $primary-color;
 $link-color-hover: $secondary-color;
 
 
+$font-family: "neulis-sans", sans-serif;
+
+
+@mixin focusVisible {
+  outline: 3px solid white;
+  box-shadow: 0 0 0 6px black;
+  z-index: 4;
+}
+
+
 :where(html) {
   --ease-1: cubic-bezier(.25, 0, .5, 1);
   --ease-2: cubic-bezier(.25, 0, .4, 1);

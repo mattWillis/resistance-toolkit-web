@@ -1,0 +1,124 @@
+---
+import '@styles/_contact.scss';
+import { Image } from 'astro:assets';
+---
+
+<section class="resist-contact max-w-4xl mx-auto py-4">
+
+  <form
+    id="contactForm" 
+    class="resist-form" 
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="contact-me-by-email-only"
+    data-netlify-recaptcha="true">
+
+    <div class="max-w-sm space-y-3 group">
+      <div>
+        <label for="email" class="resist-form__label">Email address</label>
+        <div class="relative">
+          <input type="email" required id="email" name="email" class="resist-input__text">
+          <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-4">
+            <svg role="img" aria-hidden="true" class="shrink-0 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>Inquiry Type</p>
+
+    <div class="grid sm:grid-cols-3 gap-2 group">
+      <label for="type-general" class="resist-radio__label">
+        <input type="radio" name="contact-type" class="resist-radio__input" id="type-general" value="general" checked="checked">
+        <span class="resist-radio__span-text">General</span>
+      </label>
+    
+      <label for="type-org-suggest" class="resist-radio__label">
+        <input type="radio" name="contact-type" class="resist-radio__input" value="org" id="type-org-suggest">
+        <span class="resist-radio__span-text">Org Suggestion</span>
+      </label>
+
+      <label for="type-harmful" class="resist-radio__label">
+        <input type="radio" name="contact-type" class="resist-radio__input" value="harmful-inaccurate" id="type-harmful">
+        <span class="resist-radio__span-text">Harmful/Inaccurate Content</span>
+      </label> 
+
+      <label for="type-spelling" class="resist-radio__label">
+        <input type="radio" name="contact-type" class="resist-radio__input" value="spelling" id="type-spelling">
+        <span class="resist-radio__span-text">Spelling/Grammar</span>
+      </label>   
+      
+      <label for="type-accessibility" class="resist-radio__label">
+        <input type="radio" name="contact-type" class="resist-radio__input" value="accessibility" id="type-accessibility">
+        <span class="resist-radio__span-text">Accessibility Improvement</span>
+      </label>  
+             
+      <label for="type-feature" class="resist-radio__label">
+        <input type="radio" name="contact-type" class="resist-radio__input" value="feature" id="type-feature">
+        <span class="resist-radio__span-text">Feature Suggestion</span>
+      </label> 
+
+    </div>
+
+    <div class="group">
+      <div class="flex justify-between items-center">
+        <label for="message" class="resist-form__label">Comment</label>
+        <span class="block mb-2 text-sm text-gray-500">350 characters</span>
+      </div>
+      
+      <textarea id="message" name="message" class="resist-textarea" required maxlength="350" placeholder="Say hi..."></textarea>
+    </div>
+    
+    <div class="group" data-netlify-recaptcha="true"></div>
+
+    <div class="group last">
+      <input type="tel" id="contactPreferences" name="contact-me-by-phone-only" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="group">
+      <button type="submit" class="resist-button__submit">Submit</button>
+    </div>
+
+  </form>
+</section>
+
+<script>
+  const hb = document.getElementById('contactPreferences') as HTMLInputElement;
+  hb.style.visibility = 'hidden';
+  hb.style.height = '1px';
+  hb.style.width = '1px';
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const submitButton = form.querySelector('.resist-button__submit') as HTMLButtonElement;
+  function handleFormSubmit(event: Event) {
+    event.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
+    console.log('Form: ', form);
+    const formData = new FormData(form);
+    console.log('Form Data:', formData);
+    console.log('Form URL:', new URLSearchParams(formData.toString()));
+    for (const entry of formData.entries()) {
+      console.log(entry[0], entry[1]); // key, value
+    }
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: new URLSearchParams(formData.toString()),
+    // })
+    //   .then(() => {        
+    //     form.reset();
+    //     submitButton.disabled = false;
+    //     submitButton.textContent = 'Submit';
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error!', error.message);
+    //     submitButton.disabled = false;
+    //     submitButton.textContent = 'Submit';
+    //   });
+  }
+  form.addEventListener('submit', handleFormSubmit);
+</script>

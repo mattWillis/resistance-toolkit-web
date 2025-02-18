@@ -1,0 +1,111 @@
+@use "@styles/_variables.scss" as *;
+
+
+.contribute-header {
+  font-family: $font-family;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-block: 15px;
+}
+
+.resist-contact__section {
+  p {
+    margin-block: 15px;
+  }
+}
+
+.resist-contact__section-header {
+  font-family: $font-family;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-block: 15px;
+}
+
+.resist-form {
+  background-color: white;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid $primary-color;
+}
+
+.resist-form .group {
+  margin-block: 15px;
+  &.last {
+    margin-block: 0;
+    height: 1px;
+    width: 1px;
+  }
+}
+
+.resist-form__label {
+  @apply block text-sm font-medium mb-2;
+}
+
+.resist-input__text {
+  @apply py-3 px-4 ps-11 block w-full shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none;
+  border: 1px solid $primary-color;
+}
+
+.resist-radio__label {
+ @apply flex p-3 w-full bg-white border rounded-lg text-sm;
+ border: 1px solid $primary-color;
+  &:hover {
+    cursor: pointer;
+    // border: 1px solid $link-color;
+    background-color: $link-color;
+    color: white;
+  }
+  &.active {
+    border: 1px solid $link-color-hover;
+  }
+}
+
+.resist-radio__input{
+  @apply shrink-0 mt-0.5 rounded-full disabled:opacity-50 disabled:pointer-events-none;
+  // text-blue-600 focus:ring-blue-500
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  &:hover {
+    cursor: pointer;
+    color: $light-color;
+  }
+  &:focus-visible {
+    @include focusVisible();
+  }
+}
+
+.resist-radio__span-text {
+  @apply text-sm ms-3;
+}
+
+.resist-textarea {
+  @apply py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none;
+  // width: 100%;
+  height: 100px;
+  max-height: 100px;
+  border: 1px solid $primary-color;
+}
+
+.resist-button__submit {
+  font-family: $font-family;
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  color: white;
+  &:hover {
+    background-color: $link-color-hover;
+  }
+}
+
+@media screen and (max-width: 640px) { 
+  .resist-contact {
+    input[type='text'],
+    input[type='number'],
+    input[type='email'],
+    textarea {
+      font-size: 17px !important;
+    }
+  }
+ }

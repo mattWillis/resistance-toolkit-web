@@ -63,9 +63,6 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     <title>{title} - The Resistance Toolkit</title>
     <link rel="stylesheet" href="https://use.typekit.net/bqf4wdd.css">
     <ClientRouter />
-    {import.meta.env.DEV ? 
-      <AnalyticsHeap /> : null
-    }
   </head>
 
   <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
@@ -86,7 +83,14 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 						>
 							<span class="text-sm font-medium"> About </span>
               <Icon name="mdi:information" aria-hidden="true" role={'img'} class="size-4" />
-						</a>                      
+						</a>    
+            <a
+            class="resist-button__about inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+            href="/contact"
+          >
+            <span class="text-sm font-medium"> Contact Us </span>
+            <Icon name="mdi:contact-mail" aria-hidden="true" role={'img'} class="size-4" />
+          </a>                  
 					</div>
 				</div>
 			</div>
@@ -155,5 +159,4 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
     preline.HSStaticMethods.autoInit();
   });
   import "cookie-notice/dist/cookie.notice.min.js";
-  
 </script>

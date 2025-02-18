@@ -1,0 +1,31 @@
+---
+import '@styles/_contact.scss';
+import Layout from 'src/layouts/Layout.astro';
+import Banner from '@assets/ContributeBanner.png';
+import { Image } from 'astro:assets';
+import ContactForm from 'src/components/Contact-Form.astro';
+import { Icon } from 'astro-icon/components'
+---
+
+<Layout 
+  title="Contact Us"
+  description="Have a suggestion for an org? Notice something wrong? Let us know!"
+  imageAlt='Contact page'
+  image="/images/og-image.png">
+
+    <header slot="header" class="contact-header">
+      <Image src={Banner} class="about-banner no-touchy mx-auto" alt="Banner for The Resistance Toolkit stylized as graffiti on a brick wall. Subtitle reads 'The tools you need to resist hate.'">    
+    </header>
+    <h1 class="contribute-header">Help Us Make The Resistance Toolkit Great</h1>
+    <p>Have a suggestion for an org? Notice something wrong? Let us know!</p>
+    <ContactForm />
+    <section class="resist-contact__section">
+      <h2 class="resist-contact__section-header">Have a GitHub Account?</h2>
+      <p>Submit an issue!</p>
+      <a rel="external" href="https://github.com/mattWillis/resistance-toolkit-web" target="_blank" class="contribute-btn">
+        <Icon name="mdi:github" />
+        View On GitHub
+      </a>
+    </section>
+
+</Layout>

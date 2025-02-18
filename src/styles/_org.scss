@@ -22,9 +22,14 @@
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
+.level-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
 span.cause-tag {
   background-color: $primary-color;
-  margin-right: 5px;
+  // margin-right: 5px;
   a {
     display: inline-block;
     color: #fff;

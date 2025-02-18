@@ -72,8 +72,8 @@ const orgCauses = org.cause.map((cause) => {
   <header class="max-w-6xl mx-auto" slot="header">
     <Image class="no-touchy" src={banner} alt="Stay Informed" />
   </header>
-  <section class="sticky top-0 inset-x-0 z-10 bg-white">
-    <header class="actions-nav__header">
+  <section id="actionsSection" class="sticky top-0 inset-x-0 z-10 bg-white">
+    <header id="actionsHeader" class="actions-nav__header">
       <h2 class="actions-nav__title">Actions Menu</h2>
       <p class="actions-nav__toggle">
         <button type="button" class="hs-collapse-toggle" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
@@ -117,8 +117,7 @@ const orgCauses = org.cause.map((cause) => {
 
   </section>  
   <section class="org-section">
-    <div class="org-wrapper">
-      
+    <div class="org-wrapper">      
       <section class="org-header">    
         <h1 class="org-header__title">{org.name}</h1>
         <div class="level">
@@ -169,10 +168,10 @@ const orgCauses = org.cause.map((cause) => {
   </section>
 
   <section  class="mt-8 actions-section max-w-6xl mx-auto">
-    <div class="action">
+    <div id="org-actions" class="action">
       <Image src={Rosie} role="img" width={150} height={150} alt="Rosie the Riveter flexing her right arm." class="action-icon no-touchy"/>
       <div class="action-wrapper">
-        <h2 id="org-actions" class="action-section__title">What Is Your Organization Suggesting?</h2>
+        <h2 class="action-section__title">What Is Your Organization Suggesting?</h2>
         <p>          
           The following are actions straight from the {org.name} website.
         </p>
@@ -199,10 +198,10 @@ const orgCauses = org.cause.map((cause) => {
         }
       </div>
     </div>
-    <div class="action">      
+    <div id="donate" class="action">      
       <Image src={Donate} role="img" width={150} height={150} alt="An open box with three stars jumping out." class="action-icon no-touchy"/>
       <div class="action-wrapper">
-      <h2 id="donate" class="action-section__title">Donate</h2>
+      <h2  class="action-section__title">Donate</h2>
       {org.donate ? 
         <a rel="external" href={org.donate} target="_blank" class="donate-btn inline-flex items-center">
          <Icon name="mdi:donate" aria-hidden="true" role={"img"} class="mr-2"/> 
@@ -253,10 +252,10 @@ const orgCauses = org.cause.map((cause) => {
       }
       </div>
     </div>    
-    <div class="action">
+    <div id="contact" class="action">
       <Image src={Contact} role="img" width={150} height={150} alt="Megaphone with lines emanating from the horn." class="action-icon top no-touchy"/>
       <div class="action-wrapper">
-        <h2 id="contact" class="action-section__title">Contact Your Representatives</h2>
+        <h2  class="action-section__title">Contact Your Representatives</h2>
         <p>
           Make your voice heard! Write to or call your representatives at the local, state, and national level. 
           Urge them to take up your cause, or call them out on stances you disagree with. Every email, letter, or 
@@ -296,10 +295,10 @@ const orgCauses = org.cause.map((cause) => {
       </div>            
     </div>
 
-    <div class="action">
+    <div id="volunteer" class="action">
       <Image src={Volunteer} role="img" width={150} height={150} alt="Outline of two hands overlap to make a heart." class="action-icon top no-touchy"/>
       <div class="action-wrapper">
-        <h2 id="volunteer" class="action-section__title">Volunteer</h2>
+        <h2 class="action-section__title">Volunteer</h2>
         {hasVolunteer ? 
           volunteer.map((thisVolunteer) => {
           return (
@@ -340,10 +339,10 @@ const orgCauses = org.cause.map((cause) => {
       </div>
     </div>
 
-    <div class="action">
+    <div id="vote" class="action">
       <Image src={Register} role="img" width={150} height={150} alt="An icon of a pencil is writing on a curled piece of paper." class="action-icon no-touchy"/>
       <div class="action-wrapper">        
-        <h2 id="vote" class="action-section__title">Register to Vote</h2>
+        <h2 class="action-section__title">Register to Vote</h2>
         <p>
           Register or check your registration status and find out what issues are on your ballot.
         </p>
@@ -364,10 +363,10 @@ const orgCauses = org.cause.map((cause) => {
       </div>
     </div>
 
-    <div class="action">
+    <div id="spending" class="action">
       <Image src={ResearchMoney} role="img" width={150} height={150} alt="A magnifying glass hovers as lines emanate from the glass." class="action-icon top no-touchy"/>
       <div class="action-wrapper">      
-        <h2 id="spending" class="action-section__title">Analyze Where You Are Spending Your Money</h2>      
+        <h2 class="action-section__title">Analyze Where You Are Spending Your Money</h2>      
         <p>
           For better, or for worse, some companies and politicians only seem to respond to boycotts or an increase in sales. So wield your purchasing power carefully! 
         </p>
@@ -400,10 +399,10 @@ const orgCauses = org.cause.map((cause) => {
       </div>
     </div>
 
-    <div class="action">
+    <div id="learning" class="action">
       <Image src={Learn} role="img" width={150} height={150} alt="A pen and a pencil are crossed, similar to skull and crossbones. Symbols of arrows and eyes surround them." class="action-icon top no-touchy"/>
       <div class="action-wrapper">      
-        <h2 id="learning" class="action-section__title">Learning / Education</h2>
+        <h2 class="action-section__title">Learning / Education</h2>
         <p class="mt-2">
           It's important to actively learn about the issues you are passionate about. Consider taking a class, read a book, or do a project that will immerse yourself into your cause.
           </p>
@@ -492,9 +491,9 @@ const orgCauses = org.cause.map((cause) => {
         </ul>
       </div>
     </div>
-    <div class="action">
+    <div id="next-step" class="action">
       <div class="action-wrapper">
-        <h2 id="next-step" class="action-section__title">Next Step</h2>
+        <h2 class="action-section__title">Next Step</h2>
         <p>
           Completed your action? Great! Now it's time to move on to the last step.
         </p>
@@ -506,8 +505,13 @@ const orgCauses = org.cause.map((cause) => {
   </section>   
 </Layout>
 
+<script type="module"> 
+  import ismobilejs from 'https://cdn.jsdelivr.net/npm/ismobilejs@1.1.1/+esm'  
+  window.isMobile = ismobilejs; 
+</script>
 <script type="text/javascript">
   document.addEventListener('astro:page-load', () => {
+    let offset = window.isMobile(window.navigator.userAgent).any ? document.getElementById('actionsHeader').offsetHeight : document.getElementById('actionsSection').offsetHeight;
     function isWithinTolerance(number, target, tolerance) {
       return Math.abs(number - target) <= tolerance;
     }
@@ -515,8 +519,8 @@ const orgCauses = org.cause.map((cause) => {
       const scroll = () => {
 
         scrollPosition = Math.round(scrollPosition);
-        console.log(window.scrollY);
-        console.log(scrollPosition)
+        console.log('ScrollY', window.scrollY);
+        console.log('Scroll position', scrollPosition)
 
         if(isWithinTolerance(window.scrollY, scrollPosition, 1)) {
           callback();
@@ -531,21 +535,28 @@ const orgCauses = org.cause.map((cause) => {
       });
       scroll();
     };
-
+    const userAgent = window.navigator.userAgent;
     const tocLinks = document.querySelectorAll('.toc__item a');
     tocLinks.forEach((link) => {
+      
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        const toggleBtn = document.querySelector('#hs-show-hide-collapse');
-        
+        if(window.isMobile(userAgent).any) {          
+          offset = document.getElementById('actionsHeader').offsetHeight + 350;          
+        }
+
+        const toggleBtn = document.querySelector('#hs-show-hide-collapse');        
         const sectionId = e.target.getAttribute('data-section-target');
-        console.log(sectionId)
+        console.log(sectionId);
+        if(!window.isMobile(userAgent).any && sectionId === '#next-step') {          
+          offset = 500;          
+        }
         const sectionToScrollTo = document.querySelector(sectionId);
-        console.log(sectionToScrollTo);
-        const offset = 210;
+        console.log(sectionToScrollTo);        
+        
         const elementPosition = sectionToScrollTo.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - offset;
-
+        
         scrollWithCallback(offsetPosition, () => {
           toggleBtn.click();          
         });
