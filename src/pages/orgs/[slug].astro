@@ -511,16 +511,26 @@ const orgCauses = org.cause.map((cause) => {
 </script>
 <script type="text/javascript">
   document.addEventListener('astro:page-load', () => {
-    let offset = window.isMobile(window.navigator.userAgent).any ? document.getElementById('actionsHeader').offsetHeight : document.getElementById('actionsSection').offsetHeight;
+    let actionsHeaderOffset = 64;
+    let actionsSectionOffset = 64;
+
+    const actionsSection = document.getElementById('actionsSection');
+    const actionsHeader = document.getElementById('actionsHeader');
+    if(actionsHeader) {
+      actionsHeaderOffset = actionsHeader.offsetHeight;
+    }
+    if(actionsSection) {
+      actionsSectionOffset = actionsSection.offsetHeight;
+    }
+
+    let offset = window.isMobile(window.navigator.userAgent).any ? actionsHeaderOffset : actionsSectionOffset;
     function isWithinTolerance(number, target, tolerance) {
       return Math.abs(number - target) <= tolerance;
     }
     function scrollWithCallback(scrollPosition, callback) {
       const scroll = () => {
 
-        scrollPosition = Math.round(scrollPosition);
-        console.log('ScrollY', window.scrollY);
-        console.log('Scroll position', scrollPosition)
+        scrollPosition = Math.round(scrollPosition);        
 
         if(isWithinTolerance(window.scrollY, scrollPosition, 1)) {
           callback();
@@ -551,8 +561,7 @@ const orgCauses = org.cause.map((cause) => {
         if(!window.isMobile(userAgent).any && sectionId === '#next-step') {          
           offset = 500;          
         }
-        const sectionToScrollTo = document.querySelector(sectionId);
-        console.log(sectionToScrollTo);        
+        const sectionToScrollTo = document.querySelector(sectionId);               
         
         const elementPosition = sectionToScrollTo.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - offset;
