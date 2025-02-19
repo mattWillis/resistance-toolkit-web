@@ -2616,6 +2616,11 @@ export const orgs: Org[] = [
       {
         action: "Tell Congress: No more nuclear weapons testing.",
         url: "https://secure.ucsusa.org/a/2024-tell-congress-no-more-nuclear-weapons-testing"
+      },
+      {
+        action: "Store",
+        url: "https://store.ucsusa.org/",
+        category: "money"
       }
     ],
     social: [
@@ -2630,10 +2635,6 @@ export const orgs: Org[] = [
       {
         platform: 'Instagram',
         url: 'https://www.instagram.com/unionofconcernedscientists'
-      },
-      {
-        platform: 'LinkedIn',
-        url: 'https://www.linkedin.com/company/uriglobal'
       },
       {
         platform: 'YouTube',
@@ -3395,11 +3396,6 @@ export const orgs: Org[] = [
       {
         action: "Find or Create a Group",
         url: "https://indivisible.org/groups"
-      },
-      {
-        action: "Group Support Hub",
-        url: "https://lutheranservices.org/give/",
-        category: "donate"
       },
       {
         action: "Store",
