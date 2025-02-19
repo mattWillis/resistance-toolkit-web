@@ -11,8 +11,7 @@ import { Image } from 'astro:assets';
     name="contact"
     method="POST"
     data-netlify="true"
-    data-netlify-honeypot="contact-me-by-email-only"
-    data-netlify-recaptcha="true">
+    data-netlify-honeypot="contact-me-by-email-only">
 
     <div class="max-w-sm space-y-3 group">
       <div>
@@ -71,9 +70,7 @@ import { Image } from 'astro:assets';
       </div>
       
       <textarea id="message" name="message" class="resist-textarea" required maxlength="350" placeholder="Say hi..."></textarea>
-    </div>
-    
-    <div class="group" data-netlify-recaptcha="true"></div>
+    </div>    
 
     <div class="group last">
       <input type="tel" id="contactPreferences" name="contact-me-by-phone-only" tabindex="-1" autocomplete="off">
@@ -99,11 +96,11 @@ import { Image } from 'astro:assets';
     submitButton.textContent = 'Submitting...';
     
     const formData = new FormData(form);
-    
+    const formEntries = Array.from(formData.entries()).reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
     fetch('/', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData.toString()),
+      body: new URLSearchParams(formEntries).toString(),
     })
       .then(() => {        
         form.reset();
