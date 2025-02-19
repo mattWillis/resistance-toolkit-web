@@ -3658,10 +3658,6 @@ export const orgs: Org[] = [
         url: "https://www.nrdc.org/take-action/events"
       },
       {
-        action: "Our Programs",
-        url: "https://www.advancingjustice-aajc.org/programs",
-      },
-      {
         action: "Ways to Give",
         url: "https://www.nrdc.org/ways-give",
         category: "donate"
@@ -3684,11 +3680,6 @@ export const orgs: Org[] = [
         action: "What are the Solutions to Climate Change?",
         url: "https://www.nrdc.org/stories/what-are-solutions-climate-change",
         category: "volunteer"
-      },
-      {
-        action: "News",
-        url: "https://www.advancingjustice-aajc.org/news-media/in-the-news",
-        category: "education"
       },
       {
         action: "News and Commentary",
