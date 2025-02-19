@@ -1580,10 +1580,6 @@ export const orgs: Org[] = [
     donate: "https://reproductiverights.org/get-involved/support-us/",
     social: [
       {
-        platform: 'BlueSky',
-        url: 'https://bsky.app/profile/repro-rights.bsky.social'
-      },
-      {
         platform: 'Facebook',
         url: 'https://www.facebook.com/reproductiverights/'
       },
