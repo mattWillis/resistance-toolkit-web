@@ -1,8 +1,22 @@
 ---
 import { Image } from 'astro:assets';
 import { type Cause, causes } from '@data/index';
+import { type Org, orgs } from '@data/index';
+import { Icon } from 'astro-icon/components';
 import '@styles/_cause-picker.scss';
-const sortedCauses = causes.sort((a: Cause, b: Cause) => {
+
+type CauseWithOrgCount = Cause & { orgCount: number };
+
+const causesWithOrgCount = causes.map((cause: Cause) => {
+  const matchedOrgs = orgs.filter((org: Org) => org.cause.includes(cause.slug));
+  return {
+    ...cause,
+    orgCount: matchedOrgs.length
+  };
+});
+
+
+const sortedCausesWithOrgCount = causesWithOrgCount.sort((a: Cause, b: Cause) => {
   if (a.title < b.title) {
     return -1;
   }
@@ -13,27 +27,42 @@ const sortedCauses = causes.sort((a: Cause, b: Cause) => {
 });
 
 const images = await import.meta.glob<{ default: ImageMetadata }>('@assets/*.{jpeg,jpg,png,gif,webp}');
-console.log(images);
 ---
 
 <ul class="cause-list">
-  {sortedCauses.map((cause: any) => {  
+  {sortedCausesWithOrgCount.map((cause: any) => {  
     const img = cause.listImg;          
     console.log(img);
     if(!images[img]) {
       throw new Error(`"${img}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`);
     }
       return (
-        <li class="cause-list-item">                
+     <li class="cause-list-item">                
           <a rel="next" class="cause-link" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
-            <Image class="cause-list-img no-touchy" src={images[img]()} alt={cause.listImgAlt} />
-            {cause.title}
+            <div class="cause-img__container">
+              <Image class="cause-list-img no-touchy" src={images[img]()} alt={cause.listImgAlt} />
+              <p class="org-count">
+                {cause.orgCount && (      
+                  <span class="org-count__container">
+                    <Icon  role="img" aria-label="Orgs" name="mdi:building"/>
+                    <span>{cause.orgCount}</span>
+                  </span>            
+                )}
+              </p>
+            </div>            
+            <div class="cause-text__container">
+              <p class="cause-text__title">
+                {cause.title}
+              </p>            
+            </div>
           </a>
         </li>
+   
       )
     }        
   )}
 </ul>
+
 <p class="my-6 max-w-xlg mx-auto">
   <span class="font-bold italic">About This List:</span>
   Select a cause you are passionate about or interested in
@@ -44,3 +73,5 @@ console.log(images);
 <p class="my-6 text-center">
   Big thanks to <a class="font-bold thanks-link" rel="external" href="https://www.advocate.com/politics/anti-donald-trump-charities" target="_blank">Advocate</a> for inspiring this list.
 </p>
+
+

@@ -505,12 +505,10 @@ const orgCauses = org.cause.map((cause) => {
   </section>   
 </Layout>
 
-<script type="module"> 
-  import ismobilejs from 'https://cdn.jsdelivr.net/npm/ismobilejs@1.1.1/+esm'  
-  window.isMobile = ismobilejs; 
-</script>
-<script type="text/javascript">
-  document.addEventListener('astro:page-load', () => {
+<script type="module">
+   import ismobilejs from 'https://cdn.jsdelivr.net/npm/ismobilejs@1.1.1/+esm';
+   window.isMobile = ismobilejs;
+   document.addEventListener('astro:page-load', () => {
     let actionsHeaderOffset = 64;
     let actionsSectionOffset = 64;
 
@@ -523,10 +521,16 @@ const orgCauses = org.cause.map((cause) => {
       actionsSectionOffset = actionsSection.offsetHeight;
     }
 
-    let offset = window.isMobile(window.navigator.userAgent).any ? actionsHeaderOffset : actionsSectionOffset;
+    let offset = 64;
+    if(window.hasOwnProperty('isMobile')) {
+      console.log('MOBILE: ', window.isMobile(window.navigator.userAgent).any)
+      window.isMobile(window.navigator.userAgent).any ? actionsHeaderOffset : actionsSectionOffset;
+    }     
+    console.log('OFFSET: ', offset)
     function isWithinTolerance(number, target, tolerance) {
       return Math.abs(number - target) <= tolerance;
     }
+
     function scrollWithCallback(scrollPosition, callback) {
       const scroll = () => {
 

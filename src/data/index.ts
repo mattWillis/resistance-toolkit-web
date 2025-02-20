@@ -497,7 +497,7 @@ export const orgs: Org[] = [
     url: 'https://www.aclu.org/',
     ogImage: "https://www.aclu.org/wp-content/themes/aclu-wp/img/default_fb_share.jpg",
     cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'sexism', 'voting', 'accessibility'],
-    donate: "https://action.aclu.org/give/now",
+    donate: "https://action.aclu.org/give/now/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -523,29 +523,29 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Take Action - Sign a Petition",
-        url: "https://www.aclu.org/action" 
+        url: "https://www.aclu.org/action/?utm_source=resistance-toolkit" 
       },
       {
         action: "Campaigns & Initiatives",
-        url: "https://www.aclu.org/campaigns-initiatives"
+        url: "https://www.aclu.org/campaigns-initiatives/?utm_source=resistance-toolkit"
       },
       {
         action: "Shop",
-        url: "https://shop.aclu.org/",
+        url: "https://shop.aclu.org/?utm_source=resistance-toolkit/",
         category: "money"
       },
       {
         action: "Know Your Rights",
-        url: "https://www.aclu.org/know-your-rights",
+        url: "https://www.aclu.org/know-your-rights/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Research & Publications",
-        url: "https://www.aclu.org/publications"
+        url: "https://www.aclu.org/publications/?utm_source=resistance-toolkit"
       },
       {
         action: "Careers & Internships",
-        url: "https://www.aclu.org/careers/"
+        url: "https://www.aclu.org/careers/?utm_source=resistance-toolkit"
       }
     ],
     description: 'With immigrant rights, trans justice, reproductive freedom, and more at risk, we’re in courts and communities across the country to protect everyone’s rights — and we need you with us.',
@@ -995,11 +995,36 @@ export const orgs: Org[] = [
         platform: 'Instagram',
         url: 'https://www.instagram.com/everytown/'
       },
+      {
+        platform: 'Blog',
+        url: "https://www.everytown.org/blog/"
+      }
     ],
     actions: [
       {
         action: "Take Action",
         url: "https://www.everytown.org/actions/"
+      },
+      {
+        action: "Our Work",
+        url: "https://www.everytown.org/work/"
+      },
+      {
+        action: "Stay Informed: What are the issues?",
+        url: "https://www.everytown.org/issues/"
+      },
+      {
+        action: "Our Solutions",
+        url: "https://www.everytown.org/solutions/"
+      },
+      {
+        action: "Join Gun Sense Majority Council",
+        url: "https://www.everytown.org/gun-sense-majority-council/",
+        category: "donate"
+      },
+      {
+        action: "Stay Informed: News",
+        url: "https://www.everytown.org/news/",        
       },
       {
         action: "Your State (Found on the Homepage)",
@@ -1011,7 +1036,11 @@ export const orgs: Org[] = [
         url: "https://everytownresearch.org/labs/",
         category: "education"
       },
-
+      {
+        action: "Store",
+        url: "https://store.everytown.org/",
+        category: "money"
+      }
     ],
     description: "We’re the largest gun violence prevention organization in America—and we’re winning. Everytown starts with you, and it starts in your neighborhood. By introducing evidence-based solutions in every town, we can end gun violence.",
     scope: 'us',
@@ -1045,6 +1074,10 @@ export const orgs: Org[] = [
         platform: 'TikTok',
         url: 'https://www.tiktok.com/@sandyhookpromise'
       },
+      {
+        platform: "Blog",
+        url: "https://www.sandyhookpromise.org/get-info/blog/"
+      }
     ],
     actions: [
       {
@@ -1064,6 +1097,15 @@ export const orgs: Org[] = [
         action: "Advocate for Policy",
         url: "https://actionfund.sandyhookpromise.org/"
       },
+      {
+        action: "Get the Facts",
+        url: "https://www.sandyhookpromise.org/blog/gun-violence/facts-about-gun-violence-and-school-shootings/",
+        category: "education"
+      },
+      {
+        action: "Stay Informed: Newsroom",
+        url: "https://www.sandyhookpromise.org/newsroom/"
+      }
     ],
     description: 'Sandy Hook Promise is a national nonprofit organization founded and led by several family members whose loved ones were killed at Sandy Hook Elementary School. Our intent is to honor all victims of gun violence by turning our tragedy into a moment of transformation. Text `PROMISE` to 79775',
     scope: 'us',
@@ -1092,7 +1134,7 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Take Action",
+        action: "Take Action - Get Involved",
         url: "https://giffords.org/take-action/"
       },
       {
@@ -1104,8 +1146,14 @@ export const orgs: Org[] = [
         url: "https://giffords.org/action/gun-owners-for-safety/"
       },
       {
+        action: "Resources",
+        url: "https://giffords.org/lawcenter/resources/",
+        category: "education"
+      },
+      {
         action: "Courage Fellows",
-        url: "https://giffords.org/action/courage-fellows/"
+        url: "https://giffords.org/action/courage-fellows/",
+        category: "volunteer"
       },
     ],
     description: 'Giffords is an organization dedicated to saving lives from gun violence. Led by former Congresswoman Gabrielle Giffords, we inspire the courage of people from all walks of life to make America safer. Giffords is fighting to end the gun lobby’s stranglehold on our political system.',
@@ -1118,7 +1166,7 @@ export const orgs: Org[] = [
     url: 'https://aijustice.org/',
     ogImage: "https://aijustice.org/wp-content/uploads/2020/06/ai-justice-banner.jpg",
     cause: ['immigration'],
-    donate: "https://aijustice.org/donate/",
+    donate: "https://aijustice.org/donate/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -1148,20 +1196,20 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Volunteer with American's for Immigrant Justice",
-        url: "https://aijustice.org/volunteer/",
+        url: "https://aijustice.org/volunteer/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Events",
-        url: "https://aijustice.org/events/"
+        url: "https://aijustice.org/events/?utm_source=resistance-toolkit"
       },
       {
         action: "Advocacy",
-        url: "https://aijustice.org/advocacy/"
+        url: "https://aijustice.org/advocacy/?utm_source=resistance-toolkit"
       },
       {
         action: "SB 1718 Resources",
-        url: "https://aijustice.org/sb-1718-resources/"
+        url: "https://aijustice.org/sb-1718-resources/?utm_source=resistance-toolkit"
       }
     ],
     description: 'Americans for Immigrant Justice (AI Justice) is an award-winning non-profit law firm that fights for justice for immigrants through a combination of direct representation, impact litigation, advocacy and outreach.',
@@ -1171,7 +1219,7 @@ export const orgs: Org[] = [
   {
     id: 19,
     name: "American Immigration Council",
-    url: 'https://www.americanimmigrationcouncil.org/',
+    url: 'https://www.americanimmigrationcouncil.org/?utm_source=resistance-toolkit',
     ogImage: "https://www.americanimmigrationcouncil.org/sites/default/files/americanimmigrationcouncil.jpg",
     cause: ['immigration'],
     donate: "https://www.americanimmigrationcouncil.org/donate",
@@ -1200,11 +1248,11 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Get Involved",
-        url: "https://www.americanimmigrationcouncil.org/get-involved"
+        url: "https://www.americanimmigrationcouncil.org/get-involved/?utm_source=resistance-toolkit"
       },
       {
-        action: "Immigration Impact: the only news site exclusively committed to covering immigration issues.",
-        url: "https://immigrationimpact.com/",
+        action: "Immigration Impact: Exclusively committed to covering immigration issues.",
+        url: "https://immigrationimpact.com/?utm_source=resistance-toolkit",
         category: "education"
       },
     ],
@@ -1218,7 +1266,7 @@ export const orgs: Org[] = [
     url: 'https://www.theyoungcenter.org/',
     ogImage: "http://static1.squarespace.com/static/597ab5f3bebafb0a625aaf45/t/5f763676b29ca936f6cabbd1/1601582716196/Young-Center-Hero-Image-Website.png?format=1500w",
     cause: ['immigration'],
-    donate: "https://www.theyoungcenter.org/donate",
+    donate: "https://www.theyoungcenter.org/donate/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -1240,21 +1288,25 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "How to Help",
-        url: "https://www.theyoungcenter.org/how-to-help-immigrant-children"
+        url: "https://www.theyoungcenter.org/how-to-help-immigrant-children/?utm_source=resistance-toolkit"
       },
       {
         action: "Volunteer with Young Center",
-        url: "https://clienttrack.eccovia.com/portal/default.aspx?CustomerID=TYC",
+        url: "https://www.theyoungcenter.org/volunteer-at-the-young-center/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Become a Young Center Ambassador",
-        url: "https://www.theyoungcenter.org/ambassadors",
+        url: "https://www.theyoungcenter.org/ambassadors/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Refer a Child",
-        url: "https://www.theyoungcenter.org/refer-a-child"
+        url: "https://www.theyoungcenter.org/refer-a-child/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Events",
+        url: "https://www.theyoungcenter.org/events/?utm_source=resistance-toolkit"
       }
     ],
     description: 'The Young Center is a champion for the rights and best interests of unaccompanied immigrant children, making sure that wherever they land, whether here in the U.S. or in their home country, they are safe.',
@@ -1267,7 +1319,7 @@ export const orgs: Org[] = [
     url: 'https://www.glaad.org',
     ogImage: "https://media.glaad.org/wp-content/uploads/2022/11/20110804/Glaad_Cyan.png",
     cause: ['lgbtq'],
-    donate: "https://give.glaad.org/page/76113/donate/1",
+    donate: "https://give.glaad.org/page/76113/donate/1/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -1297,22 +1349,27 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Volunteer with GLAAD",
-        url: "https://act.glaad.org/page/77842/survey/1",
+        url: "https://act.glaad.org/page/77842/survey/1/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Events",
-        url: "https://glaad.org/events/"
+        url: "https://glaad.org/events/?utm_source=resistance-toolkit"
       },
       {
         action: "Ways to Give",
-        url: "https://glaad.org/ways-to-support-glaad/",
+        url: "https://glaad.org/ways-to-support-glaad/?utm_source=resistance-toolkit",
         category: "donate"
       },
       {
         action: "Mailing List",
-        url: "https://act.glaad.org/page/52123/subscribe/1"
+        url: "https://act.glaad.org/page/52123/subscribe/1/?utm_source=resistance-toolkit"
       },
+      {
+        action: "Research",
+        url: "https://glaad.org/research/?utm_source=resistance-toolkit",
+        category: "education"
+      }
     ],
     description: 'Founded in 1985, GLAAD is a non-profit organization focused on LGBTQ advocacy and cultural change. GLAAD works to ensure fair, accurate, and inclusive representation and creates national and local programs that advance LGBTQ acceptance.',
     scope: 'global',
@@ -1324,7 +1381,7 @@ export const orgs: Org[] = [
     url: 'https://srlp.org/',
     ogImage: "/Orgs/SRLPBanner.webp",
     cause: ['lgbtq'],
-    donate: "https://srlp.org/donate/",
+    donate: "https://srlp.org/donate/?utm_source=resistance-toolkit",
     social: [
       {
         platform: "Facebook",
@@ -1350,25 +1407,25 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Volunteer with SRLP",
-        url: "https://srlp.org/get-involved/volunteer/",
+        url: "https://srlp.org/get-involved/volunteer/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Events",
-        url: "https://srlp.org/calendar/"
+        url: "https://srlp.org/calendar/?utm_source=resistance-toolkit"
       },
       {
         action: "Campaigns",
-        url: "https://srlp.org/action/"
+        url: "https://srlp.org/action/?utm_source=resistance-toolkit"
       },
       {
         action: "Trainings",
-        url: "https://srlp.org/trainings/",
+        url: "https://srlp.org/trainings/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Become a Member",
-        url: "https://srlp.org/get-involved/become-a-member/"
+        url: "https://srlp.org/get-involved/become-a-member/?utm_source=resistance-toolkit"
       },
     ],
     description: 'Sylvia Rivera Law Project (SRLP) works to guarantee that all people are free to self-determine their gender identity and expression, regardless of income or race, and without facing harassment, discrimination, or violence. SRLP is a collective organization founded on the understanding that gender self-determination is inextricably intertwined with racial, social and economic justice.',
@@ -1381,7 +1438,7 @@ export const orgs: Org[] = [
     url: 'https://www.elevatedaccess.org/',
     ogImage: "http://static1.squarespace.com/static/6467d799146f502ed383205b/t/647623878025042d20f6358e/1685463943262/Primary+Logo.png?format=1500w",
     cause: ['lgbtq'],
-    donate: "https://www.elevatedaccess.org/donate",
+    donate: "https://www.elevatedaccess.org/donate/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -1407,13 +1464,27 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Ways to Help",
-        url: "https://www.elevatedaccess.org/get-involved/ways-to-help"
+        url: "https://www.elevatedaccess.org/get-involved/ways-to-help/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Get Involved: Pilots",
+        url: "https://www.elevatedaccess.org/get-involved/pilots/?utm_source=resistance-toolkit",
+        category: "volunteer"
       },
       {
         action: "Volunteer with Elevated Access",
-        url: "https://www.elevatedaccess.org/contact",
+        url: "https://www.elevatedaccess.org/contact/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
+      {
+        action: "Get Help",
+        url: "https://www.elevatedaccess.org/get-help/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Shop",
+        url: "https://www.elevatedaccess.org/shop/?utm_source=resistance-toolkit",
+        category: "money"
+      }
     ],
     description: 'We are a non-profit organization that enables people to access healthcare by providing flights on private planes at no cost. Our volunteer pilot network transports clients seeking abortion or gender-affirming care across the United States.',
     scope: 'us',
@@ -1425,7 +1496,7 @@ export const orgs: Org[] = [
     url: 'https://www.lambdalegal.org',
     ogImage: "https://lambdalegal.org/wp-content/uploads/2023/03/LL-META.png",
     cause: ['lgbtq'],
-    donate: "https://lambdalegal.org/ways-to-give/",
+    donate: "https://lambdalegal.org/ways-to-give/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -1447,16 +1518,20 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Events",
-        url: "https://lambdalegal.org/events/"
+        url: "https://lambdalegal.org/events/?utm_source=resistance-toolkit"
       },
       {
         action: "Peer-to-Peer Fundraising",
-        url: "https://lambdalegal.org/fundraise/",
-        category: "money"
+        url: "https://lambdalegal.org/fundraise/?utm_source=resistance-toolkit",
+        category: "donate"
+      },
+      {
+        action: "Become a Sponsor", 
+        url: "https://lambdalegal.org/national-sponsorships/?utm_source=resistance-toolkit",
       },
       {
         action: "Ways to Give",
-        url: "https://lambdalegal.org/ways-to-give/",
+        url: "https://lambdalegal.org/ways-to-give/?utm_source=resistance-toolkit",
         category: "donate"
       }
     ],
@@ -1470,11 +1545,11 @@ export const orgs: Org[] = [
     url: 'https://www.plannedparenthood.org/',
     ogImage: "https://www.plannedparenthood.org/uploads/filer_public_thumbnails/filer_public/b9/ed/b9eddaf2-608a-4935-8c70-fc98afd54562/find-health-center.jpg__1200x1200_q65_subsampling-2.jpg",
     cause: ['reproductive', 'medicine'],
-    donate: "https://www.plannedparenthood.org/get-involved/other-ways-give",
+    donate: "https://www.plannedparenthood.org/get-involved/other-ways-give/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
-        url: 'https://bsky.app/profile/ppfa.bsky.social'
+        url: 'https://bsky.app/profile/ppfa.org'
       },
       {
         platform: 'Facebook',
@@ -1496,21 +1571,34 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Get Involved",
-        url: "https://www.plannedparenthood.org/get-involved"
+        url: "https://www.plannedparenthood.org/get-involved/?utm_source=resistance-toolkit"
       },
       {
         action: "Volunteer with Planned Parenthood",
-        url: "https://www.weareplannedparenthood.org/pGPUfPzxL0-W-oG8DCQ24w2?ms=3NALz2111W1N1V&sourceid=1010711&_ga=2.190745064.2122819497.1651591791-1277393218.1630613411&_gl=1*1whxp5g*_gcl_au*MTkxNjUwNjM2MS4xNzM3Nzc5MDE2*_ga*MTYwNjQ2ODY3NS4xNzM3Nzc5MDE2*_ga_ENXC8KHJL8*MTczODc3MTQ3Ni4zLjEuMTczODc3MTY0NS4wLjAuMjA4MzU1ODcxNg..",
+        url: "https://www.weareplannedparenthood.org/pGPUfPzxL0-W-oG8DCQ24w2/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
-        action: "Jobs and Work",
-        url: "https://www.plannedparenthood.org/get-involved/jobs-and-volunteering",
+        action: "Get Care",
+        url: "https://www.plannedparenthood.org/get-care"
+      },
+      {
+        action: "Get the Facts",
+        url: "https://www.plannedparenthood.org/learn/?utm_source=resistance-toolkit",        
+      },
+      {
+        action: "Get the Facts",
+        url: "https://www.plannedparenthood.org/learn/?utm_source=resistance-toolkit",
+        category: "education"
+      },
+      {
+        action: "Jobs and Volunteering",
+        url: "https://www.plannedparenthood.org/get-involved/jobs-and-volunteering/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Shop",
-        url: "https://marketplace.plannedparenthood.org/",
+        url: "https://marketplace.plannedparenthood.org/?utm_source=resistance-toolkit",
         category: "money"
       }
 
@@ -1525,7 +1613,7 @@ export const orgs: Org[] = [
     url: 'https://emilyslist.org/',
     ogImage: "https://emilyslist.org/wp-content/uploads/2023/02/eml-social-share.jpg",
     cause: ['reproductive', 'sexism'],
-    donate: "https://secure.actblue.com/donate/donate-to-emilys-list",
+    donate: "https://secure.actblue.com/donate/donate-to-emilys-list/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -1547,24 +1635,29 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Support Federal and Gubernatorial Candidates",
-        url: "https://emilyslist.org/donate/all-candidates-2025/"
+        url: "https://emilyslist.org/donate/all-candidates-2025/?utm_source=resistance-toolkit"
       },
       {
         action: "Support State and Local Candidates",
-        url: "https://emilyslist.org/state-and-local-candidates/"
+        url: "https://emilyslist.org/state-and-local-candidates/?utm_source=resistance-toolkit"
       },
       {
         action: "Events",
-        url: "https://emilyslist.org/events/"
+        url: "https://emilyslist.org/events/?utm_source=resistance-toolkit"
       },
       {
         action: "Store",
-        url: "https://store.emilyslist.org/",
+        url: "https://store.emilyslist.org/?utm_source=resistance-toolkit",
         category: "money"
       },
       {
         action: "Train to Run for Office - and Win",
-        url: "https://trainingcenter.emilyslist.org/"
+        url: "https://trainingcenter.emilyslist.org/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Train to Run for Office - and Win",
+        url: "https://trainingcenter.emilyslist.org/?utm_source=resistance-toolkit",
+        category: "education"
       },
     ],
     description: 'At EMILYs List, we work to elect Democratic pro-choice women up and down the ballot and across the country with a goal of fighting for our rights and our communities.',
@@ -1577,7 +1670,7 @@ export const orgs: Org[] = [
     url: 'https://reproductiverights.org/',
     ogImage: "https://reproductiverights.org/wp-content/uploads/2021/04/Court.jpg",
     cause: ['reproductive', 'medicine'],
-    donate: "https://reproductiverights.org/get-involved/support-us/",
+    donate: "https://reproductiverights.org/get-involved/support-us/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'Facebook',
@@ -1599,24 +1692,29 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Act",
-        url: "https://reproductiverights.org/get-involved/act/"
+        url: "https://reproductiverights.org/get-involved/act/?utm_source=resistance-toolkit"
       },
       {
         action: "Learn",
-        url: "https://reproductiverights.org/get-involved/learn/",
+        url: "https://reproductiverights.org/get-involved/learn/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Get Involved",
-        url: "https://reproductiverights.org/get-involved/"
+        url: "https://reproductiverights.org/get-involved/?utm_source=resistance-toolkit"
       },
       {
         action: "Resources",
-        url: "https://reproductiverights.org/get-involved/featured-resources/"
+        url: "https://reproductiverights.org/get-involved/featured-resources/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Resources",
+        url: "https://reproductiverights.org/get-involved/featured-resources/?utm_source=resistance-toolkit",
+        category: "education"
       },
       {
         action: "Lawyers Network",
-        url: "https://reproductiverights.org/lawyers-network/"
+        url: "https://reproductiverights.org/lawyers-network/?utm_source=resistance-toolkit"
       }
     ],
     description: 'The Center for Reproductive Rights is a global human rights organization of attorneys and advocates working to ensure reproductive rights are protected in law as fundamental human rights for the dignity, equality, health, and well-being of every person.',
@@ -1629,11 +1727,11 @@ export const orgs: Org[] = [
     url: 'https://reproductivefreedomforall.org/',
     ogImage: "https://reproductivefreedomforall.org/wp-content/uploads/2024/05/Fight-for-Reproductive-Freedom_Hero-1024x683.png",
     cause: ['reproductive'],
-    donate: "https://reproductivefreedomforall.org/donate/",
+    donate: "https://reproductivefreedomforall.org/donate/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
-        url: 'https://bsky.app/profile/reproductivefreedomforall.bsky.social'
+        url: 'https://bsky.app/profile/reproductivefreedomforall.org'
       },
       {
         platform: 'Instagram',
@@ -1651,7 +1749,7 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Take Action",
-        url: "https://reproductivefreedomforall.org/take-action/"
+        url: "https://reproductivefreedomforall.org/take-action/?utm_source=resistance-toolkit"
       },
       {
         action: "Volunteer with Reproductive Freedom For All",
@@ -1660,15 +1758,15 @@ export const orgs: Org[] = [
       },
       {
         action: "Demand Abortion Access Now",
-        url: "https://act.reproductivefreedomforall.org/a/abortion-access-now"
+        url: "https://act.reproductivefreedomforall.org/a/abortion-access-now/?utm_source=resistance-toolkit"
       },
       {
         action: "Add Your Name: We Need Court Reform!",
-        url: "https://act.reproductivefreedomforall.org/a/add-your-name-we-need-court-reform"
+        url: "https://act.reproductivefreedomforall.org/a/add-your-name-we-need-court-reform/?utm_source=resistance-toolkit"
       },
       {
         action: "Other Ways to Donate",
-        url: "https://reproductivefreedomforall.org/donate/other-ways-to-donate/",
+        url: "https://reproductivefreedomforall.org/donate/other-ways-to-donate/?utm_source=resistance-toolkit",
         category: "donate"
       }
     ],
@@ -1778,7 +1876,13 @@ export const orgs: Org[] = [
       },
       {
         action: "Become a Champion for Equality",
-        url: "https://www.globalfundforwomen.org/champions-for-equality/"
+        url: "https://www.globalfundforwomen.org/champions-for-equality/",
+        category: "volunteer"
+      },
+      {
+        action: "Latest News",
+        url: "https://www.globalfundforwomen.org/latest/",
+        category: "education"
       },
       {
         action: "Store",
@@ -1796,7 +1900,7 @@ export const orgs: Org[] = [
     url: 'https://www.advocatesforyouth.org/',
     ogImage: "https://www.advocatesforyouth.org/wp-content/uploads/2019/08/Advocates-for-Youth-Logo_RRR-blue.png",
     cause: ['sexism', 'medicine', 'lgbtq'],
-    donate: "https://actionnetwork.org/fundraising/donate-to-advocates-for-youth-3",
+    donate: "https://actionnetwork.org/fundraising/donate-to-advocates-for-youth-3/?utm_source=resistance-toolkit",
     social: [
       {
         platform: "Facebook",
@@ -1814,28 +1918,28 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Action Center",
-        url: "https://www.advocatesforyouth.org/afy-action-center/"
+        url: "https://www.advocatesforyouth.org/afy-action-center/?utm_source=resistance-toolkit"
       },
       {
         action: "Events",
-        url: "https://www.advocatesforyouth.org/events/"
+        url: "https://www.advocatesforyouth.org/events/?utm_source=resistance-toolkit"
       },
       {
         action: "Campaigns",
-        url: "https://www.advocatesforyouth.org/our-campaigns/"
+        url: "https://www.advocatesforyouth.org/our-campaigns/?utm_source=resistance-toolkit"
       },
       {
         action: "Resources and Tools",
-        url: "https://www.advocatesforyouth.org/resources-tools/",
+        url: "https://www.advocatesforyouth.org/resources-tools/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Know Your IX",
-        url: "https://www.advocatesforyouth.org/campaigns/know-your-ix/"
+        url: "https://www.advocatesforyouth.org/campaigns/know-your-ix/?utm_source=resistance-toolkit"
       },
       {
         action: "Shop",
-        url: "https://shop.advocatesforyouth.org/",
+        url: "https://shop.advocatesforyouth.org/?utm_source=resistance-toolkit",
         category: "money"
       },
     ],
@@ -2327,36 +2431,45 @@ export const orgs: Org[] = [
     url: 'https://www.globalrefuge.org/',
     ogImage: "https://www.globalrefuge.org/wp-content/uploads/2023/08/impact_overview-1200x630-c-center.jpg",
     cause: ['immigration'],
-    donate: "https://secured.globalrefuge.org/page/78592/donate/1",
+    donate: "https://secured.globalrefuge.org/page/78592/donate/1/?utm_source=resistance-toolkit",
     actions: [
       {
         action: "Volunteer Opportunities",
-        url: "https://www.globalrefuge.org/get-involved/volunteer/",
+        url: "https://www.globalrefuge.org/get-involved/volunteer/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Corporate Giving",
-        url: "https://www.globalrefuge.org/get-involved/corporate-giving-and-involvement/",
+        url: "https://www.globalrefuge.org/get-involved/corporate-giving-and-involvement/?utm_source=resistance-toolkit",
         category: "donate"
       },
       {
         action: "Create a Circle of Welcome for a New American family.",
-        url: "https://www.globalrefuge.org/get-involved/circleofwelcome/",
+        url: "https://www.globalrefuge.org/get-involved/circleofwelcome/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Advocate with Us: Raise your voice alongside those seeking safety",
-        url: "https://www.globalrefuge.org/get-involved/advocate-with-us/"
+        url: "https://www.globalrefuge.org/get-involved/advocate-with-us/?utm_source=resistance-toolkit"
       },
       {
         action: "Combatting Disinformation",
-        url: "https://www.globalrefuge.org/get-involved/advocate-with-us/disinformation/",
+        url: "https://www.globalrefuge.org/get-involved/advocate-with-us/disinformation/?utm_source=resistance-toolkit",        
+      },
+      {
+        action: "Combatting Disinformation",
+        url: "https://www.globalrefuge.org/get-involved/advocate-with-us/disinformation/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Faith in Action: Your faith community can help welcome immigrants and refugees.",
-        url: "https://www.globalrefuge.org/get-involved/faith-in-action/",
+        url: "https://www.globalrefuge.org/get-involved/faith-in-action/?utm_source=resistance-toolkit",
         category: "volunteer"
+      },
+      {
+        action: "Resources - Toolkits, Backgrounders, and more",
+        url: "https://www.globalrefuge.org/blog/resources/?utm_source=resistance-toolkit",
+        category: "education"
       }
     ],
     social: [
@@ -2366,7 +2479,7 @@ export const orgs: Org[] = [
       },
       {
         platform: 'Blog',
-        url: "https://www.globalrefuge.org/blog/"
+        url: "https://www.globalrefuge.org/blog/?utm_source=resistance-toolkit"
       },
       {
         platform: "Facebook",
@@ -2395,35 +2508,35 @@ export const orgs: Org[] = [
     url: 'https://lwr.org/',
     ogImage: "https://lwr.org/themes/custom/ai/images/logo_lwr_social_big2.jpg",
     cause: ['immigration', "faith"],
-    donate: "https://give.lwr.org/page/123179/donate/1",
+    donate: "https://give.lwr.org/page/123179/donate/1/?utm_source=resistance-toolkit",
     actions: [
       {
         action: "Volunteer to quilt",
-        url: "https://lwr.org/quilts",
+        url: "https://lwr.org/quilts/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Make LWR Kits",
-        url: "https://lwr.org/kits",
+        url: "https://lwr.org/kits/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Find an Ingathering",
-        url: "https://ingathering.lwr.org/"
+        url: "https://ingathering.lwr.org/?utm_source=resistance-toolkit"
       },
       {
         action: "Resource Library",
-        url: "https://lwr.org/downloads",
+        url: "https://lwr.org/downloads/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "LWR Farmers Market Coffee",
-        url: "https://lwr.org/coffee",
+        url: "https://lwr.org/coffee/?utm_source=resistance-toolkit",
         category: "money"
       },
       {
         action: "Mailing List - News and important communications",
-        url: "https://lwr.org/sign-our-emails"
+        url: "https://lwr.org/sign-our-emails/?utm_source=resistance-toolkit"
       }
     ],
     social: [
@@ -2595,27 +2708,24 @@ export const orgs: Org[] = [
     url: 'https://www.ucsusa.org/',
     ogImage: "https://www.ucsusa.org/themes/custom/ucstheme/assets/social-logo.png",
     cause: ['science', 'climate'],
-    donate: 'https://secure.ucsusa.org/onlineactions/dR5QqmX2uUCLCFD1KkVEzg2',
+    donate: 'https://secure.ucsusa.org/onlineactions/dR5QqmX2uUCLCFD1KkVEzg2/?utm_source=resistance-toolkit',
     actions: [
       {
-        action: '3 Ways to Take Action',
-        url: 'https://www.ucsusa.org/take-action'
+        action: 'Take Action!',
+        url: 'https://www.ucsusa.org/take-action/?utm_source=resistance-toolkit'
       },
       {
-        action: "Tell Congress: Stop Trump’s illegal and unconstitutional power grab",
-        url: "https://secure.ucsusa.org/a/2025-stop-trumps-illegal-unconstitutional-power-grab"
+        action: "Science and Democracy",
+        url: "https://www.ucsusa.org/science-democracy/?utm_source=resistance-toolkit"
       },
       {
-        action: "Demand that Congress protect federal scientists and research.",
-        url: "https://secure.ucsusa.org/a/2024-save-science-save-lives"
-      },
-      {
-        action: "Tell Congress: No more nuclear weapons testing.",
-        url: "https://secure.ucsusa.org/a/2024-tell-congress-no-more-nuclear-weapons-testing"
+        action: "Science and Democracy",
+        url: "https://www.ucsusa.org/science-democracy/?utm_source=resistance-toolkit",
+        category: "education"
       },
       {
         action: "Store",
-        url: "https://store.ucsusa.org/",
+        url: "https://store.ucsusa.org/?utm_source=resistance-toolkit",
         category: "money"
       }
     ],
@@ -2647,23 +2757,23 @@ export const orgs: Org[] = [
     url: 'https://www.aaas.org/',
     ogImage: "/Orgs/AAASBanner.webp",
     cause: ['science'],
-    donate: 'https://www.aaas.org/support',
+    donate: 'https://www.aaas.org/support/?utm_source=resistance-toolkit',
     actions: [
       {
         action: 'Membership',
-        url: 'https://www.aaas.org/membership'
+        url: 'https://www.aaas.org/membership/?utm_source=resistance-toolkit'
       },
       {
         action: 'Events',
-        url: 'https://www.aaas.org/events'
+        url: 'https://www.aaas.org/events/?utm_source=resistance-toolkit'
       },
       {
         action: 'Fellowships',
-        url: 'https://www.aaas.org/fellowships'
+        url: 'https://www.aaas.org/fellowships/?utm_source=resistance-toolkit'
       },
       {
         action: 'Training Sessions',
-        url: 'https://www.aaas.org/page/training-sessions',
+        url: 'https://www.aaas.org/page/training-sessions/?utm_source=resistance-toolkit',
         category: "education"
       }
     ],
@@ -2696,13 +2806,22 @@ export const orgs: Org[] = [
   {
     id: 49,
     name: "The Science Coalition",
-    url: 'https://www.sciencecoalition.org/',
+    url: 'https://www.sciencecoalition.org/?utm_source=resistance-toolkit',
     ogImage: "/Orgs/TSCBanner.webp",
     cause: ['science'],
     actions: [
       {
         action: 'How to Take Action - Tools and Resources',
-        url: 'https://www.sciencecoalition.org/why-science-matters/#take-action'
+        url: 'https://www.sciencecoalition.org/why-science-matters/#take-action/?utm_source=resistance-toolkit'
+      },
+      {
+        action: 'Podcast',
+        url: "https://itunes.apple.com/us/podcast/thesciencecoalition/id911477046?mt=2"
+      },
+      {
+        action: 'Podcast',
+        url: "https://itunes.apple.com/us/podcast/thesciencecoalition/id911477046?mt=2",
+        category: "education"
       }
     ],
     social: [
@@ -2881,15 +3000,19 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Events",
-        url: "https://www.who.int/news-room/events"
+        url: "https://www.who.int/news-room/events/?utm_source=resistance-toolkit"
       },
       {
         action: "Campaigns",
-        url: "https://www.who.int/campaigns"
+        url: "https://www.who.int/campaigns/?utm_source=resistance-toolkit"
       },
       {
         action: "Get Data",
-        url: "https://data.who.int/",
+        url: "https://data.who.int/?utm_source=resistance-toolkit",        
+      },
+      {
+        action: "Get Data",
+        url: "https://data.who.int/?utm_source=resistance-toolkit",
         category: "education"
       }
     ],
@@ -3006,7 +3129,7 @@ export const orgs: Org[] = [
     url: 'https://www.catholiccharitiesusa.org/',
     ogImage: "https://www.catholiccharitiesusa.org/wp-content/uploads/2023/06/Rectangle-6825-9.59.35-AM.jpg",
     cause: ['aid', 'faith', 'immigration'],
-    donate: 'https://www.catholiccharitiesusa.org/?form=createhope24',
+    donate: 'https://www.catholiccharitiesusa.org/?form=createhope24&utm_source=resistance-toolkit',
     social: [
       {
         platform: 'Facebook',
@@ -3028,16 +3151,16 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Action Center",
-        url: "https://www.catholiccharitiesusa.org/advocacy-1/action-center/#/"
+        url: "https://www.catholiccharitiesusa.org/advocacy-1/action-center/#/?utm_source=resistance-toolkit"
       },
       {
         action: "Advocacy - Resources and Tools",
-        url: "https://www.catholiccharitiesusa.org/advocacy/",
+        url: "https://www.catholiccharitiesusa.org/advocacy/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Parish Engagement",
-        url: "https://www.catholiccharitiesusa.org/what-we-do/parish-engagement/"
+        url: "https://www.catholiccharitiesusa.org/what-we-do/parish-engagement/?utm_source=resistance-toolkit"
       }
     ],
     description: "The mission of Catholic Charities is to provide service to people, families and communities in need, to advocate for justice in social structures and to call the entire church and all people of good will to do the same.",
@@ -3129,16 +3252,31 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Become a member",
-        url: "https://member.ama-assn.org/join-renew/member-search"
+        url: "https://member.ama-assn.org/join-renew/member-search/?utm_source=resistance-toolkit"
       },
       {
         action: "Join in on national advocacy efforts",
-        url: "https://www.ama-assn.org/health-care-advocacy/federal-advocacy/national-advocacy",
+        url: "https://www.ama-assn.org/health-care-advocacy/federal-advocacy/national-advocacy/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Events",
-        url: "https://www.ama-assn.org/member-benefits/events"
+        url: "https://www.ama-assn.org/member-benefits/events/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Research", 
+        url: "https://www.ama-assn.org/about/research/?utm_source=resistance-toolkit",
+        category: "education"
+      },
+      {
+        action: "AMA Store",
+        url: "https://www.ama-assn.org/practice-management/ama-store/?utm_source=resistance-toolkit",
+        category: "money"
+      },
+      {
+        action: "AMA Store",
+        url: "https://www.ama-assn.org/practice-management/ama-store/?utm_source=resistance-toolkit",
+        category: "education"
       }
     ],
     description: "Throughout history, the AMA has always followed its mission: to promote the art and science of medicine and the betterment of public health.",
@@ -3151,7 +3289,7 @@ export const orgs: Org[] = [
     url: 'https://www.npaf.org/',
     ogImage: "https://www.npaf.org/wp-content/uploads/2021/11/NPAF-image-share.jpeg",
     cause: ['medicine'],
-    donate: 'https://www.npaf.org/actions/donate/',
+    donate: 'https://www.npaf.org/actions/donate/?utm_source=resistance-toolkit',
     social: [
       {
         platform: 'Facebook',
@@ -3174,24 +3312,24 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Get Involved",
-        url: "https://www.npaf.org/get-involved/"
+        url: "https://www.npaf.org/get-involved/?utm_source=resistance-toolkit"
       },
       {
         action: "Volunteer with NPAF",
-        url: "https://www.npaf.org/actions/sign-up-to-volunteer/",
+        url: "https://www.npaf.org/actions/sign-up-to-volunteer/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Events",
-        url: "https://www.npaf.org/events/"
+        url: "https://www.npaf.org/events/?utm_source=resistance-toolkit"
       },
       {
         action: "Toolkits",
-        url: "https://www.npaf.org/resources/?_resource_types=toolkits"
+        url: "https://www.npaf.org/resources/?_resource_types=toolkits&utm_source=resistance-toolkit"
       },
       {
         action: "Understand the Issues",
-        url: "https://www.npaf.org/issues/",
+        url: "https://www.npaf.org/issues/?utm_source=resistance-toolkit",
         category: "education"
       }
     ],
@@ -3232,6 +3370,10 @@ export const orgs: Org[] = [
       },
       {
         action: "Events",
+        url: "https://ncafp.org/upcoming-events/"
+      },
+      {
+        action: "Special Programs",
         url: "https://ncafp.org/events-and-special-programs/"
       },
       {
@@ -3257,6 +3399,10 @@ export const orgs: Org[] = [
     donate: 'https://www.fp4america.org/donate/',
     social: [
       {
+        platform: 'BlueSky',
+        url: 'https://bsky.app/profile/fp4america.bsky.social'
+      },
+      {
         platform: 'Facebook',
         url: "https://www.facebook.com/fp4america"
       },
@@ -3267,12 +3413,16 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Become a Member",
-        url: "https://www.fp4america.org/membership/"
+        action: "Join Us",
+        url: "https://www.fp4america.org/join-us/"
       },
       {
         action: "Events",
         url: "https://www.fp4america.org/events/"
+      },
+      {
+        action: "Resources",
+        url: "https://www.fp4america.org/resources/",        
       },
       {
         action: "Scorecard: Check Your State's Score",
@@ -3438,16 +3588,12 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Tell Congress to Pass an Assault Weapons Ban Now",
-        url: "https://act.everytown.org/sign/awb-2023/"
+        action: "Act Now!",
+        url: "https://momsdemandaction.org/act/"
       },
       {
-        action: "Add Your Name: We Must Disarm Hate",
-        url: "https://indivisible.org/how-to-give",
-      },
-      {
-        action: "Take Action / Volunteer",
-        url: "https://indivisible.org/resource/guide",
+        action: "Volunteer",
+        url: "https://momsdemandaction.org/act/",
         category: "volunteer"
       },
       {
@@ -3503,7 +3649,7 @@ export const orgs: Org[] = [
       },
       {
         action: "Join the Calling Team",
-        url: "https://indivisible.org/resource/guide",
+        url: "https://forms.everytown.org/wyxeV-4AeUyr7eCMGPbqAg2",
         category: "volunteer"
       },
       {

@@ -73,7 +73,8 @@ span.cause-tag {
 .social-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 10px;  
+  align-items: center;
   text-align: center;
   span.tag {
     flex: 0 1 25%;

@@ -151,7 +151,7 @@
 .thanks-link {
   color: white;
   text-decoration: underline;
-  &:hover {
+  &:hover, &:focus-visible {
     color: $light-color;
   }
 }
