@@ -522,11 +522,10 @@ const orgCauses = org.cause.map((cause) => {
     }
 
     let offset = 64;
-    if(window.hasOwnProperty('isMobile')) {
-      console.log('MOBILE: ', window.isMobile(window.navigator.userAgent).any)
+    if(window.hasOwnProperty('isMobile')) {      
       window.isMobile(window.navigator.userAgent).any ? actionsHeaderOffset : actionsSectionOffset;
     }     
-    console.log('OFFSET: ', offset)
+    
     function isWithinTolerance(number, target, tolerance) {
       return Math.abs(number - target) <= tolerance;
     }
@@ -545,7 +544,7 @@ const orgCauses = org.cause.map((cause) => {
 
       window.scrollTo({
         top: scrollPosition,
-        behavior: 'smooth'
+        
       });
       scroll();
     };
@@ -560,8 +559,7 @@ const orgCauses = org.cause.map((cause) => {
         }
 
         const toggleBtn = document.querySelector('#hs-show-hide-collapse');        
-        const sectionId = e.target.getAttribute('data-section-target');
-        console.log(sectionId);
+        const sectionId = e.target.getAttribute('data-section-target');        
         if(!window.isMobile(userAgent).any && sectionId === '#next-step') {          
           offset = 500;          
         }
@@ -575,5 +573,5 @@ const orgCauses = org.cause.map((cause) => {
         });
       });
     });
-  })
+  });
 </script>

@@ -1282,7 +1282,7 @@ export const orgs: Org[] = [
     id: 20,
     name: "Young Center for Immigrant Children's Rights",
     url: 'https://www.theyoungcenter.org/',
-    ogImage: "http://static1.squarespace.com/static/597ab5f3bebafb0a625aaf45/t/5f763676b29ca936f6cabbd1/1601582716196/Young-Center-Hero-Image-Website.png?format=1500w",
+    ogImage: "https://static1.squarespace.com/static/597ab5f3bebafb0a625aaf45/t/5f763676b29ca936f6cabbd1/1601582716196/Young-Center-Hero-Image-Website.png?format=1500w",
     cause: ['immigration'],
     donate: "https://www.theyoungcenter.org/donate/?utm_source=resistance-toolkit",
     social: [
@@ -1454,7 +1454,7 @@ export const orgs: Org[] = [
     id: 23,
     name: "Elevated Access",
     url: 'https://www.elevatedaccess.org/',
-    ogImage: "http://static1.squarespace.com/static/6467d799146f502ed383205b/t/647623878025042d20f6358e/1685463943262/Primary+Logo.png?format=1500w",
+    ogImage: "https://static1.squarespace.com/static/6467d799146f502ed383205b/t/647623878025042d20f6358e/1685463943262/Primary+Logo.png?format=1500w",
     cause: ['lgbtq'],
     donate: "https://www.elevatedaccess.org/donate/?utm_source=resistance-toolkit",
     social: [
@@ -2381,7 +2381,7 @@ export const orgs: Org[] = [
     id: 38,
     name: "Inequality Media",
     url: 'https://www.inequalitymedia.org/',
-    ogImage: "http://static1.squarespace.com/static/57043836f850824f376c74ef/t/5708505d20c647096509fce8/1460162675551/IM_logo_final.jpg?format=1500w",
+    ogImage: "https://images.squarespace-cdn.com/content/57043836f850824f376c74ef/1460162674857-CNY9Y90LGABDWTOLHKRJ/IM_logo_final.jpg?content-type=image%2Fjpeg",
     cause: ['wealth'],
     donate: "https://www.inequalitymedia.org/donate/?utm_source=resistance-toolkit",
     actions: [
@@ -2415,7 +2415,7 @@ export const orgs: Org[] = [
       },
       {
         platform: "Instagram",
-        url: "http://instagram.com/inequalitymedia"
+        url: "https://www.instagram.com/inequalitymedia"
       },
       {
         platform: "Facebook",
@@ -2423,7 +2423,7 @@ export const orgs: Org[] = [
       },
       {
         platform: "YouTube",
-        url: "http://youtube.com/rbreich"
+        url: "https://www.youtube.com/rbreich"
       },      
     ],
     description: "The top 1% of America holds 40% of the wealth. It's time the public understands how this happened and what we can do about it. Our ultimate vision is a United States where active participation by informed citizens restores the balance of power in our Democracy and creates an economy where gains are widely shared.",
@@ -2930,11 +2930,11 @@ export const orgs: Org[] = [
       },
       {
         platform: 'Flickr',
-        url: 'http://www.flickr.com/photos/24397168@N02/'
+        url: 'https://www.flickr.com/photos/24397168@N02/'
       },
       {
         platform: 'YouTube',
-        url: "http://www.youtube.com/user/thesciencecoalition"
+        url: "https://www.youtube.com/user/thesciencecoalition"
       }
     ],
     description: "Established in 1994, the Science Coalition is a nonprofit, nonpartisan organization of more than 50 of the nation’s leading public and private research universities. Celebrating its 30th anniversary this year, it is dedicated to sustaining the federal government’s investment in fundamental scientific research as a means to stimulate the economy, spur innovation, and drive American competitiveness.",
@@ -4009,7 +4009,7 @@ export const orgs: Org[] = [
       },
       {
         action: "News",
-        url: "http://sunrisemovement.org/latest/#news",
+        url: "https://www.sunrisemovement.org/latest/#news",
         category: "education"
       }
     ],
@@ -4047,7 +4047,7 @@ export const orgs: Org[] = [
       },
       {
         platform: 'YouTube',
-        url: "http://youtube.com/@democracyforward"
+        url: "https://www.youtube.com/@democracyforward"
       },
     ],
     actions: [
