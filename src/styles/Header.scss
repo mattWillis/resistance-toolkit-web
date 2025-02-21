@@ -54,20 +54,15 @@
 
 @media screen and (max-width: 640px) {
   .resist-header__title {
-    font-size: 45px;
-    line-height: 40px;
-  }
-  .resist-header__the {
-    font-size: 20px;
-  }
-  .resist-header__subtitle {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 25px;
   }
-}
-
-@media screen and (max-width: 640px) { 
-  .resist-header__image {
-    display: none;
+  .resist-header__the {
+    font-size: 18px;
+    margin-bottom: -5px;
+  }
+  .resist-header__subtitle {
+    font-size: 16px;
+    line-height: 16px;
   }
 }
