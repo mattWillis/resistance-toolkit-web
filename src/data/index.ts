@@ -607,7 +607,7 @@ export const orgs: Org[] = [
     url: 'https://www.splcenter.org/',
     ogImage: "https://res.cloudinary.com/splc/images/f_auto,q_auto/v1736542788/splc-logo_twitter_instream/splc-logo_twitter_instream.png?_i=AA",
     cause: ['civil-rights', 'wealth'],
-    donate: "https://secure.splcenter.org/page/72074/donate/1",
+    donate: "https://secure.splcenter.org/page/72074/donate/1/",
     social: [
       {
         platform: 'BlueSky',
@@ -630,7 +630,10 @@ export const orgs: Org[] = [
       {
         action: "Toolkits, Guides, and How-Tos",
         url: "https://www.splcenter.org/resources/guides/",
-        category: "education"
+      },
+      {
+        action: "Report Hate",
+        url: "https://www.splcenter.org/reporthate/"
       },
       {
         action: "Hope Watch",
@@ -639,6 +642,21 @@ export const orgs: Org[] = [
       {
         action: "Resources",
         url: "https://www.splcenter.org/resources/"
+      },
+      {
+        action: "Reports",
+        url: "https://www.splcenter.org/resources/reports/",
+        category: "education"
+      },
+      {
+        action: "Stories",
+        url: "https://www.splcenter.org/resources/stories/",
+        category: "education"
+      },
+      {
+        action: "Policy Advocacy",
+        url: "https://www.splcenter.org/policy-advocacy/?utm_source=resistance-toolkit",
+        category: "education"
       }
     ],
     description: 'The Equal Justice Initiative is committed to ending mass incarceration and excessive punishment in the United States, to challenging racial and economic injustice, and to protecting basic human rights for the most vulnerable people in American society.',
@@ -1954,7 +1972,7 @@ export const orgs: Org[] = [
     url: 'https://wedefendthevote.org/',
     ogImage: "https://wedefendthevote.org/wp-content/uploads/2021/01/share.png",
     cause: ['voting', 'democracy'],
-    donate: "https://secure.actblue.com/donate/defend-the-vote-1",
+    donate: "https://secure.actblue.com/donate/defend-the-vote-1/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -1968,16 +1986,16 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Scorecard: Find your State's Score",
-        url: "https://wedefendthevote.org/scorecard/",
+        url: "https://wedefendthevote.org/scorecard/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Support Our Endorsed Politicians",
-        url: "https://wedefendthevote.org/endorsements/"
+        url: "https://wedefendthevote.org/endorsements/?utm_source=resistance-toolkit"
       },
       {
         action: "Strategies",
-        url: "https://wedefendthevote.org/strategies/"
+        url: "https://wedefendthevote.org/strategies/?utm_source=resistance-toolkit"
       }
     ],
     description: 'Defend The Vote is a political action committee dedicated to preserving our democracy by electing candidates, up and down the ballot, who will fight to ensure fair elections, voting access, voter education and voter protection.',
@@ -1990,7 +2008,7 @@ export const orgs: Org[] = [
     url: 'https://vote.org/',
     ogImage: "https://www.vote.org/img/og-www-default.png",
     cause: ['voting', 'democracy'],
-    donate: "https://www.vote.org/donate/",
+    donate: "https://www.vote.org/donate/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -2024,35 +2042,35 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Support The Freedom to Vote Act",
-        url: "https://www.freedomtovoteact.org/"
+        url: "https://www.freedomtovoteact.org/?utm_source=resistance-toolkit"
       },
       {
         action: "Vote.org on WhatsApp Bot",
-        url: "https://www.vote.org/whatsapp/"
+        url: "https://www.vote.org/whatsapp?utm_source=resistance-toolkit"
       },
       {
         action: "Sign Up for Election Reminders",
-        url: "https://www.vote.org/election-reminders/"
+        url: "https://www.vote.org/election-reminders/?utm_source=resistance-toolkit"
       },
       {
         action: "Am I Registered to Vote?",
-        url: "https://www.vote.org/am-i-registered-to-vote/"
+        url: "https://www.vote.org/am-i-registered-to-vote/?utm_source=resistance-toolkit"
       },
       {
         action: "Register to Vote",
-        url: "https://www.vote.org/register-to-vote/"
+        url: "https://www.vote.org/register-to-vote/?utm_source=resistance-toolkit"
       },
       {
         action: "Vote by Mail",
-        url: "https://www.vote.org/absentee-ballot/"
+        url: "https://www.vote.org/absentee-ballot/?utm_source=resistance-toolkit"
       },
       {
         action: "Find Your Polling Place",
-        url: "https://www.vote.org/polling-place-locator/"
+        url: "https://www.vote.org/polling-place-locator/?utm_source=resistance-toolkit"
       },
       {
         action: "Add Tools to Your Website",
-        url: "https://www.vote.org/technology/"
+        url: "https://www.vote.org/technology/?utm_source=resistance-toolkit"
       },
     ],
     description: 'Vote.org is the largest 501(c)(3) nonprofit, nonpartisan voting registration and get-out-the-vote (GOTV) technology platform in America. We build best-in-class, culturally competent programs, cutting-edge voter tools and high-profile partnerships to reach and empower voters across America – especially historically underserved voters of color and underrepresented young voters.',
@@ -2065,7 +2083,7 @@ export const orgs: Org[] = [
     url: 'https://votersoftomorrow.org/',
     ogImage: "https://votersoftomorrow.org/wp-content/uploads/2022/01/wfhVhxmI.jpeg",
     cause: ['voting', 'democracy'],
-    donate: "https://secure.actblue.com/donate/voters-of-tomorrow-action-1",
+    donate: "https://secure.actblue.com/donate/voters-of-tomorrow-action-1/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -2087,21 +2105,26 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Volunteer with Voters of Tomorrow",
-        url: "https://www.mobilize.us/votersoftomorrow/",
+        url: "https://www.mobilize.us/votersoftomorrow/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "VotingHub: Make your voice heard",
-        url: "https://votersoftomorrow.org/vote/"
+        url: "https://votersoftomorrow.org/vote/?utm_source=resistance-toolkit"
       },
       {
         action: "Find or Start a Chapter",
-        url: "https://votersoftomorrow.org/chapters/"
+        url: "https://votersoftomorrow.org/chapters/?utm_source=resistance-toolkit"
       },
       {
         action: "Store",
-        url: "https://store.votersoftomorrow.org/",
+        url: "https://store.votersoftomorrow.org/?utm_source=resistance-toolkit",
         category: "money"
+      },
+      {
+        action: "Learn More: Gen Z Agenda",
+        url: "https://votersoftomorrow.org/issues/?utm_source=resistance-toolkit",
+        category: "education"
       }
     ],
     description: 'Voters of Tomorrow is a Gen Z-led 501(c)(4) organization that engages and represents young Americans in politics and government. With chapters in 20 states and a volunteer presence in all 50, we take a locally based, multifaceted approach to engaging young voters. Our team is led by a national staff of young political strategists, organizers, and policy experts.',
@@ -2114,7 +2137,7 @@ export const orgs: Org[] = [
     url: 'https://www.commoncause.org/',
     ogImage: "https://www.commoncause.org/wp-content/uploads/2024/10/CC-Share-Graphic-Main9.jpg",
     cause: ['voting', "democracy"],
-    donate: "https://www.commoncause.org/donate/",
+    donate: "https://www.commoncause.org/donate/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -2140,16 +2163,16 @@ export const orgs: Org[] = [
     actions: [
       {
         action: "Take Action - Sign Petitions, Register to Vote, and More",
-        url: "https://www.commoncause.org/take-action/"
+        url: "https://www.commoncause.org/take-action/?utm_source=resistance-toolkit"
       },
       {
         action: "Volunteer with Common Cause",
-        url: "https://actionnetwork.org/forms/join-the-common-cause-action-team-slack/",
+        url: "https://actionnetwork.org/forms/join-the-common-cause-action-team-slack/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Resource Library",
-        url: "https://www.commoncause.org/research-and-resources/",
+        url: "https://www.commoncause.org/research-and-resources/?utm_source=resistance-toolkit",
         category: "education"
       }
     ],
@@ -2163,7 +2186,7 @@ export const orgs: Org[] = [
     url: 'https://votevets.org/',
     ogImage: "https://votevets.org/wp-content/uploads/2021/06/Social-Share.png",
     cause: ['voting', 'democracy'],
-    donate: "https://secure.actblue.com/contribute/page/vote_vets_pac",
+    donate: "https://secure.actblue.com/contribute/page/vote_vets_pac/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -2192,13 +2215,17 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
+        action: "Take Action: DOGE Tipline",
+        url: "https://votevets.org/doge-tipline/?utm_source=resistance-toolkit"
+      },
+      {
         action: "Find our Endorsed Candidates",
-        url: "https://votevets.org/candidates",
+        url: "https://votevets.org/candidates/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Shop",
-        url: "https://shop.votevets.org/",
+        url: "https://shop.votevets.org/?utm_source=resistance-toolkit",
         category: "money"
       },
 
@@ -2213,7 +2240,7 @@ export const orgs: Org[] = [
     url: 'https://www.oxfamamerica.org/',
     ogImage: "https://webassets.oxfamamerica.org/media/images/oxfam-america-image_nr63lYZ.width-1200.png",
     cause: ['wealth', 'aid'],
-    donate: "https://give.oxfamamerica.org/page/63259/donate/1",
+    donate: "https://give.oxfamamerica.org/page/63259/donate/1/?utm_source=resistance-toolkit",
     social: [
       {
         platform: 'BlueSky',
@@ -2234,27 +2261,56 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Petition: Protect All U.S. Foreign Aid",
-        url: "https://act.oxfamamerica.org/page/78720/petition/1"
+        action: "Take Action",
+        url: "https://www.oxfamamerica.org/take-action/?utm_source=resistance-toolkit"
       },
       {
-        action: "Take Action",
-        url: "https://www.oxfamamerica.org/take-action/"
+        action: "See Your Impact In Action",
+        url: "https://www.oxfamamerica.org/take-action/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Ways To Give",
+        url: "https://www.oxfamamerica.org/donate/?utm_source=resistance-toolkit",
+        category: "donate"
       },
       {
         action: "Volunteer Oxfam",
-        url: "https://www.oxfamamerica.org/take-action/volunteer/",
+        url: "https://www.oxfamamerica.org/take-action/volunteer/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Be a Fundraiser",
-        url: "https://www.oxfamamerica.org/take-action/be-a-fundraiser/",
+        url: "https://www.oxfamamerica.org/take-action/be-a-fundraiser/?utm_source=resistance-toolkit",
         category: "volunteer"
       },
       {
         action: "Host am Oxfam Hunger Banquet",
-        url: "https://www.oxfamamerica.org/take-action/oxfam-hunger-banquet/",
+        url: "https://www.oxfamamerica.org/take-action/oxfam-hunger-banquet/?utm_source=resistance-toolkit",
         category: "volunteer"
+      },
+      {
+        action: "Ambassadors",
+        url: "https://www.oxfamamerica.org/about-us/ambassadors/?utm_source=resistance-toolkit",
+        category: "volunteer"
+      },
+      {
+        action: "Careers", 
+        url: "https://www.oxfamamerica.org/about-us/careers/available-positions/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Issues",
+        url: "https://www.oxfamamerica.org/explore/issues/?utm_source=resistance-toolkit",
+        category: "education"
+      },
+      {
+        action: "Research and Publications",
+        url: "https://www.oxfamamerica.org/explore/research-publications/?utm_source=resistance-toolkit",
+        category: "education"
+      },
+      {
+        action: "Measuring Impact",
+        url: "https://www.oxfamamerica.org/about-us/measuring-impact/?utm_source=resistance-toolkit",
+        category: "education"
       }
     ],
     description: 'Oxfam is a global organization that fights inequality to end poverty and injustice. We offer lifesaving support in times of crisis and advocate for economic justice, gender equality, and climate action. We demand equal rights and equal treatment so that everyone can thrive, not just survive. The future is equal.',
@@ -2267,16 +2323,28 @@ export const orgs: Org[] = [
     url: 'https://patrioticmillionaires.org/',
     ogImage: "https://patrioticmillionaires.org/wp-content/uploads/2024/11/Share-Image-2.png",
     cause: ['wealth'],
+    donate: "https://secure.actblue.com/donate/pm_website",
     actions: [
       {
+        action: "Perspectives",
+        url: "https://patrioticmillionaires.org/perspectives/",
+        category: "education"
+      },
+      {
+        action: "Our Priorities",
+        url: "https://patrioticmillionaires.org/priorities/",
+      },
+      {
+        action: "Meet the Millionaires",
+        url: "https://patrioticmillionaires.org/meet-the-millionaires/",
+      },
+      {
         action: "Become a Patriotic Millionaire: (Minimum annual dues are $10,000)",
-        url: "https://patrioticmillionaires.org/become-a-member/",
-        category: "money"
+        url: "https://patrioticmillionaires.org/become-a-member/",        
       },
       {
         action: "I’m not a millionaire, but I want to help. How to donate?",
-        url: "https://secure.actblue.com/donate/pm_website",
-        category: "money"
+        url: "https://secure.actblue.com/donate/pm_website",        
       }
     ],
     social: [
@@ -2315,23 +2383,48 @@ export const orgs: Org[] = [
     url: 'https://www.inequalitymedia.org/',
     ogImage: "http://static1.squarespace.com/static/57043836f850824f376c74ef/t/5708505d20c647096509fce8/1460162675551/IM_logo_final.jpg?format=1500w",
     cause: ['wealth'],
-    donate: "https://www.inequalitymedia.org/donate",
+    donate: "https://www.inequalitymedia.org/donate/?utm_source=resistance-toolkit",
     actions: [
       {
         action: "Wealth and Poverty Course",
-        url: "https://www.inequalitymedia.org/wealth-and-poverty",
+        url: "https://www.inequalitymedia.org/wealth-and-poverty/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
-        action: "Mailing List",
-        url: "https://www.inequalitymedia.org/get-updates"
-      }
+        action: "Wealth and Poverty Course",
+        url: "https://www.inequalitymedia.org/wealth-and-poverty/?utm_source=resistance-toolkit",        
+      },
+      {
+        action: "Get Updates",
+        url: "https://www.inequalitymedia.org/get-updates/?utm_source=resistance-toolkit"
+      },
+      {
+        action: "Merch",
+        url: "https://inequalitymedia.goodstockcompany.com/product/YGBcbmzSsiJeDYHQw",
+        category: "money"
+      },
+      {
+        action: "Jobs",
+        url: "https://www.inequalitymedia.org/jobs/?utm_source=resistance-toolkit"
+      },
     ],
     social: [
       {
         platform: 'BlueSky',
         url: 'https://bsky.app/profile/inequalitymedia.bsky.social'
-      }
+      },
+      {
+        platform: "Instagram",
+        url: "http://instagram.com/inequalitymedia"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/inequalitymedia/"
+      },
+      {
+        platform: "YouTube",
+        url: "http://youtube.com/rbreich"
+      },      
     ],
     description: "The top 1% of America holds 40% of the wealth. It's time the public understands how this happened and what we can do about it. Our ultimate vision is a United States where active participation by informed citizens restores the balance of power in our Democracy and creates an economy where gains are widely shared.",
     scope: 'us',
@@ -2343,15 +2436,15 @@ export const orgs: Org[] = [
     url: 'https://ctj.org/',
     ogImage: "/Orgs/CTJBanner.webp",
     cause: ['wealth'],
-    donate: "https://ctj.org/donate/",
+    donate: "https://ctj.org/donate/?utm_source=resistance-toolkit",
     actions: [
       {
         action: "Advocacy Toolkit: Ready to join the fight for tax justice?",
-        url: "https://ctj.org/tools/advocacy-toolkit-you-can-use/"
+        url: "https://ctj.org/tools/advocacy-toolkit-you-can-use/?utm_source=resistance-toolkit"
       },
       {
         action: "Resources",
-        url: "https://ctj.org/resources/",
+        url: "https://ctj.org/resources/?utm_source=resistance-toolkit",
         category: "education"
       }
     ],
@@ -2379,11 +2472,11 @@ export const orgs: Org[] = [
     url: 'https://www.epi.org/',
     ogImage: "https://www.epi.org/files/2016/epi-careers-bground-05-11-2016.png",
     cause: ['wealth'],
-    donate: "https://secure.actblue.com/donate/epi",
+    donate: "https://secure.actblue.com/donate/epi/?utm_source=resistance-toolkit",
     actions: [
       {
         action: "Federal Policy Watch: Tracking how the Trump administration, Congress, and the courts are affecting workers' quality of life.",
-        url: "https://www.epi.org/policywatch/"
+        url: "https://www.epi.org/policywatch/?utm_source=resistance-toolkit"
       },
       {
         action: "Social Media Toolkit",
@@ -2391,12 +2484,18 @@ export const orgs: Org[] = [
       },
       {
         action: "The State of Working America Data Library: comprehensive historical data on the American labor force.",
-        url: "https://www.epi.org/data/",
+        url: "https://www.epi.org/data/?utm_source=resistance-toolkit",
         category: "education"
       },
       {
         action: "Resources",
-        url: "https://www.epi.org/resources/"
+        url: "https://www.epi.org/resources/?utm_source=resistance-toolkit",
+        
+      },
+      {
+        action: "Areas of Research",
+        url: "https://www.epi.org/research/?utm_source=resistance-toolkit",
+        category: "education"
       }
     ],
     social: [
@@ -2406,7 +2505,7 @@ export const orgs: Org[] = [
       },
       {
         platform: "Blog",
-        url: "https://www.epi.org/blog/"
+        url: "https://www.epi.org/blog/?utm_source=resistance-toolkit"
       },
       {
         platform: "Facebook",
