@@ -5,6 +5,7 @@ import { type Cause, causes } from '@data/index';
 import { Image } from 'astro:assets';
 import StepImg from '@assets/PickAnOrgBanner.png'
 import Layout from '../../layouts/Layout.astro';
+import DefaultImg from '@assets/resist-default-img.png';
 const { slug } = Astro.params;
 
 export function getStaticPaths() {
@@ -63,6 +64,8 @@ const sortedOrgs = allMatchedOrgs.sort((a: Org, b: Org) => {
                     width={100}
                     height={100}
                     src={thisOrg.ogImage}
+                    loading={'lazy'}
+                    decoding={'async'}
                     alt={`${thisOrg.name} social media share banner`}
                     class="org-image"
                   />
@@ -71,7 +74,7 @@ const sortedOrgs = allMatchedOrgs.sort((a: Org, b: Org) => {
                   <Image
                     width={100}
                     height={100}
-                    src={'/src/assets/resist-default-img.png'}
+                    src={DefaultImg}
                     alt={'Image not found'}
                     class="no-touchy org-image"
                   />

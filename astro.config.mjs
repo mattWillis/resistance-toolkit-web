@@ -12,4 +12,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://resistance-toolkit.com',
   integrations: [icon(), mdx(), sitemap(), tailwind()],
+  image: {
+    remotePatterns: [{protocol: 'https:'}]
+  }
 });
