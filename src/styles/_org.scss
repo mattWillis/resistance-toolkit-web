@@ -1,14 +1,49 @@
-
 @use "./variables" as *;
 
 .org-header {
-  padding-block: 15px; 
-  width: 100%; 
-  background-color: white;
+  padding-block: 15px;
+  width: 100%;
   border: 1px solid $primary-color;
   border-bottom: none;
   padding-inline: 15px;
   border-radius: 12px 12px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.org-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+#orgUrlLink {
+  color: white;
+  background-color: $primary-color;
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-shadow: none;
+  &:hover,
+  &:focus-visible {
+    background-color: $secondary-color;
+  }
+}
+
+.org-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: brightness(0.45) grayscale(0.75) saturate(1.2) contrast(0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  background-color: $light-color;
+}
+
+.actions-nav__title {
+  flex: 1 1 50%;
+  text-align: center;
 }
 
 .org-header__title {
@@ -16,41 +51,59 @@
   font-weight: 900;
   text-transform: uppercase;
   font-size: 25px;
+  position: relative;
+  color: white;
+  text-shadow: 3px 3px 5px rgba(12, 6, 21, 0.88);
 }
+
 .content p.org-causes-title {
-  color: #000;
+  color: white;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
+
 .level-left {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+
 }
+
 span.cause-tag {
   background-color: $primary-color;
+
   // margin-right: 5px;
   a {
     display: inline-block;
     color: #fff;
   }
-  &:hover, &:focus-visible {
-    background-color:$link-color-hover;    
+
+  &:hover,
+  &:focus-visible {
+    background-color: $link-color-hover;
   }
 }
+
 .org-content {
-  background-color: white;
+  // background-color: white;
+  color: white;
   border: 1px solid $primary-color;
   border-top: 0;
   border-radius: 0 0 12px 12px;
   padding-inline: 15px;
+  position: relative;
+  z-index: 100;
+  text-shadow: 2px 2px 4px rgba(12, 6, 21, 0.88);
 }
+
 .org-section {
   padding-top: 10px;
+
   h2 {
     font-family: "neulis-sans", sans-serif;
     margin-bottom: 5px;
     font-size: 20px;
+
     // text-transform: uppercase;
     svg {
       margin-right: 5px;
@@ -67,26 +120,40 @@ span.cause-tag {
 .org-info {
   flex: 0 0 60%;
 }
+
 .org-contact {
   flex: 0 0 40%;
 }
+
 .social-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;  
+  gap: 10px;
   align-items: center;
   text-align: center;
+
   span.tag {
     flex: 0 1 25%;
     border: 1px solid $primary-color;
     background-color: white;
     border-radius: 12px;
     padding: 2px 8px;
+    background-color: $primary-color;
+
     a {
       font-family: "neulis-sans", sans-serif;
       display: block;
       font-size: 14px;
       font-weight: 400;
+      text-shadow: none;
+      color: white;
+      text-shadow: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
     }
   }
 }
@@ -102,19 +169,21 @@ span.cause-tag {
   text-align: center;
   padding-block: 10px;
   border-radius: 6px;
-  
-  &:hover, &:focus-visible {
+
+  &:hover,
+  &:focus-visible {
     background-color: $link-color-hover;
     color: white;
   }
-  
 }
+
 .org-info {
-  // border-bottom: thin solid #94B1C1;
   padding-bottom: 15px;
 }
+
 .qr-wrapper {
   padding-top: 10px;
+
   img {
     margin: 0 auto;
   }
@@ -126,17 +195,21 @@ span.cause-tag {
 }
 
 .social-info-icon {
-  vertical-align:text-top;
+  vertical-align: text-top;
 }
 
 
 @media screen and (max-width: 768px) {
+
   .org-info {
     flex-direction: column;
   }
-  .org-info, .org-contact {
+
+  .org-info,
+  .org-contact {
     flex: 0 0 100%;
   }
+
   .social-tags {
     span.tag {
       padding-block: 8px;

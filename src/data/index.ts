@@ -1237,7 +1237,7 @@ export const orgs: Org[] = [
   {
     id: 19,
     name: "American Immigration Council",
-    url: 'https://www.americanimmigrationcouncil.org/?utm_source=resistance-toolkit',
+    url: 'https://www.americanimmigrationcouncil.org/',
     ogImage: "https://www.americanimmigrationcouncil.org/sites/default/files/americanimmigrationcouncil.jpg",
     cause: ['immigration'],
     donate: "https://www.americanimmigrationcouncil.org/donate",

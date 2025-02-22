@@ -62,7 +62,6 @@ const orgCauses = org.cause.map((cause) => {
 });
 ---
 
-
 <Layout 
   title={`${org.name}`}
   description={`Learn how to support ${org.name}, stay informed, and join them in the fight against the politics of hate!`}
@@ -72,53 +71,77 @@ const orgCauses = org.cause.map((cause) => {
   <header class="max-w-6xl mx-auto" slot="header">
     <Image class="no-touchy" src={banner} alt="Stay Informed" />
   </header>
-  <section id="actionsSection" class="sticky top-0 inset-x-0 z-10 bg-white">
-    <header id="actionsHeader" class="actions-nav__header">
-      <h2 class="actions-nav__title">Actions Menu</h2>
-      <p class="actions-nav__toggle">
-        <button type="button" class="hs-collapse-toggle" id="hs-show-hide-collapse" aria-expanded="false" aria-controls="hs-show-hide-collapse-heading" data-hs-collapse="#hs-show-hide-collapse-heading">
-          <span class="hs-collapse-open:hidden show-toc">Show</span>
-          <span class="hs-collapse-open:block hidden hide-toc">Hide</span>
-          <svg role="img" aria-hidden="true" class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m6 9 6 6 6-6"></path>
-          </svg>
-        </button>
-      </p>
+
+  <!-- Sidebar -->
+  <div id="hs-sidebar-basic-usage" class="hs-overlay [--auto-close:lg]  lg:bottom-0 w-64
+  hs-overlay-open:translate-x-0
+  -translate-x-full transition-all duration-300 transform
+  h-full
+  hidden
+  fixed top-0 start-0 bottom-0
+  bg-white border-e border-gray-200" role="dialog" tabindex="-1" aria-label="Sidebar" >
+    <div class="relative flex flex-col h-full max-h-full ">
+      <!-- Header -->
+      <header class="p-4 flex justify-between items-center gap-x-2">
+        <span class="resist-sidebar__title flex-none font-semibold">{org.name}</span>
+
+        <div class=" -me-2">
+          <!-- Close Button -->
+          <button type="button" id="sidebarClose" class="resist-sidebar__close" data-hs-overlay="#hs-sidebar-basic-usage">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span class="sr-only">Close</span>
+          </button>
+          <!-- End Close Button -->
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Body -->
+      <nav class="h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300">
+        <div class=" pb-0 px-2  w-full flex flex-col flex-wrap" >
+          <ul class="resist-actions__toc rounded-lg flex flex-col">
+            <li>
+              <a class="resist-sidebar__link" href="#org-actions" data-section-target="#org-actions">What Are Your Organizations Suggesting?</a>
+            </li>
+            <li>
+              <a class="resist-sidebar__link" href="#donate" data-section-target="#donate">Donate</a>
+            </li>        
+            <li>
+              <a class="resist-sidebar__link" href="#contact" data-section-target="#contact">Contact Your Representatives</a>
+            </li>
+            <li>
+              <a class="resist-sidebar__link" href="#volunteer" data-section-target="#volunteer">Volunteer</a>
+            </li>
+            <li>
+              <a class="resist-sidebar__link" href="#vote" data-section-target="#vote">Register to Vote</a>
+            </li>
+            <li>
+              <a class="resist-sidebar__link" href="#spending" data-section-target="#spending">Analyze Where You Are Spending Your Money</a>
+            </li>
+            <li>
+              <a class="resist-sidebar__link" href="#learning" data-section-target="#learning">Training / Education</a>
+            </li>
+            <li>
+              <a class="resist-sidebar__link" href="#next-step" data-section-target="#next-step">Next Step</a>
+            </li>
+          </ul>          
+        </div>
+      </nav>
+      <!-- End Body -->
+    </div>
+  </div>
+  <!-- End Sidebar -->
+
+  <section id="actionsSection" class="sticky top-0 inset-x-0 bg-white">
+    <header id="actionsHeader" class="actions-nav__header">      
+      <button type="button" class="resist-sidebar__toggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-sidebar-basic-usage" aria-label="Toggle navigation" data-hs-overlay="#hs-sidebar-basic-usage">
+        Open Actions Menu
+      </button>
     </header>
-
-    <nav id="hs-show-hide-collapse-heading" aria-label="Actions Menu" class="toc-nav max-w-4xl mx-auto hs-collapse hidden w-full overflow-hidden transition-[height] duration-300">
-      <ul class="resist-actions__toc rounded-lg flex flex-col">
-        <li class="toc__item">
-          <a href="#org-actions" data-section-target="#org-actions">What Are Your Organizations Suggesting?</a>
-        </li>
-        <li class="toc__item">
-          <a href="#donate" data-section-target="#donate">Donate</a>
-        </li>        
-        <li class="toc__item">
-          <a href="#contact" data-section-target="#contact">Contact Your Representatives</a>
-        </li>
-        <li class="toc__item">
-          <a href="#volunteer" data-section-target="#volunteer">Volunteer</a>
-        </li>
-        <li class="toc__item">
-          <a href="#vote" data-section-target="#vote">Register to Vote</a>
-        </li>
-        <li class="toc__item">
-          <a href="#spending" data-section-target="#spending">Analyze Where You Are Spending Your Money</a>
-        </li>
-        <li class="toc__item">
-          <a href="#learning" data-section-target="#learning">Training / Education</a>
-        </li>
-        <li class="toc__item">
-          <a href="#next-step" data-section-target="#next-step">Next Step</a>
-        </li>
-      </ul>
-    </nav>
-
   </section>  
   <section class="org-section">
     <div class="org-wrapper">      
-      <section class="org-header">    
+      <section class="org-header">         
         <h1 class="org-header__title">{org.name}</h1>
         <div class="level">
           <div class="level-left">        
@@ -126,16 +149,16 @@ const orgCauses = org.cause.map((cause) => {
               return <span class="cause-tag whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm"><a href={`/cause/${cause}`}>{cause}</a></span>
             })}          
           </div>    
-        </div>
+        </div>        
       </section>
-      <section  class="org-section org-content" aria-labelledby="hs-show-hide-collapse">
+      <section  class="org-section org-content">
         <div class="org-info">
           <div class="org-description">
             <h2 class="flex items-center"><Icon aria-hidden="true" name="mdi:about"/> About</h2>
             <p>{org.description}</p>        
           </div>
           <div class="org-contact">
-            <h2 class="flex items-center mb-4"><Icon name="mdi:web-check"/> Website</h2>
+            <h2 class="flex items-center mb-4 pb-3"><Icon name="mdi:web-check"/> Website</h2>
             <p>
               <a rel="external" id="orgUrlLink" href={org.url} target="_blank">{org.url}</a>
             </p>
@@ -151,23 +174,25 @@ const orgCauses = org.cause.map((cause) => {
             </div>        
           </div>
         </div>
-      </section>      
-
-      <p class="px-4 py-2 text-sm">
-        <Icon name="mdi:information-outline" aria-hidden="true" role="img" class="inline social-info-icon" />
-        <span class="font-bold">
-          A note about Social Media:
-        </span>
-        We encourage you to try and use social media platforms that are open sourced and decentralized 
-        (like <a rel="noopener nofollow external" href="https://bsky.app/" class="text-blue-800 font-bold" target="_blank">BlueSky</a> 
-        or <a rel="noopener nofollow external" href="https://joinmastodon.org/" class="text-blue-800 font-bold" target="_blank">Mastodon</a>).         
-        This is a link to a <a rel="external" href="https://go.bsky.app/54kcLsh" class="text-blue-800 font-bold" target="_blank">starter pack of organizations</a> 
-        that are currently on BlueSky.    
-      </p>
+      </section>  
+      <Image src={`${org.ogImage}`} height={200} width={200} alt={`Image of ${org.name}`} class="org-image" />       
     </div>
+
+    <p class="px-4 py-2 text-sm">
+      <Icon name="mdi:information-outline" aria-hidden="true" role="img" class="inline social-info-icon" />
+      <span class="font-bold">
+        A note about Social Media:
+      </span>
+      We encourage you to try and use social media platforms that are open sourced and decentralized 
+      (like <a rel="noopener nofollow external" href="https://bsky.app/" class="text-blue-800 font-bold" target="_blank">BlueSky</a> 
+      or <a rel="noopener nofollow external" href="https://joinmastodon.org/" class="text-blue-800 font-bold" target="_blank">Mastodon</a>).         
+      This is a link to a <a rel="external" href="https://go.bsky.app/54kcLsh" class="text-blue-800 font-bold" target="_blank">starter pack of organizations</a> 
+      that are currently on BlueSky.    
+    </p>
+    
   </section>
 
-  <section  class="mt-8 actions-section max-w-6xl mx-auto">
+  <section class="mt-8 actions-section max-w-6xl mx-auto">
     <div id="org-actions" class="action">
       <Image src={Rosie} role="img" width={150} height={150} alt="Rosie the Riveter flexing her right arm." class="action-icon no-touchy"/>
       <div class="action-wrapper">
@@ -505,73 +530,30 @@ const orgCauses = org.cause.map((cause) => {
   </section>   
 </Layout>
 
-<script type="module">
-   import ismobilejs from 'https://cdn.jsdelivr.net/npm/ismobilejs@1.1.1/+esm';
-   window.isMobile = ismobilejs;
-   document.addEventListener('astro:page-load', () => {
-    let actionsHeaderOffset = 64;
-    let actionsSectionOffset = 64;
+<script type="text/javascript">
 
-    const actionsSection = document.getElementById('actionsSection');
-    const actionsHeader = document.getElementById('actionsHeader');
-    if(actionsHeader) {
-      actionsHeaderOffset = actionsHeader.offsetHeight;
-    }
-    if(actionsSection) {
-      actionsSectionOffset = actionsSection.offsetHeight;
-    }
+  function scrollToElementWithOffset(element, offset) {
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - offset;
 
-    let offset = 64;
-    if(window.hasOwnProperty('isMobile')) {      
-      window.isMobile(window.navigator.userAgent).any ? actionsHeaderOffset : actionsSectionOffset;
-    }     
-    
-    function isWithinTolerance(number, target, tolerance) {
-      return Math.abs(number - target) <= tolerance;
-    }
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+    setTimeout(() => {
+      document.getElementById('sidebarClose').click();
+    }, 150);
+  }
 
-    function scrollWithCallback(scrollPosition, callback) {
-      const scroll = () => {
+  const headerHeight = 64;
+  const sectionLinks = document.querySelectorAll('.resist-sidebar__link');
 
-        scrollPosition = Math.round(scrollPosition);        
-
-        if(isWithinTolerance(window.scrollY, scrollPosition, 1)) {
-          callback();
-          return;
-        }
-        window.requestAnimationFrame(scroll);
-      };
-
-      window.scrollTo({
-        top: scrollPosition,
-        
-      });
-      scroll();
-    };
-    const userAgent = window.navigator.userAgent;
-    const tocLinks = document.querySelectorAll('.toc__item a');
-    tocLinks.forEach((link) => {
-      
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        if(window.isMobile(userAgent).any) {          
-          offset = document.getElementById('actionsHeader').offsetHeight + 350;          
-        }
-
-        const toggleBtn = document.querySelector('#hs-show-hide-collapse');        
-        const sectionId = e.target.getAttribute('data-section-target');        
-        if(!window.isMobile(userAgent).any && sectionId === '#next-step') {          
-          offset = 500;          
-        }
-        const sectionToScrollTo = document.querySelector(sectionId);               
-        
-        const elementPosition = sectionToScrollTo.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - offset;
-        
-        scrollWithCallback(offsetPosition, () => {
-          toggleBtn.click();          
-        });
-      });
+  sectionLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const sectionId = e.target.getAttribute('data-section-target');
+      const sectionToScrollTo = document.querySelector(sectionId);
+      scrollToElementWithOffset(sectionToScrollTo, headerHeight);
     });
   });
 </script>
