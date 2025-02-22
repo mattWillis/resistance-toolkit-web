@@ -4540,6 +4540,84 @@ export const orgs: Org[] = [
     scope: 'global',
     slug: 'internetarchive'
   },
+  {
+    id: 77,
+    name: "Snopes",
+    url: 'https://www.snopes.com/',
+    ogImage: "https://mediaproxy.snopes.com/width/1200/https://www.snopes.com/tachyon/2019/11/2019-snopes-open-graph-default.png",
+    cause: ['journalism'],
+    donate: 'https://www.snopes.com/contributions/',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/snopes.com"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/snopes"
+      },
+      {
+        platform: "Threads",
+        url: "https://www.threads.net/@snopesdotcom"
+      },
+      {
+        platform: "Mastogdon",
+        url: "https://infosec.exchange/@snopes"
+      }
+    ],
+    actions: [
+      {
+        action: "Support With Your Membership",
+        url: "https://www.snopes.com/support/",
+        category: "donate"
+      },
+      {
+        action: "FactBot - Beta",
+        url: "https://www.snopes.com/factbot/",
+      },
+      {
+        action: "Submit A Rumber",
+        url: "https://www.snopes.com/contact/"
+      },
+      {
+        action: "Latest Rumors",
+        url: "https://www.snopes.com/latest/",
+      },
+      {
+        action: "News and Political Rumors",
+        url: "https://www.snopes.com/category/politics/"
+      },
+      {
+        action: "Fact Checks",
+        url: "https://www.snopes.com/fact-check/"
+      },
+      {
+        action: "Quiz",
+        url: "https://www.snopes.com/game/"
+      },
+      {
+        action: "Learn About Fact Check Ratings",
+        url: "https://www.snopes.com/fact-check-ratings/",
+        category: "education"
+      },
+      {
+        action: "FAQs",
+        url: "https://www.snopes.com/faqs/"
+      },
+      {
+        action: "Articles About Snopes",
+        url: "https://www.snopes.com/mentions/",
+        category: "education"
+      },
+      {
+        action: "Newsletters",
+        url: "https://www.snopes.com/newsletters/",
+      }      
+    ],
+    description: "When misinformation obscures the truth and readers don’t know what to trust, Snopes’ fact-checking and original investigative reporting lights the way to evidence-based and contextualized analysis. We always link to and document our sources so readers are empowered to do independent research and make up their own minds.",
+    scope: 'global',
+    slug: 'snopes'
+  },
 ]
 
 
