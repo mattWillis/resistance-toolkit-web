@@ -11,13 +11,18 @@
  user-select: none;
 }
 
+.resist-semibold {
+  // font-style: italic;
+  text-decoration: underline;
+}
+
 .external-link {
   svg {
     display: inline-block;
     vertical-align: middle;
     padding: 0;
     margin: 0;
-    // @apply size-3;
+    @apply size-3;
   }
 }
 

@@ -35,11 +35,11 @@ import { type Org, orgs } from '@data/index';
         FactBot by Snopes (Beta)
       </h3>
       <Image src={`https://mediaproxy.snopes.com/width/1200/https://www.snopes.com/tachyon/2019/11/2019-snopes-open-graph-default.png`} width={1200} height={600} class="resist-featured__body--img no-touchy" alt="The word Snopes with the first s capitalized and stylized as a lamp shining light on the rest of the letters." />
-      <p class="resist-featured__body--text featured-tool__subtitle text-center font-semibold prose">
+      <p class="resist-featured__body--text featured-tool__subtitle text-center">
         Ask the Snopes FactBot a question and get the truth!
       </p>
       <p class="resist-featured__body--text">
-        Harness Snopes' fact checking expertise with this AI bot. Your first couple of questions don't require
+        Harness Snopes' fact checking expertise with this AI bot. <span class="resist-semibold">Your first couple of questions</span> don't require
         an account, after that it's easy to sign up for a
         <a rel="external" class="external-link not-prose" href="https://www.snopes.com/?utm_source=resistance-toolkit" target="_blank"> 
           <span>free or paid account </span>
@@ -68,7 +68,7 @@ import { type Org, orgs } from '@data/index';
             </a>
           </li>
         </ul>
-      <form class="space-y-4 max-w-3xl mx-auto">
+      <form id="factBotForm" name="FactBot Question" class="space-y-4 max-w-3xl mx-auto">
         <label for="hs-trailing-button-add-on-with-icon" class="block pt-4 mt-4 font-bold" >
           Go ahead, ask a question! We'll send you over to FactBot for the answer.
         </label>

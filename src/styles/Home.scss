@@ -124,22 +124,27 @@
 }
 
 .featured-tool .resist-featured__body--text {
-  @apply prose mx-auto;
+  @apply max-w-2xl mx-auto;
 }
 
 .featured-tool__subtitle {
-  font-size: 20px !important;
-  line-height: 1.25 !important;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
 }
 
 .example-questions__list {
-  @apply list-disc prose mx-auto pl-6;
-
+  @apply list-disc max-w-2xl mx-auto pl-6;
   li {
-    @apply mb-2;
+    @apply mb-1;
   }
 }
 
+#factBotForm {
+  input {
+    font-size: 16px;
+  } 
+}
 
 .downloads.resist-featured__section {
   flex-wrap: wrap;
@@ -235,7 +240,12 @@
   .resist-featured {
     flex: 0 1 100%;
   }
+  .featured-tool__subtitle {
+    font-size: 16px;
+    line-height: 1.25;
+  }
   .downloads.resist-featured {
     flex: 0 1 100%;
   }
+
 }
