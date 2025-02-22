@@ -185,6 +185,16 @@ export const causes: Cause[] = [
     listImgAlt: `A young black woman raises her right fist in the air as a large crowd of protesters gather in front of a political building.`,
     books: 'https://www.journalofdemocracy.org/books/'
   },
+  {
+    id: 16,
+    title: 'Journalism / Fact-Checking',
+    slug: 'journalism',
+    banner: 'Causes-Diplomacy.png',
+    emoji: '📰',
+    listImg: '/src/assets/Card-Journalism.png',
+    listImgAlt: `Bound up newspaper with the headline "Democracy Prevails" laying on the ground.`,
+    books: 'https://www.bibliovault.org/BV.titles.epl?tquery=Freedom%2520of%2520the%2520press'
+  },
 ];
 
 export interface Org {
@@ -4073,9 +4083,462 @@ export const orgs: Org[] = [
     description: "We go to court for people and democracy. Democracy Forward is a national legal organization that advances democracy and social progress through litigation, policy and public education, and regulatory engagement.",
     scope: 'us',
     slug: 'democracyfwd'
-  },   
-]
+  },
+  {
+    id: 71,
+    name: "Human Rights Campaign",
+    url: 'https://www.hrc.org/',
+    ogImage: "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/images/meta_images/HRC-DefaultWebImage-Share1200.jpg",
+    cause: ['lgbtq'],
+    donate: 'https://give.hrc.org/page/162604/donate/1',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/hrc.org"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/humanrightscampaign/"
+      },
+      {
+        platform: "Threads",
+        url: "https://www.threads.net/@humanrightscampaign"
+      },
+      {
+        platform: 'TikTok',
+        url: "https://www.tiktok.com/@humanrightscampaign"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/company/human-rights-campaign/"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/humanrightscampaign"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/@hrcmedia"
+      },
+    ],
+    actions: [
+      {
+        action: "Get Involved",
+        url: "https://www.hrc.org/get-involved"
+      },
+      {
+        action: "Volunteer",
+        url: "https://www.hrc.org/get-involved/volunteer",
+        category: "volunteer"
+      },
+      {
+        action: "Tools for equality and inclusion.",
+        url: "https://www.hrc.org/resources"
+      },
+      {
+        action: "Events",
+        url: "https://www.hrc.org/events",
+      },
+      {
+        action: "Find Your Community",
+        url: "https://www.hrc.org/in-your-area"
+      },
+      {
+        action: "HRC On Mobilize: Events, Opportunities, and More", 
+        url: "https://www.mobilize.us/hrc/"
+      },
+      {
+        action: "Other ways to support HRC",
+        url: "https://www.hrc.org/ways-to-give",
+        category: "donate"
+      },
+      {
+        action: "Shop",
+        url: "https://shop.hrc.org/",
+        category: "money"
+      },
+      {
+        action: "Municipal Equality Index",
+        url: "https://www.hrc.org/resources/municipalities",
+        category: "education"
+      },
+      {
+        action: "Corporate Equality Index",
+        url: "https://www.hrc.org/resources/employers",
+        category: "education"
+      },
+      {
+        action: "Long-Term Care Equality Index",
+        url: "https://www.hrc.org/resources/long-term-care-facilities",
+        category: "education"
+      }      
+    ],
+    description: "The Human Rights Campaign envisions a world where every member of the LGBTQ+ family has the freedom to live their truth without fear, and with equality under the law. We empower our 3 million members and supporters to mobilize against attacks on the most marginalized people in our community.",
+    scope: 'us',
+    slug: 'hrc'
+  },    
+  {
+    id: 72,
+    name: "PolitiFact",
+    url: 'https://www.politifact.com/',
+    ogImage: "https://static.politifact.com/politifact/rulings/tom_ruling_pof.png",
+    cause: ['journalism'],
+    donate: 'https://politifact.fundjournalism.org/donate/',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/politifact.bsky.social"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/politifact/"
+      },
+    ],
+    actions: [
+      {
+        action: "MAGA Meter",
+        url: "https://www.politifact.com/truth-o-meter/promises/maga-meter-tracking-donald-trumps-2024-promises/"
+      },
+      {
+        action: "Search All Issues",
+        url: "https://www.politifact.com/issues/",        
+      },
+      {
+        action: "PunditFact",
+        url: "https://www.politifact.com/punditfact/"
+      },
+      {
+        action: "News Letter",
+        url: "https://www.politifact.com/signup/",
+      },
+      {
+        action: "Suggest an Item to Check",
+        url: "https://www.politifact.com/suggest/statement/",
+      },
+      {
+        action: "Politifact - Espanol",
+        url: "https://www.politifact.com/espanol/",        
+      }      
+    ],
+    description: "Fact-checking journalism is the heart of PolitiFact. Our core principles are independence, transparency, fairness, thorough reporting and clear writing. The reason we publish is to give citizens the information they need to govern themselves in a democracy.",
+    scope: 'us',
+    slug: 'politifact'
+  }, 
+  {
+    id: 73,
+    name: "ProPublica",
+    url: 'https://www.propublica.org/',
+    ogImage: "https://assets.propublica.org/2017-pp-open-graph-1200x630.jpg",
+    cause: ['journalism'],
+    donate: 'https://give.propublica.org/give/346423/#!/donation/checkout',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/propublica.org"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/propublica"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/propublica/"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/user/propublica"
+      },
+      {
+        platform: "Threads",
+        url: "https://www.threads.net/@propublica"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/company/propublica/posts/"
+      },
+      {
+        platform: 'RSS',
+        url: "https://www.propublica.org/feeds/propublica/main"
+      },
 
+    ],
+    actions: [
+      {
+        action: "Submit a Tip - Securely",
+        url: "https://www.propublica.org/tips/"
+      },
+      {
+        action: "Search all Topics",
+        url: "https://www.propublica.org/topics/",
+      },
+      {
+        action: "Topic - Trump Administration",
+        url: "https://www.propublica.org/topics/trump-administration"
+      },
+      {
+        action: "Local Initiatives",
+        url: "https://www.propublica.org/local-initiatives/",
+      },
+      {
+        action: "Local Reporting Network",
+        url: "https://www.propublica.org/local-reporting-network/",
+      },
+      {
+        action: "Impact",
+        url: "https://www.propublica.org/impact/",        
+      },
+      {
+        action: "Data Store Archive",
+        url: "https://projects.propublica.org/datastore/",
+        category: "education"
+      },
+      {
+        action: "Jobs and Fellowships",
+        url: "https://www.propublica.org/jobs/", 
+        category: "volunteer"       
+      },
+      {
+        action: "Newsletters",
+        url: "https://www.propublica.org/newsletters/",        
+      }      
+    ],
+    description: "ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force. We dig deep into important issues, shining a light on abuses of power and betrayals of public trust — and we stick with those issues as long as it takes to hold power to account.",
+    scope: 'us',
+    slug: 'propublica'
+  }, 
+  {
+    id: 74,
+    name: "Poynter Institute",
+    url: 'https://www.poynter.org/',
+    ogImage: "https://www.poynter.org/wp-content/uploads/2022/03/FINAL-Homepage-Feature-GreenwhiteArtboard-1.jpeg",
+    cause: ['journalism'],
+    donate: 'https://www.poynter.org/give-to-poynter/',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/did:plc:wru6fcajkh2c4yg4xb4h7eg4"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/poynter_institute/?hl=en"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/Poynter/"
+      },
+      {
+        platform: 'YouTube',
+        url: "https://www.youtube.com/@poynter"
+      },
+      {
+        platform: "Threads",
+        url: "https://www.threads.net/@poynter_institute"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/school/poynter/"
+      },
+      {
+        platform: "TikTok",
+        url: "https://www.tiktok.com/@poynter_institute"
+      }
+    ],
+    actions: [
+      {
+        action: "Training - All Courses",
+        url: "https://www.poynter.org/shop/",
+        category: "money"
+      },
+      {
+        action: "Training - All Courses",
+        url: "https://www.poynter.org/shop/",
+        category: "education"
+      },
+      {
+        action: "Ethics Training",
+        url: "https://www.poynter.org/the-craig-newmark-center-for-ethics-and-leadership-at-poynter/",
+      },
+      {
+        action: "Fact-Checking",
+        url: "https://www.poynter.org/news/fact-checking/"
+      },
+      {
+        action: "MediaWise - Digital Media Literacy",
+        url: "https://www.poynter.org/mediawise/",
+      },
+      {
+        action: "Events",
+        url: "https://www.poynter.org/events/",
+      },
+      {
+        action: "News",
+        url: "https://www.poynter.org/news/",        
+      },
+      {
+        action: "Media Jobs",
+        url: "https://www.poynter.org/media-jobs/", 
+        category: "volunteer"       
+      },
+      {
+        action: "Newsletters",
+        url: "https://www.poynter.org/newsletters/",        
+      }      
+    ],
+    description: "The Poynter Institute is a global nonprofit that strengthens democracy by improving the relevance, ethical practice and value of journalism. Through teaching, publishing, convening, fact-checking and media literacy, Poynter creates a crossroads where communities come together to use journalism to confront society’s complex problems.",
+    scope: 'us',
+    slug: 'poynter'
+  },
+  {
+    id: 75,
+    name: "The Conversation",
+    url: 'https://theconversation.com/us',
+    ogImage: "https://images.theconversation.com/files/499434/original/file-20221207-21-odlkt1.png",
+    cause: ['journalism'],
+    donate: 'https://donate.theconversation.com/us',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/us.theconversation.com"
+      },
+      {
+        platform: 'Mastodon',
+        url: "https://newsie.social/@TheConversationUS"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/theconversationdotcom"
+      },
+      {
+        platform: "YouTube",
+        url: "https://www.youtube.com/@ConversationEDU"
+      },
+      {
+        platform: "Facebook",
+        url: "https://facebook.com/theConversationUS"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/company/conversationus"
+      },
+    ],
+    actions: [
+      {
+        action: "Podcasts",
+        url: "https://theconversation.com/us/podcasts"
+      },
+      {
+        action: "Our Editorial Policies",
+        url: "https://drive.google.com/file/d/1DUkhOcnF1Ef1MpuKtGr7rbBAawO4XV48/edit",
+        category: "education"
+      },
+      {
+        action: "Sign Up as a Reader",
+        url: "https://theconversation.com/sign_up",
+      },
+      {
+        action: "RSS Feeds",
+        url: "https://theconversation.com/us/feeds",
+      },
+      {
+        action: "Become an Author",
+        url: "https://theconversation.com/become-an-author",
+        category: "volunteer"
+      },
+      {
+        action: "Newsletters",
+        url: "https://theconversation.com/us/newsletters",
+      }      
+    ],
+    description: "The Conversation is a nonprofit, independent news organization dedicated to unlocking the knowledge of experts for the public good. We publish trustworthy and informative articles written by academic experts for the general public and edited by journalists.",
+    scope: 'us',
+    slug: 'theconversation'
+  },
+  {
+    id: 76,
+    name: "Internet Archive",
+    url: 'https://archive.org/',
+    ogImage: "/Orgs/InternetArchiveBanner.png",
+    cause: ['journalism'],
+    donate: 'https://archive.org/donate/',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/archive.org"
+      },
+      {
+        platform: 'Instagram',
+        url: "https://www.instagram.com/internetarchive/?hl=en"
+      },
+      {
+        platform: "YouTube",
+        url: "https://www.youtube.com/@internetarchive_"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/internetnetarchive/"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/company/internet-archive"
+      },
+      {
+        platform: "Blog",
+        url: "https://blog.archive.org/"
+      }
+    ],
+    actions: [
+      {
+        action: "Volunteer",
+        url: "https://archive.org/about/volunteer-positions",
+        category: "volunteer"
+      },
+      {
+        action: "All Our Projects",
+        url: "https://archive.org/projects/"
+      },
+      {
+        action: "Wayback Machine - More than 916 billoin web pages saved",
+        url: "https://web.archive.org/",
+      },
+      {
+        action: "eBooks and Texts",
+        url: "https://archive.org/details/texts"
+      },
+      {
+        action: "Video",
+        url: "https://archive.org/details/movies"
+      },
+      {
+        action: "Audio",
+        url: "https://archive.org/details/audio"
+      },
+      {
+        action: "Software",
+        url: "https://archive.org/details/software"
+      },
+      {
+        action: "Events",
+        url: "https://blog.archive.org/events/",
+      },
+      {
+        action: "News Stories",
+        url: "https://archive.org/about/news-stories",
+      },
+      {
+        action: "Jobs",
+        url: "https://archive.org/about/jobs",
+        category: "volunteer"
+      },
+      {
+        action: "Newsletters",
+        url: "https://theconversation.com/us/newsletters",
+      }      
+    ],
+    description: "The Internet Archive, a 501(c)(3) non-profit, is building a digital library of Internet sites and other cultural artifacts in digital form. Like a paper library, we provide free access to researchers, historians, scholars, people with print disabilities, and the general public. Our mission is to provide Universal Access to All Knowledge.",
+    scope: 'global',
+    slug: 'internetarchive'
+  },
+]
 
 
   /** 

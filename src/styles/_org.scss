@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "sass:color" as color;
 
 .org-header {
   padding-block: 15px;
@@ -19,12 +20,15 @@
 #orgUrlLink {
   color: white;
   background-color: $primary-color;
+  // background-color: color.adjust($primary-color, $alpha: -0.5);
+  // background-color: #fff;
   padding: 10px 10px;
-  border-radius: 12px;
+  border-radius: 18px;
   text-shadow: none;
   &:hover,
   &:focus-visible {
     background-color: $secondary-color;
+    // color: white;
   }
 }
 
@@ -33,7 +37,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  filter: brightness(0.45) grayscale(0.75) saturate(1.2) contrast(0.85);
+  filter: brightness(0.3) grayscale(0.9) saturate(1.2) contrast(1);
   position: absolute;
   top: 0;
   left: 0;
