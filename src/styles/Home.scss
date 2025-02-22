@@ -83,8 +83,12 @@
 }
 
 .resist-featured {
-  flex: 0 1 30%;
+  flex: 0 1 calc(33% - 15px);
   @apply flex flex-col bg-white border shadow-sm rounded-xl;
+
+  &.featured-tool {
+    flex: 0 1 75%;
+  }
 }
 
 .resist-featured__header {
@@ -113,8 +117,27 @@
 .resist-featured__body--text {
   @apply mt-2 text-gray-900;
 }
+
+
 .resist-featured__body--link {
   @apply mt-3 flex items-center gap-x-1 font-semibold rounded-lg border border-transparent hover:underline;
+}
+
+.featured-tool .resist-featured__body--text {
+  @apply prose mx-auto;
+}
+
+.featured-tool__subtitle {
+  font-size: 20px !important;
+  line-height: 1.25 !important;
+}
+
+.example-questions__list {
+  @apply list-disc prose mx-auto pl-6;
+
+  li {
+    @apply mb-2;
+  }
 }
 
 
@@ -142,7 +165,6 @@
     background-color: $link-color-hover;
   }
 }
-
 
 .resist-resource-card__img {
   @apply shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-xs;

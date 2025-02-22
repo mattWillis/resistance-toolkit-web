@@ -22,6 +22,77 @@ import { type Org, orgs } from '@data/index';
   </section>
 </div>
 
+<section class="resist-home__section featured-tools resist-featured__section">
+
+  <div id="factBot" class="resist-featured featured-tool">
+    <div class="resist-featured__header">
+      <p class="resist-featured__header--title">
+       <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" /> Featured Tool
+      </p>
+    </div>
+    <div class="resist-featured__body">
+      <h3 class="resist-featured__body--title">
+        FactBot by Snopes (Beta)
+      </h3>
+      <Image src={`https://mediaproxy.snopes.com/width/1200/https://www.snopes.com/tachyon/2019/11/2019-snopes-open-graph-default.png`} width={1200} height={600} class="resist-featured__body--img no-touchy" alt="The word Snopes with the first s capitalized and stylized as a lamp shining light on the rest of the letters." />
+      <p class="resist-featured__body--text featured-tool__subtitle text-center font-semibold prose">
+        Ask the Snopes FactBot a question and get the truth!
+      </p>
+      <p class="resist-featured__body--text">
+        Harness Snopes' fact checking expertise with this AI bot. Your first couple of questions don't require
+        an account, after that it's easy to sign up for a
+        <a rel="external" class="external-link not-prose" href="https://www.snopes.com/?utm_source=resistance-toolkit" target="_blank"> 
+          <span>free or paid account </span>
+          <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+        </a> 
+        to keep using FactBot!
+      </p>
+      <p class="example-questions__title prose mx-auto mt-3">Example questions:</p>
+        <ul class="example-questions__list">
+          <li>
+            <a class="example-questions__link not-prose external-link" rel="external" href="https://www.snopes.com/factbot/?query=Is+Zelensky+a+dictator%3F" target="_blank">
+              <span>Is Zelensky a dictator?</span>
+              <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+            </a>
+          </li>
+          <li>
+            <a class="example-questions__link not-prose external-link" rel="external" href="https://www.snopes.com/factbot/?query=Is+the+covid-19+vaccine+safe%3F" target="_blank">
+              <span>Is the COVID-19 vaccine safe?</span>
+              <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+            </a>            
+          </li>
+          <li>
+            <a class="example-questions__link not-prose external-link" rel="external" href="https://www.snopes.com/factbot/?query=Did+Hamas+get+%2450+million+for+condoms%3F" target="_blank">
+              <span>Did Hamas get $50 million for condoms?</span>
+              <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+            </a>
+          </li>
+        </ul>
+      <form class="space-y-4 max-w-3xl mx-auto">
+        <label for="hs-trailing-button-add-on-with-icon" class="block pt-4 mt-4 font-bold" >
+          Go ahead, ask a question! We'll send you over to FactBot for the answer.
+        </label>
+        <div class="flex rounded-lg shadow-sm">
+          <input type="text" id="hs-trailing-button-add-on-with-icon" name="hs-trailing-button-add-on-with-icon" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+          <button id="factBotSubmit" type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+            <svg role="img" aria-hidden="true" class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            <span class="sr-only">Submit!</span>
+          </button>
+        </div>
+        <span class="text-sm block">
+          Disclaimer: FactBot is a great starting place, but you should verify 
+          the answers by checking the sources it provides as well as looking up 
+          your topic with the human verified answers on the Snopes website.
+        </span> 
+      </form>      
+    </div>
+  </div>
+</section>
+
+
 <section class="resist-home__section resist-featured__section">
 
   <div class="resist-featured">
@@ -178,3 +249,26 @@ import { type Org, orgs } from '@data/index';
   </div>
     
 </section>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const factBotSubmit = document.getElementById('factBotSubmit') as HTMLButtonElement;
+    const factBotInputEl = document.getElementById('hs-trailing-button-add-on-with-icon') as HTMLInputElement;
+    function handleSubmit(e: Event) {
+      e.preventDefault();
+      const factBotInput = (factBotInputEl)?.value;
+      const params = new URLSearchParams();
+      params.append('query', factBotInput);
+      
+      window.open(`https://www.snopes.com/factbot/?${params.toString()}`, '_blank');
+    }
+
+    factBotSubmit?.addEventListener('click', handleSubmit);
+    factBotInputEl?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        handleSubmit(e);
+      }
+    });
+  });
+
+</script>

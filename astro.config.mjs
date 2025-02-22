@@ -11,7 +11,9 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://resistance-toolkit.com',
-  integrations: [icon(), mdx(), sitemap(), tailwind()],
+  integrations: [icon({
+    iconDir: 'src/icons',
+  }), mdx(), sitemap(), tailwind()],
   image: {
     remotePatterns: [{protocol: 'https:'}]
   }
