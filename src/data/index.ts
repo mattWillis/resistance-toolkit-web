@@ -22,6 +22,7 @@ export interface Cause {
   listImg: string;
   listImgAlt: string;
   books: string;
+  shareImg?: string;
 }
 
 export const causes: Cause[] = [
@@ -193,7 +194,8 @@ export const causes: Cause[] = [
     emoji: '📰',
     listImg: '/src/assets/Card-Journalism.png',
     listImgAlt: `Bound up newspaper with the headline "Democracy Prevails" laying on the ground.`,
-    books: 'https://www.bibliovault.org/BV.titles.epl?tquery=Freedom%2520of%2520the%2520press'
+    books: 'https://www.bibliovault.org/BV.titles.epl?tquery=Freedom%2520of%2520the%2520press',
+    shareImg: '/Journalism-Share.png'
   },
 ];
 

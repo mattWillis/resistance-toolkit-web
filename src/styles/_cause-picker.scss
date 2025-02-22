@@ -30,6 +30,10 @@ ul.cause-list {
     padding: 5px;
     font-size: 14px;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    
     &:hover {
       color:$link-color-hover;
       text-decoration: underline;
@@ -50,6 +54,8 @@ ul.cause-list {
 .cause-text__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cause-text__button {

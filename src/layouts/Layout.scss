@@ -67,7 +67,6 @@ a, .hs-collapse-toggle, div.action p a {
   color: white;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover, &:focus-visible, &:active {    
-    // background-color: #C20E03;
     background-color: $link-color-hover;
     color: white;
   }
@@ -76,8 +75,7 @@ a, .hs-collapse-toggle, div.action p a {
 .resist-button__about {
   background-color: white;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  &:hover, &:focus-visible, &:active {
-    // background-color: #C20E03;
+  &:hover, &:focus-visible, &:active {    
     background-color: $link-color-hover;
     color: white;
   }
