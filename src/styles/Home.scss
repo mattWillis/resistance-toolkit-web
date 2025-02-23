@@ -111,11 +111,16 @@
 
 .resist-featured__body--img {
   @apply mx-auto;
+  &.featured-tool {
+    object-fit: contain;
+    max-width: 70%;
+  }
 }
 
 
 .resist-featured__body--text {
   @apply mt-2 text-gray-900;
+  line-height: 1.65;
 }
 
 

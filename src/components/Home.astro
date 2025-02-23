@@ -34,18 +34,18 @@ import { type Org, orgs } from '@data/index';
       <h3 class="resist-featured__body--title">
         FactBot by Snopes (Beta)
       </h3>
-      <Image src={`https://mediaproxy.snopes.com/width/1200/https://www.snopes.com/tachyon/2019/11/2019-snopes-open-graph-default.png`} width={1200} height={600} class="resist-featured__body--img no-touchy" alt="The word Snopes with the first s capitalized and stylized as a lamp shining light on the rest of the letters." />
+      <Image src={`https://mediaproxy.snopes.com/width/1200/https://www.snopes.com/tachyon/2019/11/2019-snopes-open-graph-default.png`} width={1200} height={600} class="featured-tool resist-featured__body--img no-touchy" alt="The word Snopes with the first s capitalized and stylized as a lamp shining light on the rest of the letters." />
       <p class="resist-featured__body--text featured-tool__subtitle text-center">
-        Ask the Snopes FactBot a question and get the truth!
+        Ask FactBot a Question!
       </p>
       <p class="resist-featured__body--text">
-        Harness Snopes' fact checking expertise with this AI bot. <span class="resist-semibold">Your first couple of questions</span> don't require
+        Harness Snopes' fact checking expertise with this AI bot. Your first couple of questions don't require
         an account, after that it's easy to sign up for a
         <a rel="external" class="external-link not-prose" href="https://www.snopes.com/?utm_source=resistance-toolkit" target="_blank"> 
           <span>free or paid account </span>
           <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
         </a> 
-        to keep using FactBot!
+        to keep using FactBot! After your done, make sure to <a href="/orgs/snopes">learn how to support Snopes!</a>
       </p>
       <p class="example-questions__title max-w-2xl mx-auto mt-3">Example questions:</p>
         <ul class="example-questions__list">
@@ -73,8 +73,8 @@ import { type Org, orgs } from '@data/index';
           Go ahead, ask a question! We'll send you over to FactBot for the answer.
         </label>
         <div class="flex rounded-lg shadow-sm">
-          <input type="text" id="hs-trailing-button-add-on-with-icon" name="hs-trailing-button-add-on-with-icon" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-          <button id="factBotSubmit" type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+          <input type="text" id="hs-trailing-button-add-on-with-icon" name="hs-trailing-button-add-on-with-icon" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm">
+          <button id="factBotSubmit" type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
             <svg role="img" aria-hidden="true" class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <path d="m21 21-4.3-4.3"></path>
