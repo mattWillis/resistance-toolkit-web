@@ -50,19 +50,19 @@ import { type Org, orgs } from '@data/index';
       <p class="example-questions__title max-w-2xl mx-auto mt-3">Example questions:</p>
         <ul class="example-questions__list">
           <li>
-            <a class="example-questions__link not-prose external-link" rel="external" href="https://www.snopes.com/factbot/?query=Is+Zelensky+a+dictator%3F" target="_blank">
+            <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Is+Zelensky+a+dictator%3F" target="_blank">
               <span>Is Zelensky a dictator?</span>
               <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
             </a>
           </li>
           <li>
-            <a class="example-questions__link not-prose external-link" rel="external" href="https://www.snopes.com/factbot/?query=Is+the+covid-19+vaccine+safe%3F" target="_blank">
+            <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Is+the+covid-19+vaccine+safe%3F" target="_blank">
               <span>Is the COVID-19 vaccine safe?</span>
               <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
             </a>            
           </li>
           <li>
-            <a class="example-questions__link not-prose external-link" rel="external" href="https://www.snopes.com/factbot/?query=Did+Hamas+get+%2450+million+for+condoms%3F" target="_blank">
+            <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Did+Hamas+get+%2450+million+for+condoms%3F" target="_blank">
               <span>Did Hamas get $50 million for condoms?</span>
               <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
             </a>
@@ -74,7 +74,7 @@ import { type Org, orgs } from '@data/index';
         </label>
         <div class="flex rounded-lg shadow-sm">
           <input type="text" id="hs-trailing-button-add-on-with-icon" name="hs-trailing-button-add-on-with-icon" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm">
-          <button id="factBotSubmit" type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+          <button id="factBotSubmit" data-umami-event="{snopes-submit}" type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
             <svg role="img" aria-hidden="true" class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <path d="m21 21-4.3-4.3"></path>
@@ -109,7 +109,7 @@ import { type Org, orgs } from '@data/index';
       <p class="resist-featured__body--text">
         Make your voice heard! Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
       </p>
-      <a rel="noopener nofollow" class="resist-featured__body--link" href="https://resist.bot/" target="_blank">
+      <a rel="noopener nofollow" class="resist-featured__body--link" href="https://resist.bot/" data-umami-event="{quick-link}" target="_blank">
         Resist.bot
         <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
       </a>
@@ -130,7 +130,7 @@ import { type Org, orgs } from '@data/index';
       <p class="resist-featured__body--text">
         Are you registered to vote? Check your status, register, vote by mail, and get election reminders.
       </p>
-      <a rel="noopener nofollow" class="resist-featured__body--link" href="https://www.vote.org/" target="_blank">
+      <a rel="noopener nofollow" class="resist-featured__body--link" href="https://www.vote.org/" data-umami-event="{quick-link}" target="_blank">
         Vote.org
         <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
       </a>
@@ -151,7 +151,7 @@ import { type Org, orgs } from '@data/index';
       <p class="resist-featured__body--text">
         Find companies who align with your cause and support them. Find what companies are funding politicians. 
       </p>
-      <a rel="noopener nofollow external" class="resist-featured__body--link" href="https://www.goodsuniteus.com/" target="_blank">
+      <a rel="noopener nofollow external" class="resist-featured__body--link" href="https://www.goodsuniteus.com/" data-umami-event="{quick-link}" target="_blank">
         Goods Unite Us
         <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
       </a>
@@ -181,7 +181,7 @@ import { type Org, orgs } from '@data/index';
       <h3 class="resist-featured__body--title">
         Tools You Need
       </h3>
-      <a class="resist-featured__body--link" href="/Resources/ResistSquare.png" download="Resistance Toolkit - Fight Hate">
+      <a class="resist-featured__body--link" href="/Resources/ResistSquare.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Fight Hate">
         Download
         <Icon name="mdi:download" role="img" aria-hidden="true" />
       </a>
@@ -201,7 +201,7 @@ import { type Org, orgs } from '@data/index';
       <h3 class="resist-featured__body--title">
         I Am Somebody
       </h3>
-      <a class="resist-featured__body--link" href="/Resources/IAmSomebody.png" download="Resistance Toolkit - Somebody">
+      <a class="resist-featured__body--link" href="/Resources/IAmSomebody.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Somebody">
         Download
         <Icon name="mdi:download" role="img" aria-hidden="true" />
       </a>
@@ -221,7 +221,7 @@ import { type Org, orgs } from '@data/index';
       <h3 class="resist-featured__body--title">
         Be Heard!
       </h3>
-      <a class="resist-featured__body--link" href="/Resources/Inspire-Song-Muse.png" download="Resistance Toolkit - Be Heard">
+      <a class="resist-featured__body--link" href="/Resources/Inspire-Song-Muse.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Be Heard">
         Download
         <Icon name="mdi:download" role="img" aria-hidden="true" />
       </a>
@@ -241,7 +241,7 @@ import { type Org, orgs } from '@data/index';
       <h3 class="resist-featured__body--title">
         DEI - It's The Law
       </h3>
-      <a class="resist-featured__body--link" href="/Resources/DEIA.png" download="Resistance Toolkit - DEI">
+      <a class="resist-featured__body--link" href="/Resources/DEIA.png" data-umami-event="{resource-download}" download="Resistance Toolkit - DEI">
         Download
         <Icon name="mdi:download" role="img" aria-hidden="true" />
       </a>

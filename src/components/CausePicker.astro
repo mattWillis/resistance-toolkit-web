@@ -38,7 +38,7 @@ const images = await import.meta.glob<{ default: ImageMetadata }>('@assets/*.{jp
     }
       return (
      <li class="cause-list-item">                
-          <a rel="next" class="cause-link" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
+          <a rel="next" class="cause-link" data-umami-event="{pick-cause}" data-cause={cause.slug} href={`/cause/${cause.slug}`}>
             <div class="cause-img__container">
               <Image class="cause-list-img no-touchy" src={images[img]()} alt={cause.listImgAlt} />
               <p class="org-count">

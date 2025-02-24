@@ -81,6 +81,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 		
 					<div class="flex items-center gap-4">
 						<a
+              data-umami-event="{about-nav-link}"
 							class="resist-button__about inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
 							href="/about"
 						>
@@ -88,6 +89,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
               <Icon name="mdi:information" aria-hidden="true" role='img' class="size-4" />
 						</a>    
             <a
+            data-umami-event="{contact-nav-link}"
             class="resist-button__about inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
             href="/contact"
           >

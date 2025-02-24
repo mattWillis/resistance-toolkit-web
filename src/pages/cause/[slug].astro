@@ -67,7 +67,7 @@ const cURLString = clUrl.toString();
         {sortedOrgs.map((thisOrg) => {
           return (
           <li>
-            <a rel="next" class="org-link" href={`/orgs/${thisOrg.slug}?cause=${cause.slug}`}>
+            <a rel="next" class="org-link" data-umami-event="{org-link}" href={`/orgs/${thisOrg.slug}?cause=${cause.slug}`}>
               {thisOrg.ogImage ? 
                 <div class="org-image__cover">
                   <Image
