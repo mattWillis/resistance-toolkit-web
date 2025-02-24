@@ -60,6 +60,8 @@ if(org.actions) {
 const orgCauses = org.cause.map((cause) => {
   return causes.find((c) => c.slug === cause) as Cause;
 });
+const clUrl = new URL(Astro.url.pathname, Astro.site);
+const cURLString = clUrl.toString();
 ---
 
 <Layout 
@@ -67,6 +69,7 @@ const orgCauses = org.cause.map((cause) => {
   description={`Learn how to support ${org.name}, stay informed, and join them in the fight against the politics of hate!`}
   image={`${Astro.site}Org-Share.png`}
   imageAlt='Text reads Featured Org. Next to the text is an illustration of a woman flexing her right arm in the style of Rosie the Riveter.'
+  canonicalUrl = {cURLString}
   >
   <header class="max-w-6xl mx-auto" slot="header">
     <Image class="no-touchy" src={banner} alt="Stay Informed" />

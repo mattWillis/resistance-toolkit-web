@@ -4,14 +4,18 @@ import Layout from 'src/layouts/Layout.astro';
 import Banner from '@assets/ContributeBanner.png';
 import { Image } from 'astro:assets';
 import ContactForm from 'src/components/Contact-Form.astro';
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
+const clUrl = new URL(Astro.url.pathname, Astro.site);
+const cURLString = clUrl.toString();
 ---
 
 <Layout 
   title="Contact Us"
   description="Have a suggestion for an org? Notice something wrong? Let us know!"
   imageAlt='Text reads: The Resistance Toolkit. Contribute, Help us make this tool useful. Next to the text is an icon with a pencil and pen crossed like skull and crossbones.'
-  image=`${Astro.site}Contribute-Share.png`>
+  image=`${Astro.site}Contribute-Share.png`
+  canonicalUrl = {cURLString}
+>
 
     <header slot="header" class="contact-header">
       <Image src={Banner} class="about-banner no-touchy mx-auto" alt="Banner for The Resistance Toolkit stylized as graffiti on a brick wall. Subtitle reads 'The tools you need to resist hate.'">    

@@ -44,6 +44,9 @@ let socialShareImage = `${Astro.site}Cause-Share.png`
 if(cause.shareImg) {
   socialShareImage = cause.shareImg
 }
+
+const clUrl = new URL(Astro.url.pathname, Astro.site);
+const cURLString = clUrl.toString();
 ---
 
 <Layout 
@@ -51,6 +54,7 @@ if(cause.shareImg) {
   description={`Featured organizations - ${cause.title}. Pick an org and join the fight against the politics of hate and ignorance.`}
   image={socialShareImage}
   imageAlt='Text reads Featured Cause. Next to the text is an illustration of a megaphone with sound waves coming out of it.'
+  canonicalUrl={cURLString}
 >
 <header class="max-w-6xl mx-auto" slot="header">
   <Image class="no-touchy" src={StepImg} alt="Pick a cause." />

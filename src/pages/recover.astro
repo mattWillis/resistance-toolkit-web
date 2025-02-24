@@ -13,6 +13,8 @@ import Mindfulness from '@assets/Recover/Mindfulness.png';
 import Sleep from '@assets/Recover/Sleep.png';
 import SocialMedia from '@assets/Recover/SocialMedia.png';
 import RepeatCup from '@assets/Recover/RepeatCup.png';
+const clUrl = new URL(Astro.url.pathname, Astro.site);
+const cURLString = clUrl.toString();
 ---
 
 <Layout 
@@ -20,7 +22,8 @@ import RepeatCup from '@assets/Recover/RepeatCup.png';
   description="Recharge your batteries, this is a marathon, not a sprint! Recover so you can keep fighting the politics of hate."
   image=`${Astro.site}Recover-Share.png`
   imageAlt='Text reads Recover, Repeat! Next to the text is an illustration of a potted plate being watered by rain drops.'
-  >
+  canonicalUrl = {cURLString}
+>
   <header class="max-w-6xl mx-auto" slot="header">
     <Image src={banner} class="no-touchy" alt="Text reads 'Recover'. Illustration of a potted plate being watered by rain drops." />
   </header>
@@ -221,7 +224,7 @@ import RepeatCup from '@assets/Recover/RepeatCup.png';
       You have completed a cycle! Once your batteries are recharged, let's do it again.
     </p>
     <p class="my-8">
-      <a rel="next" href="/causes" class="start-again-btn">Go to Step 1!</a>
+      <a rel="next" href="/" class="start-again-btn">Do it again!</a>
     </p>
     <Image class="no-touchy mx-auto" height={350} width={350} src={RepeatCup} alt="A trophy cup with a repeat symbol." />
   </section>

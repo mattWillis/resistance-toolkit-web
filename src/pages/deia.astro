@@ -2,13 +2,16 @@
 import Layout from "src/layouts/Layout.astro";
 import Banner from '@assets/DEIABanner.png';
 import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
+const clUrl = new URL(Astro.url.pathname, Astro.site);
+const cURLString = clUrl.toString();
 ---
 <Layout 
   title="DEIA Statement"
   image=`${Astro.site}DEIA-Share.png`
   description = "Our stand on Diversity, Equity, Inclusion, and Accessibility. Join us and fight the politics of hate.",
   imageAlt = 'Text reads The Resistance Toolkit, tools you need to fight hate. Next to the text is an illustration a pair of hands with a heart in the middle. The hands are surrounded by icons representing diversity, equity, inclusion, and accessibility.'
+  canonicalUrl = {cURLString}
 >
   <header slot="header" class="about-header">
     <Image src={Banner} class="about-banner no-touchy mx-auto" alt="Banner reads 'DEIA Statement'. The banner includes an illustration showing various icons denoting diversity, inclusion, equity, and accessibility.">
