@@ -738,6 +738,10 @@ export const orgs: Org[] = [
     donate: "https://secure.narf.org/page/64457/donate/1",
     social: [
       {
+        platform: "BlueSky",
+        url: "https://bsky.app/profile/nativerights.bsky.social"
+      },
+      {
         platform: "Facebook",
         url: "https://www.facebook.com/NativeAmericanRightsFund/"
       },
@@ -750,7 +754,7 @@ export const orgs: Org[] = [
         url: "https://www.youtube.com/c/NativeAmericanRightsFund"
       },
       {
-        platform: "Facebook",
+        platform: "LinkedIn",
         url: "https://www.linkedin.com/company/nativeamericanrightsfund/"
       },
     ],
@@ -758,6 +762,34 @@ export const orgs: Org[] = [
       {
         action: "Our Work",
         url: "https://narf.org/our-work/"
+      },
+      {
+        action: "Support Us - Donate, Be an Ambassador, and more.",
+        url: "https://narf.org/support-us/",
+      },
+      {
+        action: "Start a Fundraiser",
+        url: "https://narf.org/support-us/facebook-fundraising/",
+        category: "volunteer"
+      },
+      {
+        action: "National Indian Law Library",
+        url: "https://narf.org/nill/",
+        category: "education"
+      },
+      {
+        action: "Store",
+        url: "https://secure.narf.org/page/65430/shop/1",
+        category: "money"
+      },
+      {
+        action: "Resources",
+        url: "https://narf.org/resources/",        
+      },
+      {
+        action: "Resources and Publications",
+        url: "https://narf.org/resources/",
+        category: "education"
       }
     ],
     description: 'The Native American Rights Fund holds governments accountable. We fight to protect Native American rights, resources, and lifeways through litigation, legal advocacy, and legal expertise. Providing legal assistance to Native American tribes, organizations, and individuals nationwide.',
