@@ -5,7 +5,7 @@ import PickCause from '@assets/PickCause.png';
 import CausePicker from './CausePicker.astro';
 import { Icon } from 'astro-icon/components';
 import MailBot from '@assets/mailbot.svg';
-import VoteDotOrg from '@assets/votedotorg.svg';
+import Vote from '@assets/Vote.svg';
 import YourMoney from '@assets/YourMoney.svg';
 import DEIA from '@assets/resources/DEIA.png';
 import Somebody from '@assets/resources/IAmSomebody.png';
@@ -16,239 +16,295 @@ import { type Org, orgs } from '@data/index';
 ---
 <div class="container max-w-6xl mx-auto">
   <section class="resist-home__section resist-start__section">
-    <h2 class="resist-steps__title text-center" >Welcome To The Resistance</h2>
-    <h3 class="font-bold my-2 pb-4 text-center">Step 1. Click on a cause to see organizations that support that cause!</h3>
+    <div class="resist-welcome__banner">
+      <h2 class="resist-steps__title text-center" >Welcome To The Resistance</h2>
+      <h3 class="font-bold my-2 pb-4 text-center">Step 1. Select a cause to see organizations that support it!</h3>
+    </div>    
     <CausePicker />
   </section>
 </div>
 
-<section class="resist-home__section featured-tools resist-featured__section">
-
-  <div id="factBot" class="resist-featured featured-tool">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-       <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" /> Featured Tool
-      </p>
+<div id="everyday" class="resist-home__actions--wrapper">
+  <section class="resist-home__section every-day-banner">
+    <h2>Everyday Things You Can Do</h2>
+  </section>
+  <section class="resist-home__section featured-tools resist-featured__section">
+  
+    <div id="factBot" class="resist-featured featured-tool">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+         <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" /> Get The Truth
+        </p>
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          FactBot by Snopes (Beta)
+        </h3>
+        <Image src={`https://mediaproxy.snopes.com/width/1200/https://www.snopes.com/tachyon/2019/11/2019-snopes-open-graph-default.png`} width={1200} height={600} class="featured-tool resist-featured__body--img no-touchy" alt="The word Snopes with the first s capitalized and stylized as a lamp shining light on the rest of the letters." />
+        <p class="resist-featured__body--text featured-tool__subtitle text-center">
+          Ask FactBot a Question!
+        </p>
+        <p class="resist-featured__body--text">
+          Harness Snopes' fact checking expertise with this AI bot. Your first couple of questions don't require
+          an account, after that it's easy to sign up for a
+          <a rel="external" class="external-link not-prose" href="https://www.snopes.com/?utm_source=resistance-toolkit" target="_blank"> 
+            <span>free or paid account </span>
+            <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+          </a> 
+          to keep using FactBot! After you're done, make sure to <a href="/orgs/snopes">learn how to support Snopes!</a>
+        </p>
+        <p class="example-questions__title max-w-2xl mx-auto mt-3">Example questions:</p>
+          <ul class="example-questions__list">
+            <li>
+              <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Is+Zelensky+a+dictator%3F" target="_blank">
+                <span>Is Zelensky a dictator?</span>
+                <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+              </a>
+            </li>
+            <li>
+              <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Is+the+covid-19+vaccine+safe%3F" target="_blank">
+                <span>Is the COVID-19 vaccine safe?</span>
+                <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+              </a>            
+            </li>
+            <li>
+              <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Did+Hamas+get+%2450+million+for+condoms%3F" target="_blank">
+                <span>Did Hamas get $50 million for condoms?</span>
+                <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+              </a>
+            </li>
+          </ul>
+        <form id="factBotForm" name="FactBot Question" class="space-y-4 max-w-3xl mx-auto">
+          <label for="hs-trailing-button-add-on-with-icon" class="block pt-4 mt-4 font-bold" >
+            Go ahead, ask a question! We'll send you over to FactBot for the answer.
+          </label>
+          <div class="flex rounded-lg shadow-sm">
+            <input type="text" id="hs-trailing-button-add-on-with-icon" name="hs-trailing-button-add-on-with-icon" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm">
+            <button id="factBotSubmit" data-umami-event="{snopes-submit}" type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+              <svg role="img" aria-hidden="true" class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
+              <span class="sr-only">Submit!</span>
+            </button>
+          </div>
+          <span class="text-sm block">
+            Disclaimer: FactBot is a great starting place, but you should verify 
+            the answers by checking the sources it provides as well as looking up 
+            your topic with the human verified answers on the Snopes website.
+          </span> 
+        </form>      
+      </div>
     </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        FactBot by Snopes (Beta)
-      </h3>
-      <Image src={`https://mediaproxy.snopes.com/width/1200/https://www.snopes.com/tachyon/2019/11/2019-snopes-open-graph-default.png`} width={1200} height={600} class="featured-tool resist-featured__body--img no-touchy" alt="The word Snopes with the first s capitalized and stylized as a lamp shining light on the rest of the letters." />
-      <p class="resist-featured__body--text featured-tool__subtitle text-center">
-        Ask FactBot a Question!
-      </p>
-      <p class="resist-featured__body--text">
-        Harness Snopes' fact checking expertise with this AI bot. Your first couple of questions don't require
-        an account, after that it's easy to sign up for a
-        <a rel="external" class="external-link not-prose" href="https://www.snopes.com/?utm_source=resistance-toolkit" target="_blank"> 
-          <span>free or paid account </span>
-          <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-        </a> 
-        to keep using FactBot! After you're done, make sure to <a href="/orgs/snopes">learn how to support Snopes!</a>
-      </p>
-      <p class="example-questions__title max-w-2xl mx-auto mt-3">Example questions:</p>
-        <ul class="example-questions__list">
-          <li>
-            <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Is+Zelensky+a+dictator%3F" target="_blank">
-              <span>Is Zelensky a dictator?</span>
-              <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-            </a>
-          </li>
-          <li>
-            <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Is+the+covid-19+vaccine+safe%3F" target="_blank">
-              <span>Is the COVID-19 vaccine safe?</span>
-              <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-            </a>            
-          </li>
-          <li>
-            <a class="example-questions__link not-prose external-link" data-umami-event="{snopes-example-question}" rel="external" href="https://www.snopes.com/factbot/?query=Did+Hamas+get+%2450+million+for+condoms%3F" target="_blank">
-              <span>Did Hamas get $50 million for condoms?</span>
-              <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-            </a>
-          </li>
-        </ul>
-      <form id="factBotForm" name="FactBot Question" class="space-y-4 max-w-3xl mx-auto">
-        <label for="hs-trailing-button-add-on-with-icon" class="block pt-4 mt-4 font-bold" >
-          Go ahead, ask a question! We'll send you over to FactBot for the answer.
-        </label>
-        <div class="flex rounded-lg shadow-sm">
-          <input type="text" id="hs-trailing-button-add-on-with-icon" name="hs-trailing-button-add-on-with-icon" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm">
-          <button id="factBotSubmit" data-umami-event="{snopes-submit}" type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-            <svg role="img" aria-hidden="true" class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.3-4.3"></path>
-            </svg>
-            <span class="sr-only">Submit!</span>
-          </button>
+
+    <div id="mobilize" class="resist-featured featured-tool">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+         <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" /> Get Involved, Take Action
+        </p>
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          Mobilize
+        </h3>
+        <Image src={`https://mobilizeamerica.imgix.net/uploads/organization_social/Social%20preview_20201104142729507467.png?w=1200&h=628&fit=crop&bg=FFF`} width={1200} height={600} class="featured-tool resist-featured__body--img no-touchy" alt="The word Snopes with the first s capitalized and stylized as a lamp shining light on the rest of the letters." />
+        <div class="mobilize-category-links">
+          <p class="resist-featured__body--text featured-tool__subtitle text-center">
+            Find an Event, Sign a Petition, Volunteer!
+          </p>
+          <p class="resist-featured__body--text">
+            Mobilize is your go-to destination for people-powered movements. We provide nonprofits, labor unions, 
+            political campaigns, and grassroots organizers the tech needed to create a more just, inclusive, and democratic world.        
+          </p>
+          <p class="resist-featured__body--text text-center">
+            Example Organizations and Causes:
+          </p>
+          <a class="mobilize-link" rel="external" target="_blank" href="https://www.mobilize.us/?org_ids=2425">
+            <Icon  role="img" aria-label="Org" name="mdi:building"/>
+            Sunrise Movement
+          </a>
+          <a class="mobilize-link" rel="external" target="_blank" href="https://www.mobilize.us/?org_ids=93">
+            <Icon  role="img" aria-label="Org" name="mdi:building"/>
+            Indivisible
+          </a>
+          <a class="mobilize-link" rel="external" target="_blank" href="https://www.mobilize.us/events/lgbtq/">
+            <Icon  role="img" aria-label="Cause" name="mdi:megaphone"/>
+            LGBTQ+
+          </a>
+          <a class="mobilize-link" rel="external" target="_blank" href="https://www.mobilize.us/events/healthcare/">
+            <Icon  role="img" aria-label="Cause" name="mdi:megaphone"/>
+            Healthcare
+          </a>
         </div>
-        <span class="text-sm block">
-          Disclaimer: FactBot is a great starting place, but you should verify 
-          the answers by checking the sources it provides as well as looking up 
-          your topic with the human verified answers on the Snopes website.
-        </span> 
-      </form>      
+        <div class="mobilize-website-link">
+          <a class="mobilize-link" rel="external" target="_blank" href="https://www.mobilize.us/">            
+            Visit Mobilize <br> Find an opportunity that inspires you!
+          </a>
+        </div>        
+      </div>
     </div>
-  </div>
-</section>
-
-
-<section class="resist-home__section resist-featured__section">
-
-  <div class="resist-featured">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-       <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
-      </p>
-    </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        ResistBot
-      </h3>
-      <Image src={MailBot} class="resist-featured__body--img" alt="A robot holding an envelope." />
-      <p class="resist-featured__body--text">
-        Make your voice heard! Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
-      </p>
-      <a rel="noopener nofollow" class="resist-featured__body--link" href="https://resist.bot/" data-umami-event="{quick-link}" target="_blank">
-        Resist.bot
-        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-      </a>
-    </div>
-  </div>
-
-  <div class="resist-featured">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-        <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
-      </p>
-    </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        Register to Vote
-      </h3>
-      <Image src={VoteDotOrg} class="resist-featured__body--img" alt="Text reads 'Vote.org'" />
-      <p class="resist-featured__body--text">
-        Are you registered to vote? Check your status, register, vote by mail, and get election reminders.
-      </p>
-      <a rel="noopener nofollow" class="resist-featured__body--link" href="https://www.vote.org/" data-umami-event="{quick-link}" target="_blank">
-        Vote.org
-        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-      </a>
-    </div>    
-  </div>
-
-  <div class="resist-featured">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-        <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Quick Link
-      </p>
-    </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        Where is your money going?
-      </h3>
-      <Image src={YourMoney} class="resist-featured__body--img" alt="Stacks of coins and dollar bills." />
-      <p class="resist-featured__body--text">
-        Find companies who align with your cause and support them. Find what companies are funding politicians. 
-      </p>
-      <!-- <a rel="noopener nofollow external" class="resist-featured__body--link" href="https://www.goodsuniteus.com/" data-umami-event="{quick-link}" target="_blank">
-        Goods Unite Us
-        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-      </a> -->
-      <a rel="noopener nofollow external" class="resist-featured__body--link" href="https://www.opensecrets.org/" target="_blank">
-        Open Secrets
-        <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
-      </a>
-    </div>    
-  </div>
-
-</section>
-
-<section class="resist-home__section downloads resist-featured__section"> 
+  </section>
   
-  <h2 class="resist-steps__title downloads text-center" >Downloads</h2>
   
-  <div class="resist-featured downloads">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
-      </p>
+  <section class="resist-home__section resist-featured__section">
+  
+    <div class="resist-featured">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+         <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Contact Your Reps
+        </p>
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          ResistBot
+        </h3>
+        <Image src={MailBot} class="resist-featured__body--img" alt="A robot holding an envelope." />
+        <p class="resist-featured__body--text">
+          Make your voice heard! Resistbot is a chatbot that turns your texts into faxes, postal mail, or emails to your representatives in minutes.
+        </p>
+        <a rel="noopener nofollow" class="resist-featured__body--link" href="https://resist.bot/" data-umami-event="{quick-link}" target="_blank">
+          Resist.bot
+          <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+        </a>
+      </div>
     </div>
-    <div class="resist-featured__body--img-wrapper">
-      <Image src={ResistSquare} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text in the top left hand corner reads "The Resistance Toolkit, Tools You Need To Fight Hate. resistance-toolkit.com". In the bottom right had corner there is an illustration of a woman flexing her right arm.` />
+  
+    <div class="resist-featured">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+          <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Vote, Vote, Vote!
+        </p>
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          Register to Vote
+        </h3>
+        <Image src={Vote} class="resist-featured__body--img" alt="Text reads 'Vote.org'" />
+        <p class="resist-featured__body--text">
+          Are you registered to vote? Check your status, register, vote by mail, and get election reminders.
+        </p>
+        <a rel="noopener nofollow" class="resist-featured__body--link" href="https://www.vote.org/" data-umami-event="{quick-link}" target="_blank">
+          Vote.org
+          <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+        </a>
+        <a rel="noopener nofollow" class="resist-featured__body--link" href="https://www.votelikeabeast.com/" data-umami-event="{quick-link}" target="_blank">
+          Vote Like A Beast
+          <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+        </a>
+        
+      </div>    
     </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        Tools You Need
-      </h3>
-      <a class="resist-featured__body--link" href="/Resources/ResistSquare.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Fight Hate">
-        Download
-        <Icon name="mdi:download" role="img" aria-hidden="true" />
-      </a>
+  
+    <div class="resist-featured">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+          <Icon name="mdi:lightning-bolt" role="img" aria-hidden="true" />  Use Your Money For Good
+        </p>
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          Where is your money going?
+        </h3>
+        <Image src={YourMoney} class="resist-featured__body--img" alt="Stacks of coins and dollar bills." />
+        <p class="resist-featured__body--text">
+          Find companies who align with your cause and support them. Find what companies are funding politicians. 
+        </p>
+        <a rel="noopener nofollow external" class="resist-featured__body--link" href="https://www.opensecrets.org/" target="_blank">
+          Open Secrets
+          <Icon name="mdi:external-link" role="img" aria-label={'External link'} />
+        </a>
+      </div>    
     </div>
-  </div>
-
-  <div class="resist-featured downloads">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
-      </p>
-    </div>
-    <div class="resist-featured__body--img-wrapper">
-      <Image src={Somebody} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text reads "I am SOMEBODY. The Resistance Toolkit." A diverse group of  illustrated hands, clenched into fists, peak up behind a city skyline. Image is washed with a pink and purple filter.` />
-    </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        I Am Somebody
-      </h3>
-      <a class="resist-featured__body--link" href="/Resources/IAmSomebody.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Somebody">
-        Download
-        <Icon name="mdi:download" role="img" aria-hidden="true" />
-      </a>
-    </div>
-  </div>
-
-  <div class="resist-featured downloads">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
-      </p>
-    </div>
-    <div class="resist-featured__body--img-wrapper">
-      <Image src={Muse} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`A silhouette of a woman with her right arm held up with a clenched fist is in the foreground with a rising sun in the background. Symbols and lines surround her. Text reads "Best, you've got to be the best You've got to change the world And use this chance to be heard by Muse".` />
-    </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        Be Heard!
-      </h3>
-      <a class="resist-featured__body--link" href="/Resources/Inspire-Song-Muse.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Be Heard">
-        Download
-        <Icon name="mdi:download" role="img" aria-hidden="true" />
-      </a>
-    </div>
-  </div>
-
-  <div class="resist-featured downloads">
-    <div class="resist-featured__header">
-      <p class="resist-featured__header--title">
-       <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
-      </p>
-    </div>
-    <div class="resist-featured__body--img-wrapper">
-      <Image src={DEIA} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Diversity, Equity, Inclusion, Accessibility: It's the law. Title 7 Of The Civil Rights Act, Americans With Disabilities Act, Age Discrimination In Employment Act, Equal Pay Act, Pregnancy Discrimination Act, Many More... DEIA initiatives merely ensure government agencies follow the law, not to force "illegal and immoral discrimination programs."` />
-    </div>
-    <div class="resist-featured__body">
-      <h3 class="resist-featured__body--title">
-        DEI - It's The Law
-      </h3>
-      <a class="resist-featured__body--link" href="/Resources/DEIA.png" data-umami-event="{resource-download}" download="Resistance Toolkit - DEI">
-        Download
-        <Icon name="mdi:download" role="img" aria-hidden="true" />
-      </a>
-    </div>
-  </div>
+  
+  </section>
+  
+  <section class="resist-home__section downloads resist-featured__section"> 
     
-</section>
+    <h2 class="resist-steps__title downloads text-center" >Downloads</h2>
+    
+    <div class="resist-featured downloads">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+        </p>
+      </div>
+      <div class="resist-featured__body--img-wrapper">
+        <Image src={ResistSquare} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text in the top left hand corner reads "The Resistance Toolkit, Tools You Need To Fight Hate. resistance-toolkit.com". In the bottom right had corner there is an illustration of a woman flexing her right arm.` />
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          Tools You Need
+        </h3>
+        <a class="resist-featured__body--link" href="/Resources/ResistSquare.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Fight Hate">
+          Download
+          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  
+    <div class="resist-featured downloads">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+        </p>
+      </div>
+      <div class="resist-featured__body--img-wrapper">
+        <Image src={Somebody} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text reads "I am SOMEBODY. The Resistance Toolkit." A diverse group of  illustrated hands, clenched into fists, peak up behind a city skyline. Image is washed with a pink and purple filter.` />
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          I Am Somebody
+        </h3>
+        <a class="resist-featured__body--link" href="/Resources/IAmSomebody.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Somebody">
+          Download
+          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  
+    <div class="resist-featured downloads">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+        </p>
+      </div>
+      <div class="resist-featured__body--img-wrapper">
+        <Image src={Muse} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`A silhouette of a woman with her right arm held up with a clenched fist is in the foreground with a rising sun in the background. Symbols and lines surround her. Text reads "Best, you've got to be the best You've got to change the world And use this chance to be heard by Muse".` />
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          Be Heard!
+        </h3>
+        <a class="resist-featured__body--link" href="/Resources/Inspire-Song-Muse.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Be Heard">
+          Download
+          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  
+    <div class="resist-featured downloads">
+      <div class="resist-featured__header">
+        <p class="resist-featured__header--title">
+         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+        </p>
+      </div>
+      <div class="resist-featured__body--img-wrapper">
+        <Image src={DEIA} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Diversity, Equity, Inclusion, Accessibility: It's the law. Title 7 Of The Civil Rights Act, Americans With Disabilities Act, Age Discrimination In Employment Act, Equal Pay Act, Pregnancy Discrimination Act, Many More... DEIA initiatives merely ensure government agencies follow the law, not to force "illegal and immoral discrimination programs."` />
+      </div>
+      <div class="resist-featured__body">
+        <h3 class="resist-featured__body--title">
+          DEI - It's The Law
+        </h3>
+        <a class="resist-featured__body--link" href="/Resources/DEIA.png" data-umami-event="{resource-download}" download="Resistance Toolkit - DEI">
+          Download
+          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+      
+  </section>
+</div>
+
 
 <script>
   document.addEventListener('astro:page-load', () => {

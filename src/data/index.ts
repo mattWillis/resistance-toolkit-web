@@ -98,7 +98,7 @@ export const causes: Cause[] = [
   },
   {
     id: 8,
-    title: 'Sexism / Sexual Violence',
+    title: "Women's Rights",
     slug: 'sexism',
     banner: 'Causes-Sexism.png',
     emoji: '💃',
