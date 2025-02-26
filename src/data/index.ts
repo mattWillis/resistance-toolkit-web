@@ -828,8 +828,21 @@ export const orgs: Org[] = [
         url: "https://www.ncai.org/events"
       },
       {
+        action: "Center for Tribal Digital Sovereignty",
+        url: "https://aipi.asu.edu/ctds"
+      },
+      {
         action: "NCAI Foundation",
         url: "https://www.ncai.org/ncai-foundation"
+      },
+      {
+        action: "Initiatives",
+        url: "https://www.ncai.org/initiatives"
+      }, 
+      {
+        action: "Tribal Directory", 
+        url: "https://www.ncai.org/tribal-directory",
+        category: "education"
       }
     ],
     description: 'NCAI, a non-profit organization, advocates for a bright future for generations to come by taking the lead to gain consensus on a constructive and promising vision for Indian Country.',
