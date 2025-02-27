@@ -197,6 +197,17 @@ export const causes: Cause[] = [
     books: 'https://www.bibliovault.org/BV.titles.epl?tquery=Freedom%2520of%2520the%2520press',
     shareImg: '/Journalism-Share.png'
   },
+  {
+    id: 16,
+    title: 'DEI',
+    slug: 'dei',
+    banner: 'Causes-Diplomacy.png',
+    emoji: '≝',
+    listImg: '/src/assets/Card-DEI-Img.png',
+    listImgAlt: `Bound up newspaper with the headline "Democracy Prevails" laying on the ground.`,
+    books: 'https://www.bibliovault.org/BV.titles.epl?tquery=Freedom%2520of%2520the%2520press',
+    shareImg: '/Journalism-Share.png'
+  },
 ];
 
 export interface Org {
@@ -298,7 +309,7 @@ export const orgs: Org[] = [
     name: "Disability Rights Education & Defense Fund",
     url: 'https://dredf.org/',
     ogImage: "/Orgs/DREDFBanner.webp",
-    cause: ['accessibility'],
+    cause: ['accessibility', 'dei'],
     donate: "https://dredf.org/donate/",
     actions: [
       {
@@ -508,7 +519,7 @@ export const orgs: Org[] = [
     name: "ACLU",
     url: 'https://www.aclu.org/',
     ogImage: "https://www.aclu.org/wp-content/themes/aclu-wp/img/default_fb_share.jpg",
-    cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'sexism', 'voting', 'accessibility'],
+    cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'sexism', 'voting', 'accessibility', 'dei'],
     donate: "https://action.aclu.org/give/now/?utm_source=resistance-toolkit",
     social: [
       {
@@ -618,7 +629,7 @@ export const orgs: Org[] = [
     name: "Southern Poverty Law Center",
     url: 'https://www.splcenter.org/',
     ogImage: "https://res.cloudinary.com/splc/images/f_auto,q_auto/v1736542788/splc-logo_twitter_instream/splc-logo_twitter_instream.png?_i=AA",
-    cause: ['civil-rights', 'wealth'],
+    cause: ['civil-rights', 'wealth', 'dei'],
     donate: "https://secure.splcenter.org/page/72074/donate/1/",
     social: [
       {
@@ -680,7 +691,7 @@ export const orgs: Org[] = [
     name: "NAACP",
     url: 'https://www.naacp.org/',
     ogImage: "https://naacp.org/themes/custom/naacp/assets/images/og-image-naacp.jpg",
-    cause: ['civil-rights'],
+    cause: ['civil-rights', 'dei'],
     donate: "https://naacp.org/donate",
     social: [
       {
@@ -1393,7 +1404,7 @@ export const orgs: Org[] = [
     name: "GLAAD",
     url: 'https://www.glaad.org',
     ogImage: "https://media.glaad.org/wp-content/uploads/2022/11/20110804/Glaad_Cyan.png",
-    cause: ['lgbtq'],
+    cause: ['lgbtq', 'dei'],
     donate: "https://give.glaad.org/page/76113/donate/1/?utm_source=resistance-toolkit",
     social: [
       {
@@ -2912,7 +2923,7 @@ export const orgs: Org[] = [
     name: "AAAS",
     url: 'https://www.aaas.org/',
     ogImage: "/Orgs/AAASBanner.webp",
-    cause: ['science'],
+    cause: ['science', 'dei'],
     donate: 'https://www.aaas.org/support/?utm_source=resistance-toolkit',
     actions: [
       {
@@ -4662,6 +4673,91 @@ export const orgs: Org[] = [
     description: "When misinformation obscures the truth and readers don’t know what to trust, Snopes’ fact-checking and original investigative reporting lights the way to evidence-based and contextualized analysis. We always link to and document our sources so readers are empowered to do independent research and make up their own minds.",
     scope: 'global',
     slug: 'snopes'
+  },
+  {
+    id: 78,
+    name: "Girls Who Code",
+    url: 'https://girlswhocode.com/',
+    ogImage: "https://girlswhocode.com/assets/images/craft-prod/images/seo/_1200x630_crop_center-center_82_none/GWC_SEO_Logo.png?mtime=1588335912",
+    cause: ['science', 'sexism', 'dei'],
+    donate: 'https://give.girlswhocode.com/give/77372/#!/donation/checkout',
+    social: [
+      {
+        platform: 'BlueSky',
+        url: "https://bsky.app/profile/girlswhocode.bsky.social"
+      },
+      {
+        platform: "Instagram",
+        url: "https://www.instagram.com/girlswhocode/"
+      },
+      {
+        platform: "YouTube",
+        url: "https://www.youtube.com/user/GirlsWhoCode"
+      },
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/GirlsWhoCode"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/school/girlswhocode/"
+      },
+      {
+        platform: "Blog",
+        url: "https://girlswhocode.medium.com/"
+      },      
+    ],
+    actions: [
+      {
+        action: "Get Involved",
+        url: "https://girlswhocode.com/get-involved",        
+      },
+      {
+        action: "Start a Club",
+        url: "https://girlswhocode.com/get-involved/start-a-club",
+        category: "volunteer"
+      },
+      {
+        action: "Fundraise",
+        url: "https://give.girlswhocode.com/campaign/in-your-workplace/c134115",
+        category: "volunteer"
+      },
+      {
+        action: "Campagins",
+        url: "https://girlswhocode.com/get-involved/campaign",
+        category: "volunteer"
+      },
+      {
+        action: "Ways To Support",
+        url: "https://girlswhocode.com/get-involved/ways-to-support",
+        category: "donate"
+      },
+      {
+        action: "Research",
+        url: "https://girlswhocode.com/about-us/research",
+        category: "education"
+      },
+      {
+        action: "Find A Club",
+        url: "https://girlswhocode.com/locations"
+      },
+      {
+        action: "Programs",
+        url: "https://girlswhocode.com/programs",
+        category: "education"
+      },
+      {
+        action: "Programs",
+        url: "https://girlswhocode.com/programs",        
+      },
+      {
+        action: "News",
+        url: "https://girlswhocode.com/news",        
+      },     
+    ],
+    description: "We're on a mission to close the gender gap in tech. Girls Who Code is changing the game We're reaching girls around the world and are on track to close the gender gap in new entry-level tech jobs by 2030.",
+    scope: 'us',
+    slug: 'girlswhocode'
   },
 ]
 
