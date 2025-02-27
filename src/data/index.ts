@@ -198,15 +198,14 @@ export const causes: Cause[] = [
     shareImg: '/Journalism-Share.png'
   },
   {
-    id: 16,
+    id: 17,
     title: 'DEI',
     slug: 'dei',
     banner: 'Causes-Diplomacy.png',
     emoji: '≝',
     listImg: '/src/assets/Card-DEI-Img.png',
     listImgAlt: `Bound up newspaper with the headline "Democracy Prevails" laying on the ground.`,
-    books: 'https://www.bibliovault.org/BV.titles.epl?tquery=Freedom%2520of%2520the%2520press',
-    shareImg: '/Journalism-Share.png'
+    books: 'https://www.cultureally.com/blog/20plus-must-read-dei-books',
   },
 ];
 
@@ -4758,6 +4757,137 @@ export const orgs: Org[] = [
     description: "We're on a mission to close the gender gap in tech. Girls Who Code is changing the game We're reaching girls around the world and are on track to close the gender gap in new entry-level tech jobs by 2030.",
     scope: 'us',
     slug: 'girlswhocode'
+  },
+  {
+    id: 79,
+    name: "AAAED",
+    url: 'https://www.aaaed.org/aaaed/default.asp',
+    ogImage: "/Orgs/AAAEDBanner.png",
+    cause: ['dei'],
+    donate: 'https://www.aaaed.org/aaaed/Donate.asp',
+    social: [
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/theaaaed"
+      },
+      {
+        platform: "Instagram",
+        url: "https://www.instagram.com/theaaaed/"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/company/aaaed"
+      },      
+      {
+        platform: "YouTube",
+        url: "https://www.youtube.com/@aaaed5727"
+      },    
+    ],
+    actions: [
+      {
+        action: "Resources",
+        url: "https://www.aaaed.org/aaaed/Resources.asp",
+      },
+      {
+        action: "Affirmative Action Programs",
+        url: "https://www.aaaed.org/aaaed/Affirmative_Action_Programs1.asp",
+      },
+      {
+        action: "Professional Development and Training Institute",
+        url: "https://www.aaaed.org/aaaed/Training.asp",
+        category: "education"
+      },
+      {
+        action: "Professional Development and Training Institute",
+        url: "https://www.aaaed.org/aaaed/Training.asp",        
+      },
+      {
+        action: "Federal Agency Resources",
+        url: "https://www.aaaed.org/aaaed/Federal_Agency_Resources1.asp",        
+      },
+      {
+        action: "State and Local Resources",
+        url: "https://www.aaaed.org/aaaed/State_and_Local_Resources1.asp",        
+      },
+      {
+        action: "LEAD Fund",
+        url: "https://www.aaaed.org/aaaed/LEAD_Fund.asp",
+        category: "donate"
+      },
+      {
+        action: "Membership - Get Access to Data, Resources, and More",
+        url: "https://www.aaaed.org/aaaed/Join_Us.asp"
+      },
+      {
+        action: "Jobs and Careers",
+        url: "https://affirmativeaction-jobs.careerwebsite.com/",
+        category: "volunteer"
+      }     
+    ],
+    description: "The American Association for Access, Equity and Diversity (AAAED), a 501c6 membership organization, is the longest-standing national organization of professionals who engage in the important work of leading, directing and managing affirmative action, equal opportunity, and diversity programs, with five decades of leadership in providing professional training to members, enabling them to be more successful and productive in their careers.",
+    scope: 'us',
+    slug: 'aaaed'
+  },
+  {
+    id: 80,
+    name: "National Diversity Council",
+    url: 'https://nationaldiversitycouncil.org/',
+    ogImage: "/Orgs/NDCBanner.png",
+    cause: ['dei'],
+    social: [
+      {
+        platform: "Facebook",
+        url: "https://www.facebook.com/nationaldiversitycouncil/"
+      },
+      {
+        platform: "Instagram",
+        url: "https://www.instagram.com/nationaldiversitycouncil/"
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/company/national-diversity-council"
+      },         
+    ],
+    actions: [
+      {
+        action: "Certifications",
+        url: "https://centerdiversitycertification.com/",
+        category: "education"
+      },
+      {
+        action: "Resources",
+        url: "https://nationaldiversitycouncil.org/resources/",
+      },
+      {
+        action: "Programs",
+        url: "https://nationaldiversitycouncil.org/programs/",
+        category: "education"
+      },
+      {
+        action: "Themed Weeks",
+        url: "https://nationaldiversitycouncil.org/weeks/",
+      },
+      {
+        action: "National Diversity and Leadership Conference",
+        url: "https://nationaldiversityconference.com/2025/",
+      },
+      {
+        action: "Get Involved at the 2025 Conference",
+        url: "https://nationaldiversityconference.com/2025/about/get-involved/", 
+        category: "volunteer"       
+      },
+      {
+        action: "Find Your Local Chapter",
+        url: "https://nationaldiversitycouncil.org/chapters/",
+      },
+      {
+        action: "Join Us",
+        url: "https://nationaldiversitycouncil.org/join-us/"
+      }    
+    ],
+    description: "The National Diversity Council – NDC is a leading organization dedicated to fostering diversity, equity, inclusion, and belonging (DEIB) across all sectors of society. By promoting dialogue, education, and collaboration, NDC seeks to build a more inclusive world where everyone has the opportunity to succeed regardless of their background.",
+    scope: 'us',
+    slug: 'ndc'
   },
 ]
 
