@@ -6,13 +6,9 @@
 
 .resist-start__section {
   @apply max-w-7xl;
-  // border: 10px solid #3F3F5B;
-  // border: 10px solid $border-color;
   border: 10px solid $primary-color;
-  // background-color: $primary-color;
   @apply rounded-xl;
   @apply shadow-xl;
-  // color: #E6E1D0;
   padding: 0;
 }
 
@@ -344,5 +340,7 @@
   .downloads.resist-featured {
     flex: 0 1 100%;
   }
-
+ .resist-welcome__banner h2  {
+    font-size: 25px;
+  }
 }

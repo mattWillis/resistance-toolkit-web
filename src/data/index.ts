@@ -204,8 +204,9 @@ export const causes: Cause[] = [
     banner: 'Causes-Diplomacy.png',
     emoji: '≝',
     listImg: '/src/assets/Card-DEI-Img.png',
-    listImgAlt: `Bound up newspaper with the headline "Democracy Prevails" laying on the ground.`,
+    listImgAlt: `An illustration of a group of diverse people talking together.`,
     books: 'https://www.cultureally.com/blog/20plus-must-read-dei-books',
+    shareImg: '/DEI-Share.png'
   },
 ];
 
