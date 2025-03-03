@@ -7,10 +7,10 @@ import { Icon } from 'astro-icon/components';
 import MailBot from '@assets/mailbot.svg';
 import Vote from '@assets/Vote.svg';
 import YourMoney from '@assets/YourMoney.svg';
-import DEIA from '@assets/resources/DEIA.png';
-import Somebody from '@assets/resources/IAmSomebody.png';
-import Muse from '@assets/resources/Inspire-Song-Muse.png';
-import ResistSquare from '@assets/resources/ResistanceSquare.png';
+import BreatheFree from '@assets/shop/BreatheFree-Tee.webp';
+import Wealth from '@assets/shop/wealth.webp';
+import Union from '@assets/shop/PerfectUnion.webp';
+import Hoodie from '@assets/shop/Rosie-Hoodie.webp';
 
 import { type Org, orgs } from '@data/index';
 ---
@@ -228,24 +228,24 @@ import { type Org, orgs } from '@data/index';
   
   <section class="resist-home__section downloads resist-featured__section"> 
     
-    <h2 class="resist-steps__title downloads text-center" >Downloads</h2>
-    
+    <h2 class="resist-steps__title downloads text-center" >Shop</h2>
     <div class="resist-featured downloads">
       <div class="resist-featured__header">
         <p class="resist-featured__header--title">
-         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+         <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />  Featured Product
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image src={ResistSquare} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text in the top left hand corner reads "The Resistance Toolkit, Tools You Need To Fight Hate. resistance-toolkit.com". In the bottom right had corner there is an illustration of a woman flexing her right arm.` />
+        <Image src={BreatheFree} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`T-shirt design showing an illustration of the Statue of Liberty with a modern graphic design twist. The background features a blue circle with white cartoon-style clouds and small birds. A speech bubble with a red heart inside is placed near the statue. Below, a quote from Emma Lazarus's poem reads: 'Give me your tired, your poor, your huddled masses yearning to breathe free,' with 'breathe free' italicized in a handwritten-style font. The website 'resistance-toolkit.com' is displayed at the bottom.` />
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
-          Tools You Need
+          Breathe Free
         </h3>
-        <a class="resist-featured__body--link" href="/Resources/ResistSquare.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Fight Hate">
-          Download
-          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        <p>Proceeds donated to charities and orgs featured on our site!</p>
+        <a target="_blank" class="resist-featured__body--link" href="https://shop.resistance-toolkit.com/products/yearning-to-breathe-free" data-umami-event="{shop-breathe-free}">
+          View Product
+          <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />
         </a>
       </div>
     </div>
@@ -253,19 +253,20 @@ import { type Org, orgs } from '@data/index';
     <div class="resist-featured downloads">
       <div class="resist-featured__header">
         <p class="resist-featured__header--title">
-         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+         <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />  Featured Product
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image src={Somebody} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Text reads "I am SOMEBODY. The Resistance Toolkit." A diverse group of  illustrated hands, clenched into fists, peak up behind a city skyline. Image is washed with a pink and purple filter.` />
+        <Image src={Wealth} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Red tee-shirt with a design showing a stylized chart depicting the U.S. Family Wealth Distribution.` />
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
-          I Am Somebody
+          Shrink The Wealth Gap
         </h3>
-        <a class="resist-featured__body--link" href="/Resources/IAmSomebody.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Somebody">
-          Download
-          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        <p>Proceeds donated to charities and orgs featured on our site!</p>
+        <a target="_blank" class="resist-featured__body--link" href="https://shop.resistance-toolkit.com/products/wealth-gap-distribution" data-umami-event="{shop-wealth}">
+          View Product
+          <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />
         </a>
       </div>
     </div>
@@ -273,19 +274,20 @@ import { type Org, orgs } from '@data/index';
     <div class="resist-featured downloads">
       <div class="resist-featured__header">
         <p class="resist-featured__header--title">
-         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+         <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />  Featured Product
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image src={Muse} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`A silhouette of a woman with her right arm held up with a clenched fist is in the foreground with a rising sun in the background. Symbols and lines surround her. Text reads "Best, you've got to be the best You've got to change the world And use this chance to be heard by Muse".` />
+        <Image src={Union} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`T-shirt design showing a book cover in the style of Penguin Classics. The title of the book is "In order to form a more perfect union". The graphic below the book title depicts a diverse group of people talking with the Preamble of the Constitution written behind them in calligraphy.` />
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
-          Be Heard!
+          Perfect Union
         </h3>
-        <a class="resist-featured__body--link" href="/Resources/Inspire-Song-Muse.png" data-umami-event="{resource-download}" download="Resistance Toolkit - Be Heard">
-          Download
-          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        <p>Proceeds donated to charities and orgs featured on our site!</p>
+        <a target="_blank" class="resist-featured__body--link" href="https://shop.resistance-toolkit.com/products/a-more-perfect-union" data-umami-event="{shop-union}">
+          View Product
+          <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />
         </a>
       </div>
     </div>
@@ -293,23 +295,28 @@ import { type Org, orgs } from '@data/index';
     <div class="resist-featured downloads">
       <div class="resist-featured__header">
         <p class="resist-featured__header--title">
-         <Icon name="mdi:download" role="img" aria-hidden="true" />  Download & Share
+         <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />  Featured Product
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image src={DEIA} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Diversity, Equity, Inclusion, Accessibility: It's the law. Title 7 Of The Civil Rights Act, Americans With Disabilities Act, Age Discrimination In Employment Act, Equal Pay Act, Pregnancy Discrimination Act, Many More... DEIA initiatives merely ensure government agencies follow the law, not to force "illegal and immoral discrimination programs."` />
+        <Image src={Hoodie} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Dark navy blue hoodie with our Rosie mascot and The Resistance Toolkit printed on the chest by the left sleeve.` />
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
-          DEI - It's The Law
+          Rosie's Ready - Hoodie
         </h3>
-        <a class="resist-featured__body--link" href="/Resources/DEIA.png" data-umami-event="{resource-download}" download="Resistance Toolkit - DEI">
-          Download
-          <Icon name="mdi:download" role="img" aria-hidden="true" />
+        <p>Proceeds donated to charities and orgs featured on our site!</p>
+        <a target="_blank" class="resist-featured__body--link" href="https://shop.resistance-toolkit.com/products/rosies-ready-are-you-hoodie" data-umami-event="{resource-download}">
+          View Product
+          <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" />
         </a>
       </div>
-    </div>
-      
+    </div>      
+  </section>
+
+  <section class="resist-home__section resist-shop__section">
+    <p class="shop-subtitle">Fight Hate. Wear Love.</p>
+    <a id="shopLink" class="shop-link" href="https://shop.resistance-toolkit.com">Visit Our Shop!</a>
   </section>
 </div>
 

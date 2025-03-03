@@ -270,6 +270,33 @@
   }
 }
 
+.resist-shop__section {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  // margin-bottom: 25px;
+}
+
+.shop-link {
+  background-color: $link-color;
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 900;
+  &:hover, &:focus-visible, &:active {
+    background-color: $link-color-hover;
+    color: white;
+  }
+}
+
 @media screen and (max-width: 915px) {
   .resist-featured__section {
    flex-wrap: wrap;
