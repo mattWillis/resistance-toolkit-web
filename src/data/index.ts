@@ -74,7 +74,8 @@ export const causes: Cause[] = [
     emoji: '🚶',
     listImg: '/src/assets/Card-Immigration-Img.webp',
     listImgAlt: 'Metal wall extending from the bottom left of the image to the top right. It is creating a scare in the dessert landscape.',
-    books: 'https://www.globalrefuge.org/books-about-immigration/'
+    books: 'https://www.globalrefuge.org/books-about-immigration/',
+    shareImg: '/Immigration-Share.png'
   },
   {
     id: 6,
