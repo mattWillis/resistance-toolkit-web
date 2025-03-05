@@ -23,6 +23,8 @@ export interface Cause {
   listImgAlt: string;
   books: string;
   shareImg?: string;
+  shopUrl?: string;
+  shopImg?: string;
 }
 
 export const causes: Cause[] = [
@@ -34,7 +36,9 @@ export const causes: Cause[] = [
     emoji: '♿️',
     listImg: '/src/assets/Card-Disability-Img.webp',
     listImgAlt: 'A person in a wheelchair outside in a park',
-    books: 'https://www.goodreads.com/list/show/142568.Ability_and_Disability_Introduction_Monthly_List_1'
+    books: 'https://www.goodreads.com/list/show/142568.Ability_and_Disability_Introduction_Monthly_List_1',
+    shopUrl: "https://shop.resistance-toolkit.com/collections/disability-rights",
+    shopImg: '/shop/causes/accessibility/accessibility.png'
   },
   {
     id: 2,
@@ -44,7 +48,9 @@ export const causes: Cause[] = [
     emoji: '⚖️',
     listImg: '/src/assets/Card-Civil-Img.webp',
     listImgAlt: 'A person in a hijab holding a megaphone in front of a crowd of people with their arms in the air.',
-    books: 'https://uncpressblog.com/2021/12/15/universal-human-rights-month-a-recommended-reading-list/'
+    books: 'https://uncpressblog.com/2021/12/15/universal-human-rights-month-a-recommended-reading-list/',
+    shopUrl: "https://shop.resistance-toolkit.com/collections/civil-rights-racism",
+    shopImg: '/shop/causes/civilrights/civilrights.png'
   },
   {
     id: 3,
@@ -54,7 +60,9 @@ export const causes: Cause[] = [
     emoji: '🌡️',
     listImg: '/src/assets/Card-Climate-Img.webp',
     listImgAlt: 'A pair of hands holding an illuminated globe.',
-    books: 'https://www.penguinrandomhouse.com/the-read-down/books-to-inspire-care-for-the-earth/'       
+    books: 'https://www.penguinrandomhouse.com/the-read-down/books-to-inspire-care-for-the-earth/'  ,
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/climate',
+    shopImg: '/shop/causes/climate/climate.png'
   },
   {
     id: 4,
@@ -75,7 +83,9 @@ export const causes: Cause[] = [
     listImg: '/src/assets/Card-Immigration-Img.webp',
     listImgAlt: 'Metal wall extending from the bottom left of the image to the top right. It is creating a scare in the dessert landscape.',
     books: 'https://www.globalrefuge.org/books-about-immigration/',
-    shareImg: '/Immigration-Share.png'
+    shareImg: '/Immigration-Share.png',
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/immigration-refugees',
+    shopImg: '/shop/causes/immigration/immigration.png'
   },
   {
     id: 6,
@@ -85,7 +95,9 @@ export const causes: Cause[] = [
     emoji: '🏳️‍🌈',
     listImg: '/src/assets/Card-LGBTQ-Img.webp',
     listImgAlt: 'Rainbow flag.',
-    books: 'https://glaad.org/tag/books/'
+    books: 'https://glaad.org/tag/books/',
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/lgbtq',
+    shopImg: '/shop/causes/lgbtq/lgbtq.png'
   },
   {
     id: 7,
@@ -125,7 +137,9 @@ export const causes: Cause[] = [
     emoji: '💰',
     listImg: '/src/assets/Card-Wealth-Img.webp',
     listImgAlt: `Bar graph with a dollar superimposed over it.`,
-    books: 'https://inequality.org/our-inequality-work/books/'
+    books: 'https://inequality.org/our-inequality-work/books/',
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/wealth-inequality',
+    shopImg: '/shop/causes/wealth/wealth.png'
   },
   {
     id: 11,
@@ -165,7 +179,9 @@ export const causes: Cause[] = [
     emoji: '👩‍🔬👨‍🔬',
     listImg: '/src/assets/Card-Science-Img.webp',
     listImgAlt: `Two women looking into microscopes in a black and white photo.`,
-    books: 'https://www.goodreads.com/list/show/692.Best_Science_Books_Non_Fiction_Only'
+    books: 'https://www.goodreads.com/list/show/692.Best_Science_Books_Non_Fiction_Only',
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/science',
+    shopImg: '/shop/causes/science/science.png'    
   },
   {
     id: 15,
@@ -185,7 +201,9 @@ export const causes: Cause[] = [
     emoji: '🇺🇸',
     listImg: '/src/assets/Card-Democracy-Img.webp',
     listImgAlt: `A young black woman raises her right fist in the air as a large crowd of protesters gather in front of a political building.`,
-    books: 'https://www.journalofdemocracy.org/books/'
+    books: 'https://www.journalofdemocracy.org/books/',
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/democracy',
+    shopImg: '/shop/causes/democracy/democracy.png' 
   },
   {
     id: 16,
@@ -196,7 +214,9 @@ export const causes: Cause[] = [
     listImg: '/src/assets/Card-Journalism.png',
     listImgAlt: `Bound up newspaper with the headline "Democracy Prevails" laying on the ground.`,
     books: 'https://www.bibliovault.org/BV.titles.epl?tquery=Freedom%2520of%2520the%2520press',
-    shareImg: '/Journalism-Share.png'
+    shareImg: '/Journalism-Share.png',
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/journalism-fact-checking',
+    shopImg: '/shop/causes/journalism/journalism.png'     
   },
   {
     id: 17,
@@ -207,7 +227,9 @@ export const causes: Cause[] = [
     listImg: '/src/assets/Card-DEI-Img.png',
     listImgAlt: `An illustration of a group of diverse people talking together.`,
     books: 'https://www.cultureally.com/blog/20plus-must-read-dei-books',
-    shareImg: '/DEI-Share.png'
+    shareImg: '/DEI-Share.png',
+    shopUrl: 'https://shop.resistance-toolkit.com/collections/dei',
+    shopImg: '/shop/causes/dei/dei.png'      
   },
 ];
 

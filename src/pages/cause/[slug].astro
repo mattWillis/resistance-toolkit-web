@@ -47,6 +47,8 @@ if(cause.shareImg) {
 
 const clUrl = new URL(Astro.url.pathname, Astro.site);
 const cURLString = clUrl.toString();
+let shopSampleImg = cause.shopImg ? `${cause.shopImg}` : `${Astro.site}Cause-Share.png`;
+
 ---
 
 <Layout 
@@ -59,6 +61,30 @@ const cURLString = clUrl.toString();
 <header class="max-w-6xl mx-auto" slot="header">
   <Image class="no-touchy" src={StepImg} alt="Pick a cause." />
 </header>
+
+{cause.shopUrl && (
+  <section class="shop-cause" aria-role="note">
+    <div class="shop-cause__img">
+      {cause.shopImg && (
+        <Image
+          class="no-touchy" 
+          src={shopSampleImg}
+          height={100}
+          width={100}
+          alt="Shop for a cause."
+        />
+      )}
+    </div>
+    <div class="shop-cause__text">
+      <p class="shop-cause__title">Shop</p>
+      <p class="shop-cause__description">
+        This cause has themed merch on our store! All proceeds are donated to Orgs 
+        featured on this site. <a href={cause.shopUrl} class="shop-cause__link" target="_blank">View Shop.</a>
+      </p>
+    </div>
+  </section>
+)}
+
 
 <section class="max-w-6xl mx-auto py-6 lg:pt-8 px-4 pb-10">
   <h1 class="resist-select-org__title">Step 2. {cause.title} - Select an Organization</h1>
@@ -77,7 +103,7 @@ const cURLString = clUrl.toString();
                     loading={'lazy'}
                     decoding={'async'}
                     alt={`${thisOrg.name} social media share banner`}
-                    class="org-image"
+                    class="org-image no-touchy"
                   />
                 </div> :
                 <div class="org-image__cover">

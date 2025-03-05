@@ -1,5 +1,47 @@
 @use "./variables" as *;
 
+
+.shop-cause {
+  @apply max-w-xl mx-auto py-3 px-2;
+  background-color: #F3F4F6;
+  border: 2px solid #DDDDDC;
+  display: flex;
+  gap: 15px;
+  color: #000;
+}
+
+.shop-cause__img {
+  flex: 0 1 calc(25% - 15px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    object-fit: cover;
+    max-height: 115px;
+    width: auto;
+  }
+}
+
+.shop-cause__text {
+  flex: 1 0 calc(75% - 15px);
+}
+
+.shop-cause__title {
+  font-family: "neulis-sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.shop-cause__description {
+  color: #000;
+}
+
+.shop-cause__link {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .resist-select-org__title {
   font-family: "neulis-sans", sans-serif;
   font-weight: 900;
@@ -7,6 +49,7 @@
   margin-bottom: 15px;
   text-transform: uppercase;
 }
+
 
 ul.org-list {
   list-style-type: none !important;

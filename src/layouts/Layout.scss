@@ -87,9 +87,18 @@ a, .hs-collapse-toggle, div.action p a {
   }
 }
 
-.resist-button__about {
+.resist-button__site-nav {
   background-color: white;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover, &:focus-visible, &:active {    
+    background-color: $link-color-hover;
+    color: white;
+  }
+}
+
+.resist-button__shop {
+  background-color: $primary-color;
+  color: white;
   &:hover, &:focus-visible, &:active {    
     background-color: $link-color-hover;
     color: white;
