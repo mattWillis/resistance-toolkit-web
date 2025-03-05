@@ -207,8 +207,8 @@ a, .hs-collapse-toggle, div.action p a {
   }
 }
 @media screen and (max-width: 640px) {
-  html, body {
-    // font-size: 16px;
+  .resist-button__site-nav {
+    padding: 8px;
   }
 
   .resist-card {
