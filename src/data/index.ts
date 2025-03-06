@@ -138,6 +138,7 @@ export const causes: Cause[] = [
     listImg: '/src/assets/Card-Wealth-Img.webp',
     listImgAlt: `Bar graph with a dollar superimposed over it.`,
     books: 'https://inequality.org/our-inequality-work/books/',
+    shareImg: '/Wealth-Share.png',
     shopUrl: 'https://shop.resistance-toolkit.com/collections/wealth-inequality',
     shopImg: '/shop/causes/wealth/wealth.png'
   },
@@ -169,7 +170,8 @@ export const causes: Cause[] = [
     emoji: '⚕️',
     listImg: '/src/assets/Card-Medicine-Img.webp',
     listImgAlt: `A stethoscope, pill packets, and other medical tools scattered on a white surface.`,
-    books: 'https://www.penguinrandomhouse.com/the-read-down/books-on-healthcare/'
+    books: 'https://www.penguinrandomhouse.com/the-read-down/books-on-healthcare/',
+    shareImg: '/Medicine-Share.png',
   },
   {
     id: 14,
