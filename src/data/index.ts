@@ -2755,7 +2755,7 @@ export const orgs: Org[] = [
     name: "Interfaith Alliance",
     url: 'https://interfaithalliance.org',
     ogImage: "https://cdn.prod.website-files.com/678fc0503fb396ad46f4567a/67a3bddbe44cba62d1c9b835_Open%20Graph%20Image.avif",
-    cause: ['faith', 'lgbtq', 'reproductive', 'democracy'],
+    cause: ['faith', 'lgbtq', 'democracy'],
     donate: "https://support.interfaithalliance.org/a/donate",
     actions: [
       {
