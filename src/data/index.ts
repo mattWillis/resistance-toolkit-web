@@ -106,6 +106,7 @@ export const causes: Cause[] = [
     banner: 'Causes-Reproductive.png',
     emoji: '♀',
     listImg: '/src/assets/Card-Reproductive-Img.webp',
+    shareImg: '/Reproductive-Share.png',
     listImgAlt: `A crowd of protesters holding signs that read: "Defend Women's and Reproductive Rights".`,
     books: 'https://stanfordpress.typepad.com/blog/2021/09/reproductive-rights-recommended-reading.html'
   },
