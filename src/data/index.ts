@@ -128,7 +128,9 @@ export const causes: Cause[] = [
     emoji: '🗳️',
     listImg: '/src/assets/Card-Voting-Img.webp',
     listImgAlt: `Stickers that read: "I Voted" scattered on a white surface.`,
-    books: 'https://socialjusticebooks.org/booklists/voting-rights/'
+    books: 'https://socialjusticebooks.org/booklists/voting-rights/',
+    shopUrl: "https://shop.resistance-toolkit.com/collections/voting",
+    shopImg: '/shop/causes/voting/voting.png'
   },
   {
     id: 10,
@@ -3682,7 +3684,12 @@ export const orgs: Org[] = [
       {
         action: "ELCA responds to fake news",
         url: "https://www.youtube.com/watch?v=Liqz0VdZG1E"
-      }
+      },
+      {
+        action: "News, Advocacy Alerts, and More",
+        url: "https://lutheranservices.org/newsroom/",
+        category: "education"
+      },
     ],
     description: "We lead one of the nation’s largest and most respected health and human services networks to empower people in America to lead their best lives - so all communities can thrive. Together, we support families, we empower children to grow up to be healthy, productive adults, and we enable veterans, refugees, older adults and people with disabilities to live with dignity and independence in the community of their choice.",
     scope: 'us',
