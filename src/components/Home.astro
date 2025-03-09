@@ -1,10 +1,17 @@
 ---
 import '@styles/Home.scss';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
+// import '../libs/lightGalleryPlugin';
+
 import { Image } from 'astro:assets';
 import PickCause from '@assets/PickCause.png';
 import CausePicker from './CausePicker.astro';
 import { Icon } from 'astro-icon/components';
 import MailBot from '@assets/mailbot.svg';
+import ProtestGuide from '@assets/light-gallery/protest/Infographic.png';
 import Vote from '@assets/Vote.svg';
 import YourMoney from '@assets/YourMoney.svg';
 import BreatheFree from '@assets/shop/BreatheFree-Tee.webp';
@@ -13,6 +20,7 @@ import Union from '@assets/shop/PerfectUnion.webp';
 import Hoodie from '@assets/shop/Rosie-Hoodie.webp';
 
 import { type Org, orgs } from '@data/index';
+
 ---
 <div class="container max-w-6xl mx-auto">
   <section class="resist-home__section resist-start__section">
@@ -24,10 +32,101 @@ import { type Org, orgs } from '@data/index';
   </section>
 </div>
 
+<div id="protest" class="resist-home__actions--wrapper">
+  <section class="resist-home__section protest-banner">
+    <h2>Protest Guides</h2>
+  </section>
+  <section class="resist-home__section">
+    <h3 class="protest__subtitle">
+      Protest Peacefully. Protest Safely.
+    </h3>
+    <div id="lightgallery">
+      <a href="/light-gallery/protest/Infographic@3x.png" 
+        data-lg-size="2251-1501" 
+        data-download="Resistance Toolkit - Protest Safely Infographic"
+        data-sub-html="#protestImgCaption"
+      >
+        <Image 
+          title={`Protesting Safely`}
+          src={ProtestGuide}
+          class="protest__img"
+          alt=`An infographic titled "Protesting Safely" provides tips for safe and peaceful participation 
+          in protests. The illustration features three diverse protestors wearing masks and practical clothing. 
+          One holds a megaphone, another raises a sign that reads "LET'S FIGHT HATE!" The infographic includes six safety 
+          tips: 
+          (1) Wear protective clothing, such as solid-colored outfits, gloves, and items that cover identifying marks. 
+          (2) Carry a physical copy of emergency contacts. 
+          (3) Wear a face mask to protect against COVID-19 and flu. 
+          (4) Bring a backpack with essentials like water, snacks, cash, ID, and first aid. 
+          (5) Make a protest sign with a short, impactful slogan. 
+          (6) Avoid bringing valuables, weapons, or illegal substances. If you need to bring medicine keep them in their original bottles. Write your required dosages out on you arm with permanent marker.
+          The design is clean, using a muted color palette with icons and illustrations for clarity. The bottom credits "The Resistance Toolkit" and designer "pikisuperstar" from freepik.com.`
+        />
+        <p class="lightGallery-thumb__subtitle">Click To Zoom and Download</p>
+      </a>      
+    </div>
+    <div id="protestImgCaption" style="display:none;">
+      <p>Resistance Toolkit - Protest Safely Infographic</p>
+    </div>
+
+    <div class="protest-content__wrapper">
+      <div class="rights">
+        <p class="protest__list-heading">Know Your Rights</p>
+        <ul class="protest__list">
+          <li>
+            <a target="_blank" rel="external" href="https://www.aclu.org/know-your-rights/protesters-rights">
+              ACLU: Select a scenario to learn your rights
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="external" href="https://dredf.org/know-your-rights-for-disabled-protestors-guide/">
+              DREDF: Disabled Protestors, Know Your Rights
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="safety">
+        <p class="protest__list-heading">Safety. Safety. Safety!</p>
+        <ul class="protest__list">
+          <li>
+            <a target="_blank" rel="external" href="https://www.law.nyu.edu/centers/race-inequality-law/protest-tips">
+              NYU School of Law: Best Practices
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="external" href="https://dredf.org/protesting-while-disabled-pocket-guide/">
+              DREDF: Protesting While Disabled Pocket Guide
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="find">
+        <p class="protest__list-heading">Find Protests and Rallies To Join</p>
+        <ul class="protest__list">
+          <li>
+            <a target="_blank" rel="external" href="https://www.mobilize.us/events/rally/">
+              Mobilize: Find upcoming rallies near you
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="external" href="discord.gg/7x5TgSvZBW">
+              Resist.Rebel.Revolt.Fascism. Connect with activists and stay informed!
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+</div>
+
 <div id="everyday" class="resist-home__actions--wrapper">
   <section class="resist-home__section every-day-banner">
     <h2>Everyday Things You Can Do</h2>
   </section>
+
   <section class="resist-home__section featured-tools resist-featured__section">
   
     <div id="factBot" class="resist-featured featured-tool">
@@ -226,7 +325,7 @@ import { type Org, orgs } from '@data/index';
   
   </section>
   
-  <section class="resist-home__section downloads resist-featured__section"> 
+  <section id="shopFeatured" class="resist-home__section downloads resist-featured__section"> 
     
     <h2 class="resist-steps__title downloads text-center" >Shop</h2>
     <div class="resist-featured downloads">
@@ -236,7 +335,21 @@ import { type Org, orgs } from '@data/index';
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image src={BreatheFree} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`T-shirt design showing an illustration of the Statue of Liberty with a modern graphic design twist. The background features a blue circle with white cartoon-style clouds and small birds. A speech bubble with a red heart inside is placed near the statue. Below, a quote from Emma Lazarus's poem reads: 'Give me your tired, your poor, your huddled masses yearning to breathe free,' with 'breathe free' italicized in a handwritten-style font. The website 'resistance-toolkit.com' is displayed at the bottom.` />
+        <a href="/light-gallery/shop/BreatheFree-Tee.webp" data-src="/light-gallery/shop/BreatheFree-Tee.webp" data-lg-size="900-1200">
+          <Image 
+            src={BreatheFree}
+            height={333}
+            width={250}
+            class="downloadable-resource object-cover rounded-sm shadow-sm" 
+            alt=`T-shirt design showing an illustration of the Statue of Liberty 
+            with a modern graphic design twist. The background features a blue 
+            circle with white cartoon-style clouds and small birds. A speech bubble 
+            with a red heart inside is placed near the statue. Below, a quote from 
+            Emma Lazarus's poem reads: 'Give me your tired, your poor, your huddled 
+            masses yearning to breathe free,' with 'breathe free' italicized in a 
+            handwritten-style font. The website 'resistance-toolkit.com' is displayed 
+            at the bottom.` />
+        </a>
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
@@ -257,7 +370,15 @@ import { type Org, orgs } from '@data/index';
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image src={Wealth} class="downloadable-resource object-cover rounded-sm shadow-sm" alt=`Red tee-shirt with a design showing a stylized chart depicting the U.S. Family Wealth Distribution.` />
+        <a href="/light-gallery/shop/wealth.webp" data-src="/light-gallery/shop/wealth.webp" data-lg-size="900-1200">
+          <Image 
+            src={Wealth} 
+            height={333}
+            width={250}
+            class="downloadable-resource object-cover rounded-sm shadow-sm" 
+            alt=`Red tee-shirt with a design showing a stylized chart depicting the U.S. Family Wealth Distribution.` 
+          />
+        </a>
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
@@ -278,14 +399,18 @@ import { type Org, orgs } from '@data/index';
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image 
-          src={Union}
-          class="downloadable-resource object-cover rounded-sm shadow-sm" 
-          alt=`T-shirt design showing a book cover in the style of Penguin Classics. 
-          The title of the book is "In order to form a more perfect union". 
-          The graphic below the book title depicts a diverse group of people talking with the 
-          Preamble of the Constitution written behind them in calligraphy.` 
-        />
+        <a href="/light-gallery/shop/PerfectUnion.webp" data-src="/light-gallery/shop/PerfectUnion.webp" data-lg-size="900-1200">
+          <Image 
+            src={Union}
+            height={333}
+            width={250}
+            class="downloadable-resource object-cover rounded-sm shadow-sm" 
+            alt=`T-shirt design showing a book cover in the style of Penguin Classics. 
+            The title of the book is "In order to form a more perfect union". 
+            The graphic below the book title depicts a diverse group of people talking with the 
+            Preamble of the Constitution written behind them in calligraphy.` 
+          />
+        </a>
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
@@ -306,11 +431,15 @@ import { type Org, orgs } from '@data/index';
         </p>
       </div>
       <div class="resist-featured__body--img-wrapper">
-        <Image 
-          src={Hoodie} 
-          class="downloadable-resource object-cover rounded-sm shadow-sm" 
-          alt=`Dark navy blue hoodie with our Rosie mascot and The Resistance 
-          Toolkit printed on the chest by the left sleeve.` />
+        <a href="/light-gallery/shop/Rosie-Hoodie.webp" data-src="/light-gallery/shop/Rosie-Hoodie.webp" data-lg-size="900-1200">
+          <Image 
+            src={Hoodie} 
+            height={333}
+            width={250}
+            class="downloadable-resource object-cover rounded-sm shadow-sm" 
+            alt=`Dark navy blue hoodie with our Rosie mascot and The Resistance 
+            Toolkit printed on the chest by the left sleeve.` />
+        </a>
       </div>
       <div class="resist-featured__body">
         <h3 class="resist-featured__body--title">
@@ -331,6 +460,8 @@ import { type Org, orgs } from '@data/index';
   </section>
 </div>
 
+
+<script src="../libs/lightGalleryPlugin.js"></script>
 
 <script>
   document.addEventListener('astro:page-load', () => {
