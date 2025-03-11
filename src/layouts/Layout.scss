@@ -205,6 +205,13 @@ a, .hs-collapse-toggle, div.action p a {
   .resist-card {
     flex: 1 1 calc(50% - 10px);
   }
+
+  .contact-btn, .about-btn, .shop-btn {
+    min-width: 45px;
+    span {
+      @apply sr-only;
+    }
+  }
 }
 @media screen and (max-width: 640px) {
   .resist-button__site-nav {

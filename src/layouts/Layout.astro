@@ -82,7 +82,7 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 					<div class="flex items-center gap-4">
 						<a
               data-umami-event="{about-nav-link}"
-							class="resist-button__site-nav inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+							class="resist-button__site-nav about-btn inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
 							href="/about"
 						>
 							<span class="text-sm font-medium"> About </span>
@@ -90,22 +90,31 @@ const imageUrl = import.meta.env.PUBLIC_URL ? new URL(image, import.meta.env.PUB
 						</a>    
             <a
             data-umami-event="{contact-nav-link}"
-            class="resist-button__site-nav inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+            class="resist-button__site-nav contact-btn inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
             href="/contact"
           >
-            <span class="text-sm font-medium"> Contact Us </span>
-            <Icon name="mdi:library-edit-outline" role="img" aria-hidden="true" class="size-4"/>            
+            <span class="text-sm font-medium"> Contact </span>
+            <Icon name="mdi:lead-pencil" role="img" aria-hidden="true" class="size-4"/>            
           </a> 
           <a
           target="_blank"
-          data-umami-event="{nav-shop-link}"
-          class="resist-button__site-nav resist-button__shop inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
-          href="https://shop.resistance-toolkit.com"
-        >
-          <span class="text-sm font-medium"> Shop </span>
-          <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" class="size-4"/>            
-        </a>                 
-					</div>
+          data-umami-event="{nav-report-hate-link}"
+          class="resist-button__site-nav report-hate-btn resist-button__shop inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+          href="https://www.splcenter.org/reporthate/"
+          >
+            <span class="text-sm font-medium"> Report Hate </span>
+            <Icon name="mdi:external-link" role="img" aria-hidden="true" class="size-4"/>            
+          </a> 
+          <a
+            target="_blank"
+            data-umami-event="{nav-shop-link}"
+            class="resist-button__site-nav shop-btn resist-button__shop inline-flex items-center justify-center gap-1.5 rounded-sm border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:ring-3 focus:outline-hidden"
+            href="https://shop.resistance-toolkit.com"
+          >
+            <span class="text-sm font-medium"> Shop </span>
+            <Icon name="mdi:shopping-outline" role="img" aria-hidden="true" class="size-4"/>            
+          </a>                 
+				  </div>
 				</div>
 			</div>
 		</nav>

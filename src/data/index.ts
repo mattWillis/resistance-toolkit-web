@@ -634,9 +634,18 @@ export const orgs: Org[] = [
         url: "https://eji.org/get-involved/"
       },
       {
+        action: "Community Remembrance Project",
+        url: "https://eji.org/projects/community-remembrance-project/"
+      },
+      {
         action: "Host an Educational Event",
         url: "https://eji.org/host-an-educational-event/",
         category: "education"
+      },
+      {
+        action: "Host an Educational Event",
+        url: "https://eji.org/host-an-educational-event/",
+        category: "volunteer"
       },
       {
         action: "Visit a Legacy Site",
@@ -645,8 +654,14 @@ export const orgs: Org[] = [
       },
       {
         action: "Employment Opportunities",
-        url: "https://eji.org/employment/"
+        url: "https://eji.org/employment/",
+        category: "volunteer"
       },
+      {
+        action: "EJI Shop",
+        url: "https://shop.eji.org/",
+        category: "money"
+      }
     ],
     description: 'The Equal Justice Initiative is committed to ending mass incarceration and excessive punishment in the United States, to challenging racial and economic injustice, and to protecting basic human rights for the most vulnerable people in American society.',
     scope: 'us',
@@ -763,6 +778,21 @@ export const orgs: Org[] = [
         url: "https://naacp.org/find-resources",
         category: "education"
       },
+      {
+        action: "Trainings and Workshops",
+        url: "https://naacp.org/trainings-workshops",
+        category: "education"
+      },
+      {
+        action: "Legislative Report Cards",
+        url: "https://naacp.org/find-resources/legislative-report-cards",
+        category: "education"
+      },
+      {
+        action: "Scholarships, Awards, and Internships",
+        url: "https://naacp.org/find-resources/scholarships-awards-internships",
+        category: "volunteer"
+      }
     ],
     description: 'We envision an inclusive community rooted in liberation where all persons can exercise their civil and human rights without discrimination. We are committed to a world without racism where Black people enjoy equitable opportunities in thriving communities.',
     scope: 'us',
@@ -923,17 +953,31 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Sign Petitions",
-        url: "https://innocenceproject.org/sign-petitions/"
+        action: "Take Action!",
+        url: "https://innocenceproject.org/take-action/"
       },
       {
-        action: "Resources and Actions",
-        url: "https://innocenceproject.org/take-action/"
+        action: "Sign Petitions",
+        url: "https://innocenceproject.org/sign-petitions/"
       },
       {
         action: "Volunteer with Innocence Project",
         url: "https://innocenceproject.org/volunteer/",
         category: "volunteer"
+      },
+      {
+        action: "Shop",
+        url: "https://shop.innocenceproject.org/",
+        category: "money"
+      },
+      {
+        action: "Speakers Bureau",
+        url: "https://innocenceproject.org/speakers-bureau/",
+        category: "education"
+      },
+      {
+        action: "Request Representation",
+        url: "https://innocenceproject.org/submit-case/"
       }
     ],
     description: 'Founded in 1992 by visionary attorneys Peter Neufeld and Barry Scheck, the Innocence Project has been at the forefront of criminal justice reform, using DNA and other scientific advancements to prove wrongful conviction.',
@@ -2262,6 +2306,26 @@ export const orgs: Org[] = [
         url: "https://www.commoncause.org/take-action/?utm_source=resistance-toolkit"
       },
       {
+        action: "Issue: Stop Voter Suppression",
+        url: "https://www.commoncause.org/issues/stopping-voter-suppression/"
+      },
+      {
+        action: "Issue: Ethics and Accountability",
+        url: "https://www.commoncause.org/issues/ethics-accountability/"
+      },
+      {
+        action: "Issue: Money in Politics",
+        url: "https://www.commoncause.org/issues/money-in-politics/"
+      },
+      {
+        action: "Issue: End Gerrymandering",
+        url: "https://www.commoncause.org/issues/fair-redistricting-gerrymandering/"
+      },
+      {
+        action: "View All Issues",
+        url: "https://www.commoncause.org/priorities/"
+      },
+      {
         action: "Volunteer with Common Cause",
         url: "https://actionnetwork.org/forms/join-the-common-cause-action-team-slack/?utm_source=resistance-toolkit",
         category: "volunteer"
@@ -2320,11 +2384,19 @@ export const orgs: Org[] = [
         category: "education"
       },
       {
+        action: "Our Policy Priorities",
+        url: "https://votevets.org/policy-priorities/?utm_source=resistance-toolkit"
+      },
+      {
         action: "Shop",
         url: "https://shop.votevets.org/?utm_source=resistance-toolkit",
         category: "money"
       },
-
+      {
+        action: "News and Videos",
+        url: "https://votevets.org/news/?utm_source=resistance-toolkit",
+        category: "education"
+      },
     ],
     description: 'Started in 2006, VoteVets PAC and VoteVets Action Fund have been the home for progressive veterans, military families, and their civilian supporters for over 15 years. It is the first organization of its kind and the largest, with over one and a half million supporters in all 50 states. VoteVets uses public issue campaigns to relentlessly lift up the voices of veterans on matters of national security, veterans’ care, and everyday issues that affect the lives of those who served, and their families.',
     scope: 'us',
@@ -2781,6 +2853,11 @@ export const orgs: Org[] = [
         action: "Our Vision", 
         url: "https://www.interfaithalliance.org/our-vision",
         category: "education"
+      },
+      {
+        action: "Join a campaign or event",
+        url: "https://www.interfaithalliance.org/get-involved#take-action",
+        category: "volunteer"
       }
     ],
     social: [
@@ -3759,6 +3836,11 @@ export const orgs: Org[] = [
         action: "Store",
         url: "https://store.indivisible.org/",
         category: "money"
+      },
+      {
+        action: 'Jobs: Join our Team',
+        url: "https://jobs.lever.co/indivisible",
+        category: "volunteer"
       }
     ],
     description: "Action by action, day by day, group by group, Indivisibles are remaking our democracy. Brought together by a practical guide to resist the Trump agenda, Indivisible is a movement of thousands of group leaders and more than a million members taking regular, iterative, and increasingly complex actions to resist the GOPs agenda, elect local champions, and fight for progressive policies.",
@@ -3943,14 +4025,15 @@ export const orgs: Org[] = [
         category: "donate"
       },
       {
-        action: "Voter Hotline - Assistance in nine Asian languages",
-        url: "https://forms.everytown.org/a/join-students-demand-action-text-team/",
-      },
-      {
-        action: "Volunteer for Voter Hotline",
-        url: "https://forms.everytown.org/a/join-students-demand-action-text-team/",
+        action: "Clerkships and Internships",
+        url: "https://www.advancingjustice-aajc.org/clerkships-and-internships",
         category: "volunteer"
       },
+      {
+        action: "Work with Us",
+        url: "https://www.advancingjustice-aajc.org/get-involved/job-opportunities",
+        category: "volunteer"
+      },      
       {
         action: "News",
         url: "https://www.advancingjustice-aajc.org/news-media/in-the-news",
@@ -4153,8 +4236,16 @@ export const orgs: Org[] = [
     ],
     actions: [
       {
-        action: "Learn About Our Strategy",
-        url: "https://democracyforward.org/about/"
+        action: "Strategy: Defend",
+        url: "https://democracyforward.org/defend/"
+      },
+      {
+        action: "Strategy: Disrupt",
+        url: "https://democracyforward.org/disrupt/"
+      },
+      {
+        action: "Strategy: Build",
+        url: "https://democracyforward.org/build/"
       },
       {
         action: "Reports & Data",
@@ -4169,6 +4260,11 @@ export const orgs: Org[] = [
         action: "Shop",
         url: "https://store.democracyforward.org/",
         category: "money"
+      },
+      {
+        action: "Careers",
+        url: "https://democracyforward.org/careers/",
+        category: "volunteer"
       }
     ],
     description: "We go to court for people and democracy. Democracy Forward is a national legal organization that advances democracy and social progress through litigation, policy and public education, and regulatory engagement.",
