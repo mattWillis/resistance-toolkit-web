@@ -6,7 +6,7 @@ export enum OrgCategory {
   Immigration = "immigration",
   LGBTQ = "lgbtq",
   Reproductive = "reproductive",
-  Sexism = "sexism",
+  WomensRights = "womens-rights",
   Voting = "voting",
   Wealth = "wealth"
 }
@@ -113,7 +113,7 @@ export const causes: Cause[] = [
   {
     id: 8,
     title: "Women's Rights",
-    slug: 'sexism',
+    slug: 'womens-rights',
     banner: 'Causes-Sexism.png',
     emoji: '💃',
     listImg: '/src/assets/Card-Sexism-Img.webp',
@@ -547,7 +547,7 @@ export const orgs: Org[] = [
     name: "ACLU",
     url: 'https://www.aclu.org/',
     ogImage: "https://www.aclu.org/wp-content/themes/aclu-wp/img/default_fb_share.jpg",
-    cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'sexism', 'voting', 'accessibility', 'dei'],
+    cause: ['civil-rights', 'immigration', 'lgbtq', 'reproductive', 'womens-rights', 'voting', 'accessibility', 'dei'],
     donate: "https://action.aclu.org/give/now/?utm_source=resistance-toolkit",
     social: [
       {
@@ -1770,7 +1770,7 @@ export const orgs: Org[] = [
     name: "EMILY's List",
     url: 'https://emilyslist.org/',
     ogImage: "https://emilyslist.org/wp-content/uploads/2023/02/eml-social-share.jpg",
-    cause: ['reproductive', 'sexism'],
+    cause: ['reproductive', 'womens-rights'],
     donate: "https://secure.actblue.com/donate/donate-to-emilys-list/?utm_source=resistance-toolkit",
     social: [
       {
@@ -1937,7 +1937,7 @@ export const orgs: Org[] = [
     name: "UN Women",
     url: 'https://www.unwomen.org/',
     ogImage: "https://www.unwomen.org/sites/default/files/UN%20Women%20Logos/UN-Women-logo-social-media-1024x512-en.png",
-    cause: ['sexism'],
+    cause: ['womens-rights'],
     social: [
       {
         platform: 'Facebook',
@@ -1995,7 +1995,7 @@ export const orgs: Org[] = [
     name: "Global Fund for Women",
     url: 'https://www.globalfundforwomen.org/',
     ogImage: "https://www.globalfundforwomen.org/wp-content/uploads/2024/01/cropped-inmotion_1200x630_1.29.24.jpg",
-    cause: ['sexism'],
+    cause: ['womens-rights'],
     donate: "https://join.globalfundforwomen.org/a/donate",
     social: [
       {
@@ -2057,7 +2057,7 @@ export const orgs: Org[] = [
     name: "Advocates for Youth",
     url: 'https://www.advocatesforyouth.org/',
     ogImage: "https://www.advocatesforyouth.org/wp-content/uploads/2019/08/Advocates-for-Youth-Logo_RRR-blue.png",
-    cause: ['sexism', 'medicine', 'lgbtq'],
+    cause: ['womens-rights', 'medicine', 'lgbtq'],
     donate: "https://actionnetwork.org/fundraising/donate-to-advocates-for-youth-3/?utm_source=resistance-toolkit",
     social: [
       {
@@ -4808,7 +4808,7 @@ export const orgs: Org[] = [
     name: "Girls Who Code",
     url: 'https://girlswhocode.com/',
     ogImage: "https://girlswhocode.com/assets/images/craft-prod/images/seo/_1200x630_crop_center-center_82_none/GWC_SEO_Logo.png?mtime=1588335912",
-    cause: ['science', 'sexism', 'dei'],
+    cause: ['science', 'womens-rights', 'dei'],
     donate: 'https://give.girlswhocode.com/give/77372/#!/donation/checkout',
     social: [
       {
