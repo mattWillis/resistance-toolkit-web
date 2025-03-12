@@ -3,6 +3,6 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/causes/sexism"
-  to = "/causes/sexism/"
+  from = "/cause/sexism"
+  to = "/cause/sexism/"
   query = {path = ":path"}
