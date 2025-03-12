@@ -5,4 +5,3 @@
 [[redirects]]
   from = "/cause/sexism"
   to = "/cause/womens-rights"
-  query = {path = ":path"}
