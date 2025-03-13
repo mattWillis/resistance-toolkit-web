@@ -9,15 +9,22 @@
   font-size: 1.8em;
 }
 
-.dei-images__subtitle-container {
-  @apply max-w-2xl mx-auto;
+.dei-images__subtitle-container, .what-is-this {
+  // @apply max-w-2xl mx-auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
   align-items: center;
-  text-align: center;
+  // text-align: center;
   margin-bottom: 30px;
+  p {
+    @apply prose;
+  }
+}
+
+.what-is-this__title {
+  font-weight: 600;
 }
 
 .dei-images__iframe-container {
