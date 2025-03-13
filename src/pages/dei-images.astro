@@ -1,0 +1,55 @@
+---
+import Layout from "src/layouts/Layout.astro"; 
+const clUrl = new URL(Astro.url.pathname, Astro.site);
+const cURLString = clUrl.toString();
+
+import '@styles/_dei-images.scss';
+---
+
+<Layout 
+  title="Banned DEI Images - DoD"
+  image=`${Astro.site}Banned-DB-Share.png`
+  description = "Explore the images that were removed from the Department of Defense website for being too inclusive.",
+  imageAlt = 'Text reads The Resistance Toolkit, tools you need to fight hate. Next to the text is an illustration of a woman wearing a bandana on her head and flexing her right arm in the style of Rosie the Riveter.'  
+  canonicalUrl = {cURLString}
+>
+<h1 class="dei-images__title">Database - DoD Images Flagged as "DEI"</h1>
+<div class="dei-images__subtitle-container">
+  <p>
+    Best viewed on desktop (filter and sort not available on mobile).
+    Data will be updating frequently, so make sure to bookmark this page!
+  </p>
+  <!-- <p>Data will be updating frequently, so make sure to bookmark this page!</p> -->
+</div>
+
+<div class="dei-images__iframe-container">
+  <h2 class="iframe__title">Image Gallery</h2>
+  <p class="gallery-instruction">Currently processed 1022 / >20,000 images.</p>
+  <p class="gallery-instruction">Tap on an entry to see all details.</p>
+  <iframe
+    class="airtable-embed"
+    src="https://airtable.com/embed/appMhXItrJUZSrJ6v/shrWzco0Sco5Wvfck" 
+    frameborder="0" 
+    width="100%" 
+    height="533" 
+    style="background: transparent; border: 1px solid #ccc;"
+  >
+  </iframe>
+</div>
+
+<div class="dei-images__iframe-container">
+  <h2 class="iframe__title">Data Analytics</h2>  
+  <!-- <p class="gallery-instruction">Tap on a graph to see detail.</p> -->
+  <iframe
+    class="airtable-embed"
+    src="https://airtable.com/embed/appMhXItrJUZSrJ6v/shrYcpR6HWUZTLk2F"
+    frameborder="0"
+    width="100%"
+    height="533"
+    style="background: transparent; border: 1px solid #ccc;"
+  >
+  </iframe>
+</div>
+
+
+</Layout>
